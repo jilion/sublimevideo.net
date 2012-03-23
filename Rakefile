@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DocsSublimeVideo::Application.load_tasks
+SublimeVideo::Application.load_tasks

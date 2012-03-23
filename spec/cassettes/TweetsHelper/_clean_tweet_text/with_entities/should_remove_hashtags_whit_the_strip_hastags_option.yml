@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1/statuses/show/14786759290.json?include_entities=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.1.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        MTUw
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        MTMx
+      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
+      - !binary |-
+        MTMzMjQwNDkyNg==
+      !binary "eC1yYXRlbGltaXQtY2xhc3M=":
+      - !binary |-
+        YXBp
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
+      !binary "c2V0LWNvb2tpZQ==":
+      - !binary |-
+        Z3Vlc3RfaWQ9InYxOjEzMzI0MDM0NDM4NjY2OTk0MiI7RXhwaXJlcz1TYXQs
+        IDIyLU1hci0xNCAwODowNDowMyBHTVQ7UGF0aD0vO0RvbWFpbj0udHdpdHRl
+        ci5jb20=
+      - !binary |-
+        az03Ny41OS4yNTUuMTYyLjQwMTgxZWRjN2Y3NmI2NTI7IHBhdGg9LzsgZXhw
+        aXJlcz1UaHUsIDI5LU1hci0yMDEyIDA4OjA0OjAzIFVUQzsgZG9tYWluPS5h
+        cGkudHdpdHRlci5jb207IGh0dHBvbmx5
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        VGh1LCAyMiBNYXIgMjAxMiAwODowNDowMyBHTVQ=
+      !binary "ZXhwaXJlcw==":
+      - !binary |-
+        VHVlLCAzMSBNYXIgMTk4MSAwNTowMDowMCBHTVQ=
+      !binary "cHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        bm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByZS1jaGVj
+        az0wLCBwb3N0LWNoZWNrPTA=
+      !binary "eC10cmFuc2FjdGlvbg==":
+      - !binary |-
+        ZTI2ZmYyY2Q2YjUwODY1Zg==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VGh1LCAyMiBNYXIgMjAxMiAwODowNDowMyBHTVQ=
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MTE4OA==
+      !binary "c2VydmVy":
+      - !binary |-
+        dGZl
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/7RWbW/bNhD+K4QGDBumyJIt2ZKBAQ26BQvQosWSoh+qQKCl
+        s8yGIlWSiuMG/u87SrIsJ3WHDpj9Sc+98Z57IZ+cXAE1UGTUOEvnIxTkLd2R
+        6ZxM/eUsWgZT8puPP/wMfMd1WOEsg3ARzxdRMk18C2TaKDQdoahn4NH6+wt4
+        TbbMbIjZAJGME10zzkmjmSjJK1rXOXBQ1EhFfjLMUMGailBRtPp0C1pWQF4x
+        YRQrgJJ36OFvqKUyoMjl+2vikY0x9TKdpJMVMx7fpZPidQNvbvEMWjYqBzxF
+        2vj+LKdko2D9e+oMFtvt1jNbAFNAfu/lskodooCjipBrybncpp0t3FqtP1Cr
+        c5VOaIfbTFUjcsugs1xTrgEpEZmCmu8yI5EbahqdWdpEw/kZYUfhS4VGgzpj
+        24vOWWosK4hM0AoOYmvhLJ+6EkZxMpsuonH9eghT6qwc/aWhyBjNsTqWzrHL
+        50IukQMmBUreKY4FlC65eoOCAtCO1b3sIxAEWCnaGhfwAFzWBMuLPZAb9gAE
+        HmtQDEQOmqyxK7awckklV4yDS7TMGeWtbSUVeOi/URz9DiUdH8tWFDVqJQ3k
+        4wJ1tQWls1w2Avt0FiATaxu2GLDFFLNi2o5Gj0zn7um0vJWCXDYlCWISzJc4
+        MFE8TIsfY+g1fcAeZAYGr+iiMXkm12sN+HkRxKiOTcQqyL5KYZn9k2JQJcgt
+        YuSXDzfkZ/KaClrQX9FjCTIDQVfcpoOth9k8IF9rNkqva6tRzPkMU6GiROcg
+        0Eku7TytGuRIH70duldnRlGhuR3KAUUS11iCbEXz+1KhX8sKtwqO3/6cb+qw
+        ipaQPasR9XHqWFW2Ezc5Z6XTSRBF82gaBHE6QQODrFysygvM13g1ZvP9iJmN
+        p/u4umsO9n9GNvj9gq8fIGCIPZ9PwyRZLDC4XnNZymkmpKoo9z7X49j/IdUf
+        jsGZuB8qfXV5GQbJSKpxKa+oylZSFbiOBr329w09/ODnteydMUijK/sfSbGj
+        X1TqMAJ6I7cZRd9M4IEhq6Bg9CAscB003GS9o6FEz/CDx5MdwezQdOuzA3DD
+        fmlAm0yDHa1OJKTBCewWoO7AfTuqdt2aXW2n+r3ELdfOHnLFBC4R1Pw0jb15
+        lER+4F7EgTdLZkkwu9s/0/oXH0dLd3BnfdSc2tuvW/gOhD5KFsm8oEEYL5KX
+        q5PWzOubvWuaIJ1gDumEFenkubn3WUu7StogWX++nJnd8fq45IZWuGmA3NQK
+        idR2ISI12Tl5f2O0W0vtsBMKq/bh5ojZT4HrtCA3ps3edVa2G9Aae/DxhCq+
+        K6V4Qdanlq4wnEXTRUvXLInD5M7tWAxn8yT+HpzgpR/18MhJB99Z1qnpVmtb
+        uP3+dNkeGkZB++wYrh8X9zK+flhX7Q3VG0NLe9ynw0Pq8DayTzDMN2+TCUM3
+        wna5a0tpgbvulsf+F30voofTe3v85BrV6hS1HZPgisAERy+EHjk5wsx3Q9ux
+        z8McXmzHENc94hJyLXJveEuGURSF8clDsoNO4ix8d5FgqvvuUrV36vHK6ukc
+        kP0/AAAA//8DAHT1ksnWCgAA
+    http_version: !binary |-
+      MS4x
+  recorded_at: Thu, 22 Mar 2012 08:04:04 GMT
+recorded_with: VCR 2.0.0

@@ -1,30 +1,20 @@
 source 'https://rubygems.org'
+source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
 
 gem 'rails', '3.2.2'
-
-gem 'thin'
-
-gem 'sublimevideo_layout', git: 'git@github.com:jilion/sublimevideo_layout.git'
+gem 'sublimevideo_layout' # hosted on gemfury
 
 # Views
-gem 'haml',                  '~> 3.1.3'
-gem 'RedCloth',              '~> 4.2.9'
+gem 'haml'
+gem 'RedCloth'
 
 # Internals
-gem 'responders',            '~> 0.7.0'
-gem 'settingslogic',         '2.0.6' # 2.0.7 has ruby-debug19 & jeweler as dependencies => UNACCEPTABLE
+gem 'airbrake',  '~> 3.0.5'
+gem 'twitter',   '~> 2.1.0'
+gem 'rack-no-www'
+gem 'ratom', require: 'atom'
+gem 'rescue_me', '~> 0.1.1', git: 'git://github.com/rymai/rescue_me.git' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
 
-gem 'airbrake',              '~> 3.0.5'
-gem 'prowl',                 '~> 0.1.3'
-
-# Perf
-# gem 'dalli',                 '~> 1.1.3'
-
-# Docs
-gem 'coderay',               '~> 1.0.4'
-gem 'haml-coderay',          '~> 0.1.2'
-
-gem 'asset_sync'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,44 +22,45 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.0'
   gem 'coffee-rails', '~> 3.2.0'
   gem 'uglifier'
+  gem 'asset_sync'
 end
 
 group :production do
-  # gem 'rack-cache'
+  gem 'thin'
+  gem 'dalli'
+  gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
 end
 
 group :staging, :production do
-  gem 'rpm_contrib', git: 'git://github.com/titanous/rpm_contrib.git', branch: 'mongoid-instrumentation'
   gem 'newrelic_rpm'
 end
 
 group :development, :test do
   gem 'rspec-rails'
-
   gem 'rack-livereload'
-  gem 'rails-dev-tweaks', '~> 0.6.0'
-end
-
-group :development do
-  gem 'heroku'
-  gem 'foreman'
-  gem 'powder'
-
-  gem 'rb-fsevent'
-
-  gem 'ruby_gntp'
-  platforms :ruby do
-    gem 'rb-readline'
-  end
-  gem 'guard'
-
-  gem 'guard-pow'
-  gem 'guard-livereload'
-  gem 'guard-rspec'
-  gem 'guard-jasmine'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+
+  gem 'vcr'
+  gem 'webmock'
+end
+
+group :tools do
+  gem 'heroku'
+  gem 'foreman'
+  gem 'powder'
+  gem 'pry'
+
+  # Guard
+  gem 'growl'
+  platforms :ruby do
+    gem 'rb-readline'
+  end
+
+  gem 'guard-pow'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
 end

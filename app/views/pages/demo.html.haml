@@ -1,6 +1,4 @@
-= content_for :javascript do
-  = javascript_include_tag  'http://cdn.sublimevideo.net/js/ibvjcopp.js', 'player'
-
+= content_for :javascript, javascript_include_tag('http://cdn.sublimevideo.net/js/ibvjcopp.js')
 - @page_title = "Demo"
 
 = content_for :header do

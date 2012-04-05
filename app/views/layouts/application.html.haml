@@ -1,4 +1,6 @@
 = content_for :javascript do
+  :javascript
+    $.noConflict();
   = javascript_include_tag 'application'
 
 = render template: 'layouts/sublimevideo'

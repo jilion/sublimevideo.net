@@ -1,7 +1,4 @@
-= content_for :javascript do
-  :javascript
-    $.noConflict();
-  = javascript_include_tag 'http://cdn.sublimevideo.net/js/ibvjcopp.js', 'home'
+= content_for :javascript, javascript_include_tag('http://cdn.sublimevideo.net/js/ibvjcopp.js')
 
 = content_for :header do
   %h2= "The HTML5 Video Player Everyone Deserves"

@@ -1,3 +1,8 @@
+#= require prototype
+#= require s2
+#= require home
+#= require player
+
 jQuery(document).ready ->
   SublimeVideo.yourBrowserIsTheBest()
 

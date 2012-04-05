@@ -1,6 +1,3 @@
-#= require prototype
-#= require s2
-#= require player
 
 jQuery(document).ready ->
   new SublimeVideo.Slideshow(4, 0.6) if jQuery('#features_slides').length > 0

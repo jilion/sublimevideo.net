@@ -3,7 +3,7 @@
   %h2= "We're proud to have great customers."
   %p.sub
     = link_to "View all showcases", "http://blog.jilion.com/tags/sublimevideo-showcase"
-    -# = link_to "Join them today", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.showPopup('signup')"
+    -# = link_to "Join them today", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"
 
 %section.showcase
   %ul.quotes

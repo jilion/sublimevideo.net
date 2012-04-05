@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe TweetsHelper do
 
-  pending "#clean_tweet_text" do
+  describe "#clean_tweet_text" do
     context "with entities", :vcr do
       subject { Twitter.status(14786759290, include_entities: true) }
 

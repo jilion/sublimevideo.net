@@ -27,7 +27,6 @@ module TweetsHelper
       indices_for_stripping = []
 
       indices_for_stripping << tweet_entities[:user_mentions].map { |h| h['indices'] } if options[:strip_user_mentions]
-      indices_for_stripping << tweet_entities[:urls].map { |h| h['indices'] }          if options[:strip_urls]
       indices_for_stripping << tweet_entities[:hashtags].map { |h| h['indices'] }      if options[:strip_hastags]
 
       # order indices array by indices descending and then slicing entities to remove
@@ -38,6 +37,7 @@ module TweetsHelper
 
     tweet_text = tweet_text.gsub(/(\s?\/\s*cc\s\@\w+)/, '') if options[:strip_cc]
     tweet_text = tweet_text.gsub(/\s*[:-]\s*$/, '') if options[:strip_cc]
+    tweet_text = tweet_text.gsub(%r{https?://\S+(\s|$)}, ' ') if options[:strip_urls]
 
     tweet_text.strip
   end

@@ -3,11 +3,13 @@
 #= require home
 #= require player
 
+jQuery.fn.exists = -> @length > 0
+
 jQuery(document).ready ->
   SublimeVideo.yourBrowserIsTheBest()
 
 SublimeVideo.yourBrowserIsTheBest = ->
-  if (browsersBox = jQuery('#browsers_box')).length > 0
+  if (browsersBox = jQuery('#browsers_box')).exists()
     if jQuery.browser.webkit
       if navigator.userAgent.indexOf('Chrome') isnt -1
         browsersBox.addClass 'chrome'

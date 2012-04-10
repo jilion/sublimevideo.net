@@ -16,8 +16,7 @@ if typeof(sublimevideo) isnt "undefined"
         SublimeVideo.showCredits(true)
 
     sublimevideo.onEnd (sv) ->
-      matches = sv.element.id.match(/^video(\d+)$/)
-      if matches isnt 'undefined'
+      if matches = sv.element.id.match(/^video(\d+)$/)
         if parseInt(matches[1], 10) < SublimeVideo.playlistDemo.lastVideoIndex
           SublimeVideo.playlistDemo.handleAutoNext(sv.element.id)
         else
@@ -34,17 +33,16 @@ SublimeVideo.updateModeBox = (mode) ->
   modeSwitcher.find('small em').html(newModeText)
 
 SublimeVideo.showCredits = (onOff) ->
-  if (credits = jQuery('#video_credits')).length > 0
+  if (credits = jQuery('#video_credits')).exists()
     if onOff
-      timerIn = setTimeout((-> credits.appear({ duration: 1 })), 3000)
+      timerIn = setTimeout((-> credits.show(1000)), 3000)
     else
       clearTimeout(timerIn)
-      clearTimeout(timerOut)
-      credits.fade({ duration: 1 })
+      credits.hide(1000)
 
 class SublimeVideo.Playlist
   constructor: (playlistWrapperId) ->
-    return unless jQuery("##{playlistWrapperId}").length > 0
+    return unless jQuery("##{playlistWrapperId}").exists()
 
     @playlistWrapperId = playlistWrapperId
     @videosCount = jQuery("##{@playlistWrapperId} .video_wrap").size()

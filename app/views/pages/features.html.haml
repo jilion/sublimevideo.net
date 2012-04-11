@@ -134,10 +134,14 @@
 
 %section.integration
   .tagline
-    %h2.title= "CMS Integration."
-    %p.sub= "We're building plugins to make it easier to integrate SublimeVideo Player with your preferred CMS. Starting with WordPress today and more to come."
+    %h2.title= "Integration Tools."
+    %p.sub= "Our tools make it even easier to integrate SublimeVideo Player with your site."
+  %section.video_code_generator.f
+    %h3.title= "Video Code Generator"
+    == <div style="float:left;clear:left;height:26px;width:14px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div>
+    %p= raw "Our Video Code Generator lets you easily generate properly configured &lt;video&gt; elements optimized for SublimeVideo. It's also the easiest way to quickly test SublimeVideo player with your own video sources. Visit our #{link_to "public demo", my_url('video-code-generator')} to quickly and easily see how your video will look with SublimeVideo."
   %section.wordpress.f
     %h3.title= "WordPress plugin"
-    == <div style="float:left;clear:left;height:26px;width:14px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div>
+    == <div style="float:right;clear:right;height:26px;width:14px;"></div><div style="float:right;clear:right;height:26px;width:15px;"></div><div style="float:right;clear:right;height:26px;width:15px;"></div>
     %p= raw "Our powerful and customizable plugin makes it easier than ever for you to use SublimeVideo in your WordPress installation. Once installed, just click on the SV button in the toolbar to start embedding your videos. #{link_to "Learn more", docs_url('wordpress')}."
   = render "layouts/sign_up_box"

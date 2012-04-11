@@ -570,7 +570,7 @@ body {
 }
 
 .features section.integration .tagline p.sub {
-  padding:15px 110px 0;
+  padding:15px 90px 0;
 }
 
 .features section.always_up_to_date {
@@ -622,19 +622,35 @@ body {
   padding-left:120px;
 }
 
-.features section.wordpress {
-  margin:10px 0 0 44px;
-  height:195px;
-  padding:0 0 0 205px;
-  background:url(<%= asset_path "features/wordpress_icon.png" %>) no-repeat;
+.features section.video_code_generator {
+  margin:-20px 0 0;
+  height:288px;
+  padding:27px 0 0 298px;
+  background:url(<%= asset_path "features/video_code_generator_icon.png" %>) no-repeat;
 }
 
-.features section.wordpress h3.title {
+.features section.video_code_generator h3.title {
   padding-top:10px;
 }
 
+.features section.video_code_generator p {
+  padding-right:80px;
+}
+
+.features section.wordpress {
+  margin:10px 56px 0 0;
+  height:195px;
+  padding:0 205px 0 0;
+  text-align:right;
+  background:url(<%= asset_path "features/wordpress_icon.png" %>) no-repeat 100% 0;
+}
+
+.features section.wordpress h3.title {
+  padding-top:0px;
+}
+
 .features section.wordpress p {
-  padding-right:160px;
+  padding-left:160px;
 }
 
 /* ========= */

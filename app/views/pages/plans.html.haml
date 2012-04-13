@@ -1,5 +1,5 @@
 -# THIS IS THE BADGED PLAYER!
-= content_for :javascript, javascript_include_tag("http://cdn.sublimevideo.net/js/t0cf1489.js")
+= content_for :javascript, sublimevideo_include_tag(request.ssl?, :badged).html_safe
 
 - @page_title = "Plans & Pricing".html_safe
 = content_for :header do

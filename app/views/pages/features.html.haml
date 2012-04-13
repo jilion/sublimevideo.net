@@ -1,4 +1,4 @@
-= content_for :javascript, javascript_include_tag('http://cdn.sublimevideo.net/js/ibvjcopp.js')
+= content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
 - @page_title = "Features"
 
 = content_for :header do

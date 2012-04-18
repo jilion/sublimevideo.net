@@ -39,6 +39,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'rack-livereload'
+  gem 'quiet_assets'
 end
 
 group :test do

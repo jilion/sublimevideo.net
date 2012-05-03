@@ -1,7 +1,7 @@
 
 jQuery(document).ready ->
   new SublimeVideo.Slideshow(4, 0.6) if jQuery('#features_slides').exists()
-  (new SublimeVideo.Quotes).randomShow()
+  (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
 
 class SublimeVideo.Slideshow
   constructor: (pause, speed) ->
@@ -103,11 +103,11 @@ class SublimeVideo.Slideshow
         index = @slideNames.indexOf(this.getBoxName(element))
         this.nextSlide(index)
         event.preventDefault()
-        
+
 class SublimeVideo.Quotes
   constructor: ->
     @quotes = jQuery("section.showcase .quote")
-    
+
   randomShow: ->
     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
     @quotes[randomQuoteIndex].show()

@@ -153,10 +153,10 @@
       %p= "Yes, all SublimeVideo plans are free to use for both non-profit and commercial websites."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Each plan is per-site. However, simply use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", page_url('site-settings', subdomain: 'docs')}."
+      %p= raw "Each plan is per-site. However, simply use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
     .box
       %h4= "Advanced domain settings"
-      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs')}."
+      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
   .col_right
     .box
       %h4= "How does the '14 days free' offer work?"
@@ -169,5 +169,5 @@
       %p= raw "All users have access to our extensive documentation and community forum. Additionally, we offer email support to customers of our paid plans. Customers of our Premium plan also benefit from VIP priority email support. Find out more on the #{link_to "help page", page_path('help')}."
     .box
       %h4= "What happens if I exceed my monthly limit?"
-      %p= "All paid plans include Peak Insurance, a flexible feature that allows your site's videos or video embeds to exceed the monthly limit of video plays in the event of a temporary burst of traffic."
+      %p= raw "All paid plans include Peak Insurance, a flexible feature that allows your site's videos or video embeds to exceed the monthly limit of video plays in the event of a temporary burst of traffic. #{link_to "Read more", page_url('peak-insurance', subdomain: 'docs')}."
   .spacer

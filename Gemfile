@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
 
-gem 'rails', '3.2.3'
+ruby '1.9.3'
+
+gem 'rails', '3.2.5'
 gem 'sublimevideo_layout' # hosted on gemfury
 
 # Views
@@ -13,7 +15,7 @@ gem 'airbrake',  '~> 3.0.5'
 gem 'twitter',   '~> 2.1.0'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
-gem 'rescue_me', '~> 0.1.1', git: 'git://github.com/rymai/rescue_me.git' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
+gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
 
 # Gems used only for assets and not required
 # in production environments by default.

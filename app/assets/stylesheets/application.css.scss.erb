@@ -1710,12 +1710,23 @@ body {
 }
 
 .news .read_more a {
+  padding:13px 15px 11px;
+  border:1px solid rgba(0,54,107,0.36);
+  @include gradient(rgba(255,255,255,0.6),rgba(255,255,255,0),transparent);
+  @include border-radius(5px);
+  @include box-shadow((inset rgba(255,255,255,1) 0 1px 0, rgba(0,0,0,0.25) 0 1px 4px));
+}
+
+.news .read_more a:active {  
+  @include gradient(rgba(255,255,255,0),rgba(255,255,255,0.6),transparent);
+}
+
+.news .read_more a span {
   color:#003165;
-  padding-bottom:5px;
-  font-size:16px;
+  font-size:21px;
   font-weight:600;
-  padding-right:22px;
-  background:url(<%= asset_data_uri "showcase/showcase_arrow.png" %>) no-repeat right 3px;
+  padding-right:24px;
+  background:url(<%= asset_data_uri "showcase/showcase_arrow.png" %>) no-repeat right 50%;
 }
 
 .news ul.press_releases li {
@@ -1752,6 +1763,50 @@ body {
 .news ul.articles li.rww span.icon {background-image:url(<%= asset_data_uri "news/logos/rww.png" %>)}
 .news ul.articles li.wired span.icon {background-image:url(<%= asset_data_uri "news/logos/wired.png" %>)}
 .news ul.articles li.df span.icon {background-image:url(<%= asset_data_uri "news/logos/daringfireball.png" %>)}
+
+.news section.awards {
+  width:290px;
+  margin-top:54px;
+  padding-top:30px;
+  background:rgba(118,144,179,0.15);
+  @include border-radius(4px);
+  @include box-shadow((inset rgba(111,147,201,0.4) 0 1px 2px, rgba(255,255,255,0.6) 0 1px 0));
+}
+
+.news section.awards h3.title {
+  display:block;
+  font-size:28px;
+  font-weight:600;
+  text-align:center;
+  color:#7690B3;
+  padding:65px 0 0;
+  background:url(<%= asset_data_uri "news/award_icon.png" %>) no-repeat center top;
+}
+
+.news section.awards ul {
+  list-style-type:none;
+  text-align:center;
+  padding-bottom:30px;
+}
+
+.news section.awards li {
+  display:block;
+  padding:25px 0 5px;
+}
+
+.news section.awards li strong {
+  display:block;
+  font-size:17px;
+  font-weight:600;
+  color:#003165;
+  padding:15px 20px 10px;
+}
+
+.news #content section.awards li a.read_more {
+  color:#1185ff;
+  padding-right:14px;
+  background:url(<%= asset_data_uri "news/small_blue_arrow.png" %>) no-repeat right 9px;
+}
 
 .news .press_kit {
   padding-top:40px;

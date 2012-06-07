@@ -1,0 +1,9 @@
+- @body_class, @page_title = 'error', "Page Not Found"
+= content_for :header do
+  %h2= "Page not found"
+  %p.sub= "The page you're looking for doesn't exist."
+
+%section.box
+  %h3.title We're sorry.
+  %p The page '#{params[:not_found]}' doesn't exist.
+  %p= raw "Back to our #{link_to 'home page', root_path, class: 'hl'}."

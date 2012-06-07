@@ -1,0 +1,9 @@
+- @body_class, @page_title = 'error', "Something Went Wrong"
+= content_for :header do
+  %h2= "An error occured"
+  %p.sub= "Something went wrong and that's our fault!"
+
+%section.box
+  %h3.title We're sorry, this is our fault, not yours.
+  %p An issue has just occured, we've been informed and will have a look into it.
+  %p= raw "Back to our #{link_to 'home page', root_path, class: 'hl'}."

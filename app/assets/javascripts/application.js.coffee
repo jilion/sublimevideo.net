@@ -1,7 +1,9 @@
 #= require prototype
 #= require s2
+#= require detectmobilebrowser
 #= require home
 #= require player
+#= require features
 
 jQuery.fn.exists = -> @length > 0
 

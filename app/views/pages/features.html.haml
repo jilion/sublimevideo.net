@@ -3,21 +3,76 @@
 
 = content_for :header do
   %h2= "Your video never looked this good."
-  %p.sub= raw "SublimeVideo Player gives your site universal playback of your videos on any browser or device. Check out the #{link_to "player", '#player_features'} and #{link_to "service", '#service_features'} features and #{link_to "sign up", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"} for free today."
+  %p.sub= raw "SublimeVideo is the easiest way to enable true HTML5 Video on your site.<br/> Discover and demo SublimeVideo's #{link_to "player", '#player_features'} and #{link_to "service", '#service_features'} features below and #{link_to "sign up", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"} for free today."
 
+%section.features_boxes
+  %ul
+    %li
+      %a{ href: "#works_everywhere" }
+        = image_tag "features/sections-icons/universal_support.png", alt: "Universal support"
+        %strong= "Universal support"
+    %li
+      %a{ href: "#consistent_ui" }
+        = image_tag "features/sections-icons/consistent_ui.png", alt: "Consistent user interface"
+        %strong= "Consistent user interface"
+    %li
+      %a{ href: "#consistent_ui" }
+        = image_tag "features/sections-icons/flexible_integrations.png", alt: "Flexible integrations", style: "margin-top:30px"
+        %strong= "Flexible integrations"
+    %li
+      %a{ href: "#advanced_features" }
+        = image_tag "features/sections-icons/advanced_features.png", alt: "Advanced Features"
+        %strong= "Universal support"
+    %li
+      %a{ href: "#always_up_to_date" }
+        = image_tag "features/sections-icons/always_up_to_date.png", alt: "Always up-to-date"
+        %strong= "Always up-to-date"
+    %li
+      %a{ href: "#fast_and_reliable" }
+        = image_tag "features/sections-icons/fast_and_reliable.png", alt: "Fast and reliable"
+        %strong= "Fast & reliable"
+    %li
+      %a{ href: "#instant_setup" }
+        = image_tag "features/sections-icons/instant_setup.png", alt: "Instant setup"
+        %strong= "Instant setup"
+    %li
+      %a{ href: "#real_time_stats" }
+        = image_tag "features/sections-icons/rts.png", alt: "Universal real-time stats", style: "margin-top:30px"
+        %strong= "Universal real-time stats"
+    %li
+      %a{ href: "#video_code_generator" }
+        = image_tag "features/sections-icons/video_generator_icon.png", alt: "Video Code Generator", style: "margin-top:0"
+        %strong= "Video Code Generator"
+    %li
+      %a{ href: "#wordpress" }
+        = image_tag "features/sections-icons/wordpress.png", alt: "WordPress Plugin", style: "margin-top:15px"
+        %strong= "WordPress Plugin"
+  .spacer
 %a{ id: 'player_features' }
+%a{ id: 'works_everywhere' }
 %section.player
   %section.browsers_and_devices.f
-    %a{ id: 'works_everywhere' }
     .browsers#browsers_box= image_tag "features/browsers/default.png", alt: "Support for any browser or device"
     %h3.title= "Support for any browser or device"
     = image_tag "features/devices_icon.png", alt: "Support for any browser or device", class: "devices"
     %p= "Reaching your audience on any platform is key. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic Flash fallback. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
     .spacer
-  %section#consistent_ui.consistency.f
-    = image_tag "features/html5_flash_consistency.png", alt: "Consistent User Interface"
+  %a{ id: 'consistent_ui' }
+  %section.consistency.f
+    .video_wrap
+      %video#single_video.sublime{ width: "400", height: "225", poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", "data-uid" => "demo-single", "data-name" => "Demo Single" }
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_720p.mp4" data-quality="hd" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_720p.webm" data-quality="hd" />
+    
     %h3.title= "Consistent user interface"
-    %p= raw "SublimeVideo provides the highest-quality user experience by using a beautiful and consistent user interface in both the HTML5 and Flash player. Take a look at the #{link_to "demo page", page_url('demo', protocol: 'http')} to see it in action."
+    %p= raw "SublimeVideo provides the highest-quality user experience by using a beautiful and consistent user interface in both the player's HTML5 and Flash modes."
+    %p#right_click_desktop_notice
+      %strong= "Right-click anywhere on the demo to the left to switch between HTML5 and Flash playback."
+    :javascript
+      if (jQuery.browser.mobile || Modernizr.touch)
+        jQuery('#right_click_desktop_notice').hide()
     .spacer
   %section.lightbox.f
     = link_to "", class: "sublime zoomable" do
@@ -74,6 +129,7 @@
     %h3.title= "Playlist support"
     %p= "Playlist support using our powerful API makes it possible for you to link multiple videos or chapters to the same player."
     .spacer
+  %a{ id: 'advanced_features' }
   %section.column_wrap.first
     %section.hd.col.f#hd_switching
       .i_wrap= image_tag "features/hd_icon.png", alt: "HD switching"
@@ -96,8 +152,8 @@
     .spacer
   %section.column_wrap.second
     %section.js_independent.col.f
-      .i_wrap= image_tag "features/js_independent_icon.png", alt: "JS independent"
-      %h3.title= "JS independent"
+      .i_wrap= image_tag "features/js_independent_icon.png", alt: "JS library independent"
+      %h3.title= "JS library independent"
       %p= "SublimeVideo is a pure JavaScript application not based on any JS library. This ensures that it never creates conflicts and runs safely alongside any other JS libraries present in your page."
     %section.compatibility.col.f
       .i_wrap= image_tag "features/compatibility_icon.png", alt: "Highly compatible"
@@ -112,34 +168,55 @@
 
 %section#service_features.service
   .tagline
-    %h2.title= "SublimeVideo Player in The Cloud."
-    %p.sub= raw "Because the player is in the cloud you'll always be running the latest version of SublimeVideo Player &mdash; without having to lift a finger."
-  %section#always_up_to_date.always_up_to_date.f
+    %h2.title= "Your Player in The Cloud"
+    %p.sub= raw "Because the SublimeVideo player is in the cloud you’ll always be running the latest version of SublimeVideo Player — without having to lift a finger."
+  %a{ id: "always_up_to_date" }
+  %section.always_up_to_date.f
     %h3.title= "Always up-to-date"
     == <div style="float:left;clear:left;height:26px;width:0px;"></div><div style="float:left;clear:left;height:26px;width:10px;"></div><div style="float:left;clear:left;height:26px;width:20px;"></div><div style="float:left;clear:left;height:26px;width:10px;"></div>
     %p= "SublimeVideo is the world's first zero maintenance HTML5 video player as a service solution. You'll always have the latest version of the player; we provide automatic browser support updates, bug fixes and new features so that you never have to lift a finger."
+  %a{ id: "fast_and_reliable" }
   %section.fast_and_reliable.f
     %h3.title= "Fast & reliable"
     == <div style="float:right;clear:right;height:26px;width:15px;"></div><div style="float:right;clear:right;height:26px;width:25px;"></div><div style="float:right;clear:right;height:26px;width:20px;"></div><div style="float:right;clear:right;height:26px;width:11px;"></div>
     %p= "Thanks to our integration with a state of the art Content Delivery Network (CDN), SublimeVideo Player is delivered to your global audience both quickly and reliably; our CDN has had 100% uptime over the last two years."
-  %section#instant_setup.instant_setup.f
+  %a{ id: "instant_setup" }
+  %section.instant_setup.f
     %h3.title= "Instant setup & easy integration"
     == <div style="float:left;clear:left;height:26px;width:14px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div>
     %p= raw "No download, no installation; #{link_to "Sign up", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"} for free today and be up and running in seconds. It couldn't be simpler to integrate SublimeVideo into your site: Just add a single line of code to enable it on your page."
-  %section#real_time_stats.real_time_stats.f
+  %a{ id: "real_time_stats" }
+  %section.real_time_stats.f
+    .left
+      %a.sublime.watch{ href: "" }
+        = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video"
+        %span.play
+      == <video class="sublime lightbox" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg" preload="none" style="display:none" data-uid="real-time-stats" data-name="Real-Time Statistics">
+      ==   <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />
+      ==   <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.mp4" />
+      ==   <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.webm" data-quality="hd" />
+      ==   <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
+      == </video>
+      %h5= "Watch the video overview"
     %h3.title= "Universal, Real-Time stats"
     %p= raw "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, HTML5 / Flash usage and more. #{link_to "Visit our live demo", demo_site_stats_url} to check it out."
+    = link_to demo_site_stats_url, class: "button" do
+      %span= "Live demo"
 
 .big_break
 
 %section.integration
   .tagline
-    %h2.title= "Integration Tools."
+    %h2.title= "Integration Tools"
     %p.sub= "Our tools make it even easier to integrate SublimeVideo Player with your site."
+  %a{ id: "video_code_generator" }
   %section.video_code_generator.f
     %h3.title= "Video Code Generator"
     == <div style="float:left;clear:left;height:26px;width:14px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div><div style="float:left;clear:left;height:26px;width:15px;"></div>
     %p= raw "Our Video Code Generator lets you easily generate properly configured &lt;video&gt; elements optimized for SublimeVideo. It's also the easiest way to quickly test SublimeVideo Player with your own video sources. Visit our #{link_to "public demo", my_url('video-code-generator')} to quickly and easily see how your video will look with SublimeVideo."
+    = link_to my_url('video-code-generator'), class: "button" do
+      %span= "Try It Now"
+  %a{ id: "wordpress" }
   %section.wordpress.f
     %h3.title= "WordPress plugin"
     == <div style="float:right;clear:right;height:26px;width:14px;"></div><div style="float:right;clear:right;height:26px;width:15px;"></div><div style="float:right;clear:right;height:26px;width:15px;"></div>

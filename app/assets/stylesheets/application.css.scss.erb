@@ -8,6 +8,40 @@ body {
 /* = Home = */
 /* ======== */
 
+.home header h2 a {
+  color:#C1D3F0;
+  display:block;
+  position:relative;
+  @include transition(color,0.4s,ease-in);
+}
+
+.home header h2 a:hover {
+  color:#fff;
+}
+
+.home header h2 a strong {
+  display:block;
+}
+
+.home header h2 a span.banner {
+  display:block;
+  width:333px;
+  height:51px;
+  position:absolute;
+  background:url(<%= asset_data_uri "home/why_banner.png" %>) no-repeat;
+  top:40px;
+  right:-20px;
+  font-size:20px;
+}
+
+.home header h2 a span.text {
+  position:absolute;
+  top:18px;
+  left:175px;
+  padding-right:25px;
+  background:url(<%= asset_data_uri "home/why_banner_arrow.png" %>) no-repeat 100% 80%;
+}
+
 .home header .video_wrap {
   width:587px;
   height:352px;
@@ -242,14 +276,16 @@ body {
   width:900px;
   margin:0 auto;
   padding:50px 0 0;
+  min-height:0;
 }
 
 .home .showcase h4.custom_break {
-  width:407px;
+  width:681px;
   background:url(<%= asset_data_uri "home/they_use_sublime_break.png" %>) no-repeat 0 50%;
-  padding-left:386px;
+  margin-left:55px;
+  padding-left:293px;
   color:#38527c;
-  font-size:14px;
+  font-size:16px;
   font-weight:normal;
   text-transform:uppercase;
   letter-spacing:1px;
@@ -343,25 +379,126 @@ body {
   background:url(<%= asset_data_uri "home/all_showcases_arrow.png" %>) no-repeat right 50%;
 }
 
-.home .vision_tagline {
-  padding:30px 80px 50px;
+.home section.highlights {
+  background:url(<%= asset_data_uri "home/highlights/highlights_texture.png" %>) repeat-x 0 0;
+  height:345px;
+  text-shadow:rgba(255,255,255,0.7) 0 1px 0;
+}
+
+.home .highlights .content {
+  width:900px;
+  margin:0 auto;
+  padding:40px 0 0;
+  position:relative;
+}
+
+.home .highlights h4.custom_break {
+  width:790px;
+  background:url(<%= asset_data_uri "home/highlights/highlights_break.png" %>) no-repeat 0 50%;
+  margin:0 auto;
   text-align:center;
+  color:#38527c;
+  font-size:16px;
+  font-weight:normal;
+  text-transform:uppercase;
+  letter-spacing:1px;
 }
 
-.home .vision_tagline h3 {
-  color:#4773a1;
-  font-size:26px;
-  font-weight:100;
-  line-height:38px;
+.home .highlights .wrap {
+  padding-top:25px;
+  width:800px;
+  height:200px;
+  margin:0 auto;
+  overflow:hidden;
 }
 
-.home .vision_tagline h3 a {
-  display:inline-block;
-  color:#003165;
-  border-bottom:#8ea8c4 1px solid;
-  padding-right:24px;
-  background:url(<%= asset_data_uri "home/vison_arrow.png" %>) no-repeat right 50%;
+.home .highlights ul {
+  width:2000px;
+  height:200px;
+  margin-left:-30px;
+  list-style-type:none;
+  position:relative;
 }
+
+.home .highlights li {
+  float:left;
+  padding:0 0 0 35px;
+  position:relative;
+}
+
+.home .highlights li a {
+  position:relative;
+  display:block;
+  width:240px;
+  height:184px;
+  text-align:center;
+  color:#7f94aa;
+  @include gradient(#fff,#ebedf3,#f5f6f9);
+  @include border-radius(4px);
+  @include box-shadow(rgba(44,79,112,0.5) 0 1px 3px);
+}
+
+.home .highlights li a img {
+  margin-top:20px;
+}
+
+.home .highlights li a span.text {
+  width:240px;
+  position:absolute;
+  bottom:12px;
+  left:0;
+}
+
+.home .highlights li a strong {
+  display:block;
+  font-size:17px;
+  font-weight:600;
+  color:#38527c;
+  padding-bottom:2px;
+}
+
+.home .highlights li a span.desc {
+  font-size:12px;
+  line-height:14px;
+  display:block;
+  padding:0 10px;
+}
+
+.home .highlights li span.badge {
+  position:absolute;
+  width:240px;
+  height:184px;
+  top:0;
+  left:0;
+}
+
+.home .highlights li.new span.badge {
+  background:url(<%= asset_data_uri "home/highlights/new.png" %>) no-repeat 0 0;
+}
+
+.home .highlights li.demo span.badge {
+  background:url(<%= asset_data_uri "home/highlights/demo.png" %>) no-repeat 0 0;
+}
+
+.home .highlights a.arrow {
+  display:block;
+  width:12px;
+  height:20px;
+  position:absolute;
+  top:166px;
+}
+
+.home .highlights a.arrow.previous {
+  background:url(<%= asset_data_uri "home/highlights/previous_arrow.png" %>) no-repeat;
+  left:20px;
+}
+
+.home .highlights a.arrow.next {
+  background:url(<%= asset_data_uri "home/highlights/next_arrow.png" %>) no-repeat;
+  right:20px;
+}
+
+.home .highlights a.arrow span {display:none}
 
 /* ============ */
 /* = Features = */

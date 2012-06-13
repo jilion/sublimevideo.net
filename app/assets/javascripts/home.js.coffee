@@ -2,6 +2,13 @@
 jQuery(document).ready ->
   new SublimeVideo.Slideshow(4, 0.6) if jQuery('#features_slides').exists()
   (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
+  if jQuery('section.highlights').exists()
+    jQuery('section.highlights ul').slidify
+      visibleSlides: 3
+      speed: 5
+      previousButtons: jQuery('section.highlights button.arrow.previous')
+      nextButtons: jQuery('section.highlights button.arrow.next')
+  new SublimeVideo.NewsTicker(6) if jQuery('.news_ticker').exists()
 
 class SublimeVideo.Slideshow
   constructor: (pause, speed) ->
@@ -111,3 +118,40 @@ class SublimeVideo.Quotes
   randomShow: ->
     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
     @quotes[randomQuoteIndex].show()
+    
+class SublimeVideo.NewsTicker
+  constructor: (pause) ->
+    @pauseDuration = pause * 1000
+    @news = jQuery('.news_ticker .news')
+    @activeBoxIndex = 0
+    this.startTimer()
+    
+  startTimer: ->
+    @timer = setInterval((=> this.nextNews(@activeBoxIndex + 1)), @pauseDuration)
+    
+  nextNews: (index) ->
+    currentEl = jQuery(@news[@activeBoxIndex])
+
+    @activeBoxIndex = index % @news.length
+    nextEl = jQuery(@news[@activeBoxIndex])
+
+    currentEl.transition({
+      opacity: 0
+    }, =>
+      currentEl.hide()
+      nextEl.css({ opacity : 0 }).show().transition({
+        opacity: 1
+      })
+    )
+
+    
+
+
+
+
+
+
+
+
+
+    

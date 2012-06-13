@@ -6,7 +6,7 @@
   %p.sub= raw "SublimeVideo is the easiest way to enable true HTML5 Video on your site.<br/> Discover and demo SublimeVideo's #{link_to "player", '#player_features'} and #{link_to "service", '#service_features'} features below and #{link_to "sign up", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"} for free today."
 
 %section.features_boxes
-  %ul
+  %ul.scroll_links
     %li
       %a{ href: "#works_everywhere" }
         = image_tag "features/sections-icons/universal_support.png", alt: "Universal support"

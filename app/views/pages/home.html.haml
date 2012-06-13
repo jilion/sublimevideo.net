@@ -139,7 +139,13 @@
               %span.text
                 %strong= "SublimeVideo Awarded at MIPCube Lab 2012"
                 %span.desc= "“Most Promising Disruptive TV Start-up”" 
-      = link_to "", class: "previous arrow" do
+      %button.previous.arrow
         %span= "previous"
-      = link_to "", class: "next arrow" do
+      %button.next.arrow
         %span= "next"
+      .news_ticker
+        %h4= "Latest News:"
+        - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
+          .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
+            = link_to news.title, news.url
+        .spacer

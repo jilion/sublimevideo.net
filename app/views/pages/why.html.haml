@@ -34,6 +34,7 @@
     %strong= "Play on Any Browser or Device"
     %em.sub
       = "Guarantee that the majority of your audience will"
+      %br
       %span= "never see a blank screen again"
     %span.spacer
   .problem.section_banner
@@ -61,7 +62,7 @@
     = image_tag "why/sublimevideo_enables_true_html5.png", alt: "SublimeVideo Enables True HTML5", style: "margin:-25px 0 -25px -8px"
     %p= raw "Automatic <strong>Flash fallback</strong> and a <strong>consistent user interface</strong> across the player’s HTML5 and Flash modes guarantee that every viewer using a desktop browser will enjoy the same consistent video experience, while support for modern connected devices ensures mobile users also benefit from flawless video playback."
 
-  = link_to "", class: "banner_link" do
+  = link_to page_path('features'), class: "banner_link" do
     %span= "Learn more about the player and test SublimeVideo Player on any device or browser"
 %a{ id: 'slide_2' } 
 %section.slide#slide_2
@@ -70,6 +71,7 @@
     %strong= "Quick and Easy to Use"
     %em.sub
       = "SublimeVideo provides any website with a"
+      %br
       %span= "pain-free way to enable HTML5 Video"
     %span.spacer
   .problem.section_banner.warning
@@ -106,7 +108,7 @@
     = image_tag "why/sublimevideo_life_belt.png", alt: "SublimeVideo Life Belt Help", class: "left", style: "margin:12px 20px 0 0"
     %h3= "If you do need support, we're here to help."
     %p= raw "Our #{link_to "documentation", docs_url('')} and #{link_to("community forum", "http://getsatisfaction.com/sublimevideo")} are great resources for troubleshooting, while users of our paid plans also have access to direct email support."
-  = link_to "", class: "banner_link" do
+  = link_to page_path('customer-showcase'), class: "banner_link" do
     %span= "See what our users have to say about using SublimeVideo with their sites"
 %a{ id: 'slide_3' }    
 %section.slide#slide_3
@@ -144,12 +146,13 @@
     %strong= "Real-time Global Statistics"
     %em.sub
       = "Integrated, real-time video statistics give you an"
-      %span= "accurate overview of your video audience"
+      %br
+      %span= "complete overview of your video audience"
     %span.spacer
   .problem.section_banner
     .wrap
       %em= "The Problem:"
-      %h3= "Understanding your audience has never been more important"
+      %h3= "As the multiplication of Web browsing devices goes on, it's harder to understand usage"
   .problem.slide_content
     = image_tag "why/audience_isolated.png", alt: "Isolated Audience", class: "right", style: "margin-top:-40px"
     %p= "With an audience watching your video on more platforms and devices than ever before, it's important to be able to understand which platforms they're using to access your content."
@@ -164,7 +167,7 @@
     %p= raw "SublimeVideo Player reports consistent statistics from <strong>all platforms - HTML5 and Flash playback on both desktop and mobile devices</strong>. This allows us to collect data from all platforms and present a comprehensive, universal overview of your site’s video traffic - all in real-time. This helps you to better understand your audience and measure the real success of your videos."
     %p= "We designed SublimeVideo's statistics platform to be able to be used alongside the other powerful analytics packages available today, giving you an even greater level of flexibility and insight into your traffic."
     .spacer
-  = link_to "", class: "banner_link" do
+  = link_to demo_site_stats_url, class: "banner_link" do
     %span= "Try a live demo of SublimeVideo's Universal, Real-Time Statistics Dashboard"
 
 %section.showcases

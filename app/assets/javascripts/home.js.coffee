@@ -118,17 +118,17 @@ class SublimeVideo.Quotes
   randomShow: ->
     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
     @quotes[randomQuoteIndex].show()
-    
+
 class SublimeVideo.NewsTicker
   constructor: (pause) ->
     @pauseDuration = pause * 1000
     @news = jQuery('.news_ticker .news')
     @activeBoxIndex = 0
     this.startTimer()
-    
+
   startTimer: ->
     @timer = setInterval((=> this.nextNews(@activeBoxIndex + 1)), @pauseDuration)
-    
+
   nextNews: (index) ->
     currentEl = jQuery(@news[@activeBoxIndex])
 
@@ -143,15 +143,3 @@ class SublimeVideo.NewsTicker
         opacity: 1
       })
     )
-
-    
-
-
-
-
-
-
-
-
-
-    

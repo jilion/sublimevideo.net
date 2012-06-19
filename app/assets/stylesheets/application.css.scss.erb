@@ -581,15 +581,10 @@ body {
   padding-top:14px;
   border-right:1px solid rgba(0,42,105,0.12);
   margin-right:25px;
-  /* Inner Shadow */
-  background-color:rgba(33,56,102,0.8);
-  -webkit-background-clip:text;
-	-moz-background-clip:text;
-	background-clip:text;
-  color:transparent;
-  text-shadow:rgba(255,255,255,0.7) 0px 1px 2px;
+  color:rgba(33,56,102,0.4);
   @include box-shadow(#fff 1px 0 0);
 }
+
 
 .why section.toc li a strong {
   display:block;
@@ -619,13 +614,18 @@ body {
   font-weight:600;
   font-style:normal;
   padding-top:20px;
-  /* Inner Shadow */
-  background-color:rgba(33,56,102,0.8);
-  -webkit-background-clip:text;
-	-moz-background-clip:text;
-	background-clip:text;
-  color:transparent;
-  text-shadow:rgba(255,255,255,0.7) 0px 1px 2px;
+  color:rgba(33,56,102,0.4);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .why section.toc li a em, .why section.slide h2 em.number {
+    text-shadow:rgba(255,255,255,0.7) 0px 1px 2px;
+    background-color:rgba(33,56,102,0.8);
+    -webkit-background-clip:text;
+  	-moz-background-clip:text;
+  	background-clip:text;
+    color:transparent;
+  }
 }
 
 .why section.slide h2 strong {

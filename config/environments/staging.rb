@@ -3,7 +3,7 @@ SublimeVideo::Application.configure do
   config.middleware.insert_after Rack::Lock, "::Rack::Auth::Basic", "Staging" do |u, p|
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
-  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'sublimevideo-staging.net', strict: true
+  config.middleware.insert_before Rack::Lock, Rack::SslEnforcer, except_hosts: 'sublimevideo-staging.net', strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
   # The production environment is meant for finished, "live" apps.
@@ -12,7 +12,7 @@ SublimeVideo::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false

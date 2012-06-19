@@ -1,12 +1,17 @@
 #= require prototype
 #= require s2
+#= require detectmobilebrowser
+#= require jquery.transit
+#= require jquery.slidify
 #= require home
+#= require why
 #= require player
 
 jQuery.fn.exists = -> @length > 0
 
 jQuery(document).ready ->
   SublimeVideo.yourBrowserIsTheBest()
+  SublimeVideo.scrollingLinks()
 
 SublimeVideo.yourBrowserIsTheBest = ->
   if (browsersBox = jQuery('#browsers_box')).exists()
@@ -20,3 +25,11 @@ SublimeVideo.yourBrowserIsTheBest = ->
     else if jQuery.browser.opera
       browsersBox.addClass 'opera'
     else # default IE
+
+SublimeVideo.scrollingLinks = ->
+  jQuery("ul.scroll_links li a").each ->
+    el = jQuery(this)
+    el.click (event) =>
+      jQuery('html, body').animate({
+        scrollTop: jQuery(el.attr('href')).offset().top
+      }, 300)

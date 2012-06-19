@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PagesController do
 
-  %w[home demo features plans help].each do |page|
+  %w[home features plans help].each do |page|
     it "responds with success to /#{page}" do
       get :show, page: page
       response.should render_template("pages/#{page}")

@@ -280,10 +280,11 @@ body {
 }
 
 .home .showcase h4.custom_break {
-  width:681px;
+  width:612px;
   background:url(<%= asset_data_uri "home/they_use_sublime_break.png" %>) no-repeat 0 50%;
-  margin-left:55px;
   padding-left:293px;
+  position:relative;
+  left:55px;
   color:#38527c;
   font-size:16px;
   font-weight:normal;
@@ -312,11 +313,12 @@ body {
   float:right;
   position:relative;
   top:-30px;
-  right:-60px;
+  right:-30px;
 }
 
 .home .showcase .quote.katabatic img {
   top:-16px;
+  right:-60px;
 }
 
 .home .showcase .quote blockquote {
@@ -328,7 +330,7 @@ body {
   color:#264e76;
   text-align:center;
   position:relative;
-  right:-70px;
+  right:-40px;
 }
 
 .home .showcase .quote.katabatic blockquote {
@@ -380,6 +382,7 @@ body {
 }
 
 .home section.highlights {
+  min-width:1000px;
   background:url(<%= asset_data_uri "home/highlights/highlights_texture.png" %>) repeat-x 0 0;
 /*  height:345px;*/
   text-shadow:rgba(255,255,255,0.5) 0 1px 0;

@@ -3,7 +3,7 @@
 
 - @page_title = "Plans & Pricing".html_safe
 = content_for :header do
-  %h2= "All paid plans are free for the first 14 days."
+  %h2= "30-day Free & Unlimited Trial."
   %p.sub= "No credit card required."
 
 #plans
@@ -140,6 +140,9 @@
 %section.faq
   .col_left
     .box
+      %h4= "How does the '30 days free' offer work?"
+      %p= "We offer 30 days free - no credit card required. When your 30 days are almost up we'll send you a reminder to choose a plan. Otherwise, you'll automatically be downgraded to our free plan."
+    .box
       %h4= "The free plan seems too good to be true, is it really free and unlimited?"
       %p
         = raw "Yes and yes, it's completely free and gives you unlimited video plays. Unlike the unbranded player offered with our paid plans, our free player will display a discreet"
@@ -154,13 +157,7 @@
     .box
       %h4= "What does 'per-site' mean?"
       %p= raw "Each plan is per-site. However, simply use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
-    .box
-      %h4= "Advanced domain settings"
-      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
   .col_right
-    .box
-      %h4= "How does the '14 days free' offer work?"
-      %p= "We offer 14 days free for every new paid plan - no credit card required. When your 14 days are almost up we'll send you a reminder to enter your credit card details if you wish to continue your paid plan. Otherwise, you'll automatically be downgraded to our free plan."
     .box
       %h4= "Can I upgrade or downgrade my plan?"
       %p= "Absolutely. You can upgrade, downgrade or change monthly and yearly billing cycles at any time. In case of a downgrade or a change from a yearly to monthly cycle, the change will come into effect at the end of the current plan's cycle."
@@ -170,4 +167,7 @@
     .box
       %h4= "What happens if I exceed my monthly limit?"
       %p= raw "All paid plans include Peak Insurance, a flexible feature that allows your site's videos or video embeds to exceed the monthly limit of video plays in the event of a temporary burst of traffic. #{link_to "Read more", page_url('peak-insurance', subdomain: 'docs')}."
+    .box
+      %h4= "Advanced domain settings"
+      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
   .spacer

@@ -10,6 +10,9 @@ feature "Com Pages" do
       within '#menu' do
         current_url.should eq "http://sublimevideo.dev/"
 
+        click_link 'why'
+        current_url.should eq "http://sublimevideo.dev/why"
+
         click_link 'features'
         current_url.should eq "http://sublimevideo.dev/features"
 
@@ -19,17 +22,20 @@ feature "Com Pages" do
         click_link 'showcase'
         current_url.should eq "http://sublimevideo.dev/customer-showcase"
 
+        click_link 'news'
+        current_url.should eq "http://sublimevideo.dev/news"
+
         click_link 'help'
         current_url.should eq "http://sublimevideo.dev/help"
-
-        # click_link 'Blog'
-        # current_url.should eq "http://sublimevideo.dev/blog"
 
         click_link 'login'
         current_url.should eq "http://sublimevideo.dev/?p=login"
 
         click_link 'sign up'
         current_url.should eq "http://sublimevideo.dev/?p=signup"
+
+        click_link 'login'
+        current_url.should eq "http://sublimevideo.dev/?p=login"
       end
     end
   end
@@ -91,6 +97,20 @@ feature "Com Pages" do
     scenario '/demo redirects to /features' do
       visit '/demo'
       current_url.should eq "http://sublimevideo.dev/features"
+    end
+
+    %w[signup sign_up register].each do |path|
+      scenario "/#{path} redirects to /?p=signup" do
+        visit "/#{path}"
+        current_url.should eq "http://sublimevideo.dev/?p=signup"
+      end
+    end
+
+    %w[login log_in sign_in signin].each do |path|
+      scenario "/#{path} redirects to /?p=login" do
+        visit "/#{path}"
+        current_url.should eq "http://sublimevideo.dev/?p=login"
+      end
     end
   end
 

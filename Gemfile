@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/' # thibaud@jilion.com account
+source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com account
 
 ruby '1.9.3'
 
@@ -27,7 +27,7 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.9.2', require: 'rack/google-analytics'
+  gem 'rack-google-analytics', '~> 0.11'
 end
 
 group :staging, :production do

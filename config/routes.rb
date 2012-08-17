@@ -26,4 +26,8 @@ SublimeVideo::Application.routes.draw do
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
 
   root to: 'pages#show', page: 'home', format: :html
+
+  unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
 end

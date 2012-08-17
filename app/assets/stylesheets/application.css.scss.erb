@@ -889,7 +889,7 @@ body {
   height:290px;
 }
 
-.features header h2, .demo header h2, .about header h2, .contact header h2, .why header h2 {
+.features header h2, .demo header h2, .about header h2, .contact header h2, .why header h2, .error header h2 {
   text-align:left;
   font-size:44px;
   padding:38px 0 15px;
@@ -1927,7 +1927,8 @@ body {
 /* ======== */
 
 .demo header, .demo header .shadow, .demo header .lights,
-.about header, .about header .shadow, .about header .lights {
+.about header, .about header .shadow, .about header .lights,
+.error header, .error header .shadow, .error header .lights {
   height:290px;
 }
 
@@ -2566,6 +2567,34 @@ body {
 }
 
 .press_release #content a {
+  color:#1185ff;
+  border-bottom:1px solid #81bbfc;
+}
+
+/* =============== */
+/* = Error pages = */
+/* =============== */
+
+.error #content {
+  width:960px;
+  margin:0 auto;
+  padding-bottom:40px;
+}
+
+.error section.box h3.title {
+  color:#003165;
+  font-size:38px;
+  font-weight:600;
+  padding:40px 0 10px;
+}
+
+.error section.box p {
+  font-size:20px;
+  line-height:30px;
+  padding:8px 0;
+}
+
+.error section p a {
   color:#1185ff;
   border-bottom:1px solid #81bbfc;
 }

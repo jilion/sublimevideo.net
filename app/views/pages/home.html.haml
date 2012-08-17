@@ -1,7 +1,13 @@
 = content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
 
 = content_for :header do
-  %h2= "The HTML5 Video Player Everyone Deserves"
+  %h2
+    = link_to "/why" do
+      %strong= "The Web's Most Reliable HTML5 Video Player"
+      %span.banner
+        %span.text
+          = "Learn Why"
+        -# %span.arrow
 
   .video_wrap
     %video#home_video.sublime{ width: "544", height: "306", poster: image_path("home/poster_frame.jpg"), preload: "none", "data-sublime-settings" => "initial-overlay:none", "data-uid" => "home", "data-name" => "Home" }
@@ -94,9 +100,52 @@
     = link_to page_path('customer-showcase'), class: "view_all_showcases" do
       %span= "View showcases"
   .spacer
-.big_break
 
-%section.vision_tagline
-  %h3
-    = "HTML5 is the future of online video. Together with the SublimeVideo community,"
-    = link_to "we've made it a reality today", page_path('about')
+= content_for :highlights do
+  %section.highlights
+    .content
+      %h4.custom_break.t1= "Highlights"
+      .wrap
+        %ul
+          %li.box.new
+            = link_to my_url('video-code-generator') do
+              = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", style: "margin-top:0"
+              %span.text
+                %strong= "Video Code Generator"
+                %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
+              %span.badge
+          %li.box
+            = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do
+              = image_tag "home/highlights/twit_tv.png", alt: "Twit.tv", style: "margin-top:30px"
+              %span.text
+                %strong= "Welcoming TWiT.tv"
+                %span.desc= raw "TWiT is now using SublimeVideo<br> for all of their shows."
+          %li.box.demo
+            = link_to demo_site_stats_url do
+              = image_tag "home/highlights/rts.png", alt: "Universal Real-Time Stats", style: "margin-top:30px"
+              %span.text
+                %strong= "Universal Real-Time Stats"
+                %span.desc= "Get the complete picture, in real-time."
+              %span.badge
+          %li.box
+            = link_to "http://blog.jilion.com/2012/04/03/vivendi-awards-sublimevideo-its-coup-de-coeur-prize-at-mipcube-lab-2012" do
+              = image_tag "home/highlights/vivendi.png", alt: "Vivendi Awards SublimeVideo", style: "margin-top:50px"
+              %span.text
+                %strong= "Vivendi Awards"
+                %span.desc= raw "“Coup de Coeur” Prize<br> at MIPCube Lab 2012."
+          %li.box
+            = link_to "http://blog.jilion.com/2012/04/02/sublimevideo-awarded-most-promising-disruptive-tv-start-up-at-mipcube-lab-2012" do
+              = image_tag "home/highlights/mipcube.png", alt: "SublimeVideo Awarded at MIPCube Lab 2012"
+              %span.text
+                %strong= "SublimeVideo Awarded at MIPCube Lab 2012"
+                %span.desc= "“Most Promising Disruptive TV Start-up”"
+      %button.previous.arrow
+        %span= "previous"
+      %button.next.arrow
+        %span= "next"
+      .news_ticker
+        %h4.custom_break.t2= "Latest News"
+        - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
+          .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
+            = link_to news.title, news.url
+        .spacer

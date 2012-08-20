@@ -1,7 +1,7 @@
 module UrlsHelper
 
   def demo_site_stats_url
-    my_url('sites/stats/demo')
+    my_url('stats-demo')
   end
 
 end

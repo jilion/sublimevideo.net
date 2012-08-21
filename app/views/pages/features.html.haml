@@ -9,52 +9,52 @@
   %ul.scroll_links
     %li
       %a{ href: "#works_everywhere" }
-        = image_tag "features/sections-icons/universal_support.png", alt: "Universal support"
+        = image_tag "features/sections-icons/universal_support.png", alt: "Universal support", size: "110x82"
         %strong= "Universal support"
     %li
       %a{ href: "#consistent_ui" }
-        = image_tag "features/sections-icons/consistent_ui.png", alt: "Consistent user interface"
+        = image_tag "features/sections-icons/consistent_ui.png", alt: "Consistent user interface", size: "125x81"
         %strong= "Consistent user interface"
     %li
       %a{ href: "#consistent_ui" }
-        = image_tag "features/sections-icons/flexible_integrations.png", alt: "Flexible integrations", style: "margin-top:30px"
+        = image_tag "features/sections-icons/flexible_integrations.png", alt: "Flexible integrations", size: "122x69", style: "margin-top:30px"
         %strong= "Flexible integrations"
     %li
       %a{ href: "#advanced_features" }
-        = image_tag "features/sections-icons/advanced_features.png", alt: "Advanced Features"
+        = image_tag "features/sections-icons/advanced_features.png", alt: "Advanced Features", size: "128x81"
         %strong= "Universal support"
     %li
       %a{ href: "#always_up_to_date" }
-        = image_tag "features/sections-icons/always_up_to_date.png", alt: "Always up-to-date"
+        = image_tag "features/sections-icons/always_up_to_date.png", alt: "Always up-to-date", size: "104x74"
         %strong= "Always up-to-date"
     %li
       %a{ href: "#fast_and_reliable" }
-        = image_tag "features/sections-icons/fast_and_reliable.png", alt: "Fast and reliable"
+        = image_tag "features/sections-icons/fast_and_reliable.png", alt: "Fast and reliable", size: "79x82"
         %strong= "Fast & reliable"
     %li
       %a{ href: "#instant_setup" }
-        = image_tag "features/sections-icons/instant_setup.png", alt: "Instant setup"
+        = image_tag "features/sections-icons/instant_setup.png", alt: "Instant setup", size: "75x82"
         %strong= "Instant setup"
     %li
       %a{ href: "#real_time_stats" }
-        = image_tag "features/sections-icons/rts.png", alt: "Universal real-time stats", style: "margin-top:30px"
+        = image_tag "features/sections-icons/rts.png", alt: "Universal real-time stats", size: "70x60", style: "margin-top:30px"
         %strong= "Universal real-time stats"
     %li
       %a{ href: "#video_code_generator" }
-        = image_tag "features/sections-icons/video_generator_icon.png", alt: "Video Code Generator", style: "margin-top:0"
+        = image_tag "features/sections-icons/video_generator_icon.png", alt: "Video Code Generator", size: "133x115", style: "margin-top:0"
         %strong= "Video Code Generator"
     %li
       %a{ href: "#wordpress" }
-        = image_tag "features/sections-icons/wordpress.png", alt: "WordPress Plugin", style: "margin-top:15px"
+        = image_tag "features/sections-icons/wordpress.png", alt: "WordPress Plugin", size: "88x89", style: "margin-top:15px"
         %strong= "WordPress Plugin"
   .spacer
 %a{ id: 'player_features' }
 %a{ id: 'works_everywhere' }
 %section.player
   %section.browsers_and_devices.f
-    .browsers#browsers_box= image_tag "features/browsers/default.png", alt: "Support for any browser or device"
+    .browsers#browsers_box= image_tag "features/browsers/default.png", alt: "Support for any browser or device", size: "366x133"
     %h3.title= "Support for any browser or device"
-    = image_tag "features/devices_icon.png", alt: "Support for any browser or device", class: "devices"
+    = image_tag "features/devices_icon.png", alt: "Support for any browser or device", class: "devices", size: "361x242"
     %p= "Reaching your audience on any platform is key. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic Flash fallback. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
     .spacer
   %a{ id: 'consistent_ui' }
@@ -76,7 +76,7 @@
     .spacer
   %section.lightbox.f
     = link_to "", class: "sublime zoomable" do
-      = image_tag "features/lightbox_thumb.jpg", alt: "Integrated Lightbox"
+      = image_tag "features/lightbox_thumb.jpg", alt: "Integrated Lightbox", size: "300x169"
       %span.overlay
       %span.magnifying_glass
     %video.sublime.lightbox{ width: "768", height: "432", poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none", "data-uid" => "features-lightbox", "data-name" => "Features Lightbox" }
@@ -112,18 +112,18 @@
       %ul.thumbs
         -#%li#thumbnail_video1
         -#  %a{ href: "" }
-        -#    = image_tag "demo/midnight_sun1_144.jpg", alt: "", width: "127", height: "71"
+        -#    = image_tag "demo/midnight_sun1_144.jpg", alt: "", size: "127x71"
         %li#thumbnail_video2
           %a{ href: "" }
-            = image_tag("demo/midnight_sun2_144.jpg", alt: "", width: "127", height: "71")
+            = image_tag("demo/midnight_sun2_144.jpg", alt: "", size: "127x71")
             %span.play
         %li#thumbnail_video3
           %a{ href: "" }
-            = image_tag("demo/midnight_sun3_144.jpg", alt: "", width: "127", height: "71")
+            = image_tag("demo/midnight_sun3_144.jpg", alt: "", size: "127x71")
             %span.play
         %li#thumbnail_video4
           %a{ href: "" }
-            = image_tag("demo/midnight_sun4_144.jpg", alt: "", width: "127", height: "71")
+            = image_tag("demo/midnight_sun4_144.jpg", alt: "", size: "127x71")
             %span.play
       .spacer
     %h3.title= "Playlist support"
@@ -132,19 +132,19 @@
   %a{ id: 'advanced_features' }
   %section.column_wrap.first
     %section.hd.col.f#hd_switching
-      .i_wrap= image_tag "features/hd_icon.png", alt: "HD switching"
+      .i_wrap= image_tag "features/hd_icon.png", alt: "HD switching", size: "161x103"
       %h3.title= "HD switching"
       %p= "Switch SD-HD video sources with a single click using SublimeVideo's new HD Switch, built straight into the player's UI."
       %p
         = raw "#{link_to "Learn more", docs_url('hd-switching')}."
     %section.embed.col.f#embeds
-      .i_wrap= image_tag "features/embed_icon.png", alt: "Embed"
+      .i_wrap= image_tag "features/embed_icon.png", alt: "Embed", size: "161x103"
       %h3.title= "Embed"
       %p= "Your audience can now easily share your videos by embedding them into their own sites or elsewhere on the web."
       %p
         = raw "#{link_to "Learn more", docs_url('embeds')}."
     %section.api.col.f
-      .i_wrap= image_tag "features/api_icon.png", alt: "Player API"
+      .i_wrap= image_tag "features/api_icon.png", alt: "Player API", size: "161x103"
       %h3.title= "Player API"
       %p= "Our powerful and flexible API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality."
       %p
@@ -152,15 +152,15 @@
     .spacer
   %section.column_wrap.second
     %section.js_independent.col.f
-      .i_wrap= image_tag "features/js_independent_icon.png", alt: "JS library independent"
+      .i_wrap= image_tag "features/js_independent_icon.png", alt: "JS library independent", size: "266x135"
       %h3.title= "JS library independent"
       %p= "SublimeVideo is a pure JavaScript application not based on any JS library. This ensures that it never creates conflicts and runs safely alongside any other JS libraries present in your page."
     %section.compatibility.col.f
-      .i_wrap= image_tag "features/compatibility_icon.png", alt: "Highly compatible"
+      .i_wrap= image_tag "features/compatibility_icon.png", alt: "Highly compatible", size: "197x136"
       %h3.title= "Highly compatible"
       %p= "We've designed SublimeVideo to be highly compatible with your site's existing code, meaning that you don't need to recode a thing to use it."
     %section.multi_sources.col.f
-      .i_wrap= image_tag "features/multi_sources_icon.png", alt: "Your video sources"
+      .i_wrap= image_tag "features/multi_sources_icon.png", alt: "Your video sources", size: "229x180"
       %h3.title= "Your video sources"
       %p= "We provide the player, while you keep full control of your videos by maintaining the flexibility of using your preferred hosting and encoding service(s)."
     .spacer
@@ -189,7 +189,7 @@
   %section.real_time_stats.f
     .left
       %a.sublime.watch{ href: "" }
-        = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video"
+        = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video", size: "196x111"
         %span.play
       == <video class="sublime lightbox" width="640" height="360" poster="http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg" preload="none" style="display:none" data-uid="real-time-stats" data-name="Real-Time Statistics">
       ==   <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />

@@ -1,7 +1,5 @@
-#= require prototype
-#= require s2
 #= require detectmobilebrowser
-#= require jquery.transit
+#= require jquery.transit.min
 #= require jquery.slidify
 #= require home
 #= require why

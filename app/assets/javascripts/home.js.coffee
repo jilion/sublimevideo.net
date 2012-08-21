@@ -1,4 +1,3 @@
-
 jQuery(document).ready ->
   new SublimeVideo.Slideshow(4, 0.6) if jQuery('#features_slides').exists()
   (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
@@ -13,7 +12,7 @@ jQuery(document).ready ->
 class SublimeVideo.Slideshow
   constructor: (pause, speed) ->
     @pauseDuration = pause * 1000
-    @speed = speed
+    @speed = speed * 1000
     @slideShowWrapper = jQuery('body.home ul.slides')[0];
 
     @slideNames = []
@@ -31,7 +30,6 @@ class SublimeVideo.Slideshow
     jQuery.browser.msie
 
   hideElement: (element) ->
-    element = jQuery(element) # ensure we have a jQuery Element since there's also Prototype in this page...
     if this.isIE()
       element.hide()
     else
@@ -39,7 +37,6 @@ class SublimeVideo.Slideshow
       element.css(opacity: 0)
 
   showElement: (element) ->
-    element = jQuery(element) # ensure we have a jQuery Element since there's also Prototype in this page...
     if this.isIE()
       element.show()
     else
@@ -53,44 +50,24 @@ class SublimeVideo.Slideshow
 
   nextSlide: (index) ->
     if @activeBoxIndex isnt index
-      currentBox = $$(".slides li.#{@slideNames[@activeBoxIndex]}")[0]
-      nextBox = $$(".slides li.#{@slideNames[index]}")[0]
+      currentBox = jQuery(".slides li.#{@slideNames[@activeBoxIndex]}")
+      nextBox = jQuery(".slides li.#{@slideNames[index]}")
       if @timer and !this.isIE()
         # animation
-        @fadeInAnimation = new S2.FX.Morph currentBox,
-          duration: @speed
-          style: 'opacity:0'
-          after: =>
-            if @timer
-              currentBox.setStyle(zIndex: 'auto')
-              nextBox.setStyle(zIndex: 2)
-              this.updateActiveClasses(@slideNames[index])
-              @fadeOutAnimation.play()
-            else
-              currentBox.setOpacity(0)
-        @fadeOutAnimation = new S2.FX.Morph nextBox,
-          duration: @speed
-          style: 'opacity:1'
-
-        @fadeInAnimation.play()
+        currentBox.transition { opacity: 0 }, @speed, =>
+          currentBox.css('z-index': 'auto')
+          nextBox.css('z-index': 2)
+          this.updateActiveClasses(@slideNames[index])
+          nextBox.transition { opacity: 1 }, @speed
       else
-        # no timer or ie
-        if @fadeInAnimation
-          @fadeInAnimation.cancel()
-          @fadeInAnimation = null
-
-        if @fadeOutAnimation
-          @fadeOutAnimation.cancel()
-          @fadeOutAnimation = null
-
-        currentBox.setStyle(zIndex: 'auto')
+        currentBox.css('z-index': 'auto')
+        currentBox.removeAttr('style')
+        this.hideElement(currentBox)
 
         this.updateActiveClasses(@slideNames[index])
-        currentBox.removeAttribute('style')
-        this.hideElement(currentBox)
-        nextBox.removeAttribute('style')
+        nextBox.removeAttr('style')
+        nextBox.css('z-index': 2)
         this.showElement(nextBox)
-        nextBox.setStyle(zIndex: 2)
 
       @activeBoxIndex = index
 
@@ -104,12 +81,12 @@ class SublimeVideo.Slideshow
     jQuery('body.home .slides_nav a').each (index, element) =>
       element = jQuery(element)
       element.on 'click', (event) =>
+        event.preventDefault()
         if @timer
           clearInterval(@timer)
           @timer = null
-        index = @slideNames.indexOf(this.getBoxName(element))
+        index = jQuery.inArray(this.getBoxName(element), @slideNames)
         this.nextSlide(index)
-        event.preventDefault()
 
 class SublimeVideo.Quotes
   constructor: ->
@@ -117,7 +94,7 @@ class SublimeVideo.Quotes
 
   randomShow: ->
     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
-    @quotes[randomQuoteIndex].show()
+    jQuery(@quotes[randomQuoteIndex]).show()
 
 class SublimeVideo.NewsTicker
   constructor: (pause) ->

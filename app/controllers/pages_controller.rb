@@ -14,7 +14,7 @@ private
   def redirect_to_my
     if logged_in_cookie?
       if %w[login signup].include?(params[:p])
-        redirect_to "https://my.sublimevideo.net#{params[:p]}"
+        redirect_to "https://my.sublimevideo.net/#{params[:p]}"
       elsif params[:page] == 'help'
         redirect_to 'https://my.sublimevideo.net/help'
       end

@@ -1,6 +1,5 @@
 SublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.middleware.insert_before ActionDispatch::Static, Rack::Redirect
   config.middleware.insert_before Rack::Lock, Rack::LiveReload
   config.middleware.insert_before Rack::Lock, Rack::NoWWW
 

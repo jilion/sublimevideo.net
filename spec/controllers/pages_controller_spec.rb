@@ -24,7 +24,7 @@ describe PagesController do
     %w[login signup].each do |param|
       it "/?p=#{param} redirects" do
         get :show, page: 'home', p: param
-        response.should redirect_to("https://my.sublimevideo.net")
+        response.should redirect_to("https://my.sublimevideo.net/#{param}")
       end
     end
 

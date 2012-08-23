@@ -18,7 +18,20 @@ class PRConstraint
 end
 
 SublimeVideo::Application.routes.draw do
-  # Please also check Rack::Redirect middleware in lib/rack
+  # Redirects
+  get '/demo' => redirect('/features')
+  %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
+  %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
+
+  # Docs routes
+  %w[javascript-api releases].each do |path|
+    get path => redirect { |params, req| "http://docs.#{req.domain}/#{path}" }
+  end
+
+  # My routes
+  %w[privacy terms sites account].each do |path|
+    get path => redirect { |params, req| "https://my.sublimevideo.net/#{path}" }
+  end
 
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/433P3t1P2a1m202w2Y3D/content'), as: :press_kit

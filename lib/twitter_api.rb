@@ -1,7 +1,10 @@
+require_dependency 'configurator'
+
 module TwitterApi
   include Configurator
-  heroku_config_file 'twitter.yml'
-  heroku_config_accessor 'TWITTER', :consumer_key, :consumer_secret, :oauth_token, :oauth_token_secret
+
+  config_file 'twitter.yml'
+  config_accessor :consumer_key, :consumer_secret, :oauth_token, :oauth_token_secret
 
   class << self
 

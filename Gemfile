@@ -12,7 +12,7 @@ gem 'RedCloth'
 
 # Internals
 gem 'airbrake',  '~> 3.0.5'
-gem 'twitter',   '~> 2.1.0'
+gem 'twitter',   '~> 3.7.0'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged

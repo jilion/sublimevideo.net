@@ -23,11 +23,11 @@ module TweetsHelper
     options    = args.extract_options!
 
     if tweet.attrs
-      tweet_entities = tweet.attrs['entities'].to_options
+      tweet_entities = tweet.attrs[:entities].to_options
       indices_for_stripping = []
 
-      indices_for_stripping << tweet_entities[:user_mentions].map { |h| h['indices'] } if options[:strip_user_mentions]
-      indices_for_stripping << tweet_entities[:hashtags].map { |h| h['indices'] }      if options[:strip_hastags]
+      indices_for_stripping << tweet_entities[:user_mentions].map { |h| h[:indices] } if options[:strip_user_mentions]
+      indices_for_stripping << tweet_entities[:hashtags].map { |h| h[:indices] }      if options[:strip_hastags]
 
       # order indices array by indices descending and then slicing entities to remove
       indices_for_stripping.flatten(1).sort { |a, b| b[0] <=> a[0] }.each do |indices|

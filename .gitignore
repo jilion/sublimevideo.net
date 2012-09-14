@@ -14,3 +14,5 @@ vendor/ruby
 vendor/bundler
 !.bundle
 .env
+*.sublime-project
+!.sublime-project

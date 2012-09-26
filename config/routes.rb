@@ -12,7 +12,6 @@ class PRConstraint
     pages = Dir.glob('app/views/press_releases/*.html.haml').map { |p|
       p.match(%r(app/views/press_releases/(.*)\.html\.haml))[1]
     }
-    p pages
     pages.include?(request.params["page"])
   end
 end
@@ -28,9 +27,14 @@ SublimeVideo::Application.routes.draw do
     get path => redirect { |params, req| "http://docs.#{req.domain}/#{path}" }
   end
 
+  # Stats demo
+  %w[stats stats-demo].each do |path|
+    get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/stats-demo" }
+  end
+
   # My routes
   %w[privacy terms sites account].each do |path|
-    get path => redirect { |params, req| "https://my.sublimevideo.net/#{path}" }
+    get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/#{path}" }
   end
 
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false

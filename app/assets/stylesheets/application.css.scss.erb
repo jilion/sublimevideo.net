@@ -1,7 +1,7 @@
 @import "css3";
 
 body {
-  background:#ecf2f8 url(<%= asset_data_uri "back_texture.png" %>);
+  background:#ecf2f8 url(<%= asset_path "back_texture.png" %>);
 }
 
 /* ======== */
@@ -29,7 +29,7 @@ body {
   width:333px;
   height:51px;
   position:absolute;
-  background:url(<%= asset_data_uri "home/why_banner.png" %>) no-repeat;
+  background:url(<%= asset_path "home/why_banner.png" %>) no-repeat;
   top:40px;
   right:-20px;
   font-size:20px;
@@ -40,14 +40,14 @@ body {
   top:18px;
   left:175px;
   padding-right:25px;
-  background:url(<%= asset_data_uri "home/why_banner_arrow.png" %>) no-repeat 100% 80%;
+  background:url(<%= asset_path "home/why_banner_arrow.png" %>) no-repeat 100% 80%;
 }
 
 .home header .video_wrap {
   width:587px;
   height:352px;
   padding:40px 0 0 43px;
-  background:url(<%= asset_data_uri "home/player_shadow.png" %>) no-repeat;
+  background:url(<%= asset_path "home/player_shadow.png" %>) no-repeat;
   position:absolute;
   top:180px;
   left:0;
@@ -158,13 +158,13 @@ body {
 .home header .slides_nav a {
   display:block;
   float:left;
-  background:url(<%= asset_data_uri "home/features/nav_dot.png" %>) no-repeat;
+  background:url(<%= asset_path "home/features/nav_dot.png" %>) no-repeat;
   width:22px;
   height:22px;
   float:left;
 }
 
-.home header .slides_nav a.active {background:url(<%= asset_data_uri "home/features/nav_dot_active.png" %>) no-repeat;}
+.home header .slides_nav a.active {background:url(<%= asset_path "home/features/nav_dot_active.png" %>) no-repeat;}
 
 .home header .slides_nav a span {display:none}
 
@@ -175,21 +175,21 @@ body {
   color:#203658;
   padding-right:22px;
   text-shadow:rgba(255,255,255,0.2) 0 1px 0;
-  background:url(<%= asset_data_uri "home/feature_tour_arrow.png" %>) no-repeat 100% 50%;
+  background:url(<%= asset_path "home/feature_tour_arrow.png" %>) no-repeat 100% 50%;
 }
 
 #get_it_now {
   min-width:1000px;
   height:135px;
   padding:8px 0 0;
-  background:url(<%= asset_data_uri "home/get_it_now_middle_shadow_repeat.png" %>) no-repeat center top;
+  background:url(<%= asset_path "home/get_it_now_middle_shadow_repeat.png" %>) no-repeat center top;
   position:relative;
   top:-8px;
   z-index:4;
 }
 
 #get_it_now .texture {
-  background:url(<%= asset_data_uri "home/get_it_now_texture.png" %>) repeat-x;
+  background:url(<%= asset_path "home/get_it_now_texture.png" %>) repeat-x;
   height:125px;
 }
 
@@ -216,7 +216,7 @@ body {
   float:left;
   width:293px;
   height:125px;
-  background:url(<%= asset_data_uri "home/get_it_now_halo.png" %>) no-repeat;
+  background:url(<%= asset_path "home/get_it_now_halo.png" %>) no-repeat;
   position:relative;
   text-align:center;
   margin-left:-30px;
@@ -227,7 +227,7 @@ body {
   width:179px;
   height:45px;
   padding-top:11px;
-  background:url(<%= asset_data_uri "home/get_it_now_btn.png" %>) no-repeat;
+  background:url(<%= asset_path "home/get_it_now_btn.png" %>) no-repeat;
   color:#fff;
   font-family:inherit;
   font-size:29px;
@@ -258,7 +258,7 @@ body {
   display:block;
   width:173px;
   height:19px;
-  background:url(<%= asset_data_uri "home/and_never_look_back.png" %>) no-repeat;
+  background:url(<%= asset_path "home/and_never_look_back.png" %>) no-repeat;
   overflow:hidden;
   text-indent:-190px;
   float:left;
@@ -282,7 +282,7 @@ body {
 
 .home .showcase h4.custom_break {
   width:612px;
-  background:url(<%= asset_data_uri "home/they_use_sublime_break.png" %>) no-repeat 0 50%;
+  background:url(<%= asset_path "home/they_use_sublime_break.png" %>) no-repeat 0 50%;
   padding-left:293px;
   position:relative;
   left:55px;
@@ -379,12 +379,12 @@ body {
 
 .home .showcase a.view_all_showcases span {
   padding:0 22px 0 0;
-  background:url(<%= asset_data_uri "home/all_showcases_arrow.png" %>) no-repeat right 50%;
+  background:url(<%= asset_path "home/all_showcases_arrow.png" %>) no-repeat right 50%;
 }
 
 .home section.highlights {
   min-width:1000px;
-  background:url(<%= asset_data_uri "home/highlights/highlights_texture.png" %>) repeat-x 0 0;
+  background:url(<%= asset_path "home/highlights/highlights_texture.png" %>) repeat-x 0 0;
 /*  height:345px;*/
   text-shadow:rgba(255,255,255,0.5) 0 1px 0;
 }
@@ -408,11 +408,11 @@ body {
 }
 
 .home .highlights h4.custom_break.t1 {
-  background:url(<%= asset_data_uri "home/highlights/highlights_break_1.png" %>) no-repeat 0 50%;
+  background:url(<%= asset_path "home/highlights/highlights_break_1.png" %>) no-repeat 0 50%;
 }
 
 .home .highlights h4.custom_break.t2 {
-  background:url(<%= asset_data_uri "home/highlights/highlights_break_2.png" %>) no-repeat 0 50%;
+  background:url(<%= asset_path "home/highlights/highlights_break_2.png" %>) no-repeat 0 50%;
 }
 
 .home .highlights .wrap {
@@ -487,11 +487,11 @@ body {
 }
 
 .home .highlights li.new span.badge {
-  background:url(<%= asset_data_uri "home/highlights/new.png" %>) no-repeat 0 0;
+  background:url(<%= asset_path "home/highlights/new.png" %>) no-repeat 0 0;
 }
 
 .home .highlights li.demo span.badge {
-  background:url(<%= asset_data_uri "home/highlights/demo.png" %>) no-repeat 0 0;
+  background:url(<%= asset_path "home/highlights/demo.png" %>) no-repeat 0 0;
 }
 
 .home .highlights button.arrow {
@@ -509,12 +509,12 @@ body {
 }
 
 .home .highlights button.arrow.previous {
-  background:url(<%= asset_data_uri "home/highlights/previous_arrow.png" %>) no-repeat;
+  background:url(<%= asset_path "home/highlights/previous_arrow.png" %>) no-repeat;
   left:20px;
 }
 
 .home .highlights button.arrow.next {
-  background:url(<%= asset_data_uri "home/highlights/next_arrow.png" %>) no-repeat;
+  background:url(<%= asset_path "home/highlights/next_arrow.png" %>) no-repeat;
   right:20px;
 }
 
@@ -535,7 +535,7 @@ body {
   line-height:34px;
   font-weight:600;
   padding-right:27px;
-  background:url(<%= asset_data_uri "home/highlights/latest_news_arrow.png" %>) no-repeat 100% 55%;
+  background:url(<%= asset_path "home/highlights/latest_news_arrow.png" %>) no-repeat 100% 55%;
 }
 
 /* ======== */
@@ -674,11 +674,11 @@ body {
 }
 
 .why section.slide .section_banner.warning .wrap {
-  background:url(<%= asset_data_uri "why/warning_big_icon.png" %>) no-repeat 98.5% 50%;
+  background:url(<%= asset_path "why/warning_big_icon.png" %>) no-repeat 98.5% 50%;
 }
 
 .why section.slide .section_banner.play .wrap {
-  background:url(<%= asset_data_uri "why/play_big_icon.png" %>) no-repeat 98% 50%;
+  background:url(<%= asset_path "why/play_big_icon.png" %>) no-repeat 98% 50%;
 }
 
 .why section.slide .section_banner em {
@@ -787,7 +787,7 @@ body {
 .why section.slide a.banner_link span {
   display:block;
   line-height:23px;
-  background:url(<%= asset_data_uri "why/banner_arrow.png" %>) no-repeat 100% 50%;
+  background:url(<%= asset_path "why/banner_arrow.png" %>) no-repeat 100% 50%;
 }
 
 .why section.showcases {
@@ -857,12 +857,12 @@ body {
 }
 
 .why section.showcases button.arrow.previous {
-  background:url(<%= asset_data_uri "why/showcase_arrow_left.png" %>) no-repeat;
+  background:url(<%= asset_path "why/showcase_arrow_left.png" %>) no-repeat;
   left:0;
 }
 
 .why section.showcases button.arrow.next {
-  background:url(<%= asset_data_uri "why/showcase_arrow_right.png" %>) no-repeat;
+  background:url(<%= asset_path "why/showcase_arrow_right.png" %>) no-repeat;
   right:0;
 }
 
@@ -877,7 +877,7 @@ body {
   font-size:18px;
   font-weight:600;
   padding-right:22px;
-  background:url(<%= asset_data_uri "why/showcase_link_arrow.png" %>) no-repeat 100% 50%;
+  background:url(<%= asset_path "why/showcase_link_arrow.png" %>) no-repeat 100% 50%;
 /*  border-bottom: 1px solid #81BBFC;*/
 }
 
@@ -1041,7 +1041,7 @@ body {
   left:0;
   width:320px;
   height:188px;
-  background:url(<%= asset_data_uri "features/lightbox_thumb_overlay.png" %>) no-repeat;
+  background:url(<%= asset_path "features/lightbox_thumb_overlay.png" %>) no-repeat;
 }
 
 .features section.lightbox a.zoomable .magnifying_glass {
@@ -1051,7 +1051,7 @@ body {
   right:15px;
   width:50px;
   height:49px;
-  background:url(<%= asset_data_uri "features/lightbox_magnifying_glass.png" %>) no-repeat;
+  background:url(<%= asset_path "features/lightbox_magnifying_glass.png" %>) no-repeat;
   opacity:0.5;
   filter:alpha(opacity=50);
   @include transition(opacity,0.3s,linear);
@@ -1225,7 +1225,7 @@ body {
   display:block;
   width:69px;
   height:69px;
-  background:url(<%= asset_data_uri "features/stats_video_play_button.png" %>) no-repeat;
+  background:url(<%= asset_path "features/stats_video_play_button.png" %>) no-repeat;
   position:absolute;
   top:0;
   left:0;
@@ -1268,7 +1268,7 @@ body {
 
 .features section.f a.button span {
   padding:2px 24px 4px 0;
-  background:url(<%= asset_data_uri "features/live_button_arrow.png" %>) no-repeat 100% 49%;
+  background:url(<%= asset_path "features/live_button_arrow.png" %>) no-repeat 100% 49%;
 }
 
 .features section.video_code_generator {
@@ -1332,7 +1332,7 @@ body {
 }
 
 .plans #content {
-  background:url(<%= asset_data_uri "plans/plans_lights.png" %>) no-repeat center top;
+  background:url(<%= asset_path "plans/plans_lights.png" %>) no-repeat center top;
 }
 
 .plans .content_wrapper {
@@ -1375,7 +1375,7 @@ body {
 #plans li h3.title {
   width:296px;
   height:74px;
-  background:url(<%= asset_data_uri "plans/plan_banner_1.png" %>) no-repeat;
+  background:url(<%= asset_path "plans/plan_banner_1.png" %>) no-repeat;
   position:relative;
   left:-8px;
   margin-top:10px;
@@ -1388,7 +1388,7 @@ body {
 }
 
 #plans li.plus h3.title, #plans li.premium h3.title {
-  background:url(<%= asset_data_uri "plans/plan_banner_2.png" %>) no-repeat;
+  background:url(<%= asset_path "plans/plan_banner_2.png" %>) no-repeat;
 }
 
 #plans ul.features {
@@ -1398,7 +1398,7 @@ body {
 
 #plans ul.features li {
   padding:13px 0;
-  background:url(<%= asset_data_uri "plans/features_break.png" %>) no-repeat center bottom;
+  background:url(<%= asset_path "plans/features_break.png" %>) no-repeat center bottom;
 }
 
 #plans ul.features li .icon {
@@ -1411,10 +1411,10 @@ body {
   background-repeat:no-repeat;
 }
 
-#plans ul.features li.plays .icon {background-image:url(<%= asset_data_uri "plans/plays_icon.png" %>)}
-#plans ul.features li.stats .icon {background-image:url(<%= asset_data_uri "plans/stats_icon.png" %>)}
-#plans ul.features li.support .icon {background-image:url(<%= asset_data_uri "plans/support_icon.png" %>)}
-#plans ul.features li.ssl .icon {background-image:url(<%= asset_data_uri "plans/ssl_icon.png" %>)}
+#plans ul.features li.plays .icon {background-image:url(<%= asset_path "plans/plays_icon.png" %>)}
+#plans ul.features li.stats .icon {background-image:url(<%= asset_path "plans/stats_icon.png" %>)}
+#plans ul.features li.support .icon {background-image:url(<%= asset_path "plans/support_icon.png" %>)}
+#plans ul.features li.ssl .icon {background-image:url(<%= asset_path "plans/ssl_icon.png" %>)}
 
 #plans ul.features li .right {
   float:left;
@@ -1462,7 +1462,7 @@ body {
 #plans .pricing .monthly {
   width:140px;
   padding-right:2px;
-  background:url(<%= asset_data_uri "plans/pricing_box_break.png" %>) no-repeat right bottom;
+  background:url(<%= asset_path "plans/pricing_box_break.png" %>) no-repeat right bottom;
 }
 
 #plans .pricing .box strong.price {
@@ -1515,7 +1515,7 @@ body {
   width:185px;
   height:43px;
   padding-top:9px;
-  background-image:url(<%= asset_data_uri "plans/signup_back.png" %>);
+  background-image:url(<%= asset_path "plans/signup_back.png" %>);
   position:static;
   top:auto;
   left:auto;
@@ -1547,7 +1547,7 @@ body {
 .plans h4.custom_break {
   text-align:center;
   padding:30px 0;
-  background:url(<%= asset_data_uri "plans/they_use_sublime_break.png" %>) no-repeat center;
+  background:url(<%= asset_path "plans/they_use_sublime_break.png" %>) no-repeat center;
   color:#7690b3;
   font-size:14px;
   font-weight:normal;
@@ -1625,7 +1625,7 @@ body {
 .help span.life_belt {
   width:253px;
   height:253px;
-  background:url(<%= asset_data_uri "help/sublimevideo_life_belt.png" %>) no-repeat;
+  background:url(<%= asset_path "help/sublimevideo_life_belt.png" %>) no-repeat;
   position:absolute;
   top:-156px;
   left:-14px;
@@ -1736,7 +1736,7 @@ body {
 .customer-showcase header p.sub a {
   color:#cee6ff;
   padding-right:30px;
-  background:url(<%= asset_data_uri "showcase/header_link_arrow.png" %>) no-repeat right 10px;
+  background:url(<%= asset_path "showcase/header_link_arrow.png" %>) no-repeat right 10px;
 }
 
 .customer-showcase #content {
@@ -1756,7 +1756,7 @@ body {
 
 .customer-showcase section.showcase li {
   padding:50px 0 70px;
-  background:url(<%= asset_data_uri "showcase/showcase_breakline.png" %>) no-repeat center bottom;
+  background:url(<%= asset_path "showcase/showcase_breakline.png" %>) no-repeat center bottom;
   position:relative;
 }
 
@@ -1775,7 +1775,7 @@ body {
   font-size:16px;
   font-weight:600;
   padding-right:22px;
-  background:url(<%= asset_data_uri "showcase/showcase_arrow.png" %>) no-repeat right 3px;
+  background:url(<%= asset_path "showcase/showcase_arrow.png" %>) no-repeat right 3px;
 }
 
 .customer-showcase section.showcase li blockquote {
@@ -1821,7 +1821,7 @@ body {
   color:#7690b3;
   font-weight:600;
   padding-right:22px;
-  background:url(<%= asset_data_uri "showcase/view_all_arrow.png" %>) no-repeat 100% center;
+  background:url(<%= asset_path "showcase/view_all_arrow.png" %>) no-repeat 100% center;
 }
 
 .customer-showcase p.view_all a.showcase {
@@ -1833,7 +1833,7 @@ body {
   width:330px;
   float:left;
   margin-top:65px;
-  background:url(<%= asset_data_uri "showcase/twitter_list_back.png" %>) no-repeat;
+  background:url(<%= asset_path "showcase/twitter_list_back.png" %>) no-repeat;
 }
 
 .customer-showcase section.twitter_love h3.title {
@@ -1843,7 +1843,7 @@ body {
   text-align:center;
   padding:90px 0 0;
   margin:40px 0 20px;
-  background:url(<%= asset_data_uri "showcase/twitter_bird.png" %>) no-repeat center top;
+  background:url(<%= asset_path "showcase/twitter_bird.png" %>) no-repeat center top;
 }
 
 .customer-showcase section.twitter_love ul {
@@ -1874,7 +1874,7 @@ body {
   display:block;
   width:12px;
   height:8px;
-  background:url(<%= asset_data_uri "showcase/twitter_quote_arrow_bottom.png" %>) no-repeat;
+  background:url(<%= asset_path "showcase/twitter_quote_arrow_bottom.png" %>) no-repeat;
   position:absolute;
   bottom:-8px;
   left:22px;
@@ -2036,7 +2036,7 @@ body {
   position:absolute;
   top:0;
   left:0;
-  background:url(<%= asset_data_uri 'features/lightbox_magnifying_glass.png' %>) no-repeat bottom right;
+  background:url(<%= asset_path 'features/lightbox_magnifying_glass.png' %>) no-repeat bottom right;
   opacity:0.3;
   @include transition(opacity,0.25s,linear);
 }
@@ -2103,7 +2103,7 @@ body {
   display:block;
   width:144px;
   height:81px;
-  background:url(<%= asset_data_uri "features/playlist_play_icon.png" %>) no-repeat center;
+  background:url(<%= asset_path "features/playlist_play_icon.png" %>) no-repeat center;
   background-color:rgba(0,0,0,0.6);
   position:absolute;
   top:0;
@@ -2156,7 +2156,7 @@ body {
 
 .demo #stats_demo .left a.button span {
   padding:2px 24px 4px 0;
-  background:url(<%= asset_data_uri "demo/live_button_arrow.png" %>) no-repeat 100% 49%;
+  background:url(<%= asset_path "demo/live_button_arrow.png" %>) no-repeat 100% 49%;
 }
 
 .demo #stats_demo .right a.watch {
@@ -2183,7 +2183,7 @@ body {
   display:block;
   width:69px;
   height:69px;
-  background:url(<%= asset_data_uri "demo/stats_video_play_button.png" %>) no-repeat;
+  background:url(<%= asset_path "demo/stats_video_play_button.png" %>) no-repeat;
   position:absolute;
   top:0;
   left:0;
@@ -2208,11 +2208,11 @@ body {
 
 .demo #content #features ul li {
   padding:0 0 0 20px;
-  background:url(<%= asset_data_uri "menu_bullet_active.png" %>) no-repeat 0 10px;
+  background:url(<%= asset_path "menu_bullet_active.png" %>) no-repeat 0 10px;
 }
 
 .demo #content #features ul li ul li {
-  background:url(<%= asset_data_uri "menu_bullet.png" %>) no-repeat 0 10px;
+  background:url(<%= asset_path "menu_bullet.png" %>) no-repeat 0 10px;
 }
 
 .demo #content #features ul li strong {
@@ -2329,7 +2329,7 @@ body {
 .news #content .break {
   width:580px;
   height:21px;
-  background:url(<%= asset_data_uri "news/break.png" %>) no-repeat;
+  background:url(<%= asset_path "news/break.png" %>) no-repeat;
   margin-top:30px;
 }
 
@@ -2358,7 +2358,7 @@ body {
 
 .news ul.news li {
   padding-left:60px;
-  background:url(<%= asset_data_uri "news/news_icon.png" %>) no-repeat 0 center;
+  background:url(<%= asset_path "news/news_icon.png" %>) no-repeat 0 center;
 }
 
 .news .read_more {
@@ -2383,12 +2383,12 @@ body {
   font-size:21px;
   font-weight:600;
   padding-right:24px;
-  background:url(<%= asset_data_uri "showcase/showcase_arrow.png" %>) no-repeat right 50%;
+  background:url(<%= asset_path "showcase/showcase_arrow.png" %>) no-repeat right 50%;
 }
 
 .news ul.press_releases li {
   padding-left:60px;
-  background:url(<%= asset_data_uri "news/press_icon.png" %>) no-repeat 0 center;
+  background:url(<%= asset_path "news/press_icon.png" %>) no-repeat 0 center;
 }
 
 .news ul.press_releases a {
@@ -2415,11 +2415,11 @@ body {
   background-repeat:no-repeat;
 }
 
-.news ul.articles li.tnw span.icon {background-image:url(<%= asset_data_uri "news/logos/tnw.png" %>)}
-.news ul.articles li.techcrunch span.icon {background-image:url(<%= asset_data_uri "news/logos/techcrunch.png" %>)}
-.news ul.articles li.rww span.icon {background-image:url(<%= asset_data_uri "news/logos/rww.png" %>)}
-.news ul.articles li.wired span.icon {background-image:url(<%= asset_data_uri "news/logos/wired.png" %>)}
-.news ul.articles li.df span.icon {background-image:url(<%= asset_data_uri "news/logos/daringfireball.png" %>)}
+.news ul.articles li.tnw span.icon {background-image:url(<%= asset_path "news/logos/tnw.png" %>)}
+.news ul.articles li.techcrunch span.icon {background-image:url(<%= asset_path "news/logos/techcrunch.png" %>)}
+.news ul.articles li.rww span.icon {background-image:url(<%= asset_path "news/logos/rww.png" %>)}
+.news ul.articles li.wired span.icon {background-image:url(<%= asset_path "news/logos/wired.png" %>)}
+.news ul.articles li.df span.icon {background-image:url(<%= asset_path "news/logos/daringfireball.png" %>)}
 
 .news section.awards {
   width:290px;
@@ -2437,7 +2437,7 @@ body {
   text-align:center;
   color:#7690B3;
   padding:65px 0 0;
-  background:url(<%= asset_data_uri "news/award_icon.png" %>) no-repeat center top;
+  background:url(<%= asset_path "news/award_icon.png" %>) no-repeat center top;
 }
 
 .news section.awards ul {
@@ -2462,7 +2462,7 @@ body {
 .news #content section.awards li a.read_more {
   color:#1185ff;
   padding-right:14px;
-  background:url(<%= asset_data_uri "news/small_blue_arrow.png" %>) no-repeat right 9px;
+  background:url(<%= asset_path "news/small_blue_arrow.png" %>) no-repeat right 9px;
 }
 
 .news .press_kit {
@@ -2488,7 +2488,7 @@ body {
 
 .news .press_kit a.button span {
   padding:2px 40px 4px 0;
-  background:url(<%= asset_data_uri "news/download_icon.png" %>) no-repeat 100% 50%;
+  background:url(<%= asset_path "news/download_icon.png" %>) no-repeat 100% 50%;
 }
 
 .news .press_kit p.desc {
@@ -2578,7 +2578,7 @@ body {
   width:895px;
   height:21px;
   margin:0 auto;
-  background:url(<%= asset_data_uri "big_break.png" %>);
+  background:url(<%= asset_path "big_break.png" %>);
 }
 
 .sign_up_box {

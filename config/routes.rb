@@ -19,6 +19,7 @@ end
 SublimeVideo::Application.routes.draw do
   # Redirects
   get '/demo' => redirect('/features')
+  get '/pricing' => redirect('/plans')
   %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
   %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
 

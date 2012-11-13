@@ -99,6 +99,11 @@ feature "Com Pages" do
       current_url.should eq "http://sublimevideo.dev/features"
     end
 
+    scenario '/pricing redirects to /plans' do
+      visit '/pricing'
+      current_url.should eq "http://sublimevideo.dev/plans"
+    end
+
     %w[signup sign_up register].each do |path|
       scenario "/#{path} redirects to /?p=signup" do
         visit "/#{path}"

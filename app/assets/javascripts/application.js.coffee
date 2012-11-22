@@ -11,7 +11,7 @@ jQuery.fn.exists = -> @length > 0
 
 jQuery(document).ready ->
   SublimeVideo.yourBrowserIsTheBest()
-  SublimeVideo.scrollingLinks()
+  # SublimeVideo.scrollingLinks()
 
 SublimeVideo.yourBrowserIsTheBest = ->
   if (browsersBox = jQuery('#browsers_box')).exists()
@@ -26,10 +26,10 @@ SublimeVideo.yourBrowserIsTheBest = ->
       browsersBox.addClass 'opera'
     else # default IE
 
-SublimeVideo.scrollingLinks = ->
-  jQuery("ul.scroll_links li a").each ->
-    el = jQuery(this)
-    el.click (event) =>
-      jQuery('html, body').animate({
-        scrollTop: jQuery(el.attr('href')).offset().top
-      }, 300)
+# SublimeVideo.scrollingLinks = ->
+#   jQuery("ul.scroll_links li a").each ->
+#     el = jQuery(this)
+#     el.click (event) =>
+#       jQuery('html, body').animate({
+#         scrollTop: jQuery(el.attr('href')).offset().top
+#       }, 300)

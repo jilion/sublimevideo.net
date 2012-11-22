@@ -1,59 +1,61 @@
 = content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
 
 = content_for :header do
-  %h2
-    = link_to "/why" do
-      %strong= "The Web's Most Reliable HTML5 Video Player"
-      %span.banner
-        %span.text
-          = "Learn Why"
 
-  .video_wrap
-    %video#home_video.sublime{ width: "544", height: "306", poster: image_path("home/poster_frame.jpg"), preload: "none", "data-sublime-settings" => "initial-overlay:none", "data-uid" => "home", "data-name" => "Home" }
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_720p.mp4" data-quality="hd" />
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_720p.webm" data-quality="hd" />
-    #video_credits{ style: "display:none" }
-      = "Video by "
-      = link_to "Joe Capra.", "http://scientifantastic.com", onclick: "window.open(this); return false"
-  .right
-    %ul.slides#features_slides
-      %li.always_up_to_date.active{style: "z-index:2"}
-        %h3= "Always Up-To-Date"
-        = link_to (image_tag "home/features/always_up_to_date.png", alt: "Always Up-To-Date", size: "239x173"), page_path('features', anchor: 'always_up_to_date')
-      %li.html5_flash{style: "display:none"}
-        %h3= "Universal compatibility"
-        = link_to (image_tag "home/features/html5_flash.png", alt: "Universal compatibility", size: "219x125"), page_path('features', anchor: 'consistent_ui')
-      %li.works_in_any_browsers{style: "display:none"}
-        %h3= "Works in any browser"
-        = link_to (image_tag "home/features/browsers/default.png", alt: "Works in any browser", size: "300x100"), page_path('features', anchor: 'works_everywhere'), id: "browsers_box"
-      %li.works_on_any_devices{style: "display:none"}
-        %h3= "Works on all mobile devices"
-        = link_to (image_tag "home/features/any_devices.png", alt: "Works on all mobile devices", size: "211x144"), page_path('features', anchor: 'works_everywhere')
-      %li.stats{style: "display:none"}
-        %h3= "Real-Time Statistics"
-        = link_to (image_tag "home/features/stats.png", alt: "Real-Time Statistics", size: "239x173"), page_path('features', anchor: 'real_time_stats')
-      %li.instant_setup{style: "display:none"}
-        = link_to (image_tag "home/features/instant_setup.png", alt: "Instant setup & easy integration", size: "167x185"), page_path('features', anchor: 'instant_setup')
-        %h3.t1= "Instant setup"
-        %h3.t2= "Easy integration"
-    .slides_nav
-      = link_to "", class: "always_up_to_date active" do
-        %span= "Always Up-To-Date"
-      = link_to "", class: "html5_flash" do
-        %span= "Universal compatibility"
-      = link_to "", class: "works_in_any_browsers" do
-        %span= "Works in any browsers"
-      = link_to "", class: "works_on_any_devices" do
-        %span= "Works on any devices"
-      = link_to "", class: "stats" do
-        %span= "Real-time Statistics"
-      = link_to "", class: "instant_setup" do
-        %span= "Instant Setup"
-    = link_to "Feature Tour", page_path('features'), class: "feature_tour"
+  #slides
+    .slide.s_1.active
+      .s_wrap
+        %h2= "The HTML5 Video Age Finally Starts Now"
+        %p.desc
+          = "Introducing SublimeVideo Horizon,"
+          %br
+          = "the Framework that finally sparks the HTML5 Video revolution, by enabling full visual freedom and features modularity,"
+          = "working perfectly on any device."
+        = link_to "", class: "learn_more" do
+          = "Learn more"
+          %span.icon-arrow
+    .slide.s_2
+      .s_wrap
+        %h2
+          = "Start Assembling Your Player!"
+          %span.beta= "Beta"
+        %p.desc= "Introducing the new & modular SublimeVideo player for everyone, powered by SublimeVideo Horizon™"
+        = link_to "", class: "learn_more" do
+          = "Learn more"
+          %span.icon-arrow
+    .slide.s_3
+      .s_wrap
+        %h2= "No limits, Just Draw your Player"
+        %p.desc
+          = "Web agencies and IT companies: Join our Partnership Program to provide your customers with ultimate branded players working perfectly on any device, powered by SublimeVideo Horizon™."
+          = link_to "" do
+            = "Learn more"
+            %span.icon-arrow
+  #home_video
+    .v_shadow
+    = link_to "", class: "sublime" do
+      = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb"
+      %span.overlay
+      %span.play
+        
 
 = content_for :middle do
+  .selectors_wrap
+    .left.side_bg.col><
+    %ul.selectors.col><
+      %li.s_1.active
+        .l
+        = link_to "SublimeVideo Horizon Powerful HTML5 Video Foundations", ""
+        .r
+      %li.s_2
+        .l
+        = link_to "The New & Modular SublimeVideo Player for everyone", ""
+        .r
+      %li.s_3
+        .l
+        = link_to "Tailor-Made SublimeVideo Players for enterprise", ""
+        .r
+    .right.side_bg.col><
   %section#get_it_now
     .texture
       .wrap

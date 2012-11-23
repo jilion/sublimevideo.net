@@ -60,38 +60,80 @@
     .texture
       .wrap
         %h3
-          = "Now"
-          %span= "Free & Unlimited"
+          = "SublimeVideo Player"
+          %span= "Starts Free"
         .button_wrap
           = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button"
-          = link_to "see all plans", page_path('plans'), class: "small"
-        %em.never_look_back= "And never look back!"
-
+        = link_to "", class: "youtube" do
+          = "Now with"
+          = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
+          = "integration!"
+%section.tailor_made
+  %h4.custom_break= "Horizon Tailor-Made Players Showcases"
+  %ul.demos
+    %li.demo.d_1
+      .video_wrap
+        = image_tag "home/showcase/players/twit_player.jpg", size: "480x270"
+      .desc
+        %h3= "TWiT.TV"
+        %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+      .spacer
+  %ul.demo_switch
+    %li.active= link_to (image_tag "home/showcase/players/twit_logo@2x.png", size: "114x53"), ""
+    %li= link_to "", ""
+    %li= link_to "", ""
+  = link_to "", class: "need_a_player" do
+    = "Need a tailor-made player?"
+    %span.icon-arrow
+  .spacer
 %section.showcase
   %h4.custom_break= "They use SublimeVideo"
   %table.logos
     %tr
-      %td= link_to (image_tag "home/logos/littlebigplanet.png", alt: "Little Big Planet", size: "96x66"), "http://blog.jilion.com/2011/04/15/customer-showcase-media-molecule-littlebigplanet2"
-      %td= link_to (image_tag "home/logos/twit_tv.png", alt: "Twit.tv", size: "107x48"), "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community"
+      %td= image_tag "home/logos/activision.png", alt: "Activision", size: "110x27"
+      %td
+        -#= image_tag "home/logos/bigcartel.png", alt: "Big Cartel", size: "87x22"
+      %td= image_tag "home/logos/bredbandsbolaget.png", alt: "Bredbandsbolaget", size: "94x35"
     %tr
-      %td= link_to (image_tag "home/logos/taptaptap.png", alt: "Tap Tap Tap", size: "125x31"), "http://blog.jilion.com/2011/06/01/customer-showcase-camera-plus"
-      %td= link_to (image_tag "home/logos/tetrapak.png", alt: "Tetra Pak", size: "65x60"), "http://blog.jilion.com/2011/06/28/customer-showcase-tetra-pak"
+      %td= image_tag "home/logos/ford.png", alt: "Ford", size: "71x30"
+      %td= image_tag "home/logos/jingit.png", alt: "Jingit", size: "74x24"
+      %td= image_tag "home/logos/nissan.png", alt: "Nissan", size: "47x41"
     %tr
-      %td= link_to (image_tag "home/logos/bigcartel.png", alt: "Big Cartel", size: "118x30"), "http://blog.jilion.com/2011/04/26/customer-showcase-big-cartel"
-      %td= link_to (image_tag "home/logos/bredbandsbolaget.png", alt: "Bredbandsbolaget", size: "124x47"), "http://blog.jilion.com/2011/09/27/customer-showcase-bredbandsbolaget"
+      %td= image_tag "home/logos/npr.png", alt: "Npr", size: "72x27"
+      %td= image_tag "home/logos/qualcomm.png", alt: "Qualcomm", size: "106x24"
+      %td= image_tag "home/logos/ralph_lauren.png", alt: "Ralph Lauren", size: "108x13"
     %tr
-      %td= link_to (image_tag "home/logos/method_and_craft.png", alt: "Method & Craft", size: "67x54"), "http://blog.jilion.com/2011/04/18/customer-showcase-method-and-craft"
-      %td= link_to (image_tag "home/logos/rock_am_ring.png", alt: "Rock Am Ring", size: "112x26"), "http://blog.jilion.com/2011/07/22/customer-showcase-rock-am-ring"
-  .quote.mediamolecule{ style: 'display:none;' }
-    = image_tag "home/showcase/tom_kiss.png", alt: "Tom Kiss", size: "219x341"
-    %blockquote= raw "&ldquo;SublimeVideo allowed us to deliver our videos to a much wider audience&rdquo;"
-    %p.author
-      = "Tom Kiss, Designer at"
-      %br
-      = "Media Molecule - part of Sony Computer Entertainment"
-    = link_to page_path('customer-showcase'), class: "view_all_showcases" do
-      %span= "View showcases"
-  .quote.katabatic{ style: 'display:none;' }
+      %td= image_tag "home/logos/rockamring.png", alt: "Rock Am Ring", size: "98x24"
+      %td= image_tag "home/logos/sony.png", alt: "Sony", size: "85x17"
+      %td= image_tag "home/logos/spyder.png", alt: "Spyder", size: "87x17"
+    %tr
+      %td= image_tag "home/logos/taptaptap.png", alt: "tap tap tap", size: "109x27"
+      %td= image_tag "home/logos/tetrapak.png", alt: "Tetrapak", size: "50x46"
+      %td= image_tag "home/logos/twit.png", alt: "TWiT.TV", size: "43x53"
+      -# %td= image_tag "home/logos/littlebigplanet.png", alt: "Little Big Planet", size: "77x56"
+  -#%table.logos
+  -#  %tr
+  -#    %td= link_to (image_tag "home/logos/littlebigplanet.png", alt: "Little Big Planet", size: "96x66"), "http://blog.jilion.com/2011/04/15/customer-showcase-media-molecule-littlebigplanet2"
+  -#    %td= link_to (image_tag "home/logos/twit_tv.png", alt: "Twit.tv", size: "107x48"), "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community"
+  -#  %tr
+  -#    %td= link_to (image_tag "home/logos/taptaptap.png", alt: "Tap Tap Tap", size: "125x31"), "http://blog.jilion.com/2011/06/01/customer-showcase-camera-plus"
+  -#    %td= link_to (image_tag "home/logos/tetrapak.png", alt: "Tetra Pak", size: "65x60"), "http://blog.jilion.com/2011/06/28/customer-showcase-tetra-pak"
+  -#  %tr
+  -#    %td= link_to (image_tag "home/logos/bigcartel.png", alt: "Big Cartel", size: "118x30"), "http://blog.jilion.com/2011/04/26/customer-showcase-big-cartel"
+  -#    %td= link_to (image_tag "home/logos/bredbandsbolaget.png", alt: "Bredbandsbolaget", size: "124x47"), "http://blog.jilion.com/2011/09/27/customer-showcase-bredbandsbolaget"
+  -#  %tr
+  -#    %td= link_to (image_tag "home/logos/method_and_craft.png", alt: "Method & Craft", size: "67x54"), "http://blog.jilion.com/2011/04/18/customer-showcase-method-and-craft"
+  -#    %td= link_to (image_tag "home/logos/rock_am_ring.png", alt: "Rock Am Ring", size: "112x26"), "http://blog.jilion.com/2011/07/22/customer-showcase-rock-am-ring"
+  -# .quote.mediamolecule{ style: 'display:none;' }
+  -#   = image_tag "home/showcase/tom_kiss.png", alt: "Tom Kiss", size: "219x341"
+  -#   %blockquote= raw "&ldquo;SublimeVideo allowed us to deliver our videos to a much wider audience&rdquo;"
+  -#   %p.author
+  -#     = "Tom Kiss, Designer at"
+  -#     %br
+  -#     = "Media Molecule - part of Sony Computer Entertainment"
+  -#   = link_to page_path('customer-showcase'), class: "view_all_showcases" do
+  -#     %span= "View showcases"
+  .quote.katabatic
     = image_tag "home/showcase/emery_wells.png", alt: "Emery Wells", size: "271x343"
     %blockquote= raw "&ldquo;SublimeVideo ensures our videos look beautiful on any browser.&rdquo;"
     %p.author

@@ -1,6 +1,6 @@
 jQuery(document).ready ->
   new SublimeVideo.Slideshow(10) if jQuery('#slides').exists()
-  (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
+  # (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
   if jQuery('section.highlights').exists()
     jQuery('section.highlights ul').slidify
       visibleSlides: 3
@@ -45,58 +45,14 @@ class SublimeVideo.Slideshow
           @timer = null
         this.showNext(index)
 
-  # hideElement: (element) ->
-  #   element.hide()
-  # 
-  # showElement: (element) ->
-  #   element.show()
-  # 
-  # getBoxName: (element) ->
-  #   element.attr('class').replace(/(box|active|\s)/gi, '')
-  # 
-  # startTimer: ->
-  #   @timer = setInterval((=> this.nextSlide((@activeBoxIndex + 1) % @slideNames.length)), @pauseDuration)
-  # 
-  # nextSlide: (index) ->
-  #   if @activeBoxIndex isnt index
-  #     currentBox = jQuery(".slides li.#{@slideNames[@activeBoxIndex]}")
-  #     nextBox = jQuery(".slides li.#{@slideNames[index]}")
-  # 
-  #     currentBox.css('z-index': 'auto')
-  #     currentBox.removeAttr('style')
-  #     this.hideElement(currentBox)
-  # 
-  #     this.updateActiveClasses(@slideNames[index])
-  #     nextBox.removeAttr('style')
-  #     nextBox.css('z-index': 2)
-  #     this.showElement(nextBox)
-  # 
-  #     @activeBoxIndex = index
-  # 
-  # updateActiveClasses: (name) ->
-  #   jQuery("body.home .slides li.active").removeClass 'active'
-  #   jQuery("body.home .slides_nav a").removeClass 'active'
-  #   jQuery("body.home .slides li.#{name}").addClass 'active'
-  #   jQuery("body.home .slides_nav a.#{name}").addClass 'active'
-  # 
-  # setupObservers: ->
-  #   jQuery('body.home .slides_nav a').each (index, element) =>
-  #     element = jQuery(element)
-  #     element.on 'click', (event) =>
-  #       event.preventDefault()
-  #       if @timer
-  #         clearInterval(@timer)
-  #         @timer = null
-  #       index = jQuery.inArray(this.getBoxName(element), @slideNames)
-  #       this.nextSlide(index)
 
-class SublimeVideo.Quotes
-  constructor: ->
-    @quotes = jQuery("section.showcase .quote")
-
-  randomShow: ->
-    randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
-    jQuery(@quotes[randomQuoteIndex]).show()
+# class SublimeVideo.Quotes
+#   constructor: ->
+#     @quotes = jQuery("section.showcase .quote")
+# 
+#   randomShow: ->
+#     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
+#     jQuery(@quotes[randomQuoteIndex]).show()
 
 class SublimeVideo.NewsTicker
   constructor: (pause) ->

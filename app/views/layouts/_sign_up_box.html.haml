@@ -1,5 +1,5 @@
 .sign_up_box
-  %h4= "Add SublimeVideo to your site for free today."
-  %h5= "30-day Unlimited Free Trial. Get all the features. No credit card required."
+  %h4= "Use SublimeVideo in your site for free today."
+  -# %h5= "30-day Unlimited Free Trial. Get all the features. No credit card required."
   .button_wrap
     = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button sign_up_btn"

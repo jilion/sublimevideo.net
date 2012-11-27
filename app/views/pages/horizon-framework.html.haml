@@ -1,0 +1,173 @@
+= content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
+- @page_title = "Horizon Framework"
+- @body_class = "horizon"
+
+= content_for :header do
+  %h2= "SublimeVideo Horizon HTML5 Video Framework"
+  %p.sub= "Here is an overview of SublimeVideo Horizon's technology, why we built it and what we plan to do with it."
+
+%ul.section_anchors
+  %li= link_to "Origin", "#origin"
+  %li= link_to "Technology", "#technology"
+  %li= link_to "Roadmap", "#roadmap"
+.spacer
+.big_break
+
+.big_video
+  -# video tag here
+  = link_to "", class: "overlay" do
+    = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon"
+    %span.overlay
+.main_copy
+  :textile
+  
+    h3. Origin and motivations for building the SublimeVideo Horizon Framework
+    
+    h4. One first goal already achieved: Reliable Video Play in any browser and device
+  
+    Before Horizon, we "just" had one player. The SublimeVideo HTML5 Video Player.
+    It was great because it was very reliable. In fact we believe it was the most web page friendly HTML5 video player out there, as we spent tons of time ensuring nothing would break when you used it into any of your page. Not an easy task for an HTML5 Video player without iFrame.
+
+    It was unique on the market in really fulfilling our philosophy of providing any Web site with a simple and true Plug-and-Play solution to have videos playing anywhere without having to care about the big on-going transition from Flash to HTML5.
+
+    So yes, our mighty HTML5 Video player was doing his job, playing videos most of the time, updating it itself thanks to its Cloud service nature, yet another unique feature.
+
+    You could literally sleep on it like you slept on your Flash player before, without having to worry about it.
+    We were therefore able to rightfully tick the "A. Reliability" check box. That was nice, but that was not enough!
+    
+    h4. Second and third major goals to achieve: Features Extensibility and Design Freedom
+    
+    While reliable, our player was limited in two other important dimensions, namely Features Extensibility and Design Freedom.
+
+    The former player architecture, was not designed to accommodate new features easily, neither to be visually modified to reflect the most demanding needs of potentially thousands of different Web Publishers out there.
+
+    We had to find a way to break those barriers. And it's worth noting by the way that no-one else had broke free from those limitations while keeping broad browsers compatibility. It was really in our view the next frontier to surpass for everybody!
+
+    Something had to be done! That's why we created Horizon. We wanted to have...
+    
+    h4(headline). The Technology to build any player, possibly thousands of different players! With no limitations and no compromises on quality.
+
+  .big_break
+
+  :textile
+    h3. A ground-breaking HTML5 Video Framework Technology
+    
+    h4. Tackling the Web Browsers technology support heterogeneity
+    
+    In order to a have a chance to reach the goal we set above, we had first to find a way to tackle the huge problem of devices, browsers and web technologies fragmentation.
+
+    There are so many different Web technologies implemented or available in various fashion in so many different Web browsing platforms today. For instance, just on the graphics front if you want to draw something, you have to choose between SVG, Canvas, CSS, VML, Flash or images. Those web technologies are in a way or another available, or not, in this or that platform. How can you deal with that fragmentation? What do you use to build a Web Application such as a Video player in such a heterogeneous context?
+
+    It's often a nightmare.
+    
+    h4. The Solution?
+    
+    We came to the conclusion we should build a Framework that could hide all this complexity and heterogeneity from the developer. Such Framework should have the following characteristics:
+
+    * *Abstraction* - It shall provide a new level of abstraction that would hide all the complexity of various Web technologies, meaning the developer should not care anymore what Web technology to use to have his player running on any browsing platform.
+
+    * *Single codebase* - It should provide the developer or the designer with a simple and unique way to program his player using JavaScript just once; meaning a single codebase that would work on absolutely any platform, whether desktop or touch, without any modification or hack! Simply the Holy Grail for any developers!
+
+    * *Technologies harmonization* - It should know and use automatically and transparently, every appropriate technology on any browser to perform any action it needs to, such as drawing a button, playing a video, absolutely any action and with absolutely no limitations, from the old IE6 to modern tablets such as the Nexus or the iPad.
+
+    * *Fully Modular* - Its architecture should be modular in order to allow the creation of any new functionality as a plug-in.
+
+    If we could build such a Framework, it could be the ultimate solution to solve the  huge problems mentioned above, and more importantly it could solve them in a fully scalable way, leading to the possibility to quickly produce and easily maintain hundreds of different state-of-the art video players.
+    
+    h4. A truly difficult Journey
+
+  = image_tag "horizon/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in building Horizon, facing the complexity of platforms fragmentation.", class: "mountain_team"
+
+  :textile
+    It remained to be seen if such a Framework could ever be built. Frankly there was numerous times when we thought the technical challenges facing us were simply too hard to solve. We really had the feeling we embarked ourselves into a crazy journey, like for instance those famous first alpinists to ever climb all the major Alps mountains in a row.
+    
+    h4. Like in the movies, happy outcome!
+    
+    The good news is that, more than a year of crazy geek work later, we survived it and were able to finally build it, and as we intended to. To try to give it a sense of the new and amazing freedom it is providing, we called it SublimeVideo Horizon.
+
+  = image_tag "horizon/horizon_framework_architecture_scheme.jpg", alt: "SublimeVideo Horizon Architecture", class: "architecture_scheme"
+  %p
+    %em.caption= "SublimeVideo Horizon Architecture"
+  
+  :textile
+    Beside achieving the above-mentioned goals of abstraction, single codebase, web technologies harmonization and fully modular architecture, we need to emphasize below one of its most powerful aspect, which is its capability to specifically unify graphics rendering and remove its complexity while not loosing any creative freedom!
+    
+    h4. Pushing the UI further up to vector drawing power
+    
+    With a hellish variety of mobile and tablet screen sizes and resolutions, we felt the need to push the envelope with a much more ambitious and elegant vector-based approach.
+  
+  = image_tag "horizon/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
+  
+  :textile
+    Nevertheless, here again, there is no single technology today that allows the consistent drawing of a graphic element across all browsers (unless one uses Flash, which is no longer an option for mobiles). 
+
+    CSS3 or Canvas won't work on older browsers. VML only works on Internet Explorer. SVG works great on the iPad but it's not supported on early Android devices and the original Kindle Fire. Flash may be the only option on certain old browsers, etc. In addition to that, these drawing engines work differently and have different capabilities.
+
+    To overcome these numerous issues, we built a sophisticated Graphics Library as part of SublimeVideo Horizon Framework to unify the differences between those drawing engines, to add all the features required to draw complex UI elements, and to benefit from a unique and consistent drawing API.
+
+    It allows you to draw a graphics element once, and get it rendered exactly in the same way everywhere by automatically using the most appropriate drawing engine depending on the device or browser capabilities.
+    
+    h4. Dynamic and resolution-independent graphics
+
+  = image_tag "features/retina_icon.jpg", alt: "SublimeVideo Retina", class: "retina"
+  
+  :textile
+    The whole rendering engine is also dynamic, which means you can control the UI elements in real time, and say, change their color or their appearance.
+
+    Also, with the advent of very high resolution displays, many designers realize their creations become pixelated when seen on those screens. Because Horizon draws user interfaces in using its vector-based graphics library, all its components are always rendered perfectly, independently of the device screen resolution.
+    
+    h4. SublimeVideo player's designs goes deeper than the usual skins
+  
+  = image_tag "horizon/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
+
+  :textile
+    In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Horizon, the player designer can create user truly unique interfaces with no constraints. This open the field for new form of branding, enhanced user experiences, and increased viewer engagement. That's we simply say: Just Draw It!
+    
+    h4. Benefits of SublimeVideo Horizon Graphic Engine Library:
+    
+    We came to the conclusion we should build a Framework that could hide all this complexity and heterogeneity from the developer. Such Framework should have the following characteristics:
+
+    * A unified drawing API, which is completely abstracted from any rendering engine
+    * A pixel perfect level of cross browser rendering
+    * The ability to draw vector graphics which are resolution independent brings beautiful and crisp controls on Retina® displays especially when users pinch to zoom on touch devices
+    * The possibility to dynamically adapt vector shapes to either modify, recolor or scale them
+    * Supports complex shapes drawn with lines, arcs and even Bézier curves
+    * Complete support for masking and clipping
+    * A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows
+    * Compatibility with fonts systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts
+    
+    h4. Demos
+    
+    Below you can test and play with various Horizon-based HTML5 Video Players.
+    We encourage it to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
+    
+  .big_break
+  
+  :textile
+    h3. Horizon Roadmap and Next Steps
+    
+    h4. 1st Phase: Horizon Introduction
+    
+    Today, as a first step, we are introducing the SublimeVideo Horizon HTML5 Video Framework, its powerful capabilities, and why we think it might be the best solution, if not the holy grail, to finally address the HTML5 Video fragmentation conundrum, elegantly and without any compromise.
+
+    In this first phase we are releasing a brand new SublimeVideo Modular Player - redeveloped from the ground-up based on SublimeVideo Horizon - for the users of our SublimeVideo.net cloud-based HTML5 Video Player service. This new, Horizon-based version of our player offering can be used right now by everyone. It is proposed as a freemium model which allows any site to start using SublimeVideo for free and indefinitely if they want.
+
+    Our new Modular Player service provides a number of important improvements over the previous generation, including:
+
+    * A new modular business-model based on add-ons so you can shop only for the features you need.
+    * A unique on the market, advanced support of the newest tablets and smartphones operating systems, that goes way beyond basic HTML5 video playback, so that your player retains all its features and identity and work fully and perfectly as it does on desktop browsers.
+    * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
+    * And much more, "see our Modular Player product page":/.
+
+    In this first phase we also start a partnership program in order Web agencies or IT companies can immediately design and provide their customers with unseen before, full tailored-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, leading the relationship with them, defining their needs, designing their tailor-made player, integrating it in their website and with us providing them with the tailored-made player they want, upon their specifications. "Learn more about our Partnership Program":/.
+    
+    h4. 2nd Phase: Opening Horizon to developers
+    
+    So what's next, now that we have announced SublimeVideo Horizon?
+
+    We don't want to stop there of course, and *it is our goal to provide developers with ways to work with SublimeVideo Horizon* as soon as possible!
+
+    After hard-working for more than a year on the creation of the Framework itself, we now want to explore properly what could be the best ways to give developers access to SublimeVideo Horizon.
+
+    Every options are on the table now! Frankly, we would love you let us know what you think we should do, and "start an open discussion about it":/.
+  

@@ -832,7 +832,10 @@ body {
   height:290px;
 }
 
-.features header h2, .demo header h2, .about header h2, .contact header h2, .why header h2 {
+.features header h2, 
+.about header h2, 
+.contact header h2, 
+.horizon header h2 {
   text-align:left;
   font-size:44px;
   padding:38px 0 15px;
@@ -848,19 +851,19 @@ body {
   margin:0 auto;
 }
 
-.features ul.section_anchors {
+ul.section_anchors {
   list-style-type:none;
   margin-left:-27px;
   padding:40px 0;
   float:left;
 }
 
-.features ul.section_anchors li {
+ul.section_anchors li {
   float:left;
   margin-left:27px;
 }
 
-.features ul.section_anchors li a {
+ul.section_anchors li a {
   width:300px;
   font-size:31px;
   color:#003165;
@@ -873,7 +876,7 @@ body {
   @include box-shadow(#fff 0 1px 0);
 }
 
-.features ul.section_anchors li a:active {
+ul.section_anchors li a:active {
   @include gradient(#dfe5f0,#fff,#fff);  
 }
 
@@ -1330,6 +1333,148 @@ section.upcoming a.tell_us span.icon-mail {
   position:relative;
   top:2px;
   margin-right:3px;
+}
+
+/* ===================== */
+/* = Horizon Framework = */
+/* ===================== */
+
+.horizon header, .horizon header .shadow, .horizon header .lights {
+  height:290px;
+}
+
+.horizon header p.sub {
+  padding-right:340px;
+}
+
+.horizon #content {
+  width:960px;
+  margin:0 auto;
+}
+
+.horizon #content .big_video {
+  width:960px;
+  height:540px;
+  margin:30px 0 40px;
+  position:relative;
+  @include box-shadow(rgba(0,13,40,0.5) 0 3px 10px);
+}
+
+.horizon #content .big_video a.overlay {
+  display:block;
+  width:960px;
+  height:540px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.horizon #content .big_video a.overlay span.overlay {
+  display:block;
+  width:960px;
+  height:540px;
+  position:absolute;
+  top:0;
+  left:0;
+  background:url(<%= asset_path "horizon/video_overlay.png" %>) no-repeat 0 0;
+  opacity:0.7;
+  filter:alpha(opacity=70);
+  @include transition(opacity, 0.5s, linear);
+}
+
+.horizon #content .big_video a.overlay:hover span.overlay {
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
+.horizon .main_copy {
+  padding-bottom:60px;
+}
+
+.horizon .main_copy h3 {
+  font-size:38px;
+  font-weight:600;
+  color:#003165;
+  padding:20px 0;
+}
+
+.horizon .main_copy h4 {
+  font-size:25px;
+  font-weight:600;
+  color:#003165;
+  padding:20px 0;
+}
+
+.horizon .main_copy p, .horizon .main_copy li {
+  font-size:21px;
+  line-height:32px;
+  padding:8px 0;
+}
+
+.horizon .main_copy ul {
+  list-style-type:none;
+}
+
+.horizon .main_copy li:before {
+  content: "• ";
+  color:#003165;
+  font-size:26px;
+}
+
+.horizon .main_copy strong {
+  color:#003165;
+  font-weight:600;
+}
+
+.horizon .main_copy p a, .horizon .main_copy li a  {
+  color:#1185ff;
+  border-bottom:1px solid #81bbfc;
+}
+
+.horizon .main_copy h4.headline {
+  font-size:25px;
+  font-weight:600;
+  line-height:34px;
+  color:#fff;
+  display:block;
+  text-align:center;
+  padding:22px 40px;
+  margin:20px 0 40px;
+  text-shadow:#000 0 -1px 0;
+  @include gradient(#1a2842,#394661,#293650);
+  @include border-radius(4px);
+  @include box-shadow((inset rgba(0,0,0,.75) 0 2px 6px, #fff 0 1px 0));
+}
+
+.horizon .main_copy em.caption {
+  color:#003165;
+  display:block;
+  text-align:center;
+}
+
+.horizon img.mountain_team {
+  margin:10px 0 20px -2px;
+}
+
+.horizon img.architecture_scheme {
+  margin:20px 0 0 -66px;
+}
+
+.horizon img.twitter_shapes {
+  margin:20px 0;
+}
+
+.horizon img.retina {
+  float:right;
+  margin:10px -20px 0 40px;
+}
+
+.horizon img.sketch {
+  margin:5px 0 20px -2px;
+}
+
+.horizon .main_copy .big_break {
+  margin:30px 0;
 }
 
 /* ========= */

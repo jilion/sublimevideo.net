@@ -835,7 +835,8 @@ body {
 .features header h2, 
 .about header h2, 
 .contact header h2, 
-.horizon header h2 {
+.horizon header h2,
+.pricing header h2 {
   text-align:left;
   font-size:44px;
   padding:38px 0 15px;
@@ -1481,238 +1482,162 @@ section.upcoming a.tell_us span.icon-mail {
 /* = Plans = */
 /* ========= */
 
-.plans header, .plans header .shadow, .plans header .lights {
-  height:618px;
+.pricing header, .pricing header .shadow, .pricing header .lights {
+  height:310px;
 }
 
-.plans header h2 {
-  font-size:44px;
-  padding-bottom:10px;
+.pricing header h2 {
+  font-size:38px;
+  padding:20px 0 10px;
 }
 
-.plans header p.sub {
+/*.pricing header p.sub {
   font-size:37px;
   font-weight:100;
   color:#c1d3f0;
   text-align:center;
   text-shadow:#001941 0 1px 4px;
   -webkit-font-smoothing:antialiased;
-}
+}*/
 
-.plans #content {
-  background:url(<%= asset_path "plans/plans_lights.png" %>) no-repeat center top;
-}
-
-.plans .content_wrapper {
+.pricing #content {
   width:960px;
-  margin:0 auto;
-  position:relative;
-  padding-top:300px;
+  margin:0 auto;    
 }
 
-#plans {
-  padding:15px 0 0;
-  position:absolute;
-  top:-344px;
-  left:0;
-}
-
-#plans ul {
-  list-style-type:none;
-}
-
-#plans > ul > li {
-  float:left;
-  width:280px;
-  height:570px;
-  position:relative;
-  background:#e6e9f3 url(<%= asset_path "my/sites/help_list_back.png" %>);
-  @include border-radius(4px);
-  @include box-shadow((inset #fff 0 1px 0, inset #fff 0 0 7px, inset #fff 0 0 7px, rgba(0,53,137,0.78) 0 1px 5px));
-}
-
-#plans > ul > li.plus {
-  margin:0 60px;
-  background-position:-100px;
-}
-
-#plans > ul > li.premium {
-  background-position:300px;
-}
-
-#plans li h3.title {
-  width:296px;
-  height:74px;
-  background:url(<%= asset_path "plans/plan_banner_1.png" %>) no-repeat;
-  position:relative;
-  left:-8px;
-  margin-top:10px;
-  text-align:center;
-  color:#f1f7ff;
+.pricing h3.title {
+  color:#003165;
   font-size:38px;
-  font-weight:normal;
-  line-height:74px;
-  text-shadow:rgba(0,0,0,0.8) 0 -1px 0;
+  font-weight:600;
+  padding:30px 0 0;
 }
 
-#plans li.plus h3.title, #plans li.premium h3.title {
-  background:url(<%= asset_path "plans/plan_banner_2.png" %>) no-repeat;
-}
-
-#plans ul.features {
-  width:255px;
-  margin:0 auto;
-}
-
-#plans ul.features li {
-  padding:13px 0;
-  background:url(<%= asset_path "plans/features_break.png" %>) no-repeat center bottom;
-}
-
-#plans ul.features li .icon {
-  display:block;
-  width:58px;
-  height:40px;
-  float:left;
-  margin-right:4px;
-  background-position:center;
-  background-repeat:no-repeat;
-}
-
-#plans ul.features li.plays .icon {background-image:url(<%= asset_path "plans/plays_icon.png" %>)}
-#plans ul.features li.stats .icon {background-image:url(<%= asset_path "plans/stats_icon.png" %>)}
-#plans ul.features li.support .icon {background-image:url(<%= asset_path "plans/support_icon.png" %>)}
-#plans ul.features li.ssl .icon {background-image:url(<%= asset_path "plans/ssl_icon.png" %>)}
-
-#plans ul.features li .right {
-  float:left;
-}
-
-#plans ul.features li h4 {
+.pricing p.desc {
   font-size:21px;
+  line-height:32px;
+}
+
+.pricing table.prices {
+  margin:20px 0;
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+  background:#e2e7ec;
+  @include border-radius(4px);
+  @include box-shadow((inset rgba(0,23,60,.5) 0 1px 3px, #fff 0 1px 0));
+}
+
+.pricing table.prices th {
+  padding:15px 18px 14px;
+  color:#fff;
+  font-size:20px;
   font-weight:600;
-  color:#00235a;
-  padding-top:8px;
+  text-shadow:#000 0 -1px 0;
+  @include gradient(#29435d,#152f49,#203a54);
 }
 
-#plans ul.features li.stats h4, #plans ul.features li.plays h4 {
-  padding-top:0;
+.pricing table.prices tr:first-child th {
+  @include border-radius(4px 4px 0 0);
 }
 
-#plans ul.features li.stats h4 {
-  margin-top:-2px;
+.pricing table.prices th a {
+  color:#fff;
+  display:block;
 }
 
-#plans ul.features li p.small_desc {
-  font-size:12px;
-  color:#6c95d1;
+.pricing table.prices th a .icon-arrow {
+  margin-left:3px;
 }
 
-#plans ul.features li p.value {
-  font-size:15px;
+.pricing table.prices td {
+  color:#003165;
+  padding:15px 18px 14px;
+  border-bottom:1px solid #b5c3d1;
+  @include box-shadow(rgba(255,255,255,0.5) 0 2px 0);
+}
+
+.pricing table.prices tr:last-child td {
+  border-bottom:none;
+  @include box-shadow(none);
+}
+
+.pricing table.prices td.name h4 {
+  font-size:22px;
   font-weight:600;
-  color:#6c95d1;
 }
 
-#plans ul.features li p.value span {
-  color:#00235a;
+.pricing table.prices td.name a {
+  color:#1185ff;
+  display:inline-block;
+  font-size:20px;
+  margin-left:3px;
 }
 
-#plans .pricing .box {
-  float:left;
-  width:138px;
-  text-align:center;
-  margin-top:20px;
-  padding:20px 0 0;
+.pricing table.prices td.price {
+  text-align:right;
+  font-size:22px;
+  text-transform:uppercase;
+}
+
+.pricing table.prices td.price em {
+  font-size:16px;
+  font-style:normal;
+  font-weight:600;
+  text-transform:none;
+  margin-right:10px;
+}
+
+.pricing table.prices td.price strong {
+  font-weight:600;
   position:relative;
 }
 
-#plans .pricing .monthly {
-  width:140px;
-  padding-right:2px;
-  background:url(<%= asset_path "plans/pricing_box_break.png" %>) no-repeat right bottom;
-}
-
-#plans .pricing .box strong.price {
-  display:block;
-  font-size:34px;
-  font-weight:600;
-  color:#00235a;
-}
-
-#plans .pricing .box strong.price sup {
-  font-size:16px;
-}
-
-#plans .pricing .box .details_label {
-  color:#5885ca;
+.pricing table.prices td.price strong sup {
   font-size:13px;
-  display:block;
-  padding-top:4px;
 }
 
-#plans .pricing span.save_label {
+.pricing table.prices td.price strong.disabled {
+  color:#657995;
+}
+
+.pricing table.prices td.price strong span.stroke {
   position:absolute;
-  top:-1px;
-  left:0;
-  right:0;
-  margin:0 auto;
-  display:block;
-  width:100px;
-  text-align:center;
-  font-size:10px;
-  letter-spacing:1px;
-  color:#fff;
-  padding:3px 0 2px;
-  text-transform:uppercase;
-  text-shadow:rgba(0,0,0,0.5) 0 -1px 0;
-  @include gradient(#3496ff,#1e80e9,#298bf4);
-  @include border-radius(4px);
-  @include box-shadow(rgba(89,153,255,0.75) 0 1px 2px);
+  top:11px;
+  left:-3px;
+  width:60px;
+  height:2px;
+  background:#003165;
+  @include rotate(-20deg);
 }
 
-#plans .sign_up_wrap {
-  width:280px;
-  height:88px;
-  position:absolute;
-  bottom:0;
-  left:0;
+.pricing table.prices td.text p {
+  font-size:18px;
+  color:#7690b3;
+  padding:10px 0;
 }
 
-#plans .sign_up_wrap .sign_up_btn {
-  width:185px;
-  height:43px;
-  padding-top:9px;
-  background-image:url(<%= asset_path "plans/signup_back.png" %>);
-  position:static;
-  top:auto;
-  left:auto;
-  font-size:26px;
-  margin:0 auto;
-  @include box-shadow(none);
-  @include border-radius(0);
-}
-
-#plans .sign_up_wrap .sign_up_btn:active {
-  background-position:0 -52px;
-}
-
-.plans #need_more {
-  padding:50px 0;
-  text-align:center;
-  font-size:20px;
-}
-
-.plans #need_more a, .plans section.faq .box a {
+.pricing table.prices td.text a {
   color:#1185ff;
   border-bottom:1px solid #81bbfc;
 }
 
-.plans .logos_banner {
+.pricing #need_more {
+  margin-top:-20px;
+  padding:0 0 50px;
+  text-align:center;
+  font-size:20px;
+}
+
+.pricing #need_more a, .pricing section.faq .box a {
+  color:#1185ff;
+  border-bottom:1px solid #81bbfc;
+}
+
+.pricing .logos_banner {
   padding:30px 0;
 }
 
-.plans h4.custom_break {
+.pricing h4.custom_break {
   text-align:center;
   padding:30px 0;
   background:url(<%= asset_path "plans/they_use_sublime_break.png" %>) no-repeat center;
@@ -1723,38 +1648,38 @@ section.upcoming a.tell_us span.icon-mail {
   letter-spacing:1px;
 }
 
-.plans ul.logos {
+.pricing ul.logos {
   list-style-type:none;
   padding-left:30px;
 }
 
-.plans ul.logos li {
+.pricing ul.logos li {
   float:left;
   padding:0 20px;
   height:66px;
   line-height:66px;
 }
 
-.plans section.faq {
+.pricing section.faq {
   padding:30px 0;
 }
 
-.plans section.faq .col_left, .plans section.faq .col_right {
+.pricing section.faq .col_left, .pricing section.faq .col_right {
   float:left;
   width:450px;
 }
 
-.plans section.faq .col_left {
+.pricing section.faq .col_left {
   margin-right:60px;
 }
 
-.plans section.faq .box {
+.pricing section.faq .box {
   padding:17px 0;
   font-size:21px;
   line-height:32px;
 }
 
-.plans section.faq .box h4 {
+.pricing section.faq .box h4 {
   font-size:21px;
   font-weight:600;
   color:#003165;

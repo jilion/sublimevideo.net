@@ -1,0 +1,226 @@
+-# THIS IS THE BADGED PLAYER!
+= content_for :javascript, sublimevideo_include_tag(request.ssl?, :badged).html_safe
+
+- @page_title = "Plans & Pricing".html_safe
+= content_for :header do
+  %h2= "The Best HTML5 Video Player Technology, Starting Free"
+  %p.sub= "The New SublimeVideo Modular Player, powered by SublimeVideo Horizon, gives you a tremendous set of powerful core features, for free! On top of it, we introduce a series of free and paid add-ons with more to come."
+
+%h3.title= "Free Core Features"
+%table.prices
+  %tr
+    %th{ colspan: 2 }= "Player"
+  %tr
+    %td.name
+      %h4
+        = "Seamless YouTube Integration"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "HD Switching"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Responsive Design Support"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Keyboard Control"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Lightbox"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "JavaScript API"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %th{ colspan: 2 }= "Cloud Delivery"
+  %tr
+    %td.name
+      %h4
+        = "Zero maintenance and automatic updates"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Fast & Reliable CDN delivery"
+        = link_to "", class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Unlimited page views and video plays"
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "SSL serving"
+    %td.price
+      %strong= "Free"
+
+%h3.title= "Add-ons"
+%p.desc= "Prices are per site and per month. Each paid add-on has a 30 days free trial with no credit card required."
+
+%table.prices
+  %tr
+    %th{ colspan: 2 }
+      = link_to "" do
+        = "Designs"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "Classic"
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Flat"
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Light"
+    %td.price
+      %strong= "Free"
+  %tr
+    %th{ colspan: 2 }
+      = link_to "" do
+        = "On Video Logo"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "No SublimeVideo logo on video"
+    %td.price
+      %strong
+        = "$9"
+        %sup><
+          = ".90"
+  %tr
+    %td.name
+      %h4
+        = "Your logo"
+    %td.price
+      %em= "free during Beta"
+      %strong.disabled
+        = "$19"
+        %sup><
+          = ".90"
+        %span.stroke
+  %tr
+    %th{ colspan: 2 }
+      = link_to "" do
+        = "Analytics"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "Real-time statistics"
+    %td.price
+      %strong
+        = "$9"
+        %sup><
+          = ".90"
+  %tr
+    %th{ colspan: 2 }
+      = link_to "" do
+        = "Support"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "Forum & e-mail support"
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "VIP e-mail Support"
+    %td.price
+      %strong
+        = "$99"
+        %sup><
+          = ".90"
+  %tr
+    %th{ colspan: 2 }
+      = link_to "" do
+        = "More Add-ons"
+        %span.icon-arrow
+  %tr
+    %td.text{ colspan: 2 }
+      %p= raw "#{link_to "Upcoming add-ons",""} will complement this list, #{link_to "let us know what you think we should add",""}."
+
+= render "layouts/sign_up_box"
+
+#need_more= raw "Need a Tailor-made player? #{link_to "Contact us", ""}."
+
+.big_break
+
+%section.faq
+  .col_left
+    .box
+      %h4= "How does the '30 days free' on paid add-ons work?"
+      %p= "We offer a 30 day free trial for each paid add-on - no credit card required. When your 30 days are almost up we will send you a reminder to give you the option to purchase the add-on."
+    .box
+      %h4= "How and when can I pay?"
+      %p= "We accept credit card payments by VISA, MasterCard and American Express. Monthly payments are charged in USD for all products purchased on the first day of the next month. A daily pro-rata is calculated for products purchased or cancelled during a given month."
+    .box
+      %h4= "The free offer may seem too good to be true. Is it really free and unlimited?"
+      %p
+        = raw "Yes, it's completely free and gives you unlimited video plays. The  free player only displays a discreet"
+        %a.sublime{ href: (image_path "plans/sv-badge-sample.jpg") }= "SublimeVideo logo"
+        %video.sublime.lightbox.sv_force_badge{ width: "576", height: "324", poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none" }
+          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+        = "for a few seconds after video playback begins."
+    -# .box
+    -#   %h4= "Can I use the free plan with a commercial site?"
+    -#   %p= "Yes, all SublimeVideo plans are free to use for both non-profit and commercial websites."
+    .box
+      %h4= "What does 'per-site' mean?"
+      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
+  .col_right
+    .box
+      %h4= "Advanced domain settings"
+      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
+    .box
+      %h4= "Can I add or remove add-ons at any time?"
+      %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
+    .box
+      %h4= "Forum & Support"
+      %p= raw "All users have access to our extensive documentation, community forum and e-mail support. Additionally, we offer a VIP support to customers who need answers within the business day. #{link_to "Find out more on the help page", page_path('help')}."
+  .spacer

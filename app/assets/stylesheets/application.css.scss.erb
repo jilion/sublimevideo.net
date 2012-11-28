@@ -836,7 +836,8 @@ body {
 .about header h2, 
 .contact header h2, 
 .horizon header h2,
-.pricing header h2 {
+.pricing header h2,
+.youtube header h2 {
   text-align:left;
   font-size:44px;
   padding:38px 0 15px;
@@ -1684,6 +1685,78 @@ section.upcoming a.tell_us span.icon-mail {
   font-weight:600;
   color:#003165;
   padding-bottom:10px;
+}
+
+/* =========== */
+/* = YouTube = */
+/* =========== */
+
+.youtube header, .youtube header .shadow, .youtube header .lights {
+  height:290px;
+}
+
+.youtube header h2 {
+  padding-top:20px;
+}
+
+.youtube #content {
+  width:960px;
+  margin:0 auto;
+  padding:40px 0;
+}
+
+.youtube #content p {
+  font-size:21px;
+  line-height:32px;
+  padding:10px 0;
+}
+
+.youtube #content p a {
+  color:#1185ff;
+  border-bottom:1px solid #81bbfc;
+}
+
+.youtube #content img.youtube {
+  float:right;
+  margin:40px 30px 0 70px;
+}
+
+.youtube #content .demos {
+  padding:0 0 40px;
+}
+
+.youtube #content .video_wrap {
+  width:640px;
+  height:360px;
+  margin:40px auto 0;
+  @include box-shadow(rgba(0,23,51,0.75) 0 2px 16px);
+}
+
+.youtube #content p em.caption {
+  padding:10px 320px 0;
+  text-align:center;
+  display:block;
+  line-height:28px;
+  font-size:18px;
+}
+
+.youtube #content a.lightbox {
+  display:block;
+  width:200px;
+  height:113px;
+  margin:40px auto 0;
+  position:relative;
+  @include box-shadow(rgba(0,23,51,0.75) 0 2px 16px);
+}
+
+.youtube #content a.lightbox span.overlay {
+  display:block;
+  width:200px;
+  height:113px;
+  background:url(<%= asset_path "youtube/lightbox_overlay.png" %>) no-repeat;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 /* ======== */

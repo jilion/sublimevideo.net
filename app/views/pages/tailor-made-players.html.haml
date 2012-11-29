@@ -1,0 +1,79 @@
+- @page_title = "Tailor-Made SublimeVideo Players"
+- @body_class = "tailor_made"
+= content_for :javascript do
+  <script src="http://cdn.sublimevideo-staging.net/js/mtf8cxlm-alpha.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//use.typekit.net/qxb6miz.js"></script>
+
+= content_for :header do
+  %h2= "Tailor-Made SublimeVideo Players"
+  %p.sub= "The SublimeVideo Horizon Framework opens the door to Tailor-made video players that allow all features and pixel perfect rendering on any platform!"
+
+.main_copy
+  %p= raw "#{content_tag :strong, "Web Agencies and IT companies"}: Let's team-up to deliver your customers with all the advantages #{link_to "SublimeVideo Horizon has to offer",""}."
+  %p= raw "#{content_tag :strong, "Web Publishers"}: Bring your audience both an unseen brand experience and custom interactions that suit your business requirements."
+  
+  .need_a_tailor
+    = link_to "", class: "button" do
+      = "Need a Tailor-made player?"
+      %strong= "Contact us"
+  .big_break
+  
+  %h3.title= "Tailor-made Players Showcases"
+  
+  .showcase.left
+    .video_wrap
+      %video.sublime{ width: "640", height: "360", poster: image_path("youtube/sony_poster_1.jpg"), data: { settings: "player-kit:5"}, preload: "none" }
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+    .desc
+      %h4= "Sony"
+      %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
+    .spacer
+  .showcase.right
+    .video_wrap
+      %video.sublime{ width: "640", height: "360", poster: image_path("demo/midnight_sun_800.jpg"), data: { settings: "player-kit:4"}, preload: "none" }
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+    .desc
+      %h4= "TWiT.TV"
+      %p= "This tailor-made TWiT.TV player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+    .spacer
+      
+  %h3.title= "Partnership Program"
+  
+  = image_tag "tailor_made/partner_certificate_icon.jpg", alt: "SublimeVideo Partnership Program", class: "partnership"
+  %p= raw "Our objective is to build a network of Integration Partners to deliver tailor-made video players based on SublimeVideo Horizon technology. We welcome web agencies and IT firms around the world to join our partnership program. Please #{link_to "contact us",""} if you are interested in becoming such an Integration Partner."
+  
+  .big_break
+  
+  %h3.title= "Branded Video Player Design"
+  
+  %p= raw "Web Publishers can increase the consistency and immersivity of their user experience with a branded player. Our team will collaborate with their web agency to design custom players which will embody their brand identity, colors, logo, fonts, layout, etc. This design will be implemented with our unique HTML5 SublimeVideo Horizon technology ensuring that the design will work seamlessly across browsers and devices, and carry the web publisher's identity in all embeds. #{link_to "Contact us to share your requests and ideas",""}."
+  
+  %h3.title= "Custom Modules"
+  
+  %p= raw "Web publishers may require a number of interactive extension modules to thoroughly engage their users. Upon request, we can implement custom modules to complement your branded player with additional interactive functions. Examples include specific social sharing functions, personalized information, e-commerce features, and more. #{link_to "Contact us to share your requests and ideas",""}."
+  
+  %section.modules
+    .wrap
+      %ul
+        %li.box
+          = image_tag "tailor_made/modules/sketch_1.jpg", alt: "SublimeVideo Custom Module #1"
+          %em.caption= "Buy Song Button (iTunes, Amazon, etc)"
+        %li.box
+          = image_tag "tailor_made/modules/sketch_2.jpg", alt: "SublimeVideo Custom Module #2"
+          %em.caption= "360° Car Viewer"
+        %li.box
+          = image_tag "tailor_made/modules/sketch_3.jpg", alt: "SublimeVideo Custom Module #3"
+          %em.caption= "Live Stock Information and Buy Button"
+    %button.previous.arrow
+      %span= "previous"
+    %button.next.arrow
+      %span= "next"
+  .spacer
+  .need_a_tailor
+    = link_to "", class: "button" do
+      = "Need a Tailor-made player?"
+      %strong= "Contact us"
+  
+  

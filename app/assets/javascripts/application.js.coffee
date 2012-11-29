@@ -5,6 +5,7 @@
 #= require jquery.slidify
 #= require home
 #= require why
+#= require tailor_made
 #= require player
 
 jQuery.fn.exists = -> @length > 0

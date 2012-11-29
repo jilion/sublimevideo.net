@@ -24,13 +24,13 @@
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the SublimeVideo Classic Player."
   .video_wrap
-    <video class="sublime" poster="#{asset_path "youtube/sony_poster_1.jpg"}" width="640" height="360" data-settings="player-kit:5;youtube-id:mEnSvSkwygc" preload="none"></video>
+    <video class="sublime" poster="#{image_path "youtube/sony_poster_1.jpg"}" width="640" height="360" data-settings="player-kit:5;youtube-id:mEnSvSkwygc" preload="none"></video>
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the SublimeVideo Classic Player."
   %a.sublime.lightbox{ href: "#video3", data: { settings: 'overlay-opacity:0.8' }}
     = image_tag "youtube/lightbox_thumb.jpg", alt: "Lightbox Thumbnail"
     %span.overlay
-  <video id="video3" style="display:none" poster="#{asset_path "demo/midnight_sun_800.jpg"}" width="800" height="450" data-settings="youtube-id:rAq2rNEru8A" preload="none"></video>
+  <video id="video3" style="display:none" poster="#{image_path "demo/midnight_sun_800.jpg"}" width="800" height="450" data-settings="youtube-id:rAq2rNEru8A" preload="none"></video>
   %p
     %em.caption= "YouTube integration also works inside the SublimeVideo Lightbox."
 .big_break

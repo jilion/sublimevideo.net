@@ -46,23 +46,21 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara'
+  gem 'capybara', '~> 1.1.4'
+  gem 'poltergeist'
 
-  gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', '~> 1.6.0'
+  gem 'typhoeus', '~> 0.2.0'
+  gem 'vcr', '~> 1.10.3'
 end
 
 group :tools do
-  gem 'heroku'
-  gem 'foreman'
   gem 'powder'
-  gem 'pry'
 
   # Guard
-  gem 'growl'
-  platforms :ruby do
-    gem 'rb-readline'
-  end
+  gem 'ruby_gntp'
+  gem 'rb-fsevent'
+  gem 'rb-readline'
 
   gem 'guard-pow'
   gem 'guard-livereload'

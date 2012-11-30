@@ -1,0 +1,19 @@
+#player_showcases
+  .showcase.left
+    .video_wrap
+      %video.sublime{ width: "640", height: "360", poster: image_path("youtube/sony_poster_1.jpg"), data: { settings: "player-kit:5"}, preload: "none" }
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+    .desc
+      %h4= "Sony"
+      %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
+    .spacer
+  .showcase.right
+    .video_wrap
+      %video.sublime{ width: "640", height: "360", poster: image_path("demo/midnight_sun_800.jpg"), data: { settings: "player-kit:4"}, preload: "none" }
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
+        == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+    .desc
+      %h4= "TWiT.TV"
+      %p= "This tailor-made TWiT.TV player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+    .spacer

@@ -1,4 +1,7 @@
-= content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
+-# = content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
+= content_for :javascript do
+  <script src="http://cdn.sublimevideo-staging.net/js/mtf8cxlm-alpha.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//use.typekit.net/qxb6miz.js"></script>
 - @page_title = "Horizon Framework"
 - @body_class = "horizon"
 
@@ -135,8 +138,11 @@
     * A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows
     * Compatibility with font systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts
     
-    h4. Demos
+    h3. Demos
     
+  = render "showcases"
+
+  :textile
     Below you can test and play with various Horizon-based HTML5 Video Players.
     We encourage it to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
     

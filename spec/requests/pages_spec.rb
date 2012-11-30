@@ -10,14 +10,17 @@ feature "Com Pages" do
       within '#menu' do
         current_url.should eq "http://sublimevideo.dev/"
 
-        click_link 'why'
-        current_url.should eq "http://sublimevideo.dev/why"
+        click_link 'SublimeVideo Player'
+        current_url.should eq "http://sublimevideo.dev/sublime-video-player"
 
-        click_link 'features'
-        current_url.should eq "http://sublimevideo.dev/features"
+        click_link 'Horizon Framework'
+        current_url.should eq "http://sublimevideo.dev/horizon-framework"
 
-        click_link 'plans'
-        current_url.should eq "http://sublimevideo.dev/plans"
+        click_link 'Tailor-Made Players'
+        current_url.should eq "http://sublimevideo.dev/tailor-made-players"
+
+        click_link 'pricing'
+        current_url.should eq "http://sublimevideo.dev/pricing"
 
         click_link 'showcase'
         current_url.should eq "http://sublimevideo.dev/customer-showcase"
@@ -50,10 +53,10 @@ feature "Com Pages" do
         current_url.should eq "http://sublimevideo.dev/why"
 
         click_link 'Features'
-        current_url.should eq "http://sublimevideo.dev/features"
+        current_url.should eq "http://sublimevideo.dev/sublime-video-player"
 
-        click_link 'Plans & Pricing'
-        current_url.should eq "http://sublimevideo.dev/plans"
+        click_link 'Pricing'
+        current_url.should eq "http://sublimevideo.dev/pricing"
 
         click_link 'Customer Showcase'
         current_url.should eq "http://sublimevideo.dev/customer-showcase"
@@ -94,9 +97,19 @@ feature "Com Pages" do
   end
 
   describe "redirects" do
-    scenario '/demo redirects to /features' do
+    scenario '/demo redirects to /sublime-video-player' do
       visit '/demo'
-      current_url.should eq "http://sublimevideo.dev/features"
+      current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+    end
+
+    scenario '/features redirects to /sublime-video-player' do
+      visit '/features'
+      current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+    end
+
+    scenario '/plans redirects to /pricing' do
+      visit '/plans'
+      current_url.should eq "http://sublimevideo.dev/pricing"
     end
 
     %w[signup sign_up register].each do |path|

@@ -1,4 +1,4 @@
-= content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
+= content_for :javascript, sublimevideo_loader_tag(:www, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
 
 = content_for :header do
 
@@ -11,7 +11,7 @@
           %br
           = "the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity,"
           = "working perfectly on any device."
-        = link_to "", class: "learn_more" do
+        = link_to 'horizon-framework', class: "learn_more" do
           = "Learn more"
           %span.icon-arrow
     .slide.s_2
@@ -20,7 +20,7 @@
           = "Start Assembling Your Player!"
           %span.beta= "Beta"
         %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Horizon™"
-        = link_to "", class: "learn_more" do
+        = link_to 'sublime-video-player', class: "learn_more" do
           = "Learn more"
           %span.icon-arrow
     .slide.s_3
@@ -28,16 +28,17 @@
         %h2= "No limits, Just Draw your Player"
         %p.desc
           = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Horizon™."
-          = link_to "" do
+          = link_to 'tailor-made-players' do
             = "Learn more"
             %span.icon-arrow
   #home_video
     .v_shadow
-    = link_to "", class: "sublime" do
+    = link_to "#video_horizon", class: "sublime" do
       = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb"
       %span.overlay
       %span.play
-        
+    %video#video_horizon{ width: 1280, height: 720, style: 'display:none' }
+
 
 = content_for :middle do
   .selectors_wrap
@@ -64,7 +65,7 @@
           %span= "Starts Free"
         .button_wrap
           = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button"
-        = link_to "", class: "youtube" do
+        = link_to 'youtube', class: "youtube" do
           = "Now with"
           = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
           = "integration!"
@@ -150,13 +151,13 @@
       %h4.custom_break.t1= "Highlights"
       .wrap
         %ul
-          %li.box.new
-            = link_to my_url('video-code-generator') do
-              = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
-              %span.text
-                %strong= "Video Code Generator"
-                %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
-              %span.badge
+          -#%li.box.new
+          -#  = link_to my_url('video-code-generator') do
+          -#    = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
+          -#    %span.text
+          -#      %strong= "Video Code Generator"
+          -#      %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
+          -#    %span.badge
           %li.box
             = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do
               = image_tag "home/highlights/twit_tv.png", alt: "Twit.tv", size: "161x75", style: "margin-top:30px"

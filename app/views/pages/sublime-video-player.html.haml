@@ -35,7 +35,7 @@
     %h3.title
       = "Design and features working even on tablets"
       %span.new= "New"
-    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones (#{link_to "check what SublimeVideo can do for you",""})."
+    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
     .spacer
 
   %section#player_designs.player_designs.f.right
@@ -44,7 +44,7 @@
       = "3 sleek player designs to choose from"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Along with the Classic SublimeVideo player design, you can now select two additional player designs, Light and Flat, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", 'tailor-made-players'}."
+    %p= raw "Along with the #{link_to 'Classic', '#video2', class: 'sublime', data: { 'player-kit' => '1' }} SublimeVideo player design, you can now select two additional player designs, #{link_to 'Light', '#video2', class: 'sublime', data: { settings: 'player-kit:3' }} and #{link_to 'Flat', '#video2', class: 'sublime', data: { 'player-kit' => '2' }}, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", 'tailor-made-players'}."
     .spacer
 
   %section#on_video_logo.logo.f.left
@@ -77,7 +77,7 @@
     %h3.title
       = "Keyboard control"
       %span.new= "New"
-    %p= raw "It's often more convenient to control viewing with your keyboard. This free add-on lets you control your video with simple keys like the arrows or +/- for volume control. It will also improve your site's Accessibility. #{link_to "Learn more",""}."
+    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the arrows or +/- for volume control. It will also improve your site's Accessibility. #{link_to "Learn more",""}."
     .spacer
 
   %section#lightbox.lightbox.f.left
@@ -193,7 +193,7 @@
     %h3.title
       = "Universal, Real-Time stats"
       %span.addon= "Add-on"
-    %p= raw "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, HTML5 / Flash usage and more. Check out #{link_to "our live demo", demo_site_stats_url}. #{link_to "Buy add-on", my_url('addons?h=stats-realtime')}."
+    %p= raw "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, HTML5 / Flash usage and more. Check out #{link_to "our live demo", demo_site_stats_url}."
     = link_to demo_site_stats_url, class: "button" do
       %span= "Live demo"
     .spacer
@@ -209,7 +209,7 @@
     %h3.title
       = "Technical support"
       %span.addon= "Add-on"
-    %p= raw "Our video player comes with a comprehensive online documentation, a community forum and e-mail support. We also offer professional-level e-mail support with a guaranteed response within the next business day if you need extra support and enhanced reactivity. #{link_to "Buy add-on", my_url('addons?h=support-vip')}."
+    %p= raw "Our video player comes with a comprehensive online documentation, a community forum and e-mail support. We also offer professional-level e-mail support with a guaranteed response within the next business day if you need extra support and enhanced reactivity."
     .spacer
 
 .big_break
@@ -223,7 +223,6 @@
     .i_wrap= image_tag "features/video_sources_icon.jpg", alt: "Choose your preferred hosting platform freely"
     %h3.title
       = "Choose your preferred hosting platform freely"
-      %span.addon= "Add-on"
       %span.new= "New"
     %p= "We provide the video player, while you keep full control of your videos by freely using your preferred hosting and encoding service(s). Your videos can be hosted anywhere, including Vimeo Pro, Amazon S3/CloudFront. In addition, we now also seamlessly integrate with YouTube."
     .spacer

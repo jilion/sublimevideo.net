@@ -1,6 +1,5 @@
--# = content_for :javascript, sublimevideo_include_tag(request.ssl?, :www).html_safe
 = content_for :javascript do
-  <script src="http://cdn.sublimevideo-staging.net/js/mtf8cxlm-alpha.js" type="text/javascript"></script>
+  = sublimevideo_loader_tag(:test, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
   = javascript_include_tag '//use.typekit.net/qxb6miz.js'
 
 - @page_title = "Horizon Framework"
@@ -19,7 +18,7 @@
 
 .big_video
   -# video tag here
-  = link_to "", class: "overlay" do
+  = link_to "#", class: "overlay" do
     = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon"
     %span.overlay
 .main_copy
@@ -163,9 +162,9 @@
     * A new modular business-model based on add-ons so you can shop only for the features you need.
     * An advanced support of the newest tablets and smartphones operating systems, unique on the market, that goes way beyond basic HTML5 video playback, so that your player retains all its features and identity and works perfectly as it does on desktop browsers without any degradation.
     * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
-    * And much more, "see our Modular Player product page":/.
+    * And much more, #{link_to "see our Modular Player product page", 'sublime-video-player'}.
 
-    In this first phase, we are also starting a partnership program to allow Web agencies or IT companies to immediately design and provide their customers with never before seen, tailor-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, managing the relationship, defining their needs, designing their tailor-made player, integrating it in their websites, and providing, along with us, the tailored-made player they want, according to their specifications. "Learn more about our Partnership Program":/.
+    In this first phase, we are also starting a partnership program to allow Web agencies or IT companies to immediately design and provide their customers with never before seen, tailor-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, managing the relationship, defining their needs, designing their tailor-made player, integrating it in their websites, and providing, along with us, the tailored-made player they want, according to their specifications. #{link_to "Learn more about our Partnership Program", 'tailor-made-players'}.
 
     h4. 2nd Phase: Opening Horizon to developers
 
@@ -176,5 +175,5 @@
     After more than a year of hard work creating the Framework itself, we now want to properly explore what could be the best ways to give developers access to SublimeVideo Horizon.
 
     All the options are on the table now!
-    Frankly, we would love for you to let us know what you think we should do, and "start a discussion about it":/.
+    Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", ''}.
 

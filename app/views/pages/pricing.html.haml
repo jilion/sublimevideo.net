@@ -1,7 +1,7 @@
+- @page_title = "Plans & Pricing"
 -# THIS IS THE BADGED PLAYER!
-= content_for :javascript, sublimevideo_include_tag(request.ssl?, :badged).html_safe
+= content_for :javascript, sublimevideo_loader_tag(:badged, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
 
-- @page_title = "Plans & Pricing".html_safe
 = content_for :header do
   %h2= "The Best HTML5 Video Player Technology, Starting Free"
   %p.sub= "The New SublimeVideo Modular Player, powered by SublimeVideo Horizon, gives you a tremendous set of powerful core features, for free! On top of it, we introduce a series of free and paid add-ons with more to come."
@@ -14,7 +14,7 @@
     %td.name
       %h4
         = "Seamless YouTube Integration"
-        = link_to "", class: "arrow" do
+        = link_to 'youtube', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -22,7 +22,7 @@
     %td.name
       %h4
         = "HD Switching"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#hd', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -30,7 +30,7 @@
     %td.name
       %h4
         = "Responsive Design Support"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#responsive', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -38,7 +38,7 @@
     %td.name
       %h4
         = "Keyboard Control"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#keyboard', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -46,7 +46,7 @@
     %td.name
       %h4
         = "Lightbox"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#lightbox', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -54,7 +54,7 @@
     %td.name
       %h4
         = "JavaScript API"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#player_api', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -64,7 +64,7 @@
     %td.name
       %h4
         = "Zero maintenance and automatic updates"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#always_up_to_date', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -72,7 +72,7 @@
     %td.name
       %h4
         = "Fast & Reliable CDN delivery"
-        = link_to "", class: "arrow" do
+        = link_to 'sublime-video-player#fast_and_reliable', class: "arrow" do
           %span.icon-arrow
     %td.price
       %strong= "Free"
@@ -95,7 +95,7 @@
 %table.prices
   %tr
     %th{ colspan: 2 }
-      = link_to "" do
+      = link_to 'sublime-video-player#player_designs' do
         = "Designs"
         %span.icon-arrow
   %tr
@@ -118,7 +118,7 @@
       %strong= "Free"
   %tr
     %th{ colspan: 2 }
-      = link_to "" do
+      = link_to 'sublime-video-player#on_video_logo' do
         = "On Video Logo"
         %span.icon-arrow
   %tr
@@ -143,7 +143,7 @@
         %span.stroke
   %tr
     %th{ colspan: 2 }
-      = link_to "" do
+      = link_to 'sublime-video-player#real_time_stats' do
         = "Analytics"
         %span.icon-arrow
   %tr
@@ -157,7 +157,7 @@
           = ".90"
   %tr
     %th{ colspan: 2 }
-      = link_to "" do
+      = link_to 'sublime-video-player#support' do
         = "Support"
         %span.icon-arrow
   %tr
@@ -177,16 +177,16 @@
           = ".90"
   %tr
     %th{ colspan: 2 }
-      = link_to "" do
+      = link_to 'sublime-video-player#upcoming_features' do
         = "More Add-ons"
         %span.icon-arrow
   %tr
     %td.text{ colspan: 2 }
-      %p= raw "#{link_to "Upcoming add-ons",""} will complement this list, #{link_to "let us know what you think we should add",""}."
+      %p= raw "#{link_to "Upcoming add-ons", 'sublime-video-player#upcoming_features'} will complement this list, #{link_to "let us know what you think we should add",""}."
 
 = render "layouts/sign_up_box"
 
-#need_more= raw "Need a Tailor-made player? #{link_to "Contact us", ""}."
+#need_more= raw "Need a Tailor-made player? #{link_to "Contact us", tailor_made_player_request_path}."
 
 .big_break
 
@@ -212,11 +212,11 @@
     -#   %p= "Yes, all SublimeVideo plans are free to use for both non-profit and commercial websites."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
+      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", docs_url('beta/site-settings#staging-and-alias-domains')}."
   .col_right
     .box
       %h4= "Advanced domain settings"
-      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", page_url('site-settings', subdomain: 'docs', anchor: 'staging-and-alias-domains')}."
+      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('beta/site-settings#staging-and-alias-domains')}."
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."

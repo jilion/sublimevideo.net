@@ -1,42 +1,42 @@
 - @page_title = "Tailor-Made SublimeVideo Players"
 - @body_class = "tailor_made"
 = content_for :javascript do
-  <script src="http://cdn.sublimevideo-staging.net/js/mtf8cxlm-alpha.js" type="text/javascript"></script>
-  <script type="text/javascript" src="//use.typekit.net/qxb6miz.js"></script>
+  = sublimevideo_loader_tag(:test, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
+  = javascript_include_tag '//use.typekit.net/qxb6miz.js'
 
 = content_for :header do
   %h2= "Tailor-Made SublimeVideo Players"
   %p.sub= "The SublimeVideo Horizon Framework opens the door to Tailor-made video players that allow all features and pixel perfect rendering on any platform!"
 
 .main_copy
-  %p= raw "#{content_tag :strong, "Web Agencies and IT companies"}: Let's team-up to deliver your customers with all the advantages #{link_to "SublimeVideo Horizon has to offer",""}."
+  %p= raw "#{content_tag :strong, "Web Agencies and IT companies"}: Let's team-up to deliver your customers with all the advantages #{link_to "SublimeVideo Horizon has to offer", 'horizon-framework'}."
   %p= raw "#{content_tag :strong, "Web Publishers"}: Bring your audience both an unseen brand experience and custom interactions that suit your business requirements."
-  
+
   .need_a_tailor
-    = link_to "", class: "button" do
+    = link_to tailor_made_player_request_path, class: "button" do
       = "Need a Tailor-made player?"
       %strong= "Contact us"
   .big_break
-  
+
   %h3.title= "Tailor-made Players Showcases"
 
   = render "showcases"
-  
+
   %h3.title= "Partnership Program"
-  
+
   = image_tag "tailor_made/partner_certificate_icon.jpg", alt: "SublimeVideo Partnership Program", class: "partnership"
   %p= raw "Our objective is to build a network of Integration Partners to deliver tailor-made video players based on SublimeVideo Horizon technology. We welcome web agencies and IT firms around the world to join our partnership program. Please #{link_to "contact us",""} if you are interested in becoming such an Integration Partner."
-  
+
   .big_break
-  
+
   %h3.title= "Branded Video Player Design"
-  
+
   %p= raw "Web Publishers can increase the consistency and immersivity of their user experience with a branded player. Our team will collaborate with their web agency to design custom players which will embody their brand identity, colors, logo, fonts, layout, etc. This design will be implemented with our unique HTML5 SublimeVideo Horizon technology ensuring that the design will work seamlessly across browsers and devices, and carry the web publisher's identity in all embeds. #{link_to "Contact us to share your requests and ideas",""}."
-  
+
   %h3.title= "Custom Modules"
-  
+
   %p= raw "Web publishers may require a number of interactive extension modules to thoroughly engage their users. Upon request, we can implement custom modules to complement your branded player with additional interactive functions. Examples include specific social sharing functions, personalized information, e-commerce features, and more. #{link_to "Contact us to share your requests and ideas",""}."
-  
+
   %section.modules
     .wrap
       %ul
@@ -55,8 +55,8 @@
       %span= "next"
   .spacer
   .need_a_tailor
-    = link_to "", class: "button" do
+    = link_to tailor_made_player_request_path, class: "button" do
       = "Need a Tailor-made player?"
       %strong= "Contact us"
-  
-  
+
+

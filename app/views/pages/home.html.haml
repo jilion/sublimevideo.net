@@ -1,4 +1,4 @@
-= content_for :javascript, sublimevideo_loader_tag(:www, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
+= content_for :javascript, sublimevideo_loader_tag(:test, host: 'cdn.sublimevideo-staging.net', stage: 'alpha').html_safe
 
 = content_for :header do
 
@@ -83,7 +83,7 @@
     %li.active= link_to (image_tag "home/showcase/players/twit_logo@2x.png", size: "114x53"), ""
     %li= link_to "", ""
     %li= link_to "", ""
-  = link_to "", class: "need_a_player" do
+  = link_to 'tailor-made-players/request-yours', class: "need_a_player" do
     = "Need a tailor-made player?"
     %span.icon-arrow
   .spacer

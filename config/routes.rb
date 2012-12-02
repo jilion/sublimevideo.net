@@ -43,5 +43,7 @@ SublimeVideo::Application.routes.draw do
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
 
+  match '/tailor-made-players/request-yours' => 'tailor_made_players#new_request', via: [:get, :post], as: 'tailor_made_player_request'
+
   root to: 'pages#show', page: 'home', format: :html
 end

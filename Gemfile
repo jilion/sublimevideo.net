@@ -6,6 +6,9 @@ ruby '1.9.3'
 gem 'rails',                '3.2.9'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
+# Databases
+gem 'pg'
+
 # Views
 gem 'haml'
 gem 'RedCloth'
@@ -16,6 +19,9 @@ gem 'twitter',   '~> 3.7.0'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
+gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
+gem 'uniquify'
+gem 'countries'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -52,6 +58,8 @@ group :test do
   gem 'webmock', '~> 1.6.0'
   gem 'typhoeus', '~> 0.2.0'
   gem 'vcr', '~> 1.10.3'
+  gem 'factory_girl'
+  gem 'factory_girl_rails' # loaded in spec_helper Spork.each_run
 end
 
 group :tools do

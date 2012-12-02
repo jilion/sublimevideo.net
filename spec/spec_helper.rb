@@ -27,6 +27,11 @@ RSpec.configure do |config|
   end
 end
 
+RSpec.configure do |config|
+  # FactoryGirl http://railscasts.com/episodes/158-factories-not-fixtures-revised
+  config.include FactoryGirl::Syntax::Methods
+end
+
 require 'vcr'
 VCR.config do |config|
   config.stub_with :webmock, :typhoeus

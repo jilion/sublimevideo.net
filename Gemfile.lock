@@ -52,6 +52,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    carrierwave (0.7.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     coderay (1.0.8)
@@ -62,7 +65,10 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    countries (0.8.4)
+      currencies (>= 0.4.0)
     crack (0.3.1)
+    currencies (0.4.0)
     daemons (1.1.9)
     dalli (2.5.0)
     diff-lcs (1.1.3)
@@ -74,6 +80,11 @@ GEM
     excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
     faye-websocket (0.4.6)
@@ -132,6 +143,7 @@ GEM
     net-ssh (2.6.1)
     newrelic_rpm (3.5.2.17)
     nokogiri (1.5.5)
+    pg (0.14.1)
     poltergeist (1.0.2)
       capybara (~> 1.1)
       childprocess (~> 0.3)
@@ -243,6 +255,7 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uniquify (0.1.0)
     vcr (1.10.3)
     webmock (1.6.4)
       addressable (~> 2.2, > 2.2.5)
@@ -260,13 +273,18 @@ DEPENDENCIES
   airbrake (~> 3.0.5)
   asset_sync
   capybara (~> 1.1.4)
+  carrierwave
   coffee-rails (~> 3.2.0)
+  countries
   dalli
+  factory_girl
+  factory_girl_rails
   guard-livereload
   guard-pow
   guard-rspec
   haml
   newrelic_rpm
+  pg
   poltergeist
   powder
   quiet_assets
@@ -289,5 +307,6 @@ DEPENDENCIES
   twitter (~> 3.7.0)
   typhoeus (~> 0.2.0)
   uglifier
+  uniquify
   vcr (~> 1.10.3)
   webmock (~> 1.6.0)

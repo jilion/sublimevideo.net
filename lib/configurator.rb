@@ -1,5 +1,4 @@
 require 'active_support/core_ext'
-require 'active_support/concern'
 
 module Configurator
   extend ActiveSupport::Concern
@@ -48,7 +47,7 @@ module Configurator
 
     def calculate_yml_options
       yml_hash = if @config_file_options[:rails_env]
-        YAML.load_file(@config_path)[Rails.env]
+        YAML.load_file(@config_path)[Rails.env.to_s]
       else
         YAML.load_file(@config_path)
       end
@@ -56,5 +55,4 @@ module Configurator
     end
 
   end
-
 end

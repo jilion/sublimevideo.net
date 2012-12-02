@@ -1,0 +1,62 @@
+= content_for :header do
+  %h2= "Tailor-made Players Partnerships - Contact form"
+  %p.sub= "If you are interested to team up with us to design tailor-made players, please fill in the form below,  we will contact you shortly."
+
+= form_for @tailor_made_request, url: url_for do |f|
+  .entry
+    = f.label :name, 'Your name'
+    = f.text_field :name, class: 'text no_icon'
+
+  .entry
+    = f.label :email, 'Email address'
+    = f.text_field :email, class: 'text no_icon'
+
+  .entry
+    = f.label :job_title, 'Job title'
+    = f.text_field :job_title, class: 'text no_icon'
+
+  .entry
+    = f.label :company, 'Company'
+    = f.text_field :company, class: 'text no_icon'
+
+  .entry
+    = f.label :url, 'Website URL'
+    = f.text_field :url, class: 'text no_icon'
+
+  .entry
+    = f.label :country, 'Country'
+    = f.country_select :country, options_for_select("Country", selected: "Country")
+
+  .entry
+    = f.label :topic, 'Please tell us the topic of your request'
+
+  .radio_wrap
+    = f.radio_button :topic, 'agency'
+    = f.label :topic_agency, 'I am an Agency and I would like to join the Partner program to design and sell tailor-made players to my customers.'
+
+  .entry
+    .radio_wrap
+      = f.radio_button :topic, 'standalone'
+      = f.label :topic_standalone, "I need a custom player for my site. Here's the name of my main agency:"
+    = f.text_field :topic_standalone_detail, class: 'text no_icon'
+
+  .radio_wrap
+    = f.radio_button :topic, 'platform'
+    = f.label :topic_platform, 'I am a CMS, OVP or other platform and I would like to integrate SublimeVideo Player Technology in my platform.'
+
+  .entry
+    .radio_wrap
+      = f.radio_button :topic, 'other'
+      = f.label :topic_other, 'Other, please specify:'
+    = f.text_field :topic_other_detail, class: 'text no_icon'
+
+  .entry
+    = f.label :comment, 'How can we help you?'
+    = f.text_area :comment, class: 'text'
+
+  .entry
+    = f.label :document, 'Additional document'
+    = f.file_field :document
+
+  .actions.center
+    = f.submit 'Submit', class: 'submit blue_button'

@@ -1,4 +1,5 @@
 %h3#email_support.title= "Dedicated Email Support"
 .help_box
   %p
-    = raw "We offer email support to customers of our #{link_to "paid plans", page_path('plans'), class: "hl"} - just use the #{link_to "support form", page_url('help', subdomain: 'my')} to email us directly and we'll send you a personal response as soon as we can. Customers of our Premium plan benefit from VIP priority email support."
+    -#= raw "We offer email support to customers of our #{link_to "paid plans", page_path('plans'), class: "hl"} - just use the #{link_to "support form", page_url('help', subdomain: 'my')} to email us directly and we'll send you a personal response as soon as we can. Customers of our Premium plan benefit from VIP priority email support."
+    = raw "We offer email support to all our customers - just use the #{link_to "support form", page_url('help', subdomain: 'my')} to email us directly and we'll send you a personal response as soon as we can. We also offer a #{link_to 'professional-level e-mail support add-on', 'sublime-video-player#support', class: 'hl'} with a guaranteed response within the next business day if you need extra support and enhanced reactivity."

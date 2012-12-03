@@ -14,8 +14,8 @@ gem 'haml'
 gem 'RedCloth'
 
 # Internals
-gem 'airbrake',  '~> 3.0.5'
-gem 'twitter',   '~> 3.7.0'
+gem 'airbrake'
+gem 'twitter'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
@@ -26,14 +26,14 @@ gem 'countries'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.0'
-  gem 'coffee-rails', '~> 3.2.0'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
   gem 'asset_sync'
 end
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.11'
+  gem 'rack-google-analytics'
 end
 
 group :staging, :production do

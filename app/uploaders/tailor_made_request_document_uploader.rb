@@ -6,6 +6,10 @@ class TailorMadeRequestDocumentUploader < CarrierWave::Uploader::Base
 
   process :set_content_type
 
+  def fog_public
+    false
+  end
+
   def fog_directory
     S3.buckets['tailor_made_requests']
   end

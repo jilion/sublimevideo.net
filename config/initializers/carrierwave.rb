@@ -6,7 +6,7 @@ module CarrierWave
       configure do |config|
         config.cache_dir       = Rails.root.join('tmp/uploads')
         config.storage         = :fog
-        config.fog_public      = true
+        config.fog_public      = false
         config.fog_attributes  = {}
         config.fog_credentials = {
           provider:              'AWS',

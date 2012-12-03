@@ -8,6 +8,9 @@
 #= require why
 #= require tailor_made
 #= require player
+#= require_self
+#= require google-analytics-turbolinks
+#= require turbolinks
 
 jQuery.fn.exists = -> @length > 0
 
@@ -35,3 +38,12 @@ SublimeVideo.yourBrowserIsTheBest = ->
 #       jQuery('html, body').animate({
 #         scrollTop: jQuery(el.attr('href')).offset().top
 #       }, 300)
+
+$(window).bind 'page:change', ->
+  SublimeVideo.documentReady()
+  SublimeVideo.yourBrowserIsTheBest()
+
+  $("video.sublime").each (index, playerEl) ->
+    sublime.prepare playerEl
+  $("a.sublime").each (index, lightboxEl) ->
+    sublime.prepare lightboxEl

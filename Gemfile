@@ -12,6 +12,8 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'RedCloth'
+gem 'turbolinks'
+gem 'google-analytics-turbolinks'
 
 # Internals
 gem 'airbrake'

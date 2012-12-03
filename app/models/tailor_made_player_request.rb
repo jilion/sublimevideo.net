@@ -1,8 +1,8 @@
-class TailorMadeRequest < ActiveRecord::Base
+class TailorMadePlayerRequest < ActiveRecord::Base
 
   attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document
 
-  mount_uploader :document, TailorMadeRequestDocumentUploader
+  mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
   TOPICS = %w[agency standalone platform other] unless defined? TOPICS
 

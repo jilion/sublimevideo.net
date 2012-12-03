@@ -2,7 +2,7 @@
   %h2= "Tailor-made Players Partnerships - Contact form"
   %p.sub= "If you are interested to team up with us to design tailor-made players, please fill in the form below,  we will contact you shortly."
 
-= form_for @tailor_made_request, url: url_for do |f|
+= form_for @tailor_made_player_request, url: url_for do |f|
   .entry
     = f.label :name, 'Your name'
     = f.text_field :name, class: 'text no_icon'

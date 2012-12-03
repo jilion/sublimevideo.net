@@ -1,7 +1,7 @@
 # encoding: utf-8
 require_dependency 's3'
 
-class TailorMadeRequestDocumentUploader < CarrierWave::Uploader::Base
+class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
 
   process :set_content_type
@@ -11,14 +11,14 @@ class TailorMadeRequestDocumentUploader < CarrierWave::Uploader::Base
   end
 
   def fog_directory
-    S3.buckets['tailor_made_requests']
+    S3.buckets['tailor_made_player_requests']
   end
 
   # Override the directory where uploaded files will be stored
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     if Rails.env.test?
-      "uploads/tailor_made_requests"
+      "uploads/tailor_made_player_requests"
     else
       super
     end

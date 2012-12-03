@@ -2,7 +2,7 @@ module TweetsHelper
 
   # Fetch +count+ tweets randomly from the 20 cached last favorite tweets, sorted by date desc
   def random_favorite_tweets(count = 3)
-    cached_last_favorite_tweets(20).sample(count).sort_by { |t| t.created_at }
+    cached_last_favorite_tweets(20).sample(count).sort_by { |t| t.created_at }.reverse
   end
 
   # Fetch +count+ last favorite tweets and cache the array for 1 hour

@@ -37,6 +37,7 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.3.2)
+    aggregate (0.2.2)
     airbrake (3.1.6)
       builder
       girl_friday
@@ -131,6 +132,13 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.5)
+    librato-metrics (0.7.5)
+      aggregate (~> 0.2.2)
+      faraday (~> 0.7)
+      multi_json
+    librato-rails (0.8.0)
+      librato-metrics (~> 0.7.4)
+      rails (>= 3.0)
     libwebsocket (0.1.7.1)
       addressable
       websocket
@@ -298,6 +306,7 @@ DEPENDENCIES
   guard-pow
   guard-rspec
   haml
+  librato-rails
   newrelic_rpm
   pg
   poltergeist

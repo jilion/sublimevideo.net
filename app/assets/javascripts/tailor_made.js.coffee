@@ -1,4 +1,4 @@
-jQuery(document).ready ->
+SublimeVideo.tailorMadeReady = ->
   if jQuery('.tailor_made section.modules').exists()
     jQuery('section.modules ul').slidify
       visibleSlides: 1

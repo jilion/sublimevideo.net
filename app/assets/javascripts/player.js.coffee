@@ -1,6 +1,3 @@
-jQuery(document).ready ->
-  SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
-
 ua = navigator.userAgent
 SublimeVideo.detectedMobile = ua.indexOf("Mobile") !=-1 ||
                               ua.indexOf('Windows Phone') != -1 ||

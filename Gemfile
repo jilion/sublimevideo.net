@@ -23,6 +23,7 @@ gem 'ratom', require: 'atom'
 gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'countries'
+gem 'librato-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

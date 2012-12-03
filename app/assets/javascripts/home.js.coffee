@@ -1,4 +1,4 @@
-jQuery(document).ready ->
+SublimeVideo.homeReady = ->
   new SublimeVideo.Slideshow(10) if jQuery('#slides').exists()
   # (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
   if jQuery('section.highlights').exists()
@@ -15,10 +15,10 @@ class SublimeVideo.Slideshow
 
     this.startTimer()
     this.setupObservers()
-    
+
   startTimer: ->
     @timer = setInterval((=> this.showNext()), @pauseDuration)
-      
+
   showNext: (index) ->
     currentSlide = $('#slides .slide.active').first()
     currentSelector = $('ul.selectors li.active').first()
@@ -34,7 +34,7 @@ class SublimeVideo.Slideshow
       else
         $('#slides .slide').first().addClass('active')
         $('ul.selectors li').first().addClass('active')
-  
+
   setupObservers: ->
     $('ul.selectors li a').each (index, element) =>
       element = $(element)
@@ -49,7 +49,7 @@ class SublimeVideo.Slideshow
 # class SublimeVideo.Quotes
 #   constructor: ->
 #     @quotes = jQuery("section.showcase .quote")
-# 
+#
 #   randomShow: ->
 #     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
 #     jQuery(@quotes[randomQuoteIndex]).show()

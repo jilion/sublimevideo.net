@@ -14,8 +14,15 @@
 
 jQuery.fn.exists = -> @length > 0
 
-jQuery(document).ready ->
+SublimeVideo.wwwDocumentReady = ->
+  SublimeVideo.homeReady()
+  SublimeVideo.whyReady()
+  SublimeVideo.tailorMadeReady()
+  SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
   SublimeVideo.yourBrowserIsTheBest()
+
+jQuery(document).ready ->
+  SublimeVideo.wwwDocumentReady()
   # SublimeVideo.scrollingLinks()
 
 SublimeVideo.yourBrowserIsTheBest = ->
@@ -41,7 +48,7 @@ SublimeVideo.yourBrowserIsTheBest = ->
 
 $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
-  SublimeVideo.yourBrowserIsTheBest()
+  SublimeVideo.wwwDocumentReady()
 
   $("video.sublime").each (index, playerEl) ->
     sublime.prepare playerEl

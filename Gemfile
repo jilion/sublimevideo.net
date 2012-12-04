@@ -12,7 +12,7 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'RedCloth'
-gem 'turbolinks'
+gem 'turbolinks', github: 'rails/turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals

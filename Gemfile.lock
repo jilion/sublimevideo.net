@@ -8,16 +8,10 @@ GIT
 
 GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: 5f156b306e938814988a9f35a72278287af0ab3c
+  revision: e98fb06b44e90dac544b1aef2c5db81f56acbd2a
   specs:
-    turbolinks (0.5.2)
+    turbolinks (0.6.0)
       coffee-rails
-
-GIT
-  remote: git://github.com/rymai/rescue_me.git
-  revision: df3c0b4ad1e7a3a925496fb9225d68a858566b66
-  specs:
-    rescue_me (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -227,6 +221,7 @@ GEM
     rb-readline (0.4.2)
     rdoc (3.12)
       json (~> 1.4)
+    rescue_me (0.1.1)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -336,7 +331,7 @@ DEPENDENCIES
   ratom
   rb-fsevent
   rb-readline
-  rescue_me (~> 0.1.1)!
+  rescue_me
   rspec-rails
   ruby_gntp
   sass-rails

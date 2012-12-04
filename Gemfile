@@ -20,7 +20,7 @@ gem 'airbrake'
 gem 'twitter'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
-gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
+gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'countries'
 gem 'librato-rails'

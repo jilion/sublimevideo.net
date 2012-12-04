@@ -5,9 +5,9 @@
 #= require jquery.transit
 #= require jquery.slidify
 #= require home
-#= require why
-#= require tailor_made_players
 #= require sublime_video_player
+#= require horizon_framework
+#= require tailor_made_players
 #= require_self
 #= require google-analytics-turbolinks
 #= require turbolinks
@@ -17,6 +17,7 @@ jQuery.fn.exists = -> @length > 0
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.homeReady()
   SublimeVideo.sublimeVideoPlayerReady() if $('.features').exists()
+  SublimeVideo.horizonFrameworkReady() if $('.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 

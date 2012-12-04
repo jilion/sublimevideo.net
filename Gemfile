@@ -48,7 +48,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'rack-livereload'
+  gem 'rack-livereload', github: 'johnbintz/rack-livereload', branch: 'turbolinks_fix'
   gem 'quiet_assets'
 end
 

@@ -22,9 +22,6 @@ feature "Com Pages" do
         click_link 'pricing'
         current_url.should eq "http://sublimevideo.dev/pricing"
 
-        click_link 'showcase'
-        current_url.should eq "http://sublimevideo.dev/customer-showcase"
-
         click_link 'news'
         current_url.should eq "http://sublimevideo.dev/news"
 
@@ -58,8 +55,8 @@ feature "Com Pages" do
         click_link 'Pricing'
         current_url.should eq "http://sublimevideo.dev/pricing"
 
-        click_link 'Customer Showcase'
-        current_url.should eq "http://sublimevideo.dev/customer-showcase"
+        click_link 'Testimonials'
+        current_url.should eq "http://sublimevideo.dev/testimonials"
 
         # Support
         click_link 'Help'
@@ -110,6 +107,11 @@ feature "Com Pages" do
     scenario '/plans redirects to /pricing' do
       visit '/plans'
       current_url.should eq "http://sublimevideo.dev/pricing"
+    end
+
+    scenario '/customer-showcase redirects to /testimonials' do
+      visit '/customer-showcase'
+      current_url.should eq "http://sublimevideo.dev/testimonials"
     end
 
     %w[signup sign_up register].each do |path|

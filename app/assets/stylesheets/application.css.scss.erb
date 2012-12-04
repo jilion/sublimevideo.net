@@ -1664,6 +1664,69 @@ section.upcoming a.tell_us span.icon-mail {
   padding-top:25px;
 }
 
+.tailor_made_form #content {
+  width:960px;
+  margin:30px auto;
+  position:relative;
+  color:#224375;
+  text-shadow:rgba(255,255,255,0.25) 0 1px 0;
+  background-color:rgba(0,0,0,0.3);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)"; /* IE8 */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);   /* IE6 & 7 */
+  zoom:1;
+  @include border-radius(5px);
+}
+
+.tailor_made_form #content .content_wrap {
+  background:#8ea6c2 url(<%= asset_path "back_texture_my.png" %>);
+  @include border-radius(5px);
+  @include box-shadow((inset rgba(255,255,255,0.2) 0 1px 0, rgba(0,25,72,1) 0 1px 6px));
+}
+
+.tailor_made_form #content .content_wrap .lights {
+  @include gradient(rgba(255,255,255,0.3),rgba(255,255,255,0),transparent);
+  @include border-radius(5px);
+  padding:30px 40px;
+}
+
+.tailor_made_form #content label {
+  color:#003165;  
+}
+
+.tailor_made_form #content .entry label {
+  display:block;
+  font-weight:600;
+  padding:5px 0 5px;
+}
+
+.tailor_made_form #content .entry.select select {
+  max-width:432px;
+}
+
+.tailor_made_form #content .entry.indent {
+  margin-top:5px;
+  margin-left:38px;
+}
+
+.tailor_made_form #content .entry.indent input.text {
+  width:377px;
+}
+
+.tailor_made_form #content h5 {
+  font-size:18px;
+  font-weight:600;
+  padding:15px 0 10px;
+  color:#003165;
+}
+
+.tailor_made_form #content .entry textarea.text.errors {
+  margin-bottom:-4px;
+}
+
+.tailor_made_form #content .actions {
+  margin:40px 0 20px;
+}
+
 /* ========= */
 /* = Plans = */
 /* ========= */

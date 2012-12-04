@@ -10,11 +10,15 @@ class TailorMadePlayerRequestsController < ApplicationController
 
     respond_with(@tailor_made_player_request) do |format|
       if @tailor_made_player_request.save
-        format.html { redirect_to '/tailor-made-players', notice: I18n.t('flash.support_requests.create.notice') }
+        Librato.increment 'www.tailor_made_player_request'
+        format.html { redirect_to thank_you_tailor_made_player_requests_path }
       else
         format.html
       end
     end
+  end
+
+  def thank_you
   end
 
 end

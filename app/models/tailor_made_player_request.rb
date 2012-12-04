@@ -1,6 +1,8 @@
+require 'file_size_validator'
+
 class TailorMadePlayerRequest < ActiveRecord::Base
 
-  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document
+  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :document_cache
 
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
@@ -8,6 +10,7 @@ class TailorMadePlayerRequest < ActiveRecord::Base
 
   validates :name, :email, :topic, :description, presence: true
   validates :topic, inclusion: TOPICS, allow_blank: true
+  validates :document, file_size: { maximum: 10.megabytes.to_i }
 
   def initialize(*args)
     super

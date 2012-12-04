@@ -24,6 +24,7 @@ gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.co
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'countries'
 gem 'librato-rails'
+gem 'lograge'
 
 # Gems used only for assets and not required
 # in production environments by default.

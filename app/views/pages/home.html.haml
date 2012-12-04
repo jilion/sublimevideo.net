@@ -139,7 +139,7 @@
       %br
       = "Katabatic Digital"
     = link_to 'testimonials', class: "view_all_showcases" do
-      %span= "View showcases"
+      %span= "View testimonials"
   .spacer
 
 = content_for :highlights do
@@ -148,13 +148,13 @@
       %h4.custom_break.t1= "Highlights"
       .wrap
         %ul
-          -#%li.box.new
-          -#  = link_to my_url('video-code-generator') do
-          -#    = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
-          -#    %span.text
-          -#      %strong= "Video Code Generator"
-          -#      %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
-          -#    %span.badge
+          %li.box.new
+            = link_to my_url('video-code-generator') do
+              = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
+              %span.text
+                %strong= "Video Code Generator"
+                %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
+              %span.badge
           %li.box
             = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do
               = image_tag "home/highlights/twit_tv.png", alt: "Twit.tv", size: "161x75", style: "margin-top:30px"

@@ -1,9 +1,9 @@
 - @body_class = "tailor_made_form"
 = content_for :header do
   %h2= "Tailor-made Players Partnerships - Contact form"
-  %p.sub= "If you are interested to team up with us to design tailor-made players, please fill in the form below,  we will contact you shortly."
+  %p.sub= "If you are interested to teaming up with us to design tailor-made players, please fill in the form below. We will contact you shortly."
 
-= form_for @tailor_made_player_request, url: url_for do |f|
+= form_for @tailor_made_player_request do |f|
   .entry
     = f.label :name, 'Your name'
     = f.text_field :name, class: 'text no_icon'
@@ -29,7 +29,7 @@
     = f.country_select :country, options_for_select("Country", selected: "Country")
 
   .entry
-    = f.label :topic, 'Please tell us the topic of your request'
+    = f.label :topic, 'Please let us know about the topic of your request:'
 
   .radio_wrap
     = f.radio_button :topic, 'agency'

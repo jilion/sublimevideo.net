@@ -1,4 +1,4 @@
-guard :livereload, host: 'docs.sublimevideo.dev' do
+guard :livereload, host: 'sublimevideo.dev' do
   watch(%r{app/views/.+\.(erb|haml|slim)})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})

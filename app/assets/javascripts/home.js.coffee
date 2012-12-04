@@ -1,16 +1,20 @@
 SublimeVideo.homeReady = ->
-  new SublimeVideo.Slideshow(10) if jQuery('#slides').exists()
+  if ($slides = $('#slides')).exists()
+    new SublimeVideo.Slideshow($slides, 10)
+
   # (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
-  if jQuery('section.highlights').exists()
-    jQuery('section.highlights ul').slidify
+
+  if ($highlights = $('section.highlights')).exists()
+    $highlights.find('ul').slidify
       visibleSlides: 3
       speed: 5
-      previousButtons: jQuery('section.highlights button.arrow.previous')
-      nextButtons: jQuery('section.highlights button.arrow.next')
-  new SublimeVideo.NewsTicker(6) if jQuery('.news_ticker').exists()
+      previousButtons: $highlights.find('button.arrow.previous')
+      nextButtons: $highlights.find('button.arrow.next')
+
+  new SublimeVideo.NewsTicker(6) if $('.news_ticker').exists()
 
 class SublimeVideo.Slideshow
-  constructor: (pause) ->
+  constructor: (@div, pause) ->
     @pauseDuration = pause * 1000
 
     this.startTimer()
@@ -20,19 +24,19 @@ class SublimeVideo.Slideshow
     @timer = setInterval((=> this.showNext()), @pauseDuration)
 
   showNext: (index) ->
-    currentSlide = $('#slides .slide.active').first()
+    currentSlide = @div.find('.slide.active').first()
     currentSelector = $('ul.selectors li.active').first()
     currentSlide.removeClass('active')
     currentSelector.removeClass('active')
     if index?
-      $($('#slides .slide')[index]).addClass('active')
+      $(@div.find('.slide')[index]).addClass('active')
       $($('ul.selectors li')[index]).addClass('active')
     else
       if currentSlide.next().length == 1
         currentSlide.next().addClass('active')
         currentSelector.next().addClass('active')
       else
-        $('#slides .slide').first().addClass('active')
+        @div.find('.slide').first().addClass('active')
         $('ul.selectors li').first().addClass('active')
 
   setupObservers: ->

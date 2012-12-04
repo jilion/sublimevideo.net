@@ -35,7 +35,7 @@
   %tr
     %td.name
       %h4
-        = "Keyboard controls"
+        = "Keyboard control"
         = link_to 'sublime-video-player#keyboard', class: "arrow" do
           %span.icon-arrow
     %td.price
@@ -161,13 +161,13 @@
   %tr
     %td.name
       %h4
-        = "Forum & e-mail support"
+        = "Forum & email support"
     %td.price
       %strong= "Free"
   %tr
     %td.name
       %h4
-        = "VIP e-mail support"
+        = "VIP email support"
     %td.price
       %strong
         = "$99"
@@ -201,7 +201,7 @@
       %p
         = raw "Yes, it's completely free and gives you unlimited video plays. The  free player only displays a discreet"
         %a.sublime{ href: '#badged_video' }= "SublimeVideo logo"
-        %video#badged_video{ size: '576x324', poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none" }
+        %video#badged_video{ size: '576x324', poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none", data: { settings: 'logo-enable:true' } }
           == <source src="//media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
           == <source src="//media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
         = "for a few seconds after video playback begins."

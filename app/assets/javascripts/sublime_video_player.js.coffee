@@ -4,7 +4,9 @@ SublimeVideo.detectedMobile = ua.indexOf("Mobile") !=-1 ||
                               ua.indexOf('Android') != -1 ||
                               ua.indexOf('webOS') != -1
 
-if typeof(sublimevideo) isnt "undefined"
+SublimeVideo.sublimeVideoPlayerReady = ->
+  new SublimeVideo.DesignsDemo($('.design_demo'))
+
   sublimevideo.ready ->
     sublimevideo.onStart (sv) ->
       if sv.element.id is "single_video" and !SublimeVideo.detectedMobile
@@ -36,6 +38,15 @@ SublimeVideo.showCredits = (onOff) ->
     else
       clearTimeout(timerIn)
       credits.hide(1000)
+
+class SublimeVideo.DesignsDemo
+  constructor: (@links) ->
+    @links.on 'click', (event) ->
+      $link = $(event.target)
+      $("#{$link.attr('href')}").attr('data-settings', "player-kit:#{$link.data('kit-id')}")
+      sublime.lightbox($link[0]).open()
+
+      false
 
 class SublimeVideo.Playlist
   constructor: (playlistWrapperId) ->

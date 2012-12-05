@@ -155,7 +155,7 @@
           = ".90"
   %tr
     %th{ colspan: 2 }
-      = link_to 'sublime-video-player#support' do
+      = link_to '#forum_and_support' do
         = "Support"
         %span.icon-arrow
   %tr
@@ -200,10 +200,10 @@
       %h4= "The free offer may seem too good to be true. Is it really free and unlimited?"
       %p
         = raw "Yes, it's completely free and gives you unlimited video plays. The  free player only displays a discreet"
-        %a.sublime{ href: '#badged_video' }= "SublimeVideo logo"
-        %video#badged_video{ size: '576x324', poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none", data: { settings: 'logo-enable:true' } }
-          == <source src="//media.jilion.com/videos/demo/midnight_sun_sv1_360p.mp4" />
-          == <source src="//media.jilion.com/videos/demo/midnight_sun_sv1_360p.webm" />
+        %a.sublime{ href: '#video_logo' }= "SublimeVideo logo"
+        %video#video_logo{ width: 576, height: 324, poster: image_path("demo/midnight_sun_800.jpg"), preload: "none", style: "display:none", data: { uid: 'pricing-badged', name: 'Pricing Badged', settings: 'logo-enable:true' } }
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.webm" />
         = "for a few seconds after video playback begins."
     .box
       %h4= "What does 'per-site' mean?"
@@ -215,7 +215,7 @@
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
-    .box
+    .box#forum_and_support
       %h4= "Forum & Support"
       %p= raw "All users have access to our extensive documentation, community forum and e-mail support. Additionally, we offer a VIP support to customers who need answers within the business day. #{link_to "Find out more on the help page", 'help'}."
   .spacer

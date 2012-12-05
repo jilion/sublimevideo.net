@@ -8,4 +8,8 @@ module UrlsHelper
     'https://getsatisfaction.com/sublimevideo'
   end
 
+  def get_satisfaction_opening_horizon_to_developers_url
+    'https://getsatisfaction.com/sublimevideo'
+  end
+
 end

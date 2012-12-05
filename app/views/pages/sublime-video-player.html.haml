@@ -46,10 +46,10 @@
       %span.addon= "Add-on"
       %span.new= "New"
     %p= raw "Along with the #{link_to 'Classic', '#design_demo', class: 'design_demo sublime', data: { 'on-open' => 'nothing', 'kit-id' => '1' }} SublimeVideo player design, you can now select two additional player designs, #{link_to 'Light', '#design_demo', class: 'design_demo sublime', data: { 'on-open' => 'nothing', 'kit-id' => '3' }} and #{link_to 'Flat', '#design_demo', class: 'design_demo sublime', data: { 'on-open' => 'nothing', 'kit-id' => '2' }}, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", 'tailor-made-players'}."
-    %video#design_demo{ width: 640, height: 360, poster: image_path('demo/midnight_sun2_800.jpg'), preload: 'none', style: 'display:none', 'data-uid' => 'designs-demo', 'data-name' => 'Designs Demo' }
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.mp4" />
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_270p.mp4" />
-      == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.webm" />
+    %video#design_demo{ width: 640, height: 360, poster: image_path('demo/midnight_sun2_800.jpg'), preload: 'none', style: 'display:none', data: { uid: 'designs-demo', name: 'Designs Demo' } }
+      <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
+      <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_270p.mp4" />
+      <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
     .spacer
 
   %a#on_video_logo
@@ -59,7 +59,7 @@
       = "On-video logo"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= "With this new add-on, you can display your logo on video and define its placement, display duration and link."
+    %p= "With this new add-on, you can display your logo on video and define its placement and link."
     .spacer
 
   %section.retina.f.right
@@ -85,7 +85,7 @@
     %h3.title
       = "Keyboard control"
       %span.new= "New"
-    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the arrows or +/- for volume control. It will also improve your site's Accessibility. #{link_to "Learn more",""}."
+    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's Accessibility. #{link_to "Learn more", docs_url('beta/keyboard')}."
     .spacer
 
   %a#lightbox
@@ -113,20 +113,20 @@
   %section#playlist.playlist.f
     .box
       .video_wrap.active
-        %video#video2.sublime{ width: "432", height: "243", poster: image_path("demo/midnight_sun2_800.jpg"), preload: "none", "data-uid" => "features-playlist-2", "data-name" => "Features Playlist #2" }
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_270p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_2_360p.webm" />
+        %video#video2.sublime{ width: 432, height: 243, poster: image_path("demo/midnight_sun2_800.jpg"), preload: "none", data: { uid: 'features-playlist-2', name: 'Features Playlist #2' } }
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_270p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
       .video_wrap
-        %video#video3{ width: "432", height: "243", poster: image_path("demo/midnight_sun3_800.jpg"), preload: "none", "data-uid" => "features-playlist-3", "data-name" => "Features Playlist #3" }
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_3_360p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_3_270p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_3_360p.webm" />
+        %video#video3{ width: 432, height: 243, poster: image_path("demo/midnight_sun3_800.jpg"), preload: "none", data: { uid: 'features-playlist-3', name: 'Features Playlist #3' } }
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_3_360p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_3_270p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_3_360p.webm" />
       .video_wrap
-        %video#video4{ width: "432", height: "243", poster: image_path("demo/midnight_sun4_800.jpg"), preload: "none", "data-uid" => "features-playlist-4", "data-name" => "Features Playlist #4" }
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_4_360p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_4_270p.mp4" />
-          == <source src="http://media.jilion.com/videos/demo/midnight_sun_sv1_4_360p.webm" />
+        %video#video4{ width: 432, height: 243, poster: image_path("demo/midnight_sun4_800.jpg"), preload: "none", data: { uid: 'features-playlist-4', name: 'Features Playlist #4' } }
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_4_360p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_4_270p.mp4" />
+          <source src="//media.sublimevideo.net/v/midnight_sun_sv1_4_360p.webm" />
       %ul.thumbs
         %li#thumbnail_video2
           %a{ href: "" }
@@ -199,10 +199,10 @@
         = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video", size: "196x111"
         %span.play
       %video#video_stats{ width: "640", height: "360", poster: "http://media.jilion.com/videos/sublimevideo-real-time-statistics.jpg", preload: "none", style: "display:none", data: { uid: "real-time-stats", name: "Real-Time Statistics" } }
-        == <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />
-        == <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.mp4" />
-        == <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-720p.webm" data-quality="hd" />
-        == <source src="http://media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
+        <source src="//media.jilion.com/videos/sublimevideo-real-time-statistics-720p.mp4" data-quality="hd" />
+        <source src="//media.jilion.com/videos/sublimevideo-real-time-statistics-360p.mp4" />
+        <source src="//media.jilion.com/videos/sublimevideo-real-time-statistics-720p.webm" data-quality="hd" />
+        <source src="//media.jilion.com/videos/sublimevideo-real-time-statistics-360p.webm" />
       %h5= "Watch the video overview"
     %h3.title
       = "Universal, Real-Time stats"
@@ -267,7 +267,7 @@
 %section.upcoming
   .tagline
     %h2.title= "Upcoming Features and Add-ons"
-    %p.sub= raw "Thanks to SublimeVideo Horizon, the SublimeVideo Modular Player can now easily be enriched with future features and add-ons. Below, we would like to share with you some possible upcoming features and add-ons. We would be delighted if you #{link_to "let us know about any other add-on you may need",""}."
+    %p.sub= raw "Thanks to SublimeVideo Horizon, the SublimeVideo Modular Player can now easily be enriched with future features and add-ons. Below, we would like to share with you some possible upcoming features and add-ons. We would be delighted if you #{link_to "let us know about any other add-on you may need", get_satisfaction_next_features_discussion_url}."
 
   %ul.upcoming_list
     %li
@@ -314,7 +314,7 @@
       %p= "Video advertising is a vital need for lots of publishers when it comes to monetizing their video contents. We are considering a number of video advertising options to answer the need for pre/post-roll advertising as well as layered advertising."
 
   .upcoming_row
-    = link_to "", class: "tell_us" do
+    = link_to get_satisfaction_next_features_discussion_url, class: "tell_us" do
       %span.icon-mail
       = "Tell us what you think"
     %h4= "Are we forgetting anything?"

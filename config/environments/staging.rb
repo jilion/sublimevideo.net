@@ -6,6 +6,9 @@ SublimeVideo::Application.configure do
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'sublimevideo-staging.net', strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
+  # One-line logs
+  config.lograge.enabled = true
+
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true

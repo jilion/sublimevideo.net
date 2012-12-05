@@ -14,9 +14,14 @@
 
 .big_video
   -# video tag here
-  = link_to "#", class: "overlay" do
+  = link_to '', class: 'overlay', id: 'video_horizon_trigger' do
     = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon"
     %span.overlay
+  %video#video_horizon{ width: 960, height: 540, poster: asset_path('horizon/posters/poster_1.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'Horizon Framework' } }
+    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
+    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_270p.mp4" />
+    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
+
 .main_copy
   %a#origin
   :textile
@@ -55,34 +60,34 @@
 
     In order to reach aforementioned goal, we first had to find a way to tackle the huge problem of devices, browsers and web technologies fragmentation.
 
-    Today, there are many different Web technologies available in various forms on even more different web platforms. For instance, on the graphic side, if you want to draw something, you have to choose between SVG, Canvas, CSS, VML, Flash or images. Those web technologies are in a way or another available, or not, depending on the platform. How can you deal with such fragmentation? Which technology can you use to create a web application such as a video player in such a heterogeneous context?
+    Today, there are many different Web technologies available in various forms on even more different web platforms. For instance, on the graphic side, if you want to draw something, you have to choose between SVG, Canvas, CSS, VML, Flash or images. Those web technologies are in a way or another, available or not, depending on the platform. How can you deal with such fragmentation? Which technology can you use to create a web application such as a video player in such a heterogeneous context?
 
     It's often a nightmare.
 
     h4. What’s the solution?
 
-    We came to the conclusion that we should build a Framework that could hide all this complexity and heterogeneity from the developer. Such Framework should have the following characteristics:
+    We came to the conclusion that we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
 
     * *Abstraction* - It should provide a new level of abstraction which would hide all the complexity of various web technologies. In other words, the developer should no longer worry about which web technology he should use to have his player running on any browsing platform.
 
-    * *Single codebase* - The Framework should provide the developer or the designer with a simple way to program his player just once using a single JavaScript codebase which works on absolutely any platform, either desktop or touch, without the need for modifications or hacks! Simply the Holy Grail for any developer!
+    * *Single codebase* - The framework should provide the developer or the designer with a simple way to program his player just once using a single JavaScript codebase which works on absolutely any platform, either desktop or touch, without the need for modifications or hacks! Simply the Holy Grail for any developer!
 
     * *Technologies harmonization* - It should have the knowledge to automatically and transparently use every appropriate technology on any browser to perform any action necessary, such as drawing a button, playing a video; absolutely any action and with no limitations, from the old IE6 to modern tablets such as the Nexus or the iPad.
 
     * *Fully Modular* - Its architecture should be modular in order to allow the creation of any new functionality in the form of a plug-in.
 
-    If we could build such a Framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
+    If we could build such a framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
 
     h4. A truly difficult Journey
 
   = image_tag "horizon/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing Horizon, facing the challenge of platforms fragmentation.", class: "mountain_team"
 
   :textile
-    It remained to be seen if such a Framework could ever be built. Frankly, there were numerous times when we thought the technical challenges facing us were simply insurmountable. We really had the feeling we were embarking on a crazy journey, like a group of alpine mountain-climbing pioneers.
+    It remained to be seen if such a framework could ever be built. Frankly, there were numerous times when we thought the technical challenges facing us were simply insurmountable. We really had the feeling we were embarking on a crazy journey, like a group of alpine mountain-climbing pioneers.
 
     h4. Just like in the movies, it turned out to be a happy outcome!
 
-    The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired Framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Horizon.
+    The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Horizon.
 
   = image_tag "horizon/horizon_framework_architecture_scheme.jpg", alt: "SublimeVideo Horizon Architecture", class: "architecture_scheme"
   %p
@@ -124,7 +129,7 @@
 
     h4. Benefits of SublimeVideo Horizon Graphic Engine Library:
 
-    We came to the conclusion we should build a Framework that could hide all this complexity and heterogeneity from the developer. Such Framework should have the following characteristics:
+    We came to the conclusion we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
 
     * A unified drawing API, which is completely abstracted from any rendering engine
     * A pixel perfect level of cross browser rendering
@@ -137,11 +142,10 @@
 
     h3. Demos
 
-  = render "showcases"
-
-  :textile
     Below you can test and play with various Horizon-based HTML5 Video Players.
-    We encourage it to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
+    We encourage you to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
+
+  = render "showcases"
 
   .big_break
 
@@ -170,8 +174,8 @@
 
     We don't want to stop there of course, and *it is our goal to provide developers with ways to work with SublimeVideo Horizon* as soon as possible!
 
-    After more than a year of hard work creating the Framework itself, we now want to properly explore what could be the best ways to give developers access to SublimeVideo Horizon.
+    After more than a year of hard work creating the framework itself, we now want to properly explore what could be the best ways to give developers access to SublimeVideo Horizon.
 
     All the options are on the table now!
-    Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", ''}.
+    Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_horizon_to_developers_url}.
 

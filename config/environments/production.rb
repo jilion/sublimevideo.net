@@ -4,6 +4,9 @@ SublimeVideo::Application.configure do
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'sublimevideo.net', strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
+  # One-line logs
+  config.lograge.enabled = true
+
   # Code is not reloaded between requests
   config.cache_classes = true
 

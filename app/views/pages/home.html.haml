@@ -34,7 +34,7 @@
       = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb"
       %span.overlay
       %span.play
-    %video#video_horizon{ "data-action-enable" => 'true', width: 800, height: 450, style: 'display:none' }
+    %video#video_horizon{ "data-action-enable" => 'true', width: 800, height: 450, style: 'display:none',  data: { uid: 'home', name: 'Home' } }
       <source src="media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'  />
       <source src="media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'  />
       <source src="media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'  />
@@ -141,8 +141,8 @@
       = "Emery Wells, Founder/CTO"
       %br
       = "Katabatic Digital"
-    = link_to page_path('customer-showcase'), class: "view_all_showcases" do
-      %span= "View showcases"
+    = link_to 'testimonials', class: "view_all_showcases" do
+      %span= "View testimonials"
   .spacer
 
 = content_for :highlights do
@@ -151,13 +151,13 @@
       %h4.custom_break.t1= "Highlights"
       .wrap
         %ul
-          -#%li.box.new
-          -#  = link_to my_url('video-code-generator') do
-          -#    = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
-          -#    %span.text
-          -#      %strong= "Video Code Generator"
-          -#      %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
-          -#    %span.badge
+          %li.box.new
+            = link_to my_url('video-code-generator') do
+              = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
+              %span.text
+                %strong= "Video Code Generator"
+                %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
+              %span.badge
           %li.box
             = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do
               = image_tag "home/highlights/twit_tv.png", alt: "Twit.tv", size: "161x75", style: "margin-top:30px"

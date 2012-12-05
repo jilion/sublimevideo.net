@@ -22,7 +22,7 @@
           = f.text_field :job_title, class: 'text no_icon'
 
         .entry
-          = f.label :company, 'Company'
+          = f.label :company, 'Company', required: true
           = f.text_field :company, class: 'text no_icon'
 
         .entry
@@ -58,10 +58,8 @@
           = f.text_area :description, class: 'text'
 
         .entry
-          = f.label :document, 'Additional document (only .pdf & .zip, 10MB max file size)'
+          = f.label :document, 'Additional document (10MB max)'
           = f.file_field :document
-          = File.basename(@tailor_made_player_request.document.path) if @tailor_made_player_request.document?
-          = f.hidden_field :document_cache
 
         .actions.center
           = f.submit 'Submit', class: 'submit blue_button'

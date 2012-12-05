@@ -12,7 +12,7 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'RedCloth'
-gem 'turbolinks' #, github: 'rails/turbolinks'
+gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
@@ -49,7 +49,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'rack-livereload', github: 'johnbintz/rack-livereload', branch: 'turbolinks_fix'
+  gem 'rack-livereload'
   gem 'quiet_assets'
 end
 

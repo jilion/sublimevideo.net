@@ -1,5 +1,11 @@
 SublimeVideo.homeReady = ->
   sublime.ready ->
+    sublime('lightbox_horizon').on
+      open: ->
+        slideshow.stopTimer() if slideshow
+      close: ->
+        slideshow.startTimer() if slideshow
+
     sublime.players.on 'ready', (player) ->
       if player.videoId() is 'video_horizon'
         player.on 'action:showcases', ->
@@ -11,7 +17,7 @@ SublimeVideo.homeReady = ->
           SublimeVideo.UI.Utils.openAccountPopup('signup')
 
   if ($slides = $('#slides')).exists()
-    new SublimeVideo.Slideshow($slides, 10)
+    slideshow = new SublimeVideo.Slideshow($slides, 10)
 
   # (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
 
@@ -34,6 +40,11 @@ class SublimeVideo.Slideshow
   startTimer: ->
     @timer = setInterval((=> this.showNext()), @pauseDuration)
 
+  stopTimer: ->
+    if @timer
+      clearInterval(@timer)
+      @timer = null
+
   showNext: (index) ->
     currentSlide = @div.find('.slide.active').first()
     currentSelector = $('ul.selectors li.active').first()
@@ -55,9 +66,7 @@ class SublimeVideo.Slideshow
       element = $(element)
       element.on 'click', (event) =>
         event.preventDefault()
-        if @timer
-          clearInterval(@timer)
-          @timer = null
+        this.stopTimer()
         this.showNext(index)
 
 

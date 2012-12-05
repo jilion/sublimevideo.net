@@ -41,3 +41,9 @@ $(window).bind 'page:change', ->
     sublime.prepare playerEl
   $("a.sublime").each (index, lightboxEl) ->
     sublime.prepare lightboxEl
+
+  setTimeout scrollToHash, 200
+
+scrollToHash = ->
+  if document.location.hash isnt ''
+    $(document.body).animate({ scrollTop: $(document.location.hash).offset()['top'] })

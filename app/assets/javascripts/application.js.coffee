@@ -38,10 +38,8 @@ $(window).bind 'page:change', ->
   SublimeVideo.wwwDocumentReady()
 
   sublime.ready ->
-    $("video.sublime").each (index, playerEl) ->
-      sublime.prepare playerEl
-    $("a.sublime").each (index, lightboxEl) ->
-      sublime.prepare lightboxEl
+    $(".sublime").each (index, el) ->
+      sublime.prepare el
   sublime.load()
 
   setTimeout scrollToHash, 200

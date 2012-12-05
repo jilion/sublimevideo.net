@@ -3,12 +3,16 @@ SublimeVideo.homeReady = ->
     sublime.players.on 'ready', (player) ->
       if player.videoId() is 'video_horizon'
         player.on 'action:showcases', ->
-          document.location.href = '/customer-showcase'
+          go = -> document.location.href = '/tailor-made-players'
+          if player.isFullscreen() then player.exitFullscreen(go) else go()
         player.on 'action:teamup', ->
-          document.location.href = '/tailor-made-players-requests/new'
+          go = -> document.location.href = '/tailor-made-players-requests/new'
+          if player.isFullscreen() then player.exitFullscreen(go) else go()
         player.on 'action:signup', ->
-          sublime('lightbox_horizon').close()
-          SublimeVideo.UI.Utils.openAccountPopup('signup')
+          go = ->
+            sublime('lightbox_horizon').close()
+            SublimeVideo.UI.Utils.openAccountPopup('signup')
+          if player.isFullscreen() then player.exitFullscreen(go) else go()
 
   if ($slides = $('#slides')).exists()
     new SublimeVideo.Slideshow($slides, 10)

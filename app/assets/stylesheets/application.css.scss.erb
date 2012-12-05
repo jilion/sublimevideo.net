@@ -1630,6 +1630,8 @@ section.upcoming a.tell_us span.icon-mail {
   width:46px;
   height:46px;
   border:none;
+  background-color:transparent;
+  background-repeat:none;
   background-size:46px;
   cursor:pointer;
   position:absolute;
@@ -1637,12 +1639,12 @@ section.upcoming a.tell_us span.icon-mail {
 }
 
 .tailor_made section.modules button.arrow.previous {
-  background:url(<%= asset_path "tailor_made/arrow_left@2x.png" %>) no-repeat;
+  background-image:url(<%= asset_path "tailor_made/arrow_left@2x.png" %>);
   left:28px;
 }
 
 .tailor_made section.modules button.arrow.next {
-  background:url(<%= asset_path "tailor_made/arrow_right@2x.png" %>) no-repeat;
+  background-image:url(<%= asset_path "tailor_made/arrow_right@2x.png" %>);
   right:28px;
 }
 

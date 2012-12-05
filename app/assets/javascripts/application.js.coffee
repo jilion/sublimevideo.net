@@ -36,7 +36,9 @@ $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
 
-  $("video.sublime").each (index, playerEl) ->
-    sublime.prepare playerEl
-  $("a.sublime").each (index, lightboxEl) ->
-    sublime.prepare lightboxEl
+  sublime.ready ->
+    $("video.sublime").each (index, playerEl) ->
+      sublime.prepare playerEl
+    $("a.sublime").each (index, lightboxEl) ->
+      sublime.prepare lightboxEl
+  sublime.load()

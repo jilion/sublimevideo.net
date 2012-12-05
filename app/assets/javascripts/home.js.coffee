@@ -1,4 +1,15 @@
 SublimeVideo.homeReady = ->
+  sublime.ready ->
+    sublime.players.on 'ready', (player) ->
+      if player.videoId() is 'video_horizon'
+        player.on 'action:showcases', ->
+          document.location.href = '/customer-showcase'
+        player.on 'action:teamup', ->
+          document.location.href = '/tailor-made-players-requests/new'
+        player.on 'action:signup', ->
+          sublime('lightbox_horizon').close()
+          SublimeVideo.UI.Utils.openAccountPopup('signup')
+
   if ($slides = $('#slides')).exists()
     new SublimeVideo.Slideshow($slides, 10)
 

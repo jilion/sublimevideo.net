@@ -184,14 +184,14 @@
 
 = render "layouts/sign_up_box"
 
-#need_more= raw "Need a Tailor-made player? #{link_to "Contact us", new_tailor_made_player_request_path}."
+#need_more= raw "Need a tailor-made player? #{link_to "Contact us", new_tailor_made_player_request_path}."
 
 .big_break
 
 %section.faq
   .col_left
     .box
-      %h4= "How does the '30-day free trial' on paid add-ons work?"
+      %h4= "How does the '30 days free' on paid add-ons work?"
       %p= "We offer a 30-day free trial for each paid add-on - no credit card required. When your 30 days are almost up we will send you a reminder to give you the option to purchase the add-on."
     .box
       %h4= "How and when can I pay?"
@@ -207,15 +207,15 @@
         = "for a few seconds after video playback begins."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same plan across these via our Alias domains option. #{link_to "Read more", docs_url('beta/site-settings')}."
+      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option. #{link_to "Read more", docs_url('beta/site-settings')}."
   .col_right
     .box
       %h4= "Advanced domain settings"
-      %p= raw "All plans come with advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('beta/site-settings')}."
+      %p= raw "We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('beta/site-settings')}."
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
     .box#forum_and_support
       %h4= "Forum & Support"
-      %p= raw "All users have access to our extensive documentation, community forum and e-mail support. Additionally, we offer a VIP support to customers who need answers within the business day. #{link_to "Find out more on the help page", 'help'}."
+      %p= raw "All users have access to our extensive #{link_to "documentation", 'help#documentation'}, ask our #{link_to "community forum", 'help#community_forum'} and #{link_to "email support", '#email_support'}. Additionally, we offer a VIP support to customers who need answers within the business day. #{link_to "Find out more on the help page", 'help'}."
   .spacer

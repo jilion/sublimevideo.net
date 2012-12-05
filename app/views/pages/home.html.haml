@@ -34,11 +34,11 @@
       = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb"
       %span.overlay
       %span.play
-    %video#video_horizon{ "data-action-enable" => 'true', width: 800, height: 450, style: 'display:none',  data: { uid: 'home', name: 'Home' } }
-      <source src="media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'  />
-      <source src="media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'  />
-      <source src="media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'  />
-      <source src="media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd'  />
+    %video#video_horizon{ width: 800, height: 450, style: 'display:none',  data: { uid: 'home', name: 'Home', 'action-enable' => 'true' } }
+      <source src="//media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
+      <source src="//media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
+      <source src="//media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
+      <source src="//media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
 
 = content_for :middle do
   .selectors_wrap

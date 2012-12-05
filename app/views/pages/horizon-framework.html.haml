@@ -17,17 +17,18 @@
   = link_to '', class: 'overlay', id: 'video_horizon_trigger' do
     = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon"
     %span.overlay
-  %video#video_horizon{ width: 960, height: 540, poster: asset_path('horizon/posters/poster_1.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'Horizon Framework' } }
-    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
-    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_270p.mp4" />
-    <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
+  %video#video_horizon{ width: 960, height: 540, poster: asset_path('horizon/posters/poster_1.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'Horizon Framework', 'action-enable' => 'true' } }
+    <source src="//media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
+    <source src="//media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
+    <source src="//media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
+    <source src="//media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
 
 .main_copy
   %a#origin
   :textile
     h3. Origin and motivations for building the SublimeVideo Horizon Framework
 
-    h4. One first goal already achieved: Reliable Video Play in any browser and device
+    h4. First goal already achieved: Reliable video play in any browser and device
 
     Before Horizon, we offered only one player; The SublimeVideo HTML5 Video Player.
     It was great because it was truly reliable. It is safe to say it was the most web-page friendly HTML5 video player out there, thanks to the countless hours we spent ensuring nothing would break when you used it on any of your pages. Not an easy task for an HTML5 Video player without iFrame.
@@ -39,7 +40,7 @@
 
     We were therefore legitimately able to tick the "Reliability" check box. We were really pleased with this, but it was not enough!
 
-    h4. Second and third major goals to achieve: Features Extensibility and Design Freedom
+    h4. Second and third major goals to achieve: Features extensibility and design freedom
 
     While being reliable, our player was limited in two important dimensions, namely Features Extensibility and Design Freedom.
     The former player architecture was not designed to accommodate new features seamlessly or to be graphically modified to  answer the various needs of thousands of potential web publishers.
@@ -78,7 +79,7 @@
 
     If we could build such a framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
 
-    h4. A truly difficult Journey
+    h4. A truly difficult journey
 
   = image_tag "horizon/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing Horizon, facing the challenge of platforms fragmentation.", class: "mountain_team"
 
@@ -122,27 +123,25 @@
 
     h4. SublimeVideo player's designs goes deeper than the usual skins
 
+    In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Horizon, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
+
   = image_tag "horizon/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
 
   :textile
-    In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Horizon, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
-
     h4. Benefits of SublimeVideo Horizon Graphic Engine Library:
 
-    We came to the conclusion we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
-
-    * A unified drawing API, which is completely abstracted from any rendering engine
-    * A pixel perfect level of cross browser rendering
-    * The ability to draw vector graphics which are resolution independent brings beautiful and crisp controls on Retina® displays especially when users pinch to zoom on touch devices
-    * The possibility to dynamically adapt vector shapes to either modify, recolor or scale them
-    * Supports complex shapes drawn with lines, arcs and even Bézier curves
-    * Complete support for masking and clipping
-    * A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows
-    * Compatibility with font systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts
+    * A unified drawing API, which is completely abstracted from any rendering engine.
+    * A pixel perfect level of cross browser rendering.
+    * The ability to draw vector graphics which are resolution independent brings beautiful and crisp controls on Retina® displays especially when users pinch to zoom on touch devices.
+    * The possibility to dynamically adapt vector shapes to either modify, recolor or scale them.
+    * Supports complex shapes drawn with lines, arcs and even Bézier curves.
+    * Complete support for masking and clipping.
+    * A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows.
+    * Compatibility with font systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts.
 
     h3. Demos
 
-    Below you can test and play with various Horizon-based HTML5 Video Players.
+    Below you can test and play with various Horizon-based HTML5 Video players.
     We encourage you to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
 
   = render "showcases"
@@ -151,7 +150,7 @@
 
   %a#roadmap
   :textile
-    h3. Horizon Roadmap and Next Steps
+    h3. Horizon's Next Steps
 
     h4. 1st Phase: Horizon Introduction
 

@@ -1,8 +1,8 @@
+- @page_title = "Tailor-Made Player Parternship"
 - @body_class = "tailor_made_form"
-- @page_title = "Tailor-made Players Partnerships - Contact form"
 
 = content_for :header do
-  %h2= "Tailor-made Players Partnerships - Contact form"
+  %h2= @page_title
   %p.sub= "If you are interested to teaming up with us to design tailor-made players, please fill in the form below. We will contact you shortly."
 
 .content_box
@@ -19,25 +19,25 @@
 
         .entry
           = f.label :job_title, 'Job title'
-          = f.text_field :job_title, class: 'text no_icon'
+          = f.text_field :job_title, class: 'text no_icon', required: true
 
         .entry
           = f.label :company, 'Company', required: true
-          = f.text_field :company, class: 'text no_icon'
+          = f.text_field :company, class: 'text no_icon', required: true
 
         .entry
           = f.label :url, 'Website URL'
-          = f.text_field :url, class: 'text no_icon'
+          = f.text_field :url, class: 'text no_icon', required: true
 
         .entry.select
           = f.label :country, 'Country'
-          = f.country_select :country, options_for_select("Country", selected: "Country")
+          = f.country_select :country, options_for_select("Country", selected: "Country"), required: true
 
         %h5= 'Please let us know about the topic of your request:'
 
         .radio_wrap
           = f.radio_button :topic, 'agency', required: true
-          = f.label :topic_agency, 'I am an Agency and I would like to join the Partner program to design and sell tailor-made players to my customers.'
+          = f.label :topic_agency, 'I am an agency and I would like to join the partner program to design and sell tailor-made players to my customers.'
 
         .radio_wrap
           = f.radio_button :topic, 'standalone', required: true

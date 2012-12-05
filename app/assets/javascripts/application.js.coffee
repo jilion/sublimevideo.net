@@ -46,4 +46,5 @@ $(window).bind 'page:change', ->
 
 scrollToHash = ->
   if document.location.hash isnt ''
-    $(document.body).animate({ scrollTop: $(document.location.hash).offset()['top'] })
+    if ($elToScrollTo = $(document.location.hash)).exists()
+      $(document.body).animate({ scrollTop: $elToScrollTo.offset()['top'] })

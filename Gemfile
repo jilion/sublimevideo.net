@@ -16,15 +16,17 @@ gem 'turbolinks'
 gem 'google-analytics-turbolinks'
 
 # Internals
+gem 'sidekiq'
 gem 'airbrake'
 gem 'twitter'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
-gem 'countries'
 gem 'librato-rails'
 gem 'lograge'
+gem 'highrise'
+gem 'countries'
 
 # Gems used only for assets and not required
 # in production environments by default.

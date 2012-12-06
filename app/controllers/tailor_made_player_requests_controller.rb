@@ -1,3 +1,6 @@
+# coding: utf-8
+require_dependency 'service/tailor_made_player_request'
+
 class TailorMadePlayerRequestsController < ApplicationController
   respond_to :html
 
@@ -9,8 +12,7 @@ class TailorMadePlayerRequestsController < ApplicationController
     @tailor_made_player_request = TailorMadePlayerRequest.new(params[:tailor_made_player_request])
 
     respond_with(@tailor_made_player_request) do |format|
-      if @tailor_made_player_request.save
-        Librato.increment 'www.tailor_made_player_request'
+      if Service::TailorMadePlayerRequest.new(@tailor_made_player_request).create
         format.html { redirect_to thank_you_tailor_made_player_requests_path }
       else
         format.html

@@ -31,8 +31,31 @@ en:
       separator: "." # US separator
       delimiter: "," # US delimiter
 
+  activerecord:
+    attributes:
+      tailor_made_player_request:
+        name: "Your name"
+        email: "Email address"
+        url: "Website URL"
+        topic_agency: "I am an agency and I would like to join the partner program to design and sell tailor-made players to my customers."
+        topic_standalone: "I need a custom player for my site. Here's the name of my main agency:"
+        topic_platform: "I am a CMS, OVP or other platform and I would like to integrate SublimeVideo Player Technology in my platform."
+        topic_other: "Other, please specify:"
+    errors:
+      models:
+        tailor_made_player_request:
+          attributes:
+            name:
+              blank: "Please fill in %{attribute}"
+            topic:
+              blank: "Please choose the %{attribute} of your request"
+
   errors:
     messages:
+      blank: "Please fill in your %{attribute}"
       wrong_size: "is the wrong size (should be %{file_size})"
       size_too_small: "is too small (should be at least %{file_size})"
       size_too_big: "is too big (should be at most %{file_size})"
+    attributes:
+      description:
+        blank: "Please enter a %{attribute}"

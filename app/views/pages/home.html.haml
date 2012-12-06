@@ -80,9 +80,15 @@
         %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
       .spacer
   %ul.demo_switch
-    %li.active= link_to (image_tag "home/showcase/players/twit_logo@2x.png", size: "114x53"), ""
-    %li= link_to "", ""
-    %li= link_to "", ""
+    %li.active.d_1
+      = link_to "" do
+        %span= "TWiT.TV"
+    %li.d_2
+      = link_to "" do
+        %span= "Sony"
+    %li.d_3
+      = link_to "" do
+        %span= "Black Hand Cinema - Anthony Mandler"
   = link_to new_tailor_made_player_request_path, class: "need_a_player" do
     = "Need a tailor-made player?"
     %span.icon-arrow

@@ -510,7 +510,17 @@ body {
 
 .home .tailor_made ul.demo_switch li {
   float:left;
+  width:145px;
+  height:80px;
   margin-right:22px;
+  @include gradient(#ffffff,#d9d9d9,#ededed);
+  @include border-radius(4px);
+  @include box-shadow(rgba(58,81,106,0.75) 0 1px 3px);
+}
+
+.home .tailor_made ul.demo_switch li.active {
+  @include gradient(#9ea7b1,#b8c1cb,#abb4be);
+  @include box-shadow((inset rgba(0,40,82,.5) 0 1px 3px, #fff 0 1px 0));
 }
 
 .home .tailor_made ul.demo_switch li a {
@@ -519,18 +529,25 @@ body {
   height:80px;
   text-align:center;
   line-height:80px;
-  @include gradient(#ffffff,#d9d9d9,#ededed);
-  @include border-radius(4px);
-  @include box-shadow(rgba(58,81,106,0.75) 0 1px 3px);
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
-.home .tailor_made ul.demo_switch li.active a {
-  @include gradient(#9ea7b1,#b8c1cb,#abb4be);
-  @include box-shadow((inset rgba(0,40,82,.5) 0 1px 3px, #fff 0 1px 0));
+.home .tailor_made ul.demo_switch li.d_1 a {
+  background-image:url(<%= asset_path "home/showcase/players/twit_logo@2x.png" %>);
+  background-size:114px 53px;
+}
+.home .tailor_made ul.demo_switch li.d_2 a {
+  background-image:url(<%= asset_path "home/showcase/players/sony_disabled_logo@2x.png" %>);
+  background-size:94px 17px;
+}
+.home .tailor_made ul.demo_switch li.d_3 a {
+  background-image:url(<%= asset_path "home/showcase/players/blackhandcinema_disabled_logo@2x.png" %>);
+  background-size:83px 44px;
 }
 
-.home .tailor_made ul.demo_switch li a img {
-  vertical-align:middle;
+.home .tailor_made ul.demo_switch li a span {
+  display:none;
 }
 
 .home .tailor_made a.need_a_player {

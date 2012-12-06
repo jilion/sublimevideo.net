@@ -1,7 +1,6 @@
-class ApplicationController < SublimeVideoController
+class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  # before_filter :fake_maintenance_page
   before_filter :set_cache_buster, if: -> { Rails.env.development? || Rails.env.test? }
 
   def logged_in_cookie?

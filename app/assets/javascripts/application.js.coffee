@@ -15,7 +15,7 @@
 jQuery.fn.exists = -> @length > 0
 
 SublimeVideo.wwwDocumentReady = ->
-  SublimeVideo.homeReady()
+  SublimeVideo.homeReady() if $('.home').exists()
   SublimeVideo.sublimeVideoPlayerReady() if $('.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('.tailor_made').exists()
@@ -34,13 +34,13 @@ jQuery(document).ready ->
 #       }, 300)
 
 $(window).bind 'page:change', ->
-  SublimeVideo.documentReady()
-  SublimeVideo.wwwDocumentReady()
-
   sublime.ready ->
-    $(".sublime").each (index, el) ->
+    $('.sublime').each (index, el) ->
       sublime.prepare el
   sublime.load()
+
+  SublimeVideo.documentReady()
+  SublimeVideo.wwwDocumentReady()
 
   setTimeout scrollToHash, 200
 

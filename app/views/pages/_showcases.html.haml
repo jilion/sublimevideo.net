@@ -1,7 +1,7 @@
 #player_showcases
   .showcase.left
     .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: image_path("youtube/sony_poster_1.jpg"), preload: 'none', data: { settings: 'player-kit:6' } }
+      %video.sublime{ width: 640, height: 360, poster: image_path("youtube/sony_poster_1.jpg"), preload: 'none', data: { settings: 'player-kit:6', uid: 'showcase-sony', name: "Sony Showcase" } }
         <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.mp4" />
         <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.webm" />
     .desc
@@ -10,7 +10,7 @@
     .spacer
   .showcase.right
     .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: image_path("demo/midnight_sun_800.jpg"), preload: 'none', data: { settings: 'player-kit:5' } }
+      %video.sublime{ width: 640, height: 360, poster: image_path("demo/midnight_sun_800.jpg"), preload: 'none', data: { settings: 'player-kit:5', uid: 'showcase-twittv', name: "TWiT.TV Showcase" } }
         <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.mp4" />
         <source src="//media.sublimevideo.net/v/midnight_sun_sv1_360p.webm" />
     .desc

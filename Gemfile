@@ -25,7 +25,6 @@ gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails'
 gem 'lograge'
-gem 'highrise'
 gem 'countries'
 
 # Gems used only for assets and not required

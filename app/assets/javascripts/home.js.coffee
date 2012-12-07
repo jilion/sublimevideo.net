@@ -3,6 +3,7 @@ SublimeVideo.homeReady = ->
   SublimeVideo.setupSolutionsSlideshow()
   SublimeVideo.setupHighlightsSlideshow()
   SublimeVideo.setupNewsTicker()
+  SublimeVideo.pickRandomVideoThumb()
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
 SublimeVideo.setupHomeSublime = ->
@@ -12,7 +13,7 @@ SublimeVideo.setupHomeSublime = ->
         SublimeVideo.homeSlideshow.stopTimer() if SublimeVideo.homeSlideshow?
       close: ->
         SublimeVideo.homeSlideshow.startTimer() if SublimeVideo.homeSlideshow?
-
+  
     sublime.players.on 'ready', (player) ->
       if player.videoId() is 'video_horizon'
         player.on 'action:showcases', ->
@@ -46,6 +47,28 @@ SublimeVideo.setupHighlightsSlideshow = ->
 SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
+
+SublimeVideo.pickRandomVideoThumb = ->
+  if ($homeVideo = $('#home_video')).exists()
+    thumb = $homeVideo.find('img.video_thumb')
+    video = $("#video_horizon")
+    $homeVideo.hide()
+    thumb.bind 'load', ->
+      $homeVideo.fadeIn()
+
+    posterId = Math.floor(Math.random()*6) + 1
+
+    # Lightbox thumb
+    src = thumb.attr("src").replace(/thumb_[\d]/,"thumb_" + posterId)
+    thumb.attr("src", src)
+
+    # Lightbox poster
+    posterSrc = video.attr("poster").replace(/poster_[\d]/,"poster_" + posterId)
+    unless SublimeVideo.isMobile()
+      posterImage = new Image()
+      posterImage.src = posterSrc 
+    video.attr("poster", posterSrc)
+  
 
 class SublimeVideo.SolutionsSlideshow
   constructor: (@div, pause) ->

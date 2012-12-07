@@ -13,9 +13,8 @@
 .big_break
 
 .big_video
-  -# video tag here
   = link_to '', class: 'overlay', id: 'video_horizon_trigger' do
-    = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon"
+    = image_tag "horizon/posters/poster_1.jpg", alt: "Discover SublimeVideo Horizon", class: "video_poster"
     %span.overlay
   %video#video_horizon{ width: 960, height: 540, poster: asset_path('horizon/posters/poster_1.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'Horizon Framework', 'action-enable' => 'true' } }
     <source src="//media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />

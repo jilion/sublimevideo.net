@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PagesController do
 
-  %w[home sublime-video-player horizon-framework tailor-made-players pricing help].each do |page|
+  %w[home modular-player horizon-framework tailor-made-players pricing help].each do |page|
     it "responds with success to /#{page}" do
       get :show, page: page
       response.should render_template("pages/#{page}")

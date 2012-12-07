@@ -11,7 +11,7 @@ feature "Com Pages" do
         current_url.should eq "http://sublimevideo.dev/"
 
         click_link 'SublimeVideo Player'
-        current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+        current_url.should eq "http://sublimevideo.dev/modular-player"
 
         click_link 'Horizon Framework'
         current_url.should eq "http://sublimevideo.dev/horizon-framework"
@@ -50,7 +50,7 @@ feature "Com Pages" do
         current_url.should eq "http://sublimevideo.dev/why"
 
         click_link 'Features'
-        current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+        current_url.should eq "http://sublimevideo.dev/modular-player"
 
         click_link 'Pricing'
         current_url.should eq "http://sublimevideo.dev/pricing"
@@ -94,14 +94,14 @@ feature "Com Pages" do
   end
 
   describe "redirects" do
-    scenario '/demo redirects to /sublime-video-player' do
+    scenario '/demo redirects to /modular-player' do
       visit '/demo'
-      current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+      current_url.should eq "http://sublimevideo.dev/modular-player"
     end
 
-    scenario '/features redirects to /sublime-video-player' do
+    scenario '/features redirects to /modular-player' do
       visit '/features'
-      current_url.should eq "http://sublimevideo.dev/sublime-video-player"
+      current_url.should eq "http://sublimevideo.dev/modular-player"
     end
 
     scenario '/plans redirects to /pricing' do

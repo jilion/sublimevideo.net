@@ -18,7 +18,7 @@ end
 
 SublimeVideo::Application.routes.draw do
   # Redirects
-  %w[demo features].each { |action| get action => redirect('/sublime-video-player') }
+  %w[demo features].each { |action| get action => redirect('/modular-player') }
   %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
   %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
   get 'plans' => redirect('/pricing')

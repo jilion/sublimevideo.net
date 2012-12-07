@@ -18,12 +18,10 @@ SublimeVideo.pickRandomVideoPoster = ->
     img.bind 'load', ->
       img.fadeIn()
 
-    posterId = Math.floor(Math.random()*6) + 1
+    imgIndex = Math.floor(Math.random()*6)
 
     # Fake poster
-    src = img.attr("src").replace(/poster_[\d]/,"poster_" + posterId)
-    img.attr("src", src)
+    img.attr("src", SublimeVideo.horizonVideoPostersPaths[imgIndex])
 
     # Real poster
-    posterSrc = video.attr("poster").replace(/poster_[\d]/,"poster_" + posterId)
-    video.attr("poster", posterSrc)
+    video.attr("poster", SublimeVideo.horizonVideoPostersPaths[imgIndex])

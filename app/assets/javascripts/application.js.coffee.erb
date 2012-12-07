@@ -42,3 +42,5 @@ scrollToHash = ->
       
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+
+SublimeVideo.horizonVideoPostersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("horizon/posters/poster_#{n}.jpg") } %>

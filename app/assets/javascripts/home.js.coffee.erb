@@ -48,6 +48,8 @@ SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
 
+SublimeVideo.thumbsPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/thumbs/thumb_#{n}.jpg") } %>
+
 SublimeVideo.pickRandomVideoThumb = ->
   if ($homeVideo = $('#home_video')).exists()
     thumb = $homeVideo.find('img.video_thumb')
@@ -56,18 +58,16 @@ SublimeVideo.pickRandomVideoThumb = ->
     thumb.bind 'load', ->
       $homeVideo.fadeIn()
 
-    posterId = Math.floor(Math.random()*6) + 1
+    imgIndex = Math.floor(Math.random()*6)
 
     # Lightbox thumb
-    src = thumb.attr("src").replace(/thumb_[\d]/,"thumb_" + posterId)
-    thumb.attr("src", src)
+    thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
 
     # Lightbox poster
-    posterSrc = video.attr("poster").replace(/poster_[\d]/,"poster_" + posterId)
     unless SublimeVideo.isMobile()
       posterImage = new Image()
-      posterImage.src = posterSrc 
-    video.attr("poster", posterSrc)
+      posterImage.src = SublimeVideo.horizonVideoPostersPaths[imgIndex] 
+    video.attr("poster", SublimeVideo.horizonVideoPostersPaths[imgIndex])
   
 
 class SublimeVideo.SolutionsSlideshow

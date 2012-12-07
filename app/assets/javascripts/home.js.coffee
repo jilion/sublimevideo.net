@@ -1,10 +1,17 @@
 SublimeVideo.homeReady = ->
+  SublimeVideo.setupHomeSublime()
+  SublimeVideo.setupSolutionsSlideshow()
+  SublimeVideo.setupHighlightsSlideshow()
+  SublimeVideo.setupNewsTicker()
+  # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
+
+SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
     sublime('lightbox_horizon').on
       open: ->
-        slideshow.stopTimer() if slideshow
+        SublimeVideo.homeSlideshow.stopTimer() if SublimeVideo.homeSlideshow?
       close: ->
-        slideshow.startTimer() if slideshow
+        SublimeVideo.homeSlideshow.startTimer() if SublimeVideo.homeSlideshow?
 
     sublime.players.on 'ready', (player) ->
       if player.videoId() is 'video_horizon'
@@ -20,11 +27,15 @@ SublimeVideo.homeReady = ->
             SublimeVideo.UI.Utils.openAccountPopup('signup')
           if player.isFullscreen() then player.exitFullscreen(go) else go()
 
+SublimeVideo.setupSolutionsSlideshow = ->
+  if SublimeVideo.homeSlideshow?
+    SublimeVideo.homeSlideshow.kill()
+    SublimeVideo.homeSlideshow = null
+
   if ($slides = $('#slides')).exists()
-    slideshow = new SublimeVideo.Slideshow($slides, 10)
+    SublimeVideo.homeSlideshow = new SublimeVideo.SolutionsSlideshow($slides, 10)
 
-  # (new SublimeVideo.Quotes).randomShow() if jQuery('section.showcase').exists()
-
+SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()
     $highlights.find('ul').slidify
       visibleSlides: 3
@@ -32,14 +43,20 @@ SublimeVideo.homeReady = ->
       previousButtons: $highlights.find('button.arrow.previous')
       nextButtons: $highlights.find('button.arrow.next')
 
-  new SublimeVideo.NewsTicker(6) if $('.news_ticker').exists()
+SublimeVideo.setupNewsTicker = ->
+  if ($newTicker = $('.news_ticker')).exists()
+    new SublimeVideo.NewsTicker($newTicker, 6)
 
-class SublimeVideo.Slideshow
+class SublimeVideo.SolutionsSlideshow
   constructor: (@div, pause) ->
     @pauseDuration = pause * 1000
 
     this.startTimer()
     this.setupObservers()
+
+  kill: ->
+    this.stopTimer()
+    this.clearObservers()
 
   startTimer: ->
     @timer = setInterval((=> this.showNext()), @pauseDuration)
@@ -67,25 +84,28 @@ class SublimeVideo.Slideshow
 
   setupObservers: ->
     $('ul.selectors li a').each (index, element) =>
-      element = $(element)
-      element.on 'click', (event) =>
+      $(element).on 'click', (event) =>
         event.preventDefault()
         this.stopTimer()
         this.showNext(index)
 
+  clearObservers: ->
+    $('ul.selectors li a').each (index, element) =>
+      $(element).off 'click'
+
 
 # class SublimeVideo.Quotes
 #   constructor: ->
-#     @quotes = jQuery("section.showcase .quote")
+#     @quotes = $("section.showcase .quote")
 #
 #   randomShow: ->
 #     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
-#     jQuery(@quotes[randomQuoteIndex]).show()
+#     $(@quotes[randomQuoteIndex]).show()
 
 class SublimeVideo.NewsTicker
-  constructor: (pause) ->
+  constructor: (@div, pause) ->
     @pauseDuration = pause * 1000
-    @news = jQuery('.news_ticker .news')
+    @news = @div.find('.news')
     @activeBoxIndex = 0
     this.startTimer()
 
@@ -93,10 +113,10 @@ class SublimeVideo.NewsTicker
     @timer = setInterval((=> this.nextNews(@activeBoxIndex + 1)), @pauseDuration)
 
   nextNews: (index) ->
-    currentEl = jQuery(@news[@activeBoxIndex])
+    currentEl = $(@news[@activeBoxIndex])
 
     @activeBoxIndex = index % @news.length
-    nextEl = jQuery(@news[@activeBoxIndex])
+    nextEl = $(@news[@activeBoxIndex])
 
     currentEl.transition({
       opacity: 0

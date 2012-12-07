@@ -1,19 +1,9 @@
-ua = navigator.userAgent
-SublimeVideo.detectedMobile = ua.indexOf("Mobile") !=-1 ||
-                              ua.indexOf('Windows Phone') != -1 ||
-                              ua.indexOf('Android') != -1 ||
-                              ua.indexOf('webOS') != -1
+SublimeVideo.modularPlayerReady = ->
+  SublimeVideo.setupModularPlayerSlideshow()
+  SublimeVideo.setupDesignsDemo()
 
-SublimeVideo.sublimeVideoPlayerReady = ->
-  new SublimeVideo.DesignsDemo($('.design_demo'))
-
+SublimeVideo.setupModularPlayerSlideshow = ->
   sublimevideo.ready ->
-    sublimevideo.onStart (sv) ->
-      if sv.element.id is "single_video" and !SublimeVideo.detectedMobile
-        SublimeVideo.updateModeBox(sv.mode)
-      else if sv.element.id is "home_video"
-        SublimeVideo.showCredits(true)
-
     sublimevideo.onEnd (sv) ->
       if matches = sv.element.id.match(/^video(\d+)$/)
         if parseInt(matches[1], 10) < SublimeVideo.playlistDemo.lastVideoIndex
@@ -24,6 +14,9 @@ SublimeVideo.sublimeVideoPlayerReady = ->
         sublimevideo.stop()
         if sv.element.id is "home_video"
           SublimeVideo.showCredits(false)
+
+SublimeVideo.setupDesignsDemo = ->
+  new SublimeVideo.DesignsDemo($('.design_demo'))
 
 SublimeVideo.updateModeBox = (mode) ->
   modeSwitcher = jQuery('#mode_switcher')

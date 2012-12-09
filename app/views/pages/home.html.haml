@@ -1,34 +1,37 @@
 = content_for :header do
   #slides
     .slide.s_1.active
-      .s_wrap
-        %h2= "The HTML5 Video Age Starts Now"
-        %p.desc
-          = "Introducing SublimeVideo Horizon,"
-          %br
-          = "the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity,"
-          = "working perfectly on any device."
-        = link_to 'horizon-framework', class: "learn_more" do
-          = "Learn more"
-          %span.icon-arrow
-    .slide.s_2
-      .s_wrap
-        %h2
-          = "Start Assembling Your Player!"
-          %span.beta= "Beta"
-        %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Horizon™"
-        = link_to 'modular-player', class: "learn_more" do
-          = "Learn more"
-          %span.icon-arrow
-    .slide.s_3
-      .s_wrap
-        %h2= "No limits, Just Draw your Player"
-        %p.desc
-          = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Horizon™."
-          = link_to 'tailor-made-players' do
+      .s_click{ onclick: "location.href='/horizon-framework'" }
+        .s_wrap
+          %h2= "The HTML5 Video Age Starts Now"
+          %p.desc
+            = "Introducing SublimeVideo Horizon,"
+            %br
+            = "the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity,"
+            = "working perfectly on any device."
+          = link_to 'horizon-framework', class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
-  #home_video
+    .slide.s_2
+      .s_click{ onclick: "location.href='/modular-player'" }
+        .s_wrap
+          %h2
+            = "Start Assembling Your Player!"
+            %span.beta= "Beta"
+          %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Horizon™"
+          = link_to 'modular-player', class: "learn_more" do
+            = "Learn more"
+            %span.icon-arrow
+    .slide.s_3
+      .s_click{ onclick: "location.href='/tailor-made-players'" }
+        .s_wrap
+          %h2= "No limits, Just Draw your Player"
+          %p.desc
+            = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Horizon™."
+            = link_to 'tailor-made-players' do
+              = "Learn more"
+              %span.icon-arrow
+  #home_video{ style: "display:none" }
     .v_shadow
     = link_to "#video_horizon", class: "sublime", id:"lightbox_horizon" do
       = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb", class: "video_thumb"
@@ -80,26 +83,31 @@
         %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
       .spacer
   %ul.demo_switch
-    %li.active.d_1
-      = link_to "" do
-        %span= "TWiT.TV"
-    %li.d_2
+    %li.d_1
       = link_to "" do
         %span= "Sony"
+    %li.active.d_2
+      = link_to "" do
+        %span= "TWiT.TV"
     %li.d_3
       = link_to "" do
         %span= "Black Hand Cinema - Anthony Mandler"
-  = link_to new_tailor_made_player_request_path, class: "need_a_player" do
-    = "Need a tailor-made player?"
-    %span.icon-arrow
+    %li.d_4
+      = link_to "" do
+        %span= "Next 15"
+    %li.d_5
+      = link_to "" do
+        %span= "HTML5"
+  -# = link_to new_tailor_made_player_request_path, class: "need_a_player" do
+  -#   = "Need a tailor-made player?"
+  -#   %span.icon-arrow
   .spacer
 %section.showcase
   %h4.custom_break= "They use SublimeVideo"
   %table.logos
     %tr
       %td= image_tag "home/logos/activision.png", alt: "Activision", size: "110x27"
-      %td
-        -#= image_tag "home/logos/bigcartel.png", alt: "Big Cartel", size: "87x22"
+      %td= image_tag "home/logos/fox.png", alt: "FOX", size: "62x21"
       %td= image_tag "home/logos/bredbandsbolaget.png", alt: "Bredbandsbolaget", size: "94x35"
     %tr
       %td= image_tag "home/logos/ford.png", alt: "Ford", size: "71x30"
@@ -158,11 +166,11 @@
       .wrap
         %ul
           %li.box.new
-            = link_to my_url('video-code-generator') do
-              = image_tag "home/highlights/video_code_generator.png", alt: "Video Code Generator", size: "178x141", style: "margin-top:0"
+            = link_to "youtube" do
+              = image_tag "home/highlights/youtube@2x.png", alt: "Video Code Generator", size: "147x65", style: "margin-top:30px"
               %span.text
-                %strong= "Video Code Generator"
-                %span.desc= raw "Easily create &lt;video&gt; elements<br> optimized for SublimeVideo."
+                %strong= "Seamless Integration"
+                %span.desc= raw "Bringing together the world's most functional HTML5 Video Player with the biggest video platform."
               %span.badge
           %li.box
             = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do

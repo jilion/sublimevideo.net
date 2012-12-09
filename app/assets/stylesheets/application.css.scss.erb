@@ -50,10 +50,18 @@ body {
   background:url(<%= asset_path "home/slides/panes/pane_3.png" %>) no-repeat;
 }
 
+#slides .slide .s_click {
+  width:1100px;
+  height:414px;
+  cursor:pointer;
+  position:relative;
+  top:130px;
+}
+
 #slides .slide .s_wrap {
   position:absolute;
   width:960px;
-  top:100px;
+  top:-30px;
 }
 
 #slides .slide h2 {
@@ -532,16 +540,24 @@ body {
 }
 
 .home .tailor_made ul.demo_switch li.d_1 a {
+  background-image:url(<%= asset_path "home/showcase/players/sony_logo@2x.png" %>);
+  background-size:99px 21px;
+}
+.home .tailor_made ul.demo_switch li.d_2 a {
   background-image:url(<%= asset_path "home/showcase/players/twit_logo@2x.png" %>);
   background-size:114px 53px;
 }
-.home .tailor_made ul.demo_switch li.d_2 a {
-  background-image:url(<%= asset_path "home/showcase/players/sony_disabled_logo@2x.png" %>);
-  background-size:94px 17px;
-}
 .home .tailor_made ul.demo_switch li.d_3 a {
-  background-image:url(<%= asset_path "home/showcase/players/blackhandcinema_disabled_logo@2x.png" %>);
-  background-size:83px 44px;
+  background-image:url(<%= asset_path "home/showcase/players/blackhandcinema_logo@2x.png" %>);
+  background-size:88px 48px;
+}
+.home .tailor_made ul.demo_switch li.d_4 a {
+  background-image:url(<%= asset_path "home/showcase/players/next_logo@2x.png" %>);
+  background-size:112px 25px;
+}
+.home .tailor_made ul.demo_switch li.d_5 a {
+  background-image:url(<%= asset_path "home/showcase/players/html5_logo@2x.png" %>);
+  background-size:46px 52px;
 }
 
 .home .tailor_made ul.demo_switch li a span {
@@ -1395,8 +1411,8 @@ section.upcoming a.tell_us span.icon-mail {
   top:0;
   left:0;
   background:url(<%= asset_path "horizon/video_overlay.png" %>) no-repeat 0 0;
-  opacity:0.7;
-  filter:alpha(opacity=70);
+  opacity:0.85;
+  filter:alpha(opacity=85);
   @include transition(opacity, 0.5s, linear);
 }
 

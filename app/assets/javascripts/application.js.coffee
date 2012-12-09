@@ -15,10 +15,10 @@
 $.fn.exists = -> @length > 0
 
 SublimeVideo.wwwDocumentReady = ->
-  SublimeVideo.homeReady() if $('.home').exists()
-  SublimeVideo.modularPlayerReady() if $('.features').exists()
-  SublimeVideo.horizonFrameworkReady() if $('.horizon').exists()
-  SublimeVideo.tailorMadePlayersReady() if $('.tailor_made').exists()
+  SublimeVideo.homeReady() if $('body.home').exists()
+  SublimeVideo.modularPlayerReady() if $('body.features').exists()
+  SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
+  SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
 $(document).ready ->
@@ -42,5 +42,3 @@ scrollToHash = ->
       
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
-
-SublimeVideo.horizonVideoPostersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("horizon/posters/poster_#{n}.jpg") } %>

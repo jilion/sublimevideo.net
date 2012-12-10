@@ -20,22 +20,17 @@ SublimeVideo.UI.setActiveItem = ->
     new SublimeVideo.UI.wwwMenu($(this)).setActiveItem()
 
 SublimeVideo.wwwDocumentReady = ->
-  SublimeVideo.setupProductInfoLinks()
   SublimeVideo.homeReady() if $('body.home').exists()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
+  SublimeVideo.prepareVideoPlayers()
 
 $(document).ready ->
   SublimeVideo.wwwDocumentReady()
 
 $(window).bind 'page:change', ->
-  sublime.ready ->
-    $('.sublime').each (index, el) ->
-      sublime.prepare el
-  sublime.load()
-
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
   SublimeVideo.UI.setActiveItem()
@@ -50,8 +45,18 @@ scrollToHash = ->
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
 
-SublimeVideo.setupProductInfoLinks = ->
+SublimeVideo.prepareVideoPlayers = ->
   sublime.ready ->
-    $("video[data-info-enable='true']").each (index, el) =>
-      sublime.player(el).on 'action:productInfo', ->
-        window.open($(el).attr('data-product-url'))
+    $('a.sublime').each (index, el) ->
+      sublime.prepare el
+
+    $('video.sublime').each (index, el) ->
+      if (player = sublime(el))
+        player.on 'action:productInfo', ->
+          window.open($("##{player.videoId()}").attr('data-product-url'));
+      else
+        sublime.prepare el, (player) ->
+          player.on 'action:productInfo', ->
+            window.open($("##{player.videoId()}").attr('data-product-url'));
+
+  sublime.load()

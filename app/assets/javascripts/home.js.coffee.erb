@@ -11,10 +11,10 @@ SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
     sublime('lightbox_horizon').on
       open: ->
-        SublimeVideo.homeSlideshow.stopTimer() if SublimeVideo.homeSlideshow?
+        SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
       close: ->
-        SublimeVideo.homeSlideshow.startTimer() if SublimeVideo.homeSlideshow?
-  
+        SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
+
     sublime.players.on 'ready', (player) ->
       if player.videoId() is 'video_horizon'
         player.on 'action:showcases', ->
@@ -30,16 +30,16 @@ SublimeVideo.setupHomeSublime = ->
           if player.isFullscreen() then player.exitFullscreen(go) else go()
 
 SublimeVideo.setupSolutionsSlideshow = ->
-  if SublimeVideo.homeSlideshow?
-    SublimeVideo.homeSlideshow.kill()
-    SublimeVideo.homeSlideshow = null
+  if SublimeVideo.solutionSlideshow?
+    SublimeVideo.solutionSlideshow.kill()
+    SublimeVideo.solutionSlideshow = null
 
   if ($slides = $('#slides')).exists()
-    SublimeVideo.homeSlideshow = new SublimeVideo.SolutionsSlideshow($slides, $('#home_slide_selector'), 10)
+    SublimeVideo.solutionSlideshow = new SublimeVideo.HomeSlideshow($slides, $('#home_slide_selector'), 10)
 
 SublimeVideo.setupShowcasesSlideshow = ->
   if ($showcases = $('section.tailor_made')).exists()
-    SublimeVideo.homeShowcasesSlideshow = new SublimeVideo.SolutionsSlideshow($showcases, $('#showcases_selector'), 6)
+    SublimeVideo.showcasesSlideshow = new SublimeVideo.HomeSlideshow($showcases, $('#showcases_selector'), 6)
 
 SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()
@@ -72,13 +72,13 @@ SublimeVideo.pickRandomVideoThumb = ->
       # Lightbox poster
       unless SublimeVideo.isMobile()
         posterImage = new Image()
-        posterImage.src = SublimeVideo.postersPaths[imgIndex] 
+        posterImage.src = SublimeVideo.postersPaths[imgIndex]
       video.attr("poster", SublimeVideo.postersPaths[imgIndex])
     else
       $homeVideo.fadeIn()
-  
 
-class SublimeVideo.SolutionsSlideshow
+
+class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->
     @pauseDuration = pause * 1000
 

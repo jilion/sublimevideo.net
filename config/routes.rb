@@ -39,6 +39,11 @@ SublimeVideo::Application.routes.draw do
     get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/#{path}" }
   end
 
+  # Showcase redirects
+  %w[sony twit blackhandcinema next15 html5].each do |showcase|
+    get "/tailor-made-players/#{showcase}" => redirect { |params, req| "#{req.scheme}://#{req.domain}/tailor-made-players##{showcase}" }
+  end
+
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/433P3t1P2a1m202w2Y3D/content'), as: :press_kit
 

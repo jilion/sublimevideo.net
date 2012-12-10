@@ -5,14 +5,19 @@
 #= require jquery.transit
 #= require jquery.slidify
 #= require home
-#= require modular_player
 #= require horizon_framework
+#= require menu
+#= require modular_player
 #= require tailor_made_players
 #= require_self
 #= require google-analytics-turbolinks
 #= require turbolinks
 
 $.fn.exists = -> @length > 0
+
+SublimeVideo.UI.setActiveItem = ->
+  $('ul.sticky').each ->
+    new SublimeVideo.UI.wwwMenu($(this)).setActiveItem()
 
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.homeReady() if $('body.home').exists()
@@ -32,6 +37,7 @@ $(window).bind 'page:change', ->
 
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
+  SublimeVideo.UI.setActiveItem()
 
   setTimeout scrollToHash, 500
 
@@ -39,6 +45,6 @@ scrollToHash = ->
   if document.location.hash isnt ''
     if ($elToScrollTo = $(document.location.hash)).exists()
       $(document.body).animate({ scrollTop: $elToScrollTo.offset()['top'] })
-      
+
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)

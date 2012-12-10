@@ -6,7 +6,6 @@
 #= require jquery.slidify
 #= require home
 #= require horizon_framework
-#= require menu
 #= require modular_player
 #= require tailor_made_players
 #= require_self
@@ -14,10 +13,6 @@
 #= require turbolinks
 
 $.fn.exists = -> @length > 0
-
-SublimeVideo.UI.setActiveItem = ->
-  $('ul.sticky').each ->
-    new SublimeVideo.UI.wwwMenu($(this)).setActiveItem()
 
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.homeReady() if $('body.home').exists()
@@ -33,8 +28,7 @@ $(document).ready ->
 $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
-  SublimeVideo.UI.setActiveItem()
-
+  SublimeVideo.UI.updateActiveItemMenus()
   setTimeout scrollToHash, 500
 
 scrollToHash = ->

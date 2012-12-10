@@ -35,15 +35,11 @@ SublimeVideo.setupSolutionsSlideshow = ->
     SublimeVideo.homeSlideshow = null
 
   if ($slides = $('#slides')).exists()
-    SublimeVideo.homeSlideshow = new SublimeVideo.SolutionsSlideshow($slides, 10)
+    SublimeVideo.homeSlideshow = new SublimeVideo.SolutionsSlideshow($slides, $('#home_slide_selector'), 10)
 
 SublimeVideo.setupShowcasesSlideshow = ->
   if ($showcases = $('section.tailor_made')).exists()
-    $showcases.find('ul.demos').slidify
-      visibleSlides: 1
-      speed: 7
-      previousButtons: $showcases.find('button.arrow.previous')
-      nextButtons: $showcases.find('button.arrow.next')
+    SublimeVideo.homeShowcasesSlideshow = new SublimeVideo.SolutionsSlideshow($showcases, $('#showcases_selector'), 6)
 
 SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()
@@ -83,7 +79,7 @@ SublimeVideo.pickRandomVideoThumb = ->
   
 
 class SublimeVideo.SolutionsSlideshow
-  constructor: (@div, pause) ->
+  constructor: (@div, @selector, pause) ->
     @pauseDuration = pause * 1000
 
     this.startTimer()
@@ -103,29 +99,29 @@ class SublimeVideo.SolutionsSlideshow
 
   showNext: (index) ->
     currentSlide = @div.find('.slide.active').first()
-    currentSelector = $('ul.selectors li.active').first()
+    currentSelector = @selector.find('li.active').first()
     currentSlide.removeClass('active')
     currentSelector.removeClass('active')
     if index?
       $(@div.find('.slide')[index]).addClass('active')
-      $($('ul.selectors li')[index]).addClass('active')
+      $(@selector.find('li')[index]).addClass('active')
     else
       if currentSlide.next().length == 1
         currentSlide.next().addClass('active')
         currentSelector.next().addClass('active')
       else
         @div.find('.slide').first().addClass('active')
-        $('ul.selectors li').first().addClass('active')
+        @selector.find('li').first().addClass('active')
 
   setupObservers: ->
-    $('ul.selectors li a').each (index, element) =>
+    @selector.find('li a').each (index, element) =>
       $(element).on 'click', (event) =>
         event.preventDefault()
         this.stopTimer()
         this.showNext(index)
 
   clearObservers: ->
-    $('ul.selectors li a').each (index, element) =>
+    @selector.find('li a').each (index, element) =>
       $(element).off 'click'
 
 
@@ -136,6 +132,7 @@ class SublimeVideo.SolutionsSlideshow
 #   randomShow: ->
 #     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
 #     $(@quotes[randomQuoteIndex]).show()
+
 
 class SublimeVideo.NewsTicker
   constructor: (@div, pause) ->

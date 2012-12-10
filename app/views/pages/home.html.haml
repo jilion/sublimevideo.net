@@ -46,7 +46,7 @@
 = content_for :middle do
   .selectors_wrap
     .left.side_bg.col><
-    %ul.selectors.col><
+    %ul.selectors.col#home_slide_selector><
       %li.s_1.active
         .l
         = link_to "SublimeVideo Horizon Powerful HTML5 Video Foundations", ""
@@ -76,7 +76,7 @@
   %h4.custom_break= "Horizon Tailor-Made Players Showcases"
   .wrap
     %ul.demos
-      %li.demo.d_1
+      %li.demo.slide.d_1.active
         .video_wrap
           = link_to "" do
             = image_tag "home/showcase/players/sony_player.jpg", size: "480x270", alt: "Sony"
@@ -85,7 +85,7 @@
           %h3= "Sony"
           %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
         .spacer
-      %li.demo.d_2
+      %li.demo.slide.d_2
         .video_wrap
           = link_to "" do
             = image_tag "home/showcase/players/twit_player.jpg", size: "480x270", alt: "TWiT.TV"
@@ -94,7 +94,7 @@
           %h3= "TWiT.TV"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
-      %li.demo.d_3
+      %li.demo.slide.d_3
         .video_wrap
           = link_to "" do
             = image_tag "home/showcase/players/blackhandcinema_player.jpg", size: "480x270", alt: "Black Hand Cinema"
@@ -103,7 +103,7 @@
           %h3= "Black Hand Cinema"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
-      %li.demo.d_4
+      %li.demo.slide.d_4
         .video_wrap
           = link_to "" do
             = image_tag "home/showcase/players/next15_player.jpg", size: "480x270", alt: "Next 15"
@@ -112,7 +112,7 @@
           %h3= "Next 15"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
-      %li.demo.d_5
+      %li.demo.slide.d_5
         .video_wrap
           = link_to "" do
             = image_tag "home/showcase/players/html5_player.jpg", size: "480x270"
@@ -121,15 +121,15 @@
           %h3= "HTML5"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
-  %button.previous.arrow
-    %span= "previous"
-  %button.next.arrow
-    %span= "next"
-  %ul.demo_switch
-    %li.d_1
+  -# %button.previous.arrow
+  -#   %span= "previous"
+  -# %button.next.arrow
+  -#   %span= "next"
+  %ul.demo_switch#showcases_selector
+    %li.d_1.active
       = link_to "" do
         %span= "Sony"
-    %li.active.d_2
+    %li.d_2
       = link_to "" do
         %span= "TWiT.TV"
     %li.d_3

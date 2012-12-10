@@ -20,6 +20,7 @@ SublimeVideo.UI.setActiveItem = ->
     new SublimeVideo.UI.wwwMenu($(this)).setActiveItem()
 
 SublimeVideo.wwwDocumentReady = ->
+  SublimeVideo.setupProductInfoLinks()
   SublimeVideo.homeReady() if $('body.home').exists()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
@@ -48,3 +49,9 @@ scrollToHash = ->
 
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+
+SublimeVideo.setupProductInfoLinks = ->
+  sublime.ready ->
+    $("video[data-info-enable='true']").each (index, el) =>
+      sublime.player(el).on 'action:productInfo', ->
+        window.open($(el).attr('data-product-url'))

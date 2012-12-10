@@ -15,12 +15,12 @@
 $.fn.exists = -> @length > 0
 
 SublimeVideo.wwwDocumentReady = ->
+  SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady() if $('body.home').exists()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
-  SublimeVideo.prepareVideoPlayers()
 
 $(document).ready ->
   SublimeVideo.wwwDocumentReady()

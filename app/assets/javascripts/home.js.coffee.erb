@@ -1,6 +1,7 @@
 SublimeVideo.homeReady = ->
   SublimeVideo.setupHomeSublime()
   SublimeVideo.setupSolutionsSlideshow()
+  SublimeVideo.setupShowcasesSlideshow()
   SublimeVideo.setupHighlightsSlideshow()
   SublimeVideo.setupNewsTicker()
   SublimeVideo.pickRandomVideoThumb()
@@ -36,6 +37,14 @@ SublimeVideo.setupSolutionsSlideshow = ->
   if ($slides = $('#slides')).exists()
     SublimeVideo.homeSlideshow = new SublimeVideo.SolutionsSlideshow($slides, 10)
 
+SublimeVideo.setupShowcasesSlideshow = ->
+  if ($showcases = $('section.tailor_made')).exists()
+    $showcases.find('ul.demos').slidify
+      visibleSlides: 1
+      speed: 7
+      previousButtons: $showcases.find('button.arrow.previous')
+      nextButtons: $showcases.find('button.arrow.next')
+
 SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()
     $highlights.find('ul').slidify
@@ -60,7 +69,6 @@ SublimeVideo.pickRandomVideoThumb = ->
       video = $("#video_horizon")
       thumb.bind 'load', ->
         $homeVideo.fadeIn()
-
 
       # Lightbox thumb
       thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])

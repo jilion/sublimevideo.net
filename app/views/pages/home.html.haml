@@ -74,14 +74,57 @@
           = "integration!"
 %section.tailor_made
   %h4.custom_break= "Horizon Tailor-Made Players Showcases"
-  %ul.demos
-    %li.demo.d_1
-      .video_wrap
-        = image_tag "home/showcase/players/twit_player.jpg", size: "480x270"
-      .desc
-        %h3= "TWiT.TV"
-        %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
-      .spacer
+  .wrap
+    %ul.demos
+      %li.demo.d_1
+        .video_wrap
+          = link_to "" do
+            = image_tag "home/showcase/players/sony_player.jpg", size: "480x270", alt: "Sony"
+            %span.overlay= "See it in action"
+        .desc
+          %h3= "Sony"
+          %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
+        .spacer
+      %li.demo.d_2
+        .video_wrap
+          = link_to "" do
+            = image_tag "home/showcase/players/twit_player.jpg", size: "480x270", alt: "TWiT.TV"
+            %span.overlay= "See it in action"
+        .desc
+          %h3= "TWiT.TV"
+          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+        .spacer
+      %li.demo.d_3
+        .video_wrap
+          = link_to "" do
+            = image_tag "home/showcase/players/blackhandcinema_player.jpg", size: "480x270", alt: "Black Hand Cinema"
+            %span.overlay= "See it in action"
+        .desc
+          %h3= "Black Hand Cinema"
+          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+        .spacer
+      %li.demo.d_4
+        .video_wrap
+          = link_to "" do
+            = image_tag "home/showcase/players/next15_player.jpg", size: "480x270", alt: "Next 15"
+            %span.overlay= "See it in action"
+        .desc
+          %h3= "Next 15"
+          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+        .spacer
+      %li.demo.d_5
+        .video_wrap
+          = link_to "" do
+            = image_tag "home/showcase/players/html5_player.jpg", size: "480x270"
+            %span.overlay= "See it in action"
+        .desc
+          %h3= "HTML5"
+          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+        .spacer
+  %button.previous.arrow
+    %span= "previous"
+  %button.next.arrow
+    %span= "next"
   %ul.demo_switch
     %li.d_1
       = link_to "" do

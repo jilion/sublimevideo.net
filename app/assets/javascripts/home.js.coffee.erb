@@ -11,13 +11,11 @@ SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
     horizon_lightbox = sublime('lightbox_horizon')
     horizon_lightbox.on
-      open: ->
+      didopen: ->
         SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
-      close: ->
+      didclose: ->
         SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
-
-    sublime.players.on 'ready', (player) ->
-      if player.videoId() is 'video_horizon'
+      contentready: (player) ->
         player.on 'action:showcases', ->
           go = -> document.location.href = '/tailor-made-players'
           if player.isFullscreen() then player.exitFullscreen(go) else go()

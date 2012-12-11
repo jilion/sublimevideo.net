@@ -81,7 +81,7 @@
           = link_to page_path('tailor-made-players', anchor: 'sony') do
             = image_tag "home/showcase/players/sony_player.jpg", size: "480x270", alt: "Sony"
             %span.overlay= "See it in action"
-        .desc
+        .desc{ style: "padding-top:40px" }
           %h3= "Sony"
           %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
         .spacer
@@ -90,9 +90,9 @@
           = link_to page_path('tailor-made-players', anchor: 'twit') do
             = image_tag "home/showcase/players/twit_player.jpg", size: "480x270", alt: "TWiT.TV"
             %span.overlay= "See it in action"
-        .desc
+        .desc{ style: "padding-top:60px" }
           %h3= "TWiT.TV"
-          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+          %p= "This tailor-made TWIT.TV player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
       %li.demo.slide.d_3
         .video_wrap
@@ -101,16 +101,16 @@
             %span.overlay= "See it in action"
         .desc
           %h3= "Black Hand Cinema"
-          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+          %p= "This tailored-made player has been developed in collaboration and for LA based award-wining director and photographer Anthony Mandler of Black Hand Cinema. The goal has been to keep the inline player extremely light and stylish and to expand the set of features once in full screen (on platforms providing full screen HTML5 support)."
         .spacer
       %li.demo.slide.d_4
         .video_wrap
           = link_to page_path('tailor-made-players', anchor: 'next15') do
             = image_tag "home/showcase/players/next15_player.jpg", size: "480x270", alt: "Next 15"
             %span.overlay= "See it in action"
-        .desc
+        .desc{ style: "padding-top:50px" }
           %h3= "Next 15"
-          %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+          %p= "Watch Next15's CEO Tim Dyson comment on the importance of SublimeVideo's cross-platform player branding and customisation technology."
         .spacer
       %li.demo.slide.d_5
         .video_wrap
@@ -212,15 +212,16 @@
             = link_to "youtube" do
               = image_tag "home/highlights/youtube@2x.png", alt: "Video Code Generator", size: "147x65", style: "margin-top:30px"
               %span.text
-                %strong= "Seamless Integration"
+                %strong= "Seamless integration"
                 %span.desc= raw "Bringing together the world's most functional HTML5 Video Player with the biggest video platform."
               %span.badge
-          %li.box
-            = link_to "http://blog.jilion.com/2012/03/31/welcoming-twit-tv-to-the-sublimevideo-community" do
-              = image_tag "home/highlights/twit_tv.png", alt: "Twit.tv", size: "161x75", style: "margin-top:30px"
+          %li.box.new
+            = link_to "modular-player" do
+              = image_tag "home/highlights/new_player_designs.png", alt: "New Player Designs", size: "123x108", style: "margin-top:12px"
               %span.text
-                %strong= "Welcoming TWiT.tv"
-                %span.desc= raw "TWiT is now using SublimeVideo<br> for all of their shows."
+                %strong= "3 Sleek player designs"
+                %span.desc= raw "The new SublimeVideo Modular Player now lets choose your player design."
+              %span.badge
           %li.box.demo
             = link_to demo_site_stats_url do
               = image_tag "home/highlights/rts.png", alt: "Universal Real-Time Stats", size: "100x87", style: "margin-top:30px"

@@ -17,17 +17,17 @@
 
 .demos
   .video_wrap
-    <video class="sublime" poster="#{asset_path "demo/midnight_sun_800.jpg"}" width="640" height="360" data-settings="youtube-id:rAq2rNEru8A" preload="none"></video>
+    %video.sublime{ poster: asset_path("demo/midnight_sun_800.jpg"), width: 640, height: 360, preload: 'none', data: { settings: 'youtube-id:rAq2rNEru8A' } }/
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the SublimeVideo Classic Player."
   .video_wrap
-    <video class="sublime" poster="#{image_path "youtube/sony_poster_1.jpg"}" width="640" height="360" data-settings="player-kit:6;youtube-id:mEnSvSkwygc" preload="none"></video>
+    %video#youtube_sony.sublime{ poster: image_path("youtube/sony_poster_1.jpg"), width: 640, height: 360, preload: 'none', data: { uid: 'showcase-sony', name: 'NEX-FS700EK', settings: 'youtube-id:mEnSvSkwygc; player-kit:6; sharing-enable:true; sharing-embed-width:200px; sharing-embed-url:/path/to/the/embed/video.html; sharing-twitter-url:http://sublimevideo.net/youtube; sharing-facebook-url:http://sublimevideo.net/youtube;', 'info-enable' => 'true', 'product-url' => 'http://www.sony.co.uk/pro/product/35mmdigitalmotionpicturecamerascamcorders/nex-fs700ek/overview' } }/
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the Sony tailor-made SublimeVideo Player."
   %a.sublime.lightbox{ href: "#video3", data: { settings: 'overlay-opacity:0.8' }}
     = image_tag "youtube/lightbox_thumb.jpg", alt: "Lightbox Thumbnail"
     %span.overlay
-  <video id="video3" style="display:none" poster="#{image_path "demo/midnight_sun_800.jpg"}" width="800" height="450" data-settings="youtube-id:rAq2rNEru8A" preload="none"></video>
+  %video#video3{ poster: image_path("demo/midnight_sun_800.jpg"), width: 800, height: 450, preload: 'none', style: 'display:none', data: { settings: 'youtube-id:rAq2rNEru8A' } }/
   %p
     %em.caption= "YouTube integration also works inside the SublimeVideo Lightbox."
 .big_break

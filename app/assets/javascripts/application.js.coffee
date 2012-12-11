@@ -45,12 +45,14 @@ SublimeVideo.prepareVideoPlayers = ->
       sublime.prepare el
 
     $('video.sublime').each (index, el) ->
-      if (player = sublime(el))
-        player.on 'action:productInfo', ->
-          window.open($("##{player.videoId()}").attr('data-product-url'));
+      if player = sublime(el)
+        SublimeVideo.setupProductInfo(player)
       else
         sublime.prepare el, (player) ->
-          player.on 'action:productInfo', ->
-            window.open($("##{player.videoId()}").attr('data-product-url'));
+          SublimeVideo.setupProductInfo(player)
 
   sublime.load()
+
+SublimeVideo.setupProductInfo = (player) ->
+  player.on 'action:productInfo', ->
+    window.open $("##{player.videoId()}").attr('data-product-url')

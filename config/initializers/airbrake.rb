@@ -1,4 +1,4 @@
 Airbrake.configure do |config|
-  config.api_key = '66d9c59629ba4f51757560b2a36d808e'
+  config.api_key = '486edda8840604c36f90e42e4a50b11a'
   config.ignore  << ActionController::UnknownHttpMethod
 end

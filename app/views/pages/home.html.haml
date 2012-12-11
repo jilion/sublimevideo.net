@@ -99,11 +99,9 @@
           = link_to page_path('tailor-made-players', anchor: 'blackhandcinema') do
             = image_tag "home/showcase/players/blackhandcinema_player.jpg", size: "480x270", alt: "Black Hand Cinema"
             %span.overlay= "See it in action"
-        .desc{ style: "padding-top:50px" }
+        .desc{ style: "padding-top:12px" }
           %h3= "Black Hand Cinema"
-          %p
-            = "This tailored-made player has been developed in collaboration and for LA based award-wining director and photographer Anthony Mandler of Black Hand Cinema."
-            -#= "The goal has been to keep the inline player extremely light and stylish and to expand the set of features once in full screen (on platforms providing full screen HTML5 support)."
+          %p{ style: "font-size:15px; line-height:26px"}= "This tailored-made player has been developed in collaboration with LA-based award-wining director and photographer Anthony Mandler of Black Hand Cinema. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
         .spacer
       %li.demo.slide.d_4
         .video_wrap
@@ -123,10 +121,6 @@
           %h3= "HTML5"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
-  -# %button.previous.arrow
-  -#   %span= "previous"
-  -# %button.next.arrow
-  -#   %span= "next"
   %ul.demo_switch#showcases_selector
     %li.d_1.active
       = link_to "" do

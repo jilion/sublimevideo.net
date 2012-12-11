@@ -9,7 +9,8 @@ SublimeVideo.homeReady = ->
 
 SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
-    sublime('lightbox_horizon').on
+    horizon_lightbox = sublime('lightbox_horizon')
+    horizon_lightbox.on
       open: ->
         SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
       close: ->
@@ -28,6 +29,9 @@ SublimeVideo.setupHomeSublime = ->
             sublime('lightbox_horizon').close()
             SublimeVideo.UI.Utils.openAccountPopup('signup')
           if player.isFullscreen() then player.exitFullscreen(go) else go()
+
+    if document.location.hash == '#horizon-video'
+      horizon_lightbox.open()
 
 SublimeVideo.setupSolutionsSlideshow = ->
   if SublimeVideo.solutionSlideshow?

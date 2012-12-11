@@ -99,9 +99,11 @@
           = link_to page_path('tailor-made-players', anchor: 'blackhandcinema') do
             = image_tag "home/showcase/players/blackhandcinema_player.jpg", size: "480x270", alt: "Black Hand Cinema"
             %span.overlay= "See it in action"
-        .desc
+        .desc{ style: "padding-top:50px" }
           %h3= "Black Hand Cinema"
-          %p= "This tailored-made player has been developed in collaboration and for LA based award-wining director and photographer Anthony Mandler of Black Hand Cinema. The goal has been to keep the inline player extremely light and stylish and to expand the set of features once in full screen (on platforms providing full screen HTML5 support)."
+          %p
+            = "This tailored-made player has been developed in collaboration and for LA based award-wining director and photographer Anthony Mandler of Black Hand Cinema."
+            -#= "The goal has been to keep the inline player extremely light and stylish and to expand the set of features once in full screen (on platforms providing full screen HTML5 support)."
         .spacer
       %li.demo.slide.d_4
         .video_wrap
@@ -117,7 +119,7 @@
           = link_to page_path('tailor-made-players', anchor: 'html5') do
             = image_tag "home/showcase/players/html5_player.jpg", size: "480x270"
             %span.overlay= "See it in action"
-        .desc
+        .desc{ style: "padding-top:60px" }
           %h3= "HTML5"
           %p= "This tailor-made Twit.tv player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer

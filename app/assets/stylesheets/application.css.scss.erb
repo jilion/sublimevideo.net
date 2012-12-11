@@ -2763,6 +2763,13 @@ section.box h3.title {
   padding:40px 0 10px;
 }
 
+section.box h4.title {
+  color:#003165;
+  font-size:24px;
+  font-weight:600;
+  padding:22px 0 10px;
+}
+
 section.box p {
   font-size:20px;
   line-height:30px;
@@ -2772,6 +2779,61 @@ section.box p {
 section.box p a {
   color:#1185ff;
   border-bottom:1px solid #81bbfc;
+}
+
+section.box p small {
+  font-size:13px;
+}
+
+.about ul.profiles {
+  list-style-type:none;
+  padding:10px 0;
+  float:left;
+}
+
+.about ul.profiles li {
+  display:block;
+  padding:15px 6% 15px 0;
+/*  width:70%;*/
+  width:44%;
+  min-height:100px;
+  float:left;
+}
+
+.about ul.profiles.team li {
+  min-height:0;
+}
+
+.about ul.profiles li img {
+  float:left;
+  margin:0 20px 40px 0;
+  @include border-radius(4px);
+  @include box-shadow((#002660 0 1px 4px));
+}
+
+.about ul.profiles.team li img {
+  margin-bottom:0;
+}
+
+.about ul.profiles li h4 {
+  color:#003165;
+  font-size:23px;
+  font-weight:600;
+  padding-top:2px;
+}
+
+.about ul.profiles.team li h4 {
+  padding-top:10px;
+}
+
+.about ul.profiles li p {
+  font-size:16px;
+  padding-top:0px;
+  line-height:22px;
+}
+
+.about ul.profiles.team li p {
+  padding-top:0px;
 }
 
 /* ============== */

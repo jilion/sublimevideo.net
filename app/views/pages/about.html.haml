@@ -3,20 +3,248 @@
   %h2= "About SublimeVideo"
   %p.sub= "SublimeVideo is the world's first cloud-based HTML5 video player; a unique solution that delivers all of the benefits of HTML5 video with none of the associated complexity."
 
-%section.box
-  %h3.title= "Our Vision"
+%section.box  
+  :textile
+    h3(title). About Us
+    
+    Jilion is a pioneer and leading provider of no-compromises HTML5 Video Technologies.
 
-  %p= "We care deeply about the Web and are committed to making contributions that push it forwards."
+    With SublimeVideo.net, the world's first cloud-based HTML5 video player service, Jilion started out providing web publishers with the most simple and reliable solution to the painful challenge of playing video across devices and browsers.
 
-  %p= "The HTML5 standard is no longer the future. We developed SublimeVideo’s cloud-based platform from the ground-up to turn the promises of HTML5 Video into a practical reality, today."
+    Today, with SublimeVideo Horizon, the world’s first HTML5 Video Framework, it goes a huge leap forward, beyond any other HTML5 Video player implementation on the market, by solving two big HTML5 Video challenges for the very first time: Namely, providing brands and marketers with total graphic freedom and complete features modularity, working on any web browser and the latest mobile platforms.
 
-  %p= "Our goal is to provide Web publishers with a fast, reliable and pain-free way to migrate from Flash to HTML5 Video, and to give their audiences a player that truly 'just works'."
-.big_break
-%section.box
-  %h3.title= "Our Story"
+    h3(title). Our Mission
 
-  %p= "SublimeVideo was completely accidental. It began as a side project in January 2010, demoing the first functional, multi-browser HTML5 Video Player."
+    We care deeply about the Web and are committed to making contributions that push it forward.
 
-  %p= "We never expected the huge positive response we received on Twitter and from leading web publications, including Daring Fireball, Wired, ReadWriteWeb and Mashable."
+    The whole Web is currently moving toward HTML5. Web video in particular is entering its 3rd age, the HTML5 Video age. We developed SublimeVideo HTML5 Video Technologies from the ground up to turn the promises of HTML5 Video into a practical reality, today.
 
-  %p= "We decided to develop SublimeVideo into the World's First Cloud-Based HTML5 Video Player: Today, SublimeVideo serves millions of video player pages a month and continues to evolve - most recently with the introduction of a free and unlimited version of its player, giving more sites the benefit of a high-quality, HTML5 Video experience."
+    Our mission is to provide Web publishers with a fast yet powerful and reliable way to migrate to the mandatory HTML5 Video standard, so they can finally provide their audiences with no-compromise, perfectly branded and features rich video players that 'just work' on any platform!
+    
+    h3(title). Our Story
+    
+    SublimeVideo started in January 2010, somehow by accident as it was initially just a simple demo, actually showcasing the world’s first functional, HTML5 Video Player with custom controls.
+
+    We never expected the tremendous, spontaneous and positive response we instantly received on Twitter and from leading web publications, including Daring Fireball, Wired, ReadWriteWeb, Mashable, to name a few. 
+
+    From that moment on, we decided to focus on the mission of providing the Web with the best possible HTML5 Video solution in order to truly enable the HTML5 Video age.
+  
+  %p= raw "#{link_to "Read more about our story", "", id: "expand_story"}"
+  :javascript
+    $("#expand_story").click(function() {
+         var txt = $("#extended_story").is(':visible') ? 'Read more about our story' : 'Close the extended story';
+         $('#extended_story').slideToggle('slow', function(){$("#expand_story").text(txt)});
+         return false;
+    });
+  
+  #extended_story{ style: "display:none"}
+    :textile
+      _Everything started with a tweet..._
+      <small>Updated December 11, 2012</small>
+
+
+      h4(title). I. A Huge Viral Buzz
+
+      On January 26th, 2010, Jilion tweeted a link to a simple demo page we'd created: It happened to be *the first implementation of an HTML5 Video Player with custom controls*. At the time, we were simply amazed to finally see a web browser playing video natively; so, without giving it too much thought, we named it 'SublimeVideo'.
+
+      We were completely taken by surprise when, less than a week later, we'd gone from zero to 3,500 Twitter followers! Six months later our demo page had received over 1 million unique visitors. By then, we'd gained over 8,000 Twitter followers and received praise from industry figureheads such as John Gruber (Daring Fireball), Jeffrey Zeldman, Tim O'Reilly and many more, as well as from major technology publications including ReadWriteWeb, Wired and Mashable. 
+
+      We achieved all this without spending a single dime on marketing!
+
+
+      With what suddenly became probably the most acclaimed and respected HTML5 Video player demo, we found ourselves right in the middle of this massive Web transition towards HTML5. At the time, Apple just released the iPad, and mobile computing was developing rapidly. Indeed, Mobile was not only poised to one day become the primary means to connect to the Web, but it also primarily relies on HTML5. In addition to these 2 major trends, Apple, Adobe, Google, Microsoft and all the other major Internet players were showing strong support for HTML5.
+
+      In April 2010, we therefore made the decision to put the original startup project, which our core team was working on before SublimeVideo hit us, on standby so we could focus 100% on making SublimeVideo the most reliable and universal video playing solution, a task that was far from easy to achieve in the new and highly fragmented HTML5 web browsers and devices landscape. During that same period, lots of people were asking us to release our player as a .zip file. However, if we really wanted to achieve our goal of providing seamless, continuous and cross-platform compatibility, we knew this wasn't the right way forward.
+
+      Our vision was clear: Developing a Flash player was easy (we developed our own SublimeVideo's Flash fallback player in just two weeks time) compared to the daunting task of developing and maintaining a reliable HTML5 Video player, that would work on any device, browser or web page, without causing conflict; all this on an ongoing basis, despite the continuous evolution of browser platforms.
+
+      Though it may be hard to believe for non-developers, providing something as basic as a video player was becoming a major challenge in the HTML5 realm. But seeing as we all have no choice but to embrace HTML5, it was a problem which could not be ignored.
+
+      We realized that providing a cloud-based player-as-a-service solution was the only way to achieve our goal of delivering a top-quality HTML5 Video player that was always up-to-date, required zero user maintenance as well as having a fully coherent user-base.
+
+
+      We therefore decided to build the necessary cloud-based service to distribute our HTML5 Video player to all of our customers' websites and their audiences around the world.
+
+      The HTML5 Video Player itself was becoming the tip of an iceberg, with a great amount of work happening behind the scenes to ensure SublimeVideo was 'just working' everywhere, all the time.
+
+
+      h4(title). II. Beta of the World's First Cloud-based HTML5 Video Player
+
+      In August 2010, we announced that the SublimeVideo.net service beta would be up and running in September. Once again, we were completely overwhelmed by the response. Our announcement's tweet made it all the way to Twitter’s home page!
+      During the six-month beta, over 12,000 web developers requested an invitation and traffic surged over 6 million player page views per month on thousands of different websites.
+
+
+      The beta's most critical success was certainly on the technical side: During those 6 months, we managed to release a little over 40 transparent player updates to all of our users' sites, without a hitch. We were delighted and relieved with this result: Our cloud-based technology and model proved to be scalable and reliable. It was not diverging into an unmanageable, crumbling mess, malfunctioning on hundreds of websites with each update. On the contrary, it was becoming more robust and therefore more valuable to our users with every release!
+      This is a unique and key benefit of SublimeVideo, that lots of our users don't necessarily realize.
+
+      We felt we were ready to move on to the next phase - commercialization.
+
+      SublimeVideo was designed to be a subscription-based player service, but it was the first of its kind. To find out what people were willing to pay for such a service, we sent a pricing survey to thousands of our beta users. A cool 25% of them replied, giving us a very valuable feedback for moving forward.
+
+
+      h4(title). III. SublimeVideo Commercialization
+
+      On March 29th, 2011, we announced the commercialization of SublimeVideo, introducing three paid plans, mainly categorized based on their levels of video traffic usage and options.
+
+      On November 29th, 2011, we updated our initial commercial offering by switching to a Freemium model and introducing a new free plan with the goal of eliminating barriers to adoption (which were mainly: no free option and rather low traffic caps). We did this because we didn't want to corner ourselves with a premium solution while the HTML5 video player market was emerging and we had the most liquid model for capturing market share. For this reason, we set out to further accelerate our user base acquisition, with success: SublimeVideo users acquisition rate immediately switched trajectory and accelerated 13-fold, increasing player traffic along with it.
+
+
+      h4(title). IV. Building the World’s first HTML5 Video Framework.
+
+      You can learn about the origin and motivations behind the creation of our own HTML5 development framework on the "SublimeVideo Horizon page":horizon-framework.
+
+      In late 2011, while we were happy with the unique reliability offered by our cloud-operated player, we also started to recognize its limitations. Rightfully so, users were asking for more features than the usual play, pause, seek, volume or full-screen!
+
+      Our philosophy has been and will always be the same.  If we implement a feature, it has to be done properly! This also goes for the most "mundane" things mentioned above.
+
+      And while the metrics were accelerating, we were concerned about our positioning. It was clear we did not want to become yet another online video platform (OVP). Did we really want to become a next-generation mini OVP, redeveloping what dozens of other companies had already built (hosting, encoding, monetization, etc) during the Flash video era?
+      The answer was a big NO! We had to excel where it mattered, in solving the front-end - frankly frightening - HTML5 challenge! It was clear this is where we had to put most of our investors' money.
+
+      Confident with this reassuring vision, we somehow went nuts, having suddenly decided that nothing, absolutely nothing would be impossible with HTML5!
+
+      In particular, we thought there should be a way to push the envelope much further than what had been done till now by finally removing all of HTML5's limitations.
+
+      And in the process, our own player's limitations too. Because, although our "cloud-player" was certainly more reliable than the static down-loadable alternatives, our player's architecture was not designed to scale: it was not designed to easily add new features, let alone provide enterprises with completely tailor-made players!
+
+      We therefore set the mark high and embarked on the development of our own HTML5 Video Framework technology, a technology that would allow us to build any player imaginable. Read more about it on the "SublimeVideo Horizon page":horizon-framework.
+
+      More than the whole of 2012 has been dedicated to the development of our Framework. Many times, we thought we would loose hope in meeting the new and huge technical challenge facing us. The team has been incredibly tenacious. The result speaks for itself, we are now releasing the world's first technology able to create an endless number of different HTML5 Video players, with no graphic or feature limitation, which 'just works' with pixel-perfect rendition on any browser including on all mobile platforms that support HTML5 Video customization!
+
+      In our opinion, to say that this is a revolution is not an overstatement. This technology can finally and securely bring the whole web community across the pond, delivering sophisticated graphical and functional capabilities, working on a universal basis, despite the highly fragmented underlying web browsing technology.
+      So here we are, where we could only dream of being just a year ago, delivering this incredible piece of technology. We are proud, but more importantly, we are delighted for our users, who can now benefit from the beautiful and unique features offered by SublimeVideo Horizon.
+
+      Now there are so many things to do! The roadmap is full to the brim and the company is now ready to accelerate its growth. Stay tuned for upcoming developments and thank you for supporting our work.
+
+  
+  :textile
+    h3(title). Our Team
+    
+    Jilion's core team met at EPFL (Swiss Federal Institute of Technology of Lausanne), and initially started to work on a completely different Web project. This is how we "muscled" knowledge in Rails, JavaScript, CSS, etc. Thank you EPFL for creating the conditions for people like us to meet and start working together.
+    
+  %ul.profiles.team
+    %li
+      = image_tag "about/mehdi.jpg", size: "70x70", alt: "Mehdi Aminian"
+      %h4= "Mehdi Jacques Aminian"
+      %p= "Co-Founder"
+      .spacer
+    %li
+      = image_tag "about/zeno.jpg", size: "70x70", alt: "Zeno Crivelli"
+      %h4= "Zeno Crivelli"
+      %p= "Co-Founder"
+      .spacer
+    %li
+      = image_tag "about/thibaud.jpg", size: "70x70", alt: "Thibaud Guillaume-Gentil"
+      %h4= "Thibaud Guillaume-Gentil"
+      %p= "Software Engineer"
+      .spacer
+    %li
+      = image_tag "about/octave.jpg", size: "70x70", alt: "Octave Zangs"
+      %h4= "Octave Zangs"
+      %p= "Web & UI Designer"
+      .spacer
+    %li
+      = image_tag "about/remy.jpg", size: "70x70", alt: "Rémy Coutable"
+      %h4= "Rémy Coutable"
+      %p= "Software Engineer"
+      .spacer
+    %li
+      = image_tag "about/andrea.jpg", size: "70x70", alt: "Andrea Coiro"
+      %h4= "Andrea Coiro"
+      %p= "Software Engineer"
+      .spacer
+  .spacer
+  :textile
+    h3(title). Our Supporters
+    
+    In this section we would like to take the opportunity to express our warmest gratitude to all our supporters, whether they have been with us for a long or short time.
+    We would also like to thank the various Swiss institutions and initiatives for helping innovation flourish in our country.
+
+    It is clear we would not have come this far without your combined support.
+  
+  %ul.profiles
+    %li
+      = image_tag "about/supporters/pierre_fazan.jpg", size: "70x70", alt: "Prof. Pierre Fazan"
+      %h4= "Prof. Pierre Fazan"
+      %p= "Jilion’s angel investor, entrepreneur and co-founder of InnovativeSilicon (acquired by Micron)."
+      .spacer
+    %li
+      = image_tag "about/supporters/stelio_tzonis.jpg", size: "70x70", alt: "Stelio Tzonis"
+      %h4= "Stelio Tzonis"
+      %p= raw "Jilion’s angel investor, entrepreneur and co-founder of Lysis (acquired by Nagra-Kudelski) and #{link_to "Webdoc","http://webdoc.com"}."
+      .spacer
+    %li
+      = image_tag "about/supporters/amin_shokrollahi.jpg", size: "70x70", alt: "Amin Shokrollahi"
+      %h4= "Prof. Amin Shokrollahi"
+      %p= raw "Jilion’s angel investor, EPFL Professor, entrepreneur and co-founder of #{link_to "Kandou Bus","http://www.kandou.com"}."
+      .spacer
+    %li
+      = image_tag "about/supporters/marc_beltrametti.jpg", size: "70x70", alt: "Marc Beltrametti"
+      %h4= "Marc Beltrametti"
+      %p= "Jilion’s angel investor."
+      .spacer
+    %li
+      = image_tag "about/supporters/family.png", size: "70x70", alt: "Family"
+      %h4= "The Crivelli Family"
+      %p= "Jilion’s angel investor."
+      .spacer
+    %li
+      = image_tag "about/supporters/family.png", size: "70x70", alt: "Family"
+      %h4= "The Aminian Family"
+      %p= "Jilion’s angel investor."
+      .spacer
+    %li
+      = image_tag "about/supporters/francois_stieger.jpg", size: "70x70", alt: "François Stieger"
+      %h4= "François Stieger"
+      %p= "Jilion’s angel investor, former senior exec at Verisign, Oracle and Broadvision."
+      .spacer
+    %li
+      = image_tag "about/supporters/colas_overkott.jpg", size: "70x70", alt: "Colas Overkott"
+      %h4= "Colas Overkott"
+      %p= raw "Jilion’s angel investor, CEO at #{link_to "Visiware","http://www.visiware.com"}, former co-founding director of e-TF1 and CEO of Lysis (acquired by Nagra-Kudelski)."
+      .spacer
+    %li
+      = image_tag "about/supporters/dave_brown.jpg", size: "70x70", alt: "Dave Brown"
+      %h4= "Dave Brown"
+      %p= "Jilion’s angel investor, entrepreneur and co-founder of Buy.at (acquired by AOL)."
+      .spacer
+    %li
+      = image_tag "about/supporters/willy_zwaenepoel.jpg", size: "70x70", alt: "Prof. Willy Zwaenepoel"
+      %h4= "Prof. Willy Zwaenepoel"
+      %p= raw "Jilion’s advisor, head of EPFL Operating Systems Lab, entrepreneur and co-founder of #{link_to "BugBuster", "http://bugbuster.com"}, former Dean of EPFL Computer Sciences."
+      .spacer
+    %li
+      = image_tag "about/supporters/pierre_vandergheynst.jpg", size: "70x70", alt: "Prof. Pierre Vandergheynst"
+      %h4= "Prof. Pierre Vandergheynst"
+      %p= raw "Jilion’s advisor, head of EPFL Signal Processing Lab, entrepreneur and co-founder of #{link_to "Immersive Vision Technologies","http://www.immersive-vision.com"}."
+      .spacer
+    %li
+      = image_tag "about/supporters/epfl.png", size: "70x70", alt: "EPFL - Swiss Federal Institute of Technology of Lausanne"
+      %h4= "EPFL - Swiss Federal Institute of Technology of Lausanne"
+      %p= raw "Spin-off support and financial innovation grants (#{link_to "innogrants","http://vpiv.epfl.ch/page-22998-en.html"})."
+      .spacer
+    %li
+      = image_tag "about/supporters/fit.jpg", size: "70x70", alt: "Foundation for Technology Innovation"
+      %h4= "Foundation for Technology Innovation"
+      %p= raw "No-interest long term loans (#{link_to "link","http://www.fondation-fit.ch"})."
+      .spacer
+    %li
+      = image_tag "about/supporters/venture_kick.png", size: "70x70", alt: "venture kick"
+      %h4= "venture kick"
+      %p= raw "Private initiative providing swiss startups with financial grants (#{link_to "link","http://venturekick.ch"})."
+      .spacer
+    %li
+      = image_tag "about/supporters/vaud.png", size: "70x70", alt: "Canton of Vaud"
+      %h4= "Canton of Vaud"
+      %p= raw "Various start-up financial #{link_to "support", "http://www.vaud.ch/en/our-services/companies/starting-up-developing/"}."
+      .spacer
+    %li
+      = image_tag "about/supporters/jura.png", size: "70x70", alt: "Canton of Jura"
+      %h4= "Canton of Jura"
+      %p= raw "Various start-up financial #{link_to "support", "http://eco.jura.ch/en/index.html"}."
+      .spacer
+    %li
+      = image_tag "about/supporters/swiss_confederation.png", size: "70x70", alt: "Swiss Confederation"
+      %h4= "Swiss Confederation"
+      %p= raw "Governmental #{link_to "Commission for Technology and Innovation CTI", "http://www.kti.admin.ch/index.html?lang=en"} providing academia with financial grants to support start-up innovation."
+      .spacer
+  .spacer

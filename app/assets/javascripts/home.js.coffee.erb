@@ -63,7 +63,7 @@ SublimeVideo.pickRandomVideoThumb = ->
     if imgIndex > 0
       thumb = $homeVideo.find('img.video_thumb')
       video = $("#video_horizon")
-      thumb.bind 'load', ->
+      thumb.bind 'load abort error', ->
         $homeVideo.fadeIn()
 
       # Lightbox thumb

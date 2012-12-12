@@ -12,32 +12,16 @@ SublimeVideo.setupModularPlayerSlideshow = ->
           sublimevideo.stop()
       else
         sublimevideo.stop()
-        if sv.element.id is "home_video"
-          SublimeVideo.showCredits(false)
 
 SublimeVideo.setupDesignsDemo = ->
   new SublimeVideo.DesignsDemo($('.design_demo'))
-
-SublimeVideo.updateModeBox = (mode) ->
-  modeSwitcher = jQuery('#mode_switcher')
-  newModeText = if mode is 'html5' then 'Flash' else 'HTML5'
-  modeSwitcher.attr 'class', "active #{mode}"
-  modeSwitcher.find('small em').html(newModeText)
-
-SublimeVideo.showCredits = (onOff) ->
-  if (credits = jQuery('#video_credits')).exists()
-    if onOff
-      timerIn = setTimeout((-> credits.show(1000)), 3000)
-    else
-      clearTimeout(timerIn)
-      credits.hide(1000)
 
 class SublimeVideo.DesignsDemo
   constructor: (@links) ->
     @links.on 'click', (event) ->
       $link = $(event.target)
       $("#{$link.attr('href')}").attr('data-settings', "player-kit:#{$link.data('kit-id')}")
-      sublime.lightbox($link[0]).open()
+      sublime.prepare $link[0], (lightbox) -> lightbox.open()
 
       false
 

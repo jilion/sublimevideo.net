@@ -576,7 +576,7 @@ body {
 .home .tailor_made ul.demo_switch {
   list-style-type:none;
   float:left;
-  padding:0px 0 50px 55px;
+  padding:0px 0 0px 55px;
 }
 
 .home .tailor_made ul.demo_switch li {
@@ -629,22 +629,34 @@ body {
   display:none;
 }
 
-.home .tailor_made a.need_a_player {
+.home .tailor_made .need_a_player {
+  padding:0 0 37px 0;
+  text-align:center;
+}
+
+.home .tailor_made .need_a_player h4 {
+  font-size:20px;
+  font-weight:600;
+  color:#38527c;
+  display:inline;
+}
+
+.home .tailor_made .need_a_player a {
   display:inline-block;
   color:#38527c;
   padding:10px 10px 10px 12px;
-  margin:44px 0 0 30px;
+  margin:44px 0 0 12px;
   border: 1px solid #bfccda;
   @include gradient(rgba(255,255,255,0.6), rgba(255,255,255,0), transparent);
   @include border-radius(8px);
   @include box-shadow((inset #fff 0 1px 0, #fff 0 1px 0));
 }
 
-.home .tailor_made a.need_a_player:active {
+.home .tailor_made .need_a_player a:active {
   @include gradient(rgba(255,255,255,0), rgba(255,255,255,0.6), transparent);
 }
 
-.home .tailor_made a.need_a_player span.icon-arrow {
+.home .tailor_made .need_a_player a span.icon-arrow {
   color:#567ca5;
   font-size:18px;
   margin-left:4px;

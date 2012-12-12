@@ -66,7 +66,7 @@ SublimeVideo.pickRandomVideoThumb = ->
       thumb = $homeVideo.find('img.video_thumb')
       video = $("#video_horizon")
       thumb.bind 'load abort error', ->
-        $homeVideo.fadeIn()
+        $homeVideo.fadeIn -> SublimeVideo.fadeInHackForChrome($homeVideo)
 
       # Lightbox thumb
       thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
@@ -77,8 +77,11 @@ SublimeVideo.pickRandomVideoThumb = ->
         posterImage.src = SublimeVideo.postersPaths[imgIndex]
       video.attr("poster", SublimeVideo.postersPaths[imgIndex])
     else
-      $homeVideo.fadeIn()
+      $homeVideo.fadeIn -> SublimeVideo.fadeInHackForChrome($homeVideo)
 
+SublimeVideo.fadeInHackForChrome = ($div) ->
+  $div.css('opacity', 0.99)
+  setTimeout((-> $div.css('opacity', 1)), 0)
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

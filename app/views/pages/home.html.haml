@@ -137,9 +137,12 @@
     %li.d_5
       = link_to "" do
         %span= "HTML5"
-  -# = link_to new_tailor_made_player_request_path, class: "need_a_player" do
-  -#   = "Need a tailor-made player?"
-  -#   %span.icon-arrow
+  .spacer
+  .need_a_player
+    %h4= "Need a tailor made player?"
+    = link_to new_tailor_made_player_request_path do
+      = "Contact us"
+      %span.icon-arrow
   .spacer
 %section.showcase
   %h4.custom_break= "They use SublimeVideo"

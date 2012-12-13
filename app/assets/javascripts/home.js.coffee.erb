@@ -55,7 +55,6 @@ SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
 
-SublimeVideo.thumbsPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/thumbs/thumb_#{n}.jpg") } %>
 SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
 SublimeVideo.pickRandomVideoThumb = ->

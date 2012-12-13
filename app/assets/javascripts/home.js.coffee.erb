@@ -84,6 +84,7 @@ SublimeVideo.pickRandomVideoThumb = ->
 SublimeVideo.fadeInHackForChrome = ($div) ->
   if /Chrome/i.test(navigator.userAgent)
     $div.hide().show()
+    setTimeout((-> $div.hide().show()), 500)
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

@@ -1,10 +1,10 @@
 SublimeVideo.homeReady = ->
+  SublimeVideo.setupHomeSublime()
   SublimeVideo.pickRandomVideoThumb()
-  # SublimeVideo.setupHomeSublime()
-  # SublimeVideo.setupSolutionsSlideshow()
-  # SublimeVideo.setupShowcasesSlideshow()
-  # SublimeVideo.setupHighlightsSlideshow()
-  # SublimeVideo.setupNewsTicker()
+  SublimeVideo.setupSolutionsSlideshow()
+  SublimeVideo.setupShowcasesSlideshow()
+  SublimeVideo.setupHighlightsSlideshow()
+  SublimeVideo.setupNewsTicker()
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
 SublimeVideo.setupHomeSublime = ->
@@ -66,10 +66,8 @@ SublimeVideo.pickRandomVideoThumb = ->
       thumb = $homeVideo.find('img.video_thumb')
       video = $("#video_horizon")
       thumb.bind 'load abort error', ->
-        $homeVideo.show()
-        # $homeVideo.fadeIn ->
-        #   console.log 'fadeIn ended, fadeInHackForChrome'
-        #   SublimeVideo.fadeInHackForChrome($homeVideo)
+        $homeVideo.fadeIn ->
+          SublimeVideo.fadeInHackForChrome($homeVideo)
 
       # Lightbox thumb
       thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
@@ -80,19 +78,23 @@ SublimeVideo.pickRandomVideoThumb = ->
         posterImage.src = SublimeVideo.postersPaths[imgIndex]
       video.attr("poster", SublimeVideo.postersPaths[imgIndex])
     else
-      $homeVideo.show()
-      # $homeVideo.fadeIn ->
-      #   console.log 'fadeIn (remy) ended, fadeInHackForChrome'
-      #   SublimeVideo.fadeInHackForChrome($homeVideo)
+      $homeVideo.fadeIn ->
+        SublimeVideo.fadeInHackForChrome($homeVideo)
 
 SublimeVideo.fadeInHackForChrome = ($div) ->
-  console.log 'setting opacity to 0.99'
-  $div.css('opacity', 0.99)
-  setTimeout((->
-    console.log 'setting opacity to 1 after 100ms timeout'
-    $div.css('opacity', 1)
-  )
-  , 100)
+  if /Chrome/i.test(navigator.userAgent)
+    console.log 'setting opacity to 0.9'
+    $div.css('opacity', 0.9)
+    setTimeout((->
+      console.log 'setting opacity to 1 after 100ms timeout'
+      $div.css('opacity', 1)
+      console.log 'setting opacity to 0.9'
+      $div.css('opacity', 0.9)
+      setTimeout((->
+        console.log 'setting opacity to 1 after 200ms timeout'
+        $div.css('opacity', 1)
+      ), 200)
+    ), 100)
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

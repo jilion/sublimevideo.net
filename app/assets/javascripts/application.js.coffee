@@ -2,12 +2,12 @@
 #= require detectmobilebrowser
 # TODO: Replace with minified http://ricostacruz.com/jquery.transit/ v0.1.4 when it's out
 #       It should contain a fix for jQuery 1.8
-# require jquery.transit
-# require jquery.slidify
+#= require jquery.transit
+#= require jquery.slidify
 #= require home
-# require horizon_framework
-# require modular_player
-# require tailor_made_players
+#= require horizon_framework
+#= require modular_player
+#= require tailor_made_players
 #= require_self
 #= require google-analytics-turbolinks
 #= require turbolinks

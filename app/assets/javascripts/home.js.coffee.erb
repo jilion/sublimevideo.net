@@ -61,6 +61,13 @@ SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path
 SublimeVideo.pickRandomVideoThumb = ->
   if ($homeVideo2 = $('#home_video2')).exists()
     $homeVideo2.fadeIn(500)
+    thumb = $homeVideo2.find('img.video_thumb')
+    thumb.bind 'load abort error', ->
+      $homeVideo2.fadeIn 500
+
+    # Lightbox thumb
+    thumb.attr("src", SublimeVideo.thumbsPaths[1])
+
   if ($homeVideo = $('#home_video')).exists()
     imgIndex = Math.floor(Math.random()*6)
     # $homeVideo.hide()

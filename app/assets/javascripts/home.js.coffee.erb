@@ -83,17 +83,7 @@ SublimeVideo.pickRandomVideoThumb = ->
 
 SublimeVideo.fadeInHackForChrome = ($div) ->
   if /Chrome/i.test(navigator.userAgent)
-    # console.log 'setting opacity to 0.9'
-    $div.css('opacity', 0.99)
-    setInterval((->
-      # console.log 'setting opacity to 1'
-      $div.css('opacity', 1)
-      # console.log 'setting opacity to 1'
-      setTimeout((->
-        # console.log 'setting opacity to 0.99'
-        $div.css('opacity', 0.99)
-      ), 100)
-    ), 200)
+    $div.hide().show()
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

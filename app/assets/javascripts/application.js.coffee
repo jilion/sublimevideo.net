@@ -13,7 +13,7 @@
 #= require turbolinks
 
 # Ensure we don't have new relic errors
-NREUMQ = NREUMQ || []
+window.NREUMQ = window.NREUMQ || []
 
 $.fn.exists = -> @length > 0
 

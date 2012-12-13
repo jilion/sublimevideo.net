@@ -31,7 +31,8 @@
   #home_video{ style: "display:none" }
     .v_shadow
     = link_to "#video_horizon", class: "sublime", id: "lightbox_horizon" do
-      = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb", class: "video_thumb"
+      - (1..6).each do |n|
+        = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none'
       %span.overlay
       %span.play
     %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'sharing-enable' => 'true', 'sharing-embed-width' => '640px', 'sharing-embed-height' => '360px', 'sharing-embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-default-text' => 'Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework', 'sharing-twitter-url' => page_url(''), 'sharing-facebook-url' => page_url('') } }

@@ -66,9 +66,10 @@ SublimeVideo.pickRandomVideoThumb = ->
       thumb = $homeVideo.find('img.video_thumb')
       video = $("#video_horizon")
       thumb.bind 'load abort error', ->
-        $homeVideo.fadeIn ->
-          console.log 'fadeIn ended, fadeInHackForChrome'
-          SublimeVideo.fadeInHackForChrome($homeVideo)
+        $homeVideo.show()
+        # $homeVideo.fadeIn ->
+        #   console.log 'fadeIn ended, fadeInHackForChrome'
+        #   SublimeVideo.fadeInHackForChrome($homeVideo)
 
       # Lightbox thumb
       thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
@@ -79,9 +80,10 @@ SublimeVideo.pickRandomVideoThumb = ->
         posterImage.src = SublimeVideo.postersPaths[imgIndex]
       video.attr("poster", SublimeVideo.postersPaths[imgIndex])
     else
-      $homeVideo.fadeIn ->
-        console.log 'fadeIn (remy) ended, fadeInHackForChrome'
-        SublimeVideo.fadeInHackForChrome($homeVideo)
+      $homeVideo.show()
+      # $homeVideo.fadeIn ->
+      #   console.log 'fadeIn (remy) ended, fadeInHackForChrome'
+      #   SublimeVideo.fadeInHackForChrome($homeVideo)
 
 SublimeVideo.fadeInHackForChrome = ($div) ->
   console.log 'setting opacity to 0.99'

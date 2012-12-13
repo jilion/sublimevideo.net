@@ -1,32 +1,32 @@
 SublimeVideo.homeReady = ->
   SublimeVideo.setupHomeSublime()
+  SublimeVideo.pickRandomVideoThumb()
   SublimeVideo.setupSolutionsSlideshow()
   SublimeVideo.setupShowcasesSlideshow()
   SublimeVideo.setupHighlightsSlideshow()
   SublimeVideo.setupNewsTicker()
-  SublimeVideo.pickRandomVideoThumb()
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
 SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
-    horizon_lightbox = sublime('lightbox_horizon')
-    horizon_lightbox.on
-      didopen: ->
-        SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
-      didclose: ->
-        SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
-      contentready: (player) ->
-        player.on 'action:showcases', ->
-          go = -> document.location.href = '/tailor-made-players'
-          if player.isFullscreen() then player.exitFullscreen(go) else go()
-        player.on 'action:teamup', ->
-          go = -> document.location.href = '/tailor-made-players-requests/new'
-          if player.isFullscreen() then player.exitFullscreen(go) else go()
-        player.on 'action:signup', ->
-          go = ->
-            sublime('lightbox_horizon').close()
-            SublimeVideo.UI.Utils.openAccountPopup('signup')
-          if player.isFullscreen() then player.exitFullscreen(go) else go()
+    if horizon_lightbox = sublime('lightbox_horizon')
+      horizon_lightbox.on
+        didopen: ->
+          SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
+        didclose: ->
+          SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
+        contentready: (player) ->
+          player.on 'action:showcases', ->
+            go = -> document.location.href = '/tailor-made-players'
+            if player.isFullscreen() then player.exitFullscreen(go) else go()
+          player.on 'action:teamup', ->
+            go = -> document.location.href = '/tailor-made-players-requests/new'
+            if player.isFullscreen() then player.exitFullscreen(go) else go()
+          player.on 'action:signup', ->
+            go = ->
+              sublime('lightbox_horizon').close()
+              SublimeVideo.UI.Utils.openAccountPopup('signup')
+            if player.isFullscreen() then player.exitFullscreen(go) else go()
 
     if document.location.hash == '#horizon-video'
       horizon_lightbox.open()
@@ -55,30 +55,30 @@ SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
 
-SublimeVideo.thumbsPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/thumbs/thumb_#{n}.jpg") } %>
 SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
 SublimeVideo.pickRandomVideoThumb = ->
   if ($homeVideo = $('#home_video')).exists()
     imgIndex = Math.floor(Math.random()*6)
-    # $homeVideo.hide()
-    if imgIndex > 0
-      thumb = $homeVideo.find('img.video_thumb')
-      video = $("#video_horizon")
-      thumb.bind 'load abort error', ->
-        $homeVideo.fadeIn()
 
-      # Lightbox thumb
-      thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
+    thumbs = $homeVideo.find('img.video_thumb')
+    thumbs.hide()
 
-      # Lightbox poster
-      unless SublimeVideo.isMobile()
-        posterImage = new Image()
-        posterImage.src = SublimeVideo.postersPaths[imgIndex]
-      video.attr("poster", SublimeVideo.postersPaths[imgIndex])
-    else
-      $homeVideo.fadeIn()
+    # Lightbox thumb
+    $(thumbs[imgIndex]).show()
+    $homeVideo.show()
 
+    # Lightbox poster
+    unless SublimeVideo.isMobile()
+      posterImage = new Image()
+      posterImage.src = SublimeVideo.postersPaths[imgIndex]
+    $video = $("#video_horizon")
+    $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
+
+SublimeVideo.fadeInHackForChrome = ($div) ->
+  if /Chrome/i.test(navigator.userAgent)
+    $div.css('left', '49px')
+    setTimeout((-> $div.css('left', '50px')), 10)
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

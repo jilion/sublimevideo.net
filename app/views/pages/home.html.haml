@@ -5,10 +5,7 @@
         .s_wrap
           %h2= "The HTML5 Video Age Starts Now"
           %p.desc
-            = "Introducing SublimeVideo Horizon,"
-            %br
-            = "the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity,"
-            = "working perfectly on any device."
+            = "Introducing SublimeVideo Horizon, the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity, working perfectly on any browser and the latest mobile platforms"
           = link_to 'horizon-framework', class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
@@ -33,8 +30,9 @@
               %span.icon-arrow
   #home_video{ style: "display:none" }
     .v_shadow
-    = link_to "#video_horizon", class: "sublime", id:"lightbox_horizon" do
-      = image_tag "home/video/thumbs/thumb_1.jpg", size: "270x152", alt: "Video Thumb", class: "video_thumb"
+    = link_to "#video_horizon", class: "sublime", id: "lightbox_horizon" do
+      - (1..6).each do |n|
+        = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none'
       %span.overlay
       %span.play
     %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'sharing-enable' => 'true', 'sharing-embed-width' => '640px', 'sharing-embed-height' => '360px', 'sharing-embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-default-text' => 'Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework', 'sharing-twitter-url' => page_url(''), 'sharing-facebook-url' => page_url('') } }
@@ -49,15 +47,15 @@
     %ul.selectors.col#home_slide_selector><
       %li.s_1.active
         .l
-        = link_to "SublimeVideo Horizon Powerful HTML5 Video Foundations", ""
+        = link_to "SublimeVideo Horizon Powerful HTML5 Video Foundations", page_path('horizon-framework')
         .r
       %li.s_2
         .l
-        = link_to "The New Modular SublimeVideo Player for every website", ""
+        = link_to "The New Modular SublimeVideo Player for every website", page_path('modular-player')
         .r
       %li.s_3
         .l
-        = link_to "Tailor-Made SublimeVideo Players for Brands", ""
+        = link_to "Tailor-Made SublimeVideo Players for Brands", page_path('tailor-made-players')
         .r
     .right.side_bg.col><
   %section#get_it_now
@@ -83,7 +81,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:40px" }
           %h3= "Sony"
-          %p= "This tailor-made player designed for Sony Europe has been developed in collaboration with their agency Bite Communications following Sony's branding guidelines."
+          %p= raw "This tailor-made player designed for #{link_to "Sony Europe","http://www.sony-europe.com"} has been developed in collaboration with their agency #{link_to "Bite Global", "http://www.biteglobal.com"} following Sony's branding guidelines."
         .spacer
       %li.demo.slide.d_2
         .video_wrap
@@ -92,7 +90,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:60px" }
           %h3= "TWiT.TV"
-          %p= "This tailor-made TWIT.TV player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
+          %p= raw "This tailor-made #{link_to "TWiT.TV", "http://twit.tv"} player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
         .spacer
       %li.demo.slide.d_3
         .video_wrap
@@ -101,7 +99,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:12px" }
           %h3= "Black Hand Cinema"
-          %p{ style: "font-size:15px; line-height:26px"}= "This tailored-made player has been developed in collaboration with LA-based award-wining director and photographer Anthony Mandler of Black Hand Cinema. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
+          %p{ style: "font-size:15px; line-height:26px"}= raw "This tailored-made player has been developed in collaboration with LA-based award-winning director and photographer Anthony Mandler of #{link_to "Black Hand Cinema","http://blackhandcinema.com"}. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
         .spacer
       %li.demo.slide.d_4
         .video_wrap
@@ -110,16 +108,16 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:50px" }
           %h3= "Next 15"
-          %p= "Watch Next15's CEO Tim Dyson comment on the importance of SublimeVideo's cross-platform player branding and customisation technology."
+          %p= raw "Watch #{link_to "Next15", "http://www.next15.com"}'s CEO Tim Dyson comment on the importance of SublimeVideo's cross-platform player branding and customisation technology."
         .spacer
       %li.demo.slide.d_5
         .video_wrap
           = link_to page_path('tailor-made-players', anchor: 'html5') do
             = image_tag "home/showcase/players/html5_player.jpg", size: "480x270"
             %span.overlay= "See it in action"
-        .desc{ style: "padding-top:60px" }
+        .desc{ style: "padding-top:50px" }
           %h3= "HTML5"
-          %p= "Here's a showcase paying homage to HTML5 itself! Like all other Horizon players, it is rendered using pure vector graphics, enjoy it on Retina displays!"
+          %p= "Here's a showcase paying homage to HTML5 itself! Like all other Horizon players, it is rendered purely using vector graphics. Enjoy it on Retina displays!"
         .spacer
   %ul.demo_switch#showcases_selector
     %li.d_1.active
@@ -149,7 +147,7 @@
   %table.logos
     %tr
       %td= image_tag "home/logos/activision.png", alt: "Activision", size: "110x27"
-      %td= image_tag "home/logos/fox.png", alt: "FOX", size: "62x21"
+      %td= image_tag "home/logos/sony.png", alt: "Sony", size: "85x17"
       %td= image_tag "home/logos/bredbandsbolaget.png", alt: "Bredbandsbolaget", size: "94x35"
     %tr
       %td= image_tag "home/logos/ford.png", alt: "Ford", size: "71x30"
@@ -161,7 +159,7 @@
       %td= image_tag "home/logos/ralph_lauren.png", alt: "Ralph Lauren", size: "108x13"
     %tr
       %td= image_tag "home/logos/rockamring.png", alt: "Rock Am Ring", size: "98x24"
-      %td= image_tag "home/logos/sony.png", alt: "Sony", size: "85x17"
+      %td= image_tag "home/logos/nokia.png", alt: "Nokia", size: "83x15"
       %td= image_tag "home/logos/spyder.png", alt: "Spyder", size: "87x17"
     %tr
       %td= image_tag "home/logos/taptaptap.png", alt: "tap tap tap", size: "109x27"
@@ -215,7 +213,7 @@
                 %span.desc= raw "Bringing together the world's most functional HTML5 Video Player with the biggest video platform."
               %span.badge
           %li.box.new
-            = link_to "modular-player" do
+            = link_to "modular-player#player_designs" do
               = image_tag "home/highlights/new_player_designs.png", alt: "New Player Designs", size: "123x108", style: "margin-top:12px"
               %span.text
                 %strong= "3 Sleek player designs"

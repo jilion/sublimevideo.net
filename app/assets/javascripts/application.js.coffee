@@ -12,6 +12,9 @@
 #= require google-analytics-turbolinks
 #= require turbolinks
 
+# Ensure we don't have new relic errors
+window.NREUMQ = window.NREUMQ || []
+
 $.fn.exists = -> @length > 0
 
 SublimeVideo.wwwDocumentReady = ->

@@ -59,13 +59,13 @@ SublimeVideo.thumbsPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path(
 SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
 SublimeVideo.pickRandomVideoThumb = ->
-  if ($homeVideo2 = $('#home_video2')).exists()
-    thumb = $homeVideo2.find('img.video_thumb')
-    thumb.bind 'load abort error', ->
-      $homeVideo2.fadeIn 500
+  # if ($homeVideo2 = $('#home_video2')).exists()
+  #   thumb = $homeVideo2.find('img.video_thumb')
+  #   thumb.bind 'load abort error', ->
+  #     $homeVideo2.fadeIn 500
 
-    # Lightbox thumb
-    thumb.attr("src", SublimeVideo.thumbsPaths[1])
+  #   # Lightbox thumb
+  #   thumb.attr("src", SublimeVideo.thumbsPaths[1])
 
   if ($homeVideo = $('#home_video')).exists()
     imgIndex = Math.floor(Math.random()*6)
@@ -73,12 +73,22 @@ SublimeVideo.pickRandomVideoThumb = ->
     if imgIndex > 0
       thumb = $homeVideo.find('img.video_thumb')
       video = $("#video_horizon")
-      thumb.bind 'load abort error', ->
-        $homeVideo.fadeIn 500, ->
-          SublimeVideo.fadeInHackForChrome($homeVideo)
 
       # Lightbox thumb
-      thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
+      # thumb.attr("src", SublimeVideo.thumbsPaths[imgIndex])
+      newThumbImage = new Image()
+
+      $(newThumbImage).bind 'load abort error', ->
+        $homeVideo.fadeIn 500#, ->
+        # SublimeVideo.fadeInHackForChrome($homeVideo)
+
+      thumb.remove()
+      $('#lightbox_horizon').prepend newThumbImage
+      newThumbImage.src = SublimeVideo.thumbsPaths[imgIndex]
+      newThumbImage.className = 'video_thumb'
+      newThumbImage.alt    = 'Video Thumb'
+      newThumbImage.width  = 270
+      newThumbImage.height = 152
 
       # Lightbox poster
       unless SublimeVideo.isMobile()
@@ -86,8 +96,8 @@ SublimeVideo.pickRandomVideoThumb = ->
         posterImage.src = SublimeVideo.postersPaths[imgIndex]
       video.attr("poster", SublimeVideo.postersPaths[imgIndex])
     else
-      $homeVideo.fadeIn 500, ->
-        SublimeVideo.fadeInHackForChrome($homeVideo)
+      $homeVideo.fadeIn 500#, ->
+      # SublimeVideo.fadeInHackForChrome($homeVideo)
 
 SublimeVideo.fadeInHackForChrome = ($div) ->
   if /Chrome/i.test(navigator.userAgent)

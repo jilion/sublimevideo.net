@@ -46,7 +46,7 @@ SublimeVideo::Application.routes.draw do
   end
 
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false
-  get '/press-kit' => redirect('http://cl.ly/2G0U46132f2x/content'), as: :press_kit
+  get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
 

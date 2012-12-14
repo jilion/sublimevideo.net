@@ -21,6 +21,7 @@ SublimeVideo::Application.routes.draw do
   %w[demo features].each { |action| get action => redirect('/modular-player') }
   %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
   %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
+  get 'why' => redirect('/horizon-framework')
   get 'plans' => redirect('/pricing')
   get 'customer-showcase' => redirect('/testimonials')
   get 'horizon-video' => redirect('/#horizon-video')

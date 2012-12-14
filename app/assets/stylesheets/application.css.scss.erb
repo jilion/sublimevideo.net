@@ -229,6 +229,14 @@ body {
   left:0;
 }
 
+@media \0screen {
+  #home_video span.overlay {
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/video/video_thumb_overlay@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/video/video_thumb_overlay@2x.png' %>', sizingMethod='scale')";    
+  }
+}
+
 #home_video span.play {
   width:126px;
   height:126px;
@@ -242,6 +250,14 @@ body {
   opacity: 0.65;
   filter:alpha(opacity=65);
   @include transition(0.5s, opacity, linear);
+}
+
+@media \0screen {
+  #home_video span.play {
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/video/video_play_button@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/video/video_play_button@2x.png' %>', sizingMethod='scale')";    
+  }
 }
 
 #home_video a:hover span.play {
@@ -477,6 +493,14 @@ body {
   letter-spacing:1px;
 }
 
+@media \0screen {
+  .home .tailor_made h4.custom_break {
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/tailor_made_showcases@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/tailor_made_showcases@2x.png' %>', sizingMethod='scale')";    
+  }
+}
+
 .home .tailor_made .wrap {
   width:830px;
   height:300px;
@@ -628,6 +652,49 @@ body {
 .home .tailor_made ul.demo_switch li.d_5 a {
   background-image:url(<%= asset_path "home/showcase/players/html5_logo@2x.png" %>);
   background-size:46px 52px;
+}
+
+@media \0screen {
+  .home .tailor_made ul.demo_switch li.d_1 a {
+    width:99px;
+    height:21px;
+    margin:30px auto 0;
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/showcase/players/sony_logo@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/showcase/players/sony_logo@2x.png' %>', sizingMethod='scale')";    
+  }
+  .home .tailor_made ul.demo_switch li.d_2 a {
+    width:114px;
+    height:53px;
+    margin:15px auto 0;
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/showcase/players/twit_logo@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/showcase/players/twit_logo@2x.png' %>', sizingMethod='scale')";    
+  }
+  .home .tailor_made ul.demo_switch li.d_3 a {
+    width:88px;
+    height:48px;
+    margin:15px auto 0;
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/showcase/players/blackhandcinema_logo@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/showcase/players/blackhandcinema_logo@2x.png' %>', sizingMethod='scale')";    
+  }
+  .home .tailor_made ul.demo_switch li.d_4 a {
+    width:112px;
+    height:25px;
+    margin:30px auto 0;
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/showcase/players/next_logo@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/showcase/players/next_logo@2x.png' %>', sizingMethod='scale')";    
+  }
+  .home .tailor_made ul.demo_switch li.d_5 a {
+    width:46px;
+    height:52px;
+    margin:20px auto 0;
+    background: no-repeat center center fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="<%= asset_path 'home/showcase/players/html5_logo@2x.png' %>",sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<%= asset_path 'home/showcase/players/html5_logo@2x.png' %>', sizingMethod='scale')";    
+  }
 }
 
 .home .tailor_made ul.demo_switch li a span {
@@ -1494,13 +1561,13 @@ section.upcoming a.tell_us span.icon-mail {
   left:0;
   background:url(<%= asset_path "horizon/video_overlay.png" %>) no-repeat 0 0;
   opacity:0.85;
-  filter:alpha(opacity=85);
+  filter:alpha(opacity=40);
   @include transition(opacity, 0.5s, linear);
 }
 
 .horizon #content .big_video a.overlay:hover span.overlay {
   opacity:1;
-  filter:alpha(opacity=100);
+  filter:alpha(opacity=60);
 }
 
 .horizon .main_copy {
@@ -1893,6 +1960,7 @@ section.upcoming a.tell_us span.icon-mail {
 }
 
 .pricing table.prices th {
+  text-align:left;
   padding:15px 18px 14px;
   color:#fff;
   font-size:20px;

@@ -13,7 +13,7 @@ module UrlsHelper
   end
 
   def get_satisfaction_opening_horizon_to_developers_url
-    'https://getsatisfaction.com/sublimevideo'
+    'https://getsatisfaction.com/sublimevideo/topics/opening_horizon_to_developers'
   end
 
 end

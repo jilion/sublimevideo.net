@@ -9,7 +9,7 @@ module UrlsHelper
   end
 
   def get_satisfaction_next_features_discussion_url
-    'https://getsatisfaction.com/sublimevideo'
+    'https://getsatisfaction.com/sublimevideo/topics/next_features_suggestions'
   end
 
   def get_satisfaction_opening_horizon_to_developers_url

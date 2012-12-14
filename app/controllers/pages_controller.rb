@@ -1,36 +1,37 @@
 class PagesController < ApplicationController
-  caches_page :show
-  before_filter { @page_caching = true }
-  before_filter { redirect_to_my }
+  before_filter :handle_help_page, :redirect_to_my
 
   def show
     @body_class = params[:page]
 
-    render params[:page] if fresh_required?
+    expires_in 5.minutes, public: true
+    if stale?(etag: page_file.path, last_modified: page_file.mtime, public: true)
+      render params[:page]
+    end
   end
 
 private
 
-  def redirect_to_my
-    if logged_in_cookie?
-      if %w[login signup].include?(params[:p])
-        redirect_to "https://my.sublimevideo.net/#{params[:p]}"
-      elsif params[:page] == 'help'
+  def handle_help_page
+    if params[:page] == 'help'
+      if logged_in_cookie?
         redirect_to 'https://my.sublimevideo.net/help'
+      else # no cache
+        @body_class = 'help'
+        render 'help'
       end
     end
   end
 
-  def fresh_required?
-    Rails.env.development? || Rails.env.test? || stale?(etag: page_sha1, last_modified: page_file.mtime, public: true)
-  end
-
-  def page_sha1
-    Digest::SHA1.file(page_file).to_s
+  def redirect_to_my
+    if logged_in_cookie? && %w[login signup].include?(params[:p])
+      redirect_to "https://my.sublimevideo.net/#{params[:p]}"
+    end
   end
 
   def page_file
-    @page_file ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
+    @page_files ||= {}
+    @page_files[params[:page]] ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
   end
 
 end

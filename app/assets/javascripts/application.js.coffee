@@ -1,35 +1,61 @@
+#= require sublimevideo
 #= require detectmobilebrowser
 # TODO: Replace with minified http://ricostacruz.com/jquery.transit/ v0.1.4 when it's out
 #       It should contain a fix for jQuery 1.8
 #= require jquery.transit
 #= require jquery.slidify
 #= require home
-#= require why
-#= require player
+#= require horizon_framework
+#= require modular_player
+#= require tailor_made_players
+#= require_self
+#= require google-analytics-turbolinks
+#= require turbolinks
 
-jQuery.fn.exists = -> @length > 0
+# Ensure we don't have new relic errors
+window.NREUMQ = window.NREUMQ || []
 
-jQuery(document).ready ->
-  SublimeVideo.yourBrowserIsTheBest()
-  SublimeVideo.scrollingLinks()
+$.fn.exists = -> @length > 0
 
-SublimeVideo.yourBrowserIsTheBest = ->
-  if (browsersBox = jQuery('#browsers_box')).exists()
-    if jQuery.browser.webkit
-      if navigator.userAgent.indexOf('Chrome') isnt -1
-        browsersBox.addClass 'chrome'
-      else # assume Safari
-        browsersBox.addClass 'safari'
-    else if jQuery.browser.mozilla
-      browsersBox.addClass 'firefox'
-    else if jQuery.browser.opera
-      browsersBox.addClass 'opera'
-    else # default IE
+SublimeVideo.wwwDocumentReady = ->
+  SublimeVideo.prepareVideoPlayers()
+  SublimeVideo.homeReady() if $('body.home').exists()
+  SublimeVideo.modularPlayerReady() if $('body.features').exists()
+  SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
+  SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
+  SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
-SublimeVideo.scrollingLinks = ->
-  jQuery("ul.scroll_links li a").each ->
-    el = jQuery(this)
-    el.click (event) =>
-      jQuery('html, body').animate({
-        scrollTop: jQuery(el.attr('href')).offset().top
-      }, 300)
+$(document).ready ->
+  SublimeVideo.wwwDocumentReady()
+
+$(window).bind 'page:change', ->
+  SublimeVideo.documentReady()
+  SublimeVideo.wwwDocumentReady()
+  SublimeVideo.UI.updateActiveItemMenus()
+  setTimeout scrollToHash, 500
+
+scrollToHash = ->
+  if document.location.hash isnt ''
+    if ($elToScrollTo = $(document.location.hash)).exists()
+      $(document.body).animate({ scrollTop: $elToScrollTo.offset()['top'] })
+
+SublimeVideo.isMobile = ->
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+
+SublimeVideo.prepareVideoPlayers = ->
+  sublime.ready ->
+    $('a.sublime').each (index, el) ->
+      sublime.prepare el
+
+    $('video.sublime').each (index, el) ->
+      if player = sublime(el)
+        SublimeVideo.setupProductInfo(player)
+      else
+        sublime.prepare el, (player) ->
+          SublimeVideo.setupProductInfo(player)
+
+  sublime.load()
+
+SublimeVideo.setupProductInfo = (player) ->
+  player.on 'action:productinfo', ->
+    window.open $("##{player.videoId()}").attr('data-product-url')

@@ -1,3 +1,7 @@
-= content_for :javascript , javascript_include_tag('application')
+= content_for :javascript do
+  %meta{ name: 'viewport', content: 'width=1080' }/
+  = javascript_include_tag '//use.typekit.net/qxb6miz.js'
+  = stylesheet_link_tag "//fast.fonts.com/cssapi/408c56a9-a5bb-46f5-b6cf-20bc44f6bd24.css"
+  = sublimevideo_loader_tag(:www, host: cdn_host, stage: 'alpha').html_safe
 
 = render template: 'layouts/sublimevideo'

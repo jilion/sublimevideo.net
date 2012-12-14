@@ -1,4 +1,4 @@
-guard :livereload, host: 'docs.sublimevideo.dev' do
+guard :livereload, host: 'sublimevideo.dev' do
   watch(%r{app/views/.+\.(erb|haml|slim)})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
@@ -19,7 +19,7 @@ guard :pow do
   watch(%r{^config/initializers/.*\.rb$})
 end
 
-guard :rspec, bundler: false, cli: "--color -f progress" do
+guard :rspec, bundler: false, cli: "--color -f progress", keep_failed: false do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }

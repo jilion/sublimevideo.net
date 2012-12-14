@@ -1,15 +1,14 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
-require "action_controller/railtie"
-require "sprockets/railtie"
+require 'active_record/railtie'
+require 'action_controller/railtie'
+require 'sprockets/railtie'
 
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
+# If you precompile assets before deploying to production, use this line
+Bundler.require *Rails.groups(assets: %w(development test))
+# If you want your assets lazily compiled in production, use this line
+# Bundler.setup(:default, :assets, Rails.env)
 
 module SublimeVideo
   class Application < Rails::Application
@@ -17,8 +16,8 @@ module SublimeVideo
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W(#{config.root}/lib)
+    # http://ileitch.github.com/2012/03/24/rails-32-code-reloading-from-lib.html
+    config.watchable_dirs['lib'] = [:rb]
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.

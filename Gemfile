@@ -3,31 +3,41 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'rails',               '3.2.9'
-gem 'sublime_video_layout', '1.0.0' # hosted on gemfury
+gem 'rails',                '3.2.9'
+gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
+
+# Databases
+gem 'pg'
 
 # Views
 gem 'haml'
 gem 'RedCloth'
+gem 'turbolinks'
+gem 'google-analytics-turbolinks'
 
 # Internals
-gem 'airbrake',  '~> 3.0.5'
-gem 'twitter',   '~> 3.7.0'
+gem 'sidekiq'
+gem 'airbrake'
+gem 'twitter'
 gem 'rack-no-www'
 gem 'ratom', require: 'atom'
-gem 'rescue_me', '~> 0.1.1', github: 'rymai/rescue_me' # until https://github.com/ashirazi/rescue_me/pull/2 is merged
+gem 'rescue_me'
+gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
+gem 'librato-rails'
+gem 'lograge'
+gem 'countries'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.0'
-  gem 'coffee-rails', '~> 3.2.0'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
   gem 'asset_sync'
 end
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.11'
+  gem 'rack-google-analytics'
 end
 
 group :staging, :production do
@@ -46,23 +56,23 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara'
+  gem 'capybara', '~> 1.1.4'
+  gem 'poltergeist'
 
-  gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', '~> 1.6.0'
+  gem 'typhoeus', '~> 0.2.0'
+  gem 'vcr', '~> 1.10.3'
+  gem 'factory_girl'
+  gem 'factory_girl_rails' # loaded in spec_helper Spork.each_run
 end
 
 group :tools do
-  gem 'heroku'
-  gem 'foreman'
   gem 'powder'
-  gem 'pry'
 
   # Guard
-  gem 'growl'
-  platforms :ruby do
-    gem 'rb-readline'
-  end
+  gem 'ruby_gntp'
+  gem 'rb-fsevent'
+  gem 'rb-readline'
 
   gem 'guard-pow'
   gem 'guard-livereload'

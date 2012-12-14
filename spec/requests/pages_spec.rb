@@ -10,17 +10,17 @@ feature "Com Pages" do
       within '#menu' do
         current_url.should eq "http://sublimevideo.dev/"
 
-        click_link 'why'
-        current_url.should eq "http://sublimevideo.dev/why"
+        click_link 'SublimeVideo Player'
+        current_url.should eq "http://sublimevideo.dev/modular-player"
 
-        click_link 'features'
-        current_url.should eq "http://sublimevideo.dev/features"
+        click_link 'Horizon Framework'
+        current_url.should eq "http://sublimevideo.dev/horizon-framework"
 
-        click_link 'plans'
-        current_url.should eq "http://sublimevideo.dev/plans"
+        click_link 'Tailor-Made Players'
+        current_url.should eq "http://sublimevideo.dev/tailor-made-players"
 
-        click_link 'showcase'
-        current_url.should eq "http://sublimevideo.dev/customer-showcase"
+        click_link 'pricing'
+        current_url.should eq "http://sublimevideo.dev/pricing"
 
         click_link 'news'
         current_url.should eq "http://sublimevideo.dev/news"
@@ -50,13 +50,13 @@ feature "Com Pages" do
         current_url.should eq "http://sublimevideo.dev/why"
 
         click_link 'Features'
-        current_url.should eq "http://sublimevideo.dev/features"
+        current_url.should eq "http://sublimevideo.dev/modular-player"
 
-        click_link 'Plans & Pricing'
-        current_url.should eq "http://sublimevideo.dev/plans"
+        click_link 'Pricing'
+        current_url.should eq "http://sublimevideo.dev/pricing"
 
-        click_link 'Customer Showcase'
-        current_url.should eq "http://sublimevideo.dev/customer-showcase"
+        click_link 'Testimonials'
+        current_url.should eq "http://sublimevideo.dev/testimonials"
 
         # Support
         click_link 'Help'
@@ -94,9 +94,24 @@ feature "Com Pages" do
   end
 
   describe "redirects" do
-    scenario '/demo redirects to /features' do
+    scenario '/demo redirects to /modular-player' do
       visit '/demo'
-      current_url.should eq "http://sublimevideo.dev/features"
+      current_url.should eq "http://sublimevideo.dev/modular-player"
+    end
+
+    scenario '/features redirects to /modular-player' do
+      visit '/features'
+      current_url.should eq "http://sublimevideo.dev/modular-player"
+    end
+
+    scenario '/plans redirects to /pricing' do
+      visit '/plans'
+      current_url.should eq "http://sublimevideo.dev/pricing"
+    end
+
+    scenario '/customer-showcase redirects to /testimonials' do
+      visit '/customer-showcase'
+      current_url.should eq "http://sublimevideo.dev/testimonials"
     end
 
     scenario '/pricing redirects to /plans' do

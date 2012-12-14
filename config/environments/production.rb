@@ -1,8 +1,14 @@
+require 'rack/maintenance'
+
 SublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.middleware.insert_before Rack::Cache, Rack::Maintenance, domain: 'sublimevideo.net'
   config.middleware.insert_before Rack::Cache, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'sublimevideo.net', strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
+
+  # One-line logs
+  config.lograge.enabled = true
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -55,7 +61,7 @@ SublimeVideo::Application.configure do
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "http://d1p69vb2iuddhr.cloudfront.net"
+  config.action_controller.asset_host = "//cdn.sublimevideo.net"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )

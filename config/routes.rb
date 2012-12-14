@@ -18,10 +18,17 @@ end
 
 SublimeVideo::Application.routes.draw do
   # Redirects
+<<<<<<< HEAD
   get '/demo' => redirect('/features')
   get '/pricing' => redirect('/plans')
+=======
+  %w[demo features].each { |action| get action => redirect('/modular-player') }
+>>>>>>> horizon
   %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
   %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
+  get 'plans' => redirect('/pricing')
+  get 'customer-showcase' => redirect('/testimonials')
+  get 'horizon-video' => redirect('/#horizon-video')
 
   # Docs routes
   %w[javascript-api releases].each do |path|
@@ -38,10 +45,19 @@ SublimeVideo::Application.routes.draw do
     get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/#{path}" }
   end
 
+  # Showcase redirects
+  %w[sony twit blackhandcinema next15 html5].each do |showcase|
+    get "/tailor-made-players/#{showcase}" => redirect { |params, req| "/tailor-made-players##{showcase}" }
+  end
+
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false
-  get '/press-kit' => redirect('http://cl.ly/433P3t1P2a1m202w2Y3D/content'), as: :press_kit
+  get '/press-kit' => redirect('http://cl.ly/0g0u032K3p26/content'), as: :press_kit
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
+
+  resources :tailor_made_player_requests, only: [:new, :create], path: 'tailor-made-players-requests' do
+    get :thank_you, on: :collection, path: 'thank-you'
+  end
 
   root to: 'pages#show', page: 'home', format: :html
 end

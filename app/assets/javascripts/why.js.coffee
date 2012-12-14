@@ -1,4 +1,4 @@
-jQuery(document).ready ->
+SublimeVideo.whyReady = ->
   if jQuery('section.slide').exists()
     jQuery('section.showcases ul').slidify
       visibleSlides: 2

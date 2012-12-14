@@ -1,6 +1,6 @@
 - @page_title = "News"
 = content_for :header do
-  %h2= "News"
+  %h2= @page_title
   %p.sub= raw "Stay up-to-date with the latest SublimeVideo news."
 
 %section.content_left
@@ -14,7 +14,7 @@
     = link_to "http://blog.jilion.com/tags/sublimevideo" do
       %span= "Read the blog"
   .break
-  %h3.title= "In the Press"
+  %h3.title= "Press Highlights"
   %ul.articles
     %li.tnw
       %span.icon
@@ -86,7 +86,7 @@
         %strong= 'Trophées PERL 2012 1st Prize'
         = link_to "Read more", "http://blog.jilion.com/2012/04/05/sublimevideo-awarded-1st-prize-of-the-trophees-perl-2012", class: "read_more"
   .press_kit
-    = link_to press_kit_url, class: "button" do
+    = link_to press_kit_url, class: "button", data: { "no-turbolink" => true } do
       %span= "Download the Press Pack"
     %p.desc= "Includes Jilion & SublimeVideo logos (vector & raster), promotional graphics and recent press release."
 

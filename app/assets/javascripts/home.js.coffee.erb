@@ -13,8 +13,10 @@ SublimeVideo.setupHomeSublime = ->
       horizon_lightbox.on
         didopen: ->
           SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
+          SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
         didclose: ->
           SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
+          SublimeVideo.showcasesSlideshow.startTimer() if SublimeVideo.showcasesSlideshow?
         contentready: (player) ->
           player.on 'action:showcases', ->
             go = -> document.location.href = '/tailor-made-players'

@@ -10,11 +10,11 @@ feature "Com Pages" do
       within '#menu' do
         current_url.should eq "http://sublimevideo.dev/"
 
-        click_link 'SublimeVideo Player'
-        current_url.should eq "http://sublimevideo.dev/modular-player"
-
         click_link 'Horizon Framework'
         current_url.should eq "http://sublimevideo.dev/horizon-framework"
+
+        click_link 'Modular Player'
+        current_url.should eq "http://sublimevideo.dev/modular-player"
 
         click_link 'Tailor-Made Players'
         current_url.should eq "http://sublimevideo.dev/tailor-made-players"
@@ -46,14 +46,14 @@ feature "Com Pages" do
 
       within 'footer' do
         # Product
-        click_link 'Why SublimeVideo?'
-        current_url.should eq "http://sublimevideo.dev/why"
+        click_link 'Horizon Framework'
+        current_url.should eq "http://sublimevideo.dev/horizon-framework"
 
-        click_link 'Features'
+        click_link 'Modular Player'
         current_url.should eq "http://sublimevideo.dev/modular-player"
 
-        click_link 'Pricing'
-        current_url.should eq "http://sublimevideo.dev/pricing"
+        click_link 'Tailor-Made Players'
+        current_url.should eq "http://sublimevideo.dev/tailor-made-players"
 
         click_link 'Testimonials'
         current_url.should eq "http://sublimevideo.dev/testimonials"
@@ -94,6 +94,11 @@ feature "Com Pages" do
   end
 
   describe "redirects" do
+    scenario '/why redirects to /horizon-framework' do
+      visit '/why'
+      current_url.should eq "http://sublimevideo.dev/horizon-framework"
+    end
+
     scenario '/demo redirects to /modular-player' do
       visit '/demo'
       current_url.should eq "http://sublimevideo.dev/modular-player"
@@ -112,11 +117,6 @@ feature "Com Pages" do
     scenario '/customer-showcase redirects to /testimonials' do
       visit '/customer-showcase'
       current_url.should eq "http://sublimevideo.dev/testimonials"
-    end
-
-    scenario '/pricing redirects to /plans' do
-      visit '/pricing'
-      current_url.should eq "http://sublimevideo.dev/plans"
     end
 
     %w[signup sign_up register].each do |path|

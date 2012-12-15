@@ -18,9 +18,9 @@ describe TailorMadePlayerRequest do
       it { should allow_mass_assignment_of(attribute) }
     end
 
-    [:name, :email, :job_title, :company, :url, :country, :topic, :description].each do |attribute|
-      it { should validate_presence_of(attribute) }
-    end
+    # [:name, :email, :job_title, :company, :url, :country, :topic, :description].each do |attribute|
+    #   it { should validate_presence_of(attribute) }
+    # end
 
     described_class::TOPICS.each do |topic|
       it { should allow_value(topic).for(:topic) }

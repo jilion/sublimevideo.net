@@ -9,6 +9,7 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   TOPICS = %w[agency standalone platform other] unless defined? TOPICS
 
   validates :name, :email, :job_title, :company, :url, :country, :topic, :description, presence: true
+  validates :email, format: { with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/ }
   validates :topic, inclusion: TOPICS, allow_blank: true
   validates :document, file_size: { maximum: 10.megabytes.to_i }
 

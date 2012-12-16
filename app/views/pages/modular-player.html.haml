@@ -19,7 +19,7 @@
     %h3.title
       = "Modular architecture"
       %span.new= "New"
-    %p= raw "Re-written from the ground-up using the #{link_to "SublimeVideo Horizon HTML5 Video Framework", 'horizon-framework'}, the SublimeVideo Player is now fully modular and allows you to choose and assemble exactly the player you need."
+    %p= raw "Re-written from the ground-up using the #{link_to "SublimeVideo Horizon HTML5 Video Framework", page_path('horizon-framework')}, the SublimeVideo Player is now fully modular and allows you to choose and assemble exactly the player you need."
     .spacer
 
   %section.youtube_integration.f.right
@@ -27,7 +27,7 @@
     %h3.title
       = "Seamless YouTube integration"
       %span.new= "New"
-    %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", 'youtube'}."
+    %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
     .spacer
 
   %section.tablets.f.left
@@ -45,7 +45,7 @@
       = "3 sleek player designs to choose from"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Along with the #{link_to 'Classic', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '1' }} SublimeVideo player design, you can now select two additional player designs, #{link_to 'Light', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '3' }} and #{link_to 'Flat', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '2' }}, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", 'tailor-made-players'}."
+    %p= raw "Along with the #{link_to 'Classic', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '1' }} SublimeVideo player design, you can now select two additional player designs, #{link_to 'Light', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '3' }} and #{link_to 'Flat', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '2' }}, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", page_path('tailor-made-players')}."
     %video#design_demo{ width: 640, height: 360, poster: image_path('demo/midnight_sun2_800.jpg'), preload: 'none', style: 'display:none', data: { uid: 'designs-demo', name: 'Designs Demo' } }
       <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_450p.mp4" />
       <source src="//media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />

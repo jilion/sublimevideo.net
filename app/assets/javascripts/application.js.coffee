@@ -30,12 +30,6 @@ $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
   SublimeVideo.UI.updateActiveItemMenus()
-  setTimeout scrollToHash, 500
-
-scrollToHash = ->
-  if document.location.hash isnt ''
-    if ($elToScrollTo = $(document.location.hash)).exists()
-      $(document.body).animate({ scrollTop: $elToScrollTo.offset()['top'] })
 
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)

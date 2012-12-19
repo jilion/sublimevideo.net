@@ -45,6 +45,10 @@ SublimeVideo.setupShowcasesSlideshow = ->
   if ($showcases = $('section.tailor_made')).exists()
     SublimeVideo.showcasesSlideshow = new SublimeVideo.HomeSlideshow($showcases, $('#showcases_selector'), 6)
 
+    $showcases.find('a').each (index, el) ->
+      $(el).on 'click', (event) ->
+        SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
+
 SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()
     $highlights.find('ul').slidify

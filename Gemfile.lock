@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/jilion/turbolinks.git
-  revision: 797e9c8d326b053f9e263773833f019f99489ec6
+  revision: 8078d9f05142faf1abc2c2d1ab0ee267c3666104
+  branch: ios_video_issue
   specs:
     turbolinks (0.6.1)
       coffee-rails

@@ -49,5 +49,6 @@ SublimeVideo.prepareVideoPlayers = ->
   sublime.load()
 
 SublimeVideo.setupProductInfo = (player) ->
-  player.on 'action:productinfo', ->
-    window.open $("##{player.videoId()}").attr('data-product-url')
+  if $("##{player.videoId()}").attr('data-info-enable') is 'true'
+    player.on 'action:productinfo', ->
+      window.open $("##{player.videoId()}").attr('data-product-url')

@@ -3,7 +3,7 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'rails',                '3.2.9'
+gem 'rails',                '3.2.10'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Databases
@@ -51,6 +51,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'rack-livereload'
+  gem 'rack-nocache'
   gem 'quiet_assets'
 end
 

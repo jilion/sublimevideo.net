@@ -23,7 +23,7 @@ gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
-gem 'librato-rails'
+gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'lograge'
 gem 'countries'
 

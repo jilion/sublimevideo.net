@@ -2,114 +2,116 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.twitter.com/1/statuses/show/14786759290.json?include_entities=true
+    uri: https://api.twitter.com/1.1/statuses/show/14786759290.json?include_entities=true
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      accept:
+      Accept:
       - application/json
-      user-agent:
-      - Twitter Ruby Gem 2.1.1
-      accept-encoding:
+      User-Agent:
+      - Twitter Ruby Gem 4.4.3
+      Authorization:
+      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="640100261a3d04e4d5ec906a0d62e7c0",
+        oauth_signature="fRITj2nuGpKneAFnGr4%2FJF40Fh4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1357747212", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
+        oauth_version="1.0"
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      connection:
-      - close
   response:
     status:
       code: 200
       message: !binary |-
         T0s=
     headers:
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      !binary "WC1BY2Nlc3MtTGV2ZWw=":
       - !binary |-
-        MTUw
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        MTMx
-      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
-      - !binary |-
-        MTMzMjQwNDkyNg==
-      !binary "eC1yYXRlbGltaXQtY2xhc3M=":
-      - !binary |-
-        YXBp
-      !binary "Y29udGVudC10eXBl":
+        cmVhZC13cml0ZQ==
+      !binary "Q29udGVudC1UeXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
-      !binary "c2V0LWNvb2tpZQ==":
+      !binary "TGFzdC1Nb2RpZmllZA==":
       - !binary |-
-        Z3Vlc3RfaWQ9InYxOjEzMzI0MDM0NDM4NjY2OTk0MiI7RXhwaXJlcz1TYXQs
-        IDIyLU1hci0xNCAwODowNDowMyBHTVQ7UGF0aD0vO0RvbWFpbj0udHdpdHRl
-        ci5jb20=
-      - !binary |-
-        az03Ny41OS4yNTUuMTYyLjQwMTgxZWRjN2Y3NmI2NTI7IHBhdGg9LzsgZXhw
-        aXJlcz1UaHUsIDI5LU1hci0yMDEyIDA4OjA0OjAzIFVUQzsgZG9tYWluPS5h
-        cGkudHdpdHRlci5jb207IGh0dHBvbmx5
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        VGh1LCAyMiBNYXIgMjAxMiAwODowNDowMyBHTVQ=
-      !binary "ZXhwaXJlcw==":
+        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDoxMyBHTVQ=
+      !binary "RXhwaXJlcw==":
       - !binary |-
         VHVlLCAzMSBNYXIgMTk4MSAwNTowMDowMCBHTVQ=
-      !binary "cHJhZ21h":
+      !binary "UHJhZ21h":
       - !binary |-
         bm8tY2FjaGU=
-      !binary "Y2FjaGUtY29udHJvbA==":
+      !binary "Q2FjaGUtQ29udHJvbA==":
       - !binary |-
         bm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByZS1jaGVj
         az0wLCBwb3N0LWNoZWNrPTA=
-      !binary "eC10cmFuc2FjdGlvbg==":
+      !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        ZTI2ZmYyY2Q2YjUwODY1Zg==
-      !binary "eC1mcmFtZS1vcHRpb25z":
+        Z3Vlc3RfaWQ9djElM0ExMzU3NzQ3MjEzNjE5NTgxNzA7IEV4cGlyZXM9RnJp
+        LCA5LUphbi0yMDE1IDE2OjAwOjEzIEdNVDsgUGF0aD0vOyBEb21haW49LnR3
+        aXR0ZXIuY29t
+      - !binary |-
+        bGFuZz1lbg==
+      !binary "WC1UcmFuc2FjdGlvbg==":
+      - !binary |-
+        ODhjMDdhNGE5YzJjYWZmOA==
+      !binary "WC1GcmFtZS1PcHRpb25z":
       - !binary |-
         U0FNRU9SSUdJTg==
-      !binary "c3RhdHVz":
+      !binary "U3RhdHVz":
       - !binary |-
         MjAwIE9L
-      !binary "ZGF0ZQ==":
+      !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAyMiBNYXIgMjAxMiAwODowNDowMyBHTVQ=
-      !binary "Y29udGVudC1lbmNvZGluZw==":
+        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDoxMyBHTVQ=
+      !binary "Q29udGVudC1FbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
-      !binary "Y29udGVudC1sZW5ndGg=":
+      !binary "Q29udGVudC1MZW5ndGg=":
       - !binary |-
-        MTE4OA==
-      !binary "c2VydmVy":
+        MTI2OA==
+      !binary "WC1SYXRlLUxpbWl0LUxpbWl0":
+      - !binary |-
+        MTgw
+      !binary "WC1SYXRlLUxpbWl0LVJlbWFpbmluZw==":
+      - !binary |-
+        MTY0
+      !binary "WC1SYXRlLUxpbWl0LVJlc2V0":
+      - !binary |-
+        MTM1Nzc0Nzg2Mg==
+      !binary "U2VydmVy":
       - !binary |-
         dGZl
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7RWbW/bNhD+K4QGDBumyJIt2ZKBAQ26BQvQosWSoh+qQKCl
-        s8yGIlWSiuMG/u87SrIsJ3WHDpj9Sc+98Z57IZ+cXAE1UGTUOEvnIxTkLd2R
-        6ZxM/eUsWgZT8puPP/wMfMd1WOEsg3ARzxdRMk18C2TaKDQdoahn4NH6+wt4
-        TbbMbIjZAJGME10zzkmjmSjJK1rXOXBQ1EhFfjLMUMGailBRtPp0C1pWQF4x
-        YRQrgJJ36OFvqKUyoMjl+2vikY0x9TKdpJMVMx7fpZPidQNvbvEMWjYqBzxF
-        2vj+LKdko2D9e+oMFtvt1jNbAFNAfu/lskodooCjipBrybncpp0t3FqtP1Cr
-        c5VOaIfbTFUjcsugs1xTrgEpEZmCmu8yI5EbahqdWdpEw/kZYUfhS4VGgzpj
-        24vOWWosK4hM0AoOYmvhLJ+6EkZxMpsuonH9eghT6qwc/aWhyBjNsTqWzrHL
-        50IukQMmBUreKY4FlC65eoOCAtCO1b3sIxAEWCnaGhfwAFzWBMuLPZAb9gAE
-        HmtQDEQOmqyxK7awckklV4yDS7TMGeWtbSUVeOi/URz9DiUdH8tWFDVqJQ3k
-        4wJ1tQWls1w2Avt0FiATaxu2GLDFFLNi2o5Gj0zn7um0vJWCXDYlCWISzJc4
-        MFE8TIsfY+g1fcAeZAYGr+iiMXkm12sN+HkRxKiOTcQqyL5KYZn9k2JQJcgt
-        YuSXDzfkZ/KaClrQX9FjCTIDQVfcpoOth9k8IF9rNkqva6tRzPkMU6GiROcg
-        0Eku7TytGuRIH70duldnRlGhuR3KAUUS11iCbEXz+1KhX8sKtwqO3/6cb+qw
-        ipaQPasR9XHqWFW2Ezc5Z6XTSRBF82gaBHE6QQODrFysygvM13g1ZvP9iJmN
-        p/u4umsO9n9GNvj9gq8fIGCIPZ9PwyRZLDC4XnNZymkmpKoo9z7X49j/IdUf
-        jsGZuB8qfXV5GQbJSKpxKa+oylZSFbiOBr329w09/ODnteydMUijK/sfSbGj
-        X1TqMAJ6I7cZRd9M4IEhq6Bg9CAscB003GS9o6FEz/CDx5MdwezQdOuzA3DD
-        fmlAm0yDHa1OJKTBCewWoO7AfTuqdt2aXW2n+r3ELdfOHnLFBC4R1Pw0jb15
-        lER+4F7EgTdLZkkwu9s/0/oXH0dLd3BnfdSc2tuvW/gOhD5KFsm8oEEYL5KX
-        q5PWzOubvWuaIJ1gDumEFenkubn3WUu7StogWX++nJnd8fq45IZWuGmA3NQK
-        idR2ISI12Tl5f2O0W0vtsBMKq/bh5ojZT4HrtCA3ps3edVa2G9Aae/DxhCq+
-        K6V4Qdanlq4wnEXTRUvXLInD5M7tWAxn8yT+HpzgpR/18MhJB99Z1qnpVmtb
-        uP3+dNkeGkZB++wYrh8X9zK+flhX7Q3VG0NLe9ynw0Pq8DayTzDMN2+TCUM3
-        wna5a0tpgbvulsf+F30voofTe3v85BrV6hS1HZPgisAERy+EHjk5wsx3Q9ux
-        z8McXmzHENc94hJyLXJveEuGURSF8clDsoNO4ix8d5FgqvvuUrV36vHK6ukc
-        kP0/AAAA//8DAHT1ksnWCgAA
-    http_version: !binary |-
-      MS4x
-  recorded_at: Thu, 22 Mar 2012 08:04:04 GMT
-recorded_with: VCR 2.0.0
+        H4sIAAAAAAAAALxWbW/bNhD+K4QGDBum2nq1JAMDGrQrVqBFi6VFP1SBQEln
+        hy1NqiQVxw3833eUZFlKmnXdh7kfGt0r+dzdc7xzKgXUQF1Q46ydD1CT1/RA
+        ghUJvHUYr/2A/ObhDz99z3EdVjtrP0rSVRJnQeZZQaGNQteJFO0M3Np4fwJv
+        yJ6Za2KugUjGiW4Y56TVTGzJU9o0FXBQ1EhFfjLMUMHaHaGi7uzpHrTcAXnK
+        hFGsBkreYIS/oJHKgCIXb1+SBbk2plnny3xZMrPgh3xZP2vh1Ts8g5atqgBP
+        kbeeF1aUXCvY/J47o8d+v1+YPYCpofq8qOQud4gCjiZCbiTncp/3vvDOWj1H
+        qz5UvqS93N5UtaKyCDrrDeUaEBJRKGj4oTASsaGm1YWFTbScP6LsIXxo0GpQ
+        j/gOqsc8NZYVRCHoDk5q6+Gs7/oSxmkWBkk8rd8gwiv1Xo7+0lJEjFZYHQvn
+        NOR9JZeIAZMCNW8UxwJKl7x4hYoa0I81g+4DEBSwrehqXMMNcNlgnamqsU2E
+        sF2BxcaOqAy7AQK3DSgGogJNNtgjeyhdspMl4+ASLStGeRdpJxUsMFurOGYZ
+        Czw9pK0vWoDANmOgLRKddfcffn68+zfetw2mw2npTE+w16yyAT96bhBeHa+O
+        9249Zrg6oqpR0kA17Ze+1UDpopKtwLEJwxVK7b3rUZb4CDLTdlIHSZC68+F9
+        LQW5aLfET4m/WuP8xuk4vF6Kp9/QGxwJZuAcFSEzVSE3Gw34+cRP0Rx7mu2g
+        +CqFLfQfFJMqQd6hjPzy/pL8TJ5RQWv6K0bcgixA0JLb6+Ak4G1usGAbNrle
+        3+WTnDYDtsgWg4PAIJW04122CLM+RzsNky6MokJzyxGjFEHcYA8UJa0+bxXG
+        tahwa+B4zz0vsBT0DRu2o1so7pWZekgCbLftCGD5mJfOl0kQJV4cZUG+XEWb
+        MqFRXUVVucq8OC7DMIQ4rMNsswqjbPGpge13zlDYE+jhJLrvOPb/nsXg9wNM
+        fwCk02n81SqIsixJUrzDhsutDAoh1Y5yTD7N/R8u/8M5SioEcuP5At/B1lrb
+        +AP/4V9hHAV+EsTTLuJMfB577MXFReRnE63G7VRSVZRS1Zh77MXu9w07/ODn
+        aN1vYmWX56iNX9h/Ey3O0oOOOA1fjXTVclMMtmNt78lPTjMCYnYiZxJcJ19a
+        0KbQYAd30AlpcMB7uteD9NhRgaU6c2gsa7yVSOPdbCMiTCBJWQIM0sUqzmLP
+        d5+k/iLMwswPLV3OrL4T4+zpjuFsjIZTu+z7/eZA5KEmyVY19aM0yWa7oW8I
+        2jDbEAbZrW8Jf+HnS7xGvmR1vrwfYfFJS8tWXZ5iOGLFzOG8MC+4oTskMyCX
+        jUI4teVc3BHFY/phR3bEqA5Y8tqavb88y+ynQMauyaXpAHCd0pYdvbHZbmdo
+        8cNWigd4fewQi6IwDpIOsTBLo+zK7YGMwlWW/pM4w2dOPIgnQXrxlQWemp69
+        u9odj3M+Py1JBd1Da9xw80V8TfW1odt+Cw9Px9Nr0Jlu2ChyY7ti3XGl9u+a
+        YmfDdf2IEeYvlekjc1KrudQ2TYYMgxecvIkGyewIoedGtmnvpzm9Uc8pXg4S
+        l5CXolqMr+cojuMonT2de9EsT+K5Sda/Juzetmv7vBUHOEfJ8W8AAAD//wMA
+        zg8KVcgLAAA=
+    http_version: 
+  recorded_at: Wed, 09 Jan 2013 16:00:13 GMT
+recorded_with: VCR 2.4.0

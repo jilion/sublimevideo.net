@@ -33,22 +33,18 @@ RSpec.configure do |config|
 end
 
 require 'vcr'
-VCR.config do |config|
-  config.stub_with :webmock, :typhoeus
+VCR.configure do |config|
+  config.hook_into :webmock, :typhoeus
   config.cassette_library_dir     = 'spec/cassettes'
   config.ignore_localhost         = true
   config.default_cassette_options = { record: :new_episodes }
-end
-
-RSpec.configure do |config|
-  config.extend VCR::RSpec::Macros
+  config.configure_rspec_metadata!
 end
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run_including focus: true
-
   config.mock_with :rspec
 end
 

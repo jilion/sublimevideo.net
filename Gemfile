@@ -58,18 +58,18 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'capybara', '~> 1.1.4'
-  gem 'poltergeist'
+  gem 'capybara'
+  gem 'poltergeist', github: 'brutuscat/poltergeist'
 
-  gem 'webmock', '~> 1.6.0'
-  gem 'typhoeus', '~> 0.2.0'
-  gem 'vcr', '~> 1.10.3'
-  gem 'factory_girl'
-  gem 'factory_girl_rails' # loaded in spec_helper Spork.each_run
+  gem 'vcr'
+  gem 'webmock'
+  gem 'typhoeus', '~> 0.5.3'
+  gem 'factory_girl_rails'
 end
 
 group :tools do
   gem 'powder'
+  gem 'annotate'
 
   # Guard
   gem 'ruby_gntp'

@@ -26,3 +26,31 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   end
 
 end
+
+# == Schema Information
+#
+# Table name: tailor_made_player_requests
+#
+#  company                 :string(255)
+#  country                 :string(255)
+#  created_at              :datetime         not null
+#  description             :text             not null
+#  document                :string(255)
+#  email                   :string(255)      not null
+#  highrise_kase_id        :integer
+#  id                      :integer          not null, primary key
+#  job_title               :string(255)
+#  name                    :string(255)      not null
+#  token                   :string(255)
+#  topic                   :string(255)      not null
+#  topic_other_detail      :string(255)
+#  topic_standalone_detail :string(255)
+#  updated_at              :datetime         not null
+#  url                     :string(255)
+#
+# Indexes
+#
+#  index_tailor_made_player_requests_on_created_at  (created_at)
+#  index_tailor_made_player_requests_on_topic       (topic)
+#
+

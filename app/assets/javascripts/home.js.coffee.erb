@@ -17,7 +17,8 @@ SublimeVideo.setupHomeSublime = ->
         didclose: ->
           SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
           SublimeVideo.showcasesSlideshow.startTimer() if SublimeVideo.showcasesSlideshow?
-        contentready: (player) ->
+        contentready: (lightbox, player) ->
+          player = lightbox unless player
           player.on 'action:showcases', ->
             go = -> document.location.href = '/tailor-made-players'
             if player.isFullscreen() then player.exitFullscreen(go) else go()

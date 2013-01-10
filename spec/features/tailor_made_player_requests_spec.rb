@@ -24,6 +24,9 @@ feature "TailorMadePlayerRequest", :vcr do
 
       page.should have_content 'Thank you!'
       page.should have_content 'We have received your contact request. We will get back to you as soon as possible.'
+
+      Sidekiq::Worker.drain_all
+      TailorMadePlayerRequest.first.highrise_kase_id.should be_present
     end
   end
 

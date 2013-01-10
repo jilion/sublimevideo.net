@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-feature "TailorMadePlayerRequest" do
+feature "TailorMadePlayerRequest", :vcr do
 
   describe "creation" do
     scenario 'links are clickable and routable' do

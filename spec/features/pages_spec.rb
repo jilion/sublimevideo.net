@@ -1,9 +1,9 @@
 # coding: utf-8
 require 'spec_helper'
 
-feature "Com Pages" do
+feature "Com Pages", :vcr do
 
-  describe "menu", :vcr do
+  describe "menu" do
     scenario 'links are clickable and routable' do
       visit '/'
 
@@ -40,7 +40,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "footer", :vcr do
+  describe "footer" do
     scenario 'links are clickable and routable' do
       visit '/'
 
@@ -83,7 +83,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "home page", :vcr do
+  describe "home page" do
     scenario 'Get It Know link is reachable and show signup popup' do
       visit '/'
 
@@ -93,7 +93,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "redirects", :vcr do
+  describe "redirects" do
     scenario '/why redirects to /horizon-framework' do
       visit '/why'
       current_url.should eq "http://sublimevideo.dev/horizon-framework"

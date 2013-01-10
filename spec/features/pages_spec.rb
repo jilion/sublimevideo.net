@@ -83,7 +83,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "home page" do
+  describe "home page", :vcr do
     scenario 'Get It Know link is reachable and show signup popup' do
       visit '/'
 
@@ -93,7 +93,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "redirects" do
+  describe "redirects", :vcr do
     scenario '/why redirects to /horizon-framework' do
       visit '/why'
       current_url.should eq "http://sublimevideo.dev/horizon-framework"

@@ -14,13 +14,20 @@ describe TailorMadePlayerRequest do
   end
 
   describe "Validations" do
+    subject { build(:tailor_made_player_request) }
+
     [:name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document].each do |attribute|
       it { should allow_mass_assignment_of(attribute) }
     end
 
-    # [:name, :email, :job_title, :company, :url, :country, :topic, :description].each do |attribute|
-    #   it { should validate_presence_of(attribute) }
-    # end
+    it { should validate_presence_of(:name).with_message('Please fill in Your name') }
+    it { should validate_presence_of(:email).with_message('Please fill in your Email address') }
+    it { should validate_presence_of(:job_title).with_message('Please fill in your Job title') }
+    it { should validate_presence_of(:company).with_message('Please fill in your Company') }
+    it { should validate_presence_of(:url).with_message('Please fill in your Website URL') }
+    it { should validate_presence_of(:country).with_message('Please fill in your Country') }
+    it { should validate_presence_of(:topic).with_message('Please choose the Topic of your request') }
+    it { should validate_presence_of(:description).with_message('Please enter a Description') }
 
     described_class::TOPICS.each do |topic|
       it { should allow_value(topic).for(:topic) }

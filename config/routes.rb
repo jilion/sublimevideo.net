@@ -18,7 +18,7 @@ end
 
 SublimeVideo::Application.routes.draw do
   namespace :api do
-    resources :tailor_made_player_requests, only: [:index, :show, :delete], path: 'tailor-made-players-requests'
+    resources :tailor_made_player_requests, only: [:index, :show, :destroy], path: 'tailor-made-players-requests'
   end
 
   # Redirects

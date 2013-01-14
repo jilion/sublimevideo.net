@@ -15,12 +15,16 @@ gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
 
+# Controllers
+gem 'has_scope'
+gem 'responders'
+gem 'kaminari'
+
 # Internals
 gem 'sidekiq'
 gem 'airbrake'
 gem 'twitter'
 gem 'highrise'
-gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
@@ -46,6 +50,7 @@ group :staging, :production do
   gem 'thin'
   gem 'dalli'
   gem 'rack-cache'
+  gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
 end
@@ -58,7 +63,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers', ref: 'cc03053'
   gem 'capybara'
   gem 'launchy'
   gem 'poltergeist', github: 'brutuscat/poltergeist'

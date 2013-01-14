@@ -1,205 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://bf26a52fe7ea66caad3b9eca117e07bb:@jilion.highrisehq.com/kases.xml
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<kase>\n  <background>From
-        https://admin.sublimevideo.net/tailor_made_player_requests/24</background>\n
-        \ <name>Tailor-made player request for John Doe SA</name>\n</kase>\n"
-    headers:
-      Content-Type:
-      - application/xml
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 10 Jan 2013 12:56:31 GMT
-      Content-Type:
-      - application/xml; charset=utf-8
-      Content-Length:
-      - '629'
-      Connection:
-      - keep-alive
-      Status:
-      - 201 Created
-      X-Throttle-Max:
-      - '500'
-      X-Throttle-Count:
-      - '1'
-      Location:
-      - https://jilion.highrisehq.com/kases/832554-tailor-made-player-request-for-john-doe-sa
-      X-Throttle-Horizon:
-      - '2013-01-10T12:56:40Z'
-      X-Runtime:
-      - '17'
-      X-Request-Id:
-      - 273ed04e-a226-44dd-a853-31303a39c07f
-      Cache-Control:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<kase>\n  <author-id
-        type=\"integer\">787818</author-id>\n  <background>From https://admin.sublimevideo.net/tailor_made_player_requests/24</background>\n
-        \ <closed-at type=\"datetime\" nil=\"true\"></closed-at>\n  <created-at type=\"datetime\">2013-01-10T12:56:31Z</created-at>\n
-        \ <group-id type=\"integer\" nil=\"true\"></group-id>\n  <id type=\"integer\">832554</id>\n
-        \ <name>Tailor-made player request for John Doe SA</name>\n  <owner-id type=\"integer\"
-        nil=\"true\"></owner-id>\n  <updated-at type=\"datetime\">2013-01-10T12:56:31Z</updated-at>\n
-        \ <visible-to>Everyone</visible-to>\n  <parties type=\"array\"/>\n</kase>\n"
-    http_version: 
-  recorded_at: Thu, 10 Jan 2013 12:56:31 GMT
-- request:
-    method: post
-    uri: https://bf26a52fe7ea66caad3b9eca117e07bb:@jilion.highrisehq.com/people.xml
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<person>\n  <background>From
-        https://admin.sublimevideo.net/tailor_made_player_requests/24</background>\n
-        \ <company-name>John Doe SA</company-name>\n  <contact-data>\n    <email-addresses>\n
-        \     <email-address>\n        <address>john@doe.com</address>\n        <location>Work</location>\n
-        \     </email-address>\n    </email-addresses>\n  </contact-data>\n  <first-name>John</first-name>\n
-        \ <last-name>Doe</last-name>\n  <title>Mr. Dev</title>\n</person>\n"
-    headers:
-      Content-Type:
-      - application/xml
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 10 Jan 2013 12:56:32 GMT
-      Content-Type:
-      - application/xml; charset=utf-8
-      Content-Length:
-      - '1207'
-      Connection:
-      - keep-alive
-      Status:
-      - 201 Created
-      X-Throttle-Max:
-      - '500'
-      X-Throttle-Count:
-      - '2'
-      Location:
-      - https://jilion.highrisehq.com/people/148782560-john-doe
-      X-Throttle-Horizon:
-      - '2013-01-10T12:56:40Z'
-      X-Runtime:
-      - '66'
-      X-Request-Id:
-      - 03ccf9a7-a8a4-4ace-86ef-68d0b268f872
-      Set-Cookie:
-      - _sunrise_session=BAh7BzoPc2Vzc2lvbl9pZCIlYjBiNzQ2YTNmNGYwYjFlYTM0NWI5MzZkMjUzODc0OGYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoPbmV3X3BlcnNvblQGOgpAdXNlZHsGOwdG--18ebc9dbddff6d99403659cad46753dff4e442be;
-        path=/; HttpOnly; secure
-      Cache-Control:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<person>\n  <author-id
-        type=\"integer\">787818</author-id>\n  <background>From https://admin.sublimevideo.net/tailor_made_player_requests/24</background>\n
-        \ <company-id type=\"integer\" nil=\"true\"></company-id>\n  <created-at type=\"datetime\">2013-01-10T12:56:32Z</created-at>\n
-        \ <first-name>John</first-name>\n  <group-id type=\"integer\" nil=\"true\"></group-id>\n
-        \ <id type=\"integer\">148782560</id>\n  <last-name>Doe</last-name>\n  <owner-id
-        type=\"integer\" nil=\"true\"></owner-id>\n  <title>Mr. Dev</title>\n  <updated-at
-        type=\"datetime\">2013-01-10T12:56:32Z</updated-at>\n  <visible-to>Everyone</visible-to>\n
-        \ <company-name nil=\"true\"></company-name>\n  <linkedin-url nil=\"true\"></linkedin-url>\n
-        \ <avatar-url>http://asset0.37img.com/highrise/missing/avatar.gif?r=3</avatar-url>\n<contact-data>\n
-        \ <email-addresses type=\"array\">\n    <email-address>\n      <address>john@doe.com</address>\n
-        \     <id type=\"integer\">75058288</id>\n      <location>Work</location>\n
-        \   </email-address>\n  </email-addresses>\n  <phone-numbers type=\"array\"/>\n
-        \ <web-addresses type=\"array\"/>\n  <instant-messengers type=\"array\"/>\n
-        \ <addresses type=\"array\"/>\n  <twitter-accounts type=\"array\"/>\n</contact-data>\n</person>\n"
-    http_version: 
-  recorded_at: Thu, 10 Jan 2013 12:56:32 GMT
-- request:
-    method: post
-    uri: https://bf26a52fe7ea66caad3b9eca117e07bb:@jilion.highrisehq.com/notes.xml
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <author-id
-        type=\"integer\">148782560</author-id>\n  <body>Contact: John Doe (john@doe.com)\n\nJob
-        &amp; company: Mr. Dev at John Doe SA\n\nWebsite: john_doe.com\n\nCountry:
-        Switzerland\n\nTopic: I am an agency and I would like to join the partner
-        program to design and sell tailor-made players to my customers.\n\nDescription:
-        I want a gorgeous tailor-made player!</body>\n  <owner-id type=\"integer\">148782560</owner-id>\n
-        \ <subject-id type=\"integer\">832554</subject-id>\n  <subject-type>Kase</subject-type>\n</note>\n"
-    headers:
-      Content-Type:
-      - application/xml
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 10 Jan 2013 12:56:33 GMT
-      Content-Type:
-      - application/xml; charset=utf-8
-      Content-Length:
-      - '969'
-      Connection:
-      - keep-alive
-      Status:
-      - 201 Created
-      X-Throttle-Max:
-      - '500'
-      X-Throttle-Count:
-      - '3'
-      Location:
-      - https://jilion.highrisehq.com/notes/139407179
-      X-Throttle-Horizon:
-      - '2013-01-10T12:56:40Z'
-      X-Runtime:
-      - '27'
-      X-Request-Id:
-      - a229c09f-95ba-4ce8-860e-64dec8867d22
-      Cache-Control:
-      - no-cache
-      Strict-Transport-Security:
-      - max-age=31536000
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>\n  <author-id
-        type=\"integer\">787818</author-id>\n  <body>Contact: John Doe (john@doe.com)\n\nJob
-        &amp; company: Mr. Dev at John Doe SA\n\nWebsite: john_doe.com\n\nCountry:
-        Switzerland\n\nTopic: I am an agency and I would like to join the partner
-        program to design and sell tailor-made players to my customers.\n\nDescription:
-        I want a gorgeous tailor-made player!</body>\n  <collection-id type=\"integer\">832554</collection-id>\n
-        \ <collection-type>Kase</collection-type>\n  <created-at type=\"datetime\">2013-01-10T12:56:33Z</created-at>\n
-        \ <group-id type=\"integer\" nil=\"true\"></group-id>\n  <id type=\"integer\">139407179</id>\n
-        \ <owner-id type=\"integer\" nil=\"true\"></owner-id>\n  <subject-id type=\"integer\">832554</subject-id>\n
-        \ <subject-type>Kase</subject-type>\n  <updated-at type=\"datetime\">2013-01-10T12:56:33Z</updated-at>\n
-        \ <visible-to>Everyone</visible-to>\n  <subject-name>Tailor-made player request
-        for John Doe SA</subject-name>\n</note>\n"
-    http_version: 
-  recorded_at: Thu, 10 Jan 2013 12:56:33 GMT
-- request:
     method: get
     uri: http://blog.jilion.com/atom.xml
     body:
@@ -218,7 +19,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 10 Jan 2013 15:37:52 GMT
+      - Thu, 10 Jan 2013 14:36:11 GMT
       Content-Type:
       - application/xml
       Content-Length:
@@ -230,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=31536000, public
       X-Varnish:
-      - 120107347 24689203
+      - 873852927 718900769
       Age:
-      - '685562'
+      - '1158328'
       Via:
       - 1.1 varnish
     body:
@@ -4928,5 +4729,5 @@ http_interactions:
         MjEyOyBNZWhkaSwgWmVubywgVGhpYmF1ZCwgT2N0YXZlJmx0Oy9wJmd0Ozwv
         Y29udGVudD4KICAgIDwvZW50cnk+CiAgCgo8L2ZlZWQ+Cg==
     http_version: 
-  recorded_at: Thu, 10 Jan 2013 15:37:53 GMT
+  recorded_at: Thu, 10 Jan 2013 14:36:12 GMT
 recorded_with: VCR 2.4.0

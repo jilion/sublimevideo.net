@@ -1,17 +1,19 @@
 require 'file_size_validator'
 
 class TailorMadePlayerRequest < ActiveRecord::Base
+  TOPICS = %w[agency standalone platform other]
 
   attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document
 
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
-  TOPICS = %w[agency standalone platform other] unless defined? TOPICS
-
   validates :name, :email, :job_title, :company, :url, :country, :topic, :description, presence: true
   validates :email, format: { with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/ }
   validates :topic, inclusion: TOPICS, allow_blank: true
   validates :document, file_size: { maximum: 10.megabytes.to_i }
+
+  scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
+  scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }
 
   def initialize(*args)
     super

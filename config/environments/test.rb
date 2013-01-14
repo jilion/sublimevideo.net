@@ -1,6 +1,5 @@
 SublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.middleware.insert_before Rack::Lock, Rack::NoWWW
   config.middleware.insert_before Rack::Lock, Rack::Nocache
 
   # The test environment is used exclusively to run your application's

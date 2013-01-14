@@ -11,10 +11,10 @@ GIT
 
 GIT
   remote: git://github.com/jilion/turbolinks.git
-  revision: 8078d9f05142faf1abc2c2d1ab0ee267c3666104
+  revision: c800a62e398ffa4724f8b83c49fc66090409325b
   branch: ios_video_issue
   specs:
-    turbolinks (0.6.1)
+    turbolinks (1.0.0)
       coffee-rails
 
 GIT
@@ -219,7 +219,7 @@ GEM
       slop (~> 3.3.1)
     quiet_assets (1.0.1)
       railties (~> 3.1)
-    rack (1.4.3)
+    rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-google-analytics (0.11.0)

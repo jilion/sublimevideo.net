@@ -56,13 +56,14 @@ group :staging, :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', github: 'rspec/rspec-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
   gem 'quiet_assets'
 end
 
 group :test do
+  gem 'rspec-core', github: 'rspec/rspec-core'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'capybara'
   gem 'launchy'

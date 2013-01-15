@@ -63,7 +63,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers', ref: 'cc03053'
+  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
   gem 'poltergeist', github: 'brutuscat/poltergeist'

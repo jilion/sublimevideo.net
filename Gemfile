@@ -8,6 +8,7 @@ gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Databases
 gem 'pg'
+gem 'squeel'
 
 # Views
 gem 'haml'

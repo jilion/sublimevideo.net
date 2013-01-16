@@ -5,10 +5,11 @@ class Api::ApiController < ActionController::Base
   before_filter :authenticate
   responders Responders::KaminariApiResponder
 
+  private
+
   def authenticate
     authenticate_or_request_with_http_token do |token, options|
       token == ENV['API_PASSWORD'] || 'sublimevideo'
     end
   end
-
 end

@@ -1,9 +1,8 @@
 module ApiAuthHelper
 
-  def http_api_login
+  def set_api_auth_token
     @env ||= {}
-    @env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(
-      'sublimevideo','sublimevideo')
+    @env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Token.encode_credentials('sublimevideo')
   end
 
 end

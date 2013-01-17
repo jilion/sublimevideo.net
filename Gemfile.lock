@@ -172,6 +172,7 @@ GEM
       multipart-post (~> 1.1)
     faye-websocket (0.4.6)
       eventmachine (>= 0.12.0)
+    ffaker (1.15.0)
     ffi (1.2.1)
     fog (1.8.0)
       builder
@@ -381,6 +382,7 @@ DEPENDENCIES
   countries
   dalli
   factory_girl_rails
+  ffaker
   google-analytics-turbolinks
   guard-livereload
   guard-pow

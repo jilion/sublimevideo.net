@@ -61,6 +61,7 @@ group :development, :test do
   gem 'rack-livereload'
   gem 'rack-nocache'
   gem 'quiet_assets'
+  gem 'ffaker'
 end
 
 group :test do

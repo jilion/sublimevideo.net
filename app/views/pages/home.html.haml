@@ -6,7 +6,7 @@
           %h2= "The HTML5 Video Age Starts Now"
           %p.desc
             = "Introducing SublimeVideo Horizon, the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity, working perfectly on any browser and the latest mobile platforms"
-          = link_to 'horizon-framework', class: "learn_more" do
+          = link_to page_path('horizon-framework'), class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
     .slide.s_2
@@ -16,7 +16,7 @@
             = "Start Assembling Your Player!"
             %span.beta= "Beta"
           %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Horizon™"
-          = link_to 'modular-player', class: "learn_more" do
+          = link_to page_path('modular-player'), class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
     .slide.s_3
@@ -25,7 +25,7 @@
           %h2= "No limits, Just Draw your Player"
           %p.desc
             = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Horizon™."
-            = link_to 'tailor-made-players' do
+            = link_to page_path('tailor-made-players') do
               = "Learn more"
               %span.icon-arrow
   #home_video{ style: "display:none" }
@@ -66,7 +66,7 @@
           %span= "Starts Free"
         .button_wrap
           = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button"
-        = link_to 'youtube', class: "youtube" do
+        = link_to page_path('youtube'), class: "youtube" do
           = "Now with"
           = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
           = "integration!"
@@ -81,7 +81,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:40px" }
           %h3= "Sony"
-          %p= raw "This tailor-made player designed for #{link_to "Sony Europe","http://www.sony-europe.com"} has been developed in collaboration with their agency #{link_to "Bite Global", "http://www.biteglobal.com"} following Sony's branding guidelines."
+          %p= raw "This tailor-made player designed for #{link_to "Sony Europe", "http://www.sony-europe.com"} has been developed in collaboration with their agency #{link_to "Bite Global", "http://www.biteglobal.com"} following Sony's branding guidelines."
         .spacer
       %li.demo.slide.d_2
         .video_wrap
@@ -99,7 +99,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:12px" }
           %h3= "Black Hand Cinema"
-          %p{ style: "font-size:15px; line-height:26px"}= raw "This tailored-made player has been developed in collaboration with LA-based award-winning director and photographer Anthony Mandler of #{link_to "Black Hand Cinema","http://blackhandcinema.com"}. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
+          %p{ style: "font-size:15px; line-height:26px"}= raw "This tailored-made player has been developed in collaboration with LA-based award-winning director and photographer Anthony Mandler of #{link_to "Black Hand Cinema", "http://blackhandcinema.com"}. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
         .spacer
       %li.demo.slide.d_4
         .video_wrap
@@ -195,7 +195,7 @@
       = "Emery Wells, Founder/CTO"
       %br
       = "Katabatic Digital"
-    = link_to 'testimonials', class: "view_all_showcases" do
+    = link_to page_path('testimonials'), class: "view_all_showcases" do
       %span= "View testimonials"
   .spacer
 
@@ -206,14 +206,14 @@
       .wrap
         %ul
           %li.box.new
-            = link_to "youtube" do
+            = link_to page_path('youtube') do
               = image_tag "home/highlights/youtube@2x.png", alt: "Video Code Generator", size: "147x65", style: "margin-top:30px"
               %span.text
                 %strong= "Seamless integration"
                 %span.desc= raw "Bringing together the world's most functional HTML5 Video Player with the biggest video platform."
               %span.badge
           %li.box.new
-            = link_to "modular-player#player_designs" do
+            = link_to page_path('modular-player', anchor: 'player_designs') do
               = image_tag "home/highlights/new_player_designs.png", alt: "New Player Designs", size: "123x108", style: "margin-top:12px"
               %span.text
                 %strong= "3 Sleek player designs"

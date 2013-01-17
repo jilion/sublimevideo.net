@@ -5,7 +5,7 @@
   %p.sub= "SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform."
 
 = image_tag "features/youtube_icon.jpg", alt: "SublimeVideo YouTube Integration", class: "youtube"
-%p= raw "Now, thanks to YouTube Player API and #{link_to "SublimeVideo Horizon", 'horizon-framework'}, using the SublimeVideo Player with YouTube could not be simpler."
+%p= raw "Now, thanks to YouTube Player API and #{link_to "SublimeVideo Horizon", page_path('horizon-framework')}, using the SublimeVideo Player with YouTube could not be simpler."
 
 %p= raw "This strong integration enables you to encode, host and deliver your videos on #{link_to "YouTube", 'http://youtube.com'} and play them on your site or blog using your personalized SublimeVideo Player."
 
@@ -24,7 +24,7 @@
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the SublimeVideo Classic Player."
   .video_wrap
-    %video#youtube_sony.sublime{ poster: image_path("youtube/sony_poster_1.jpg"), width: 640, height: 360, preload: 'none', data: { uid: 'showcase-sony', name: 'NEX-FS700EK', settings: 'youtube-id:mEnSvSkwygc; player-kit:6;', 'info-enable' => 'true', 'product-url' => 'http://www.sony.co.uk/pro/product/35mmdigitalmotionpicturecamerascamcorders/nex-fs700ek/overview', 'sharing-enable' => 'true', 'sharing-embed-width' => '640px', 'sharing-embed-height' => '360px', 'sharing-embed-url' => "//#{cdn_host}/embeds/youtube_sony.html", 'sharing-default-text' => 'SublimeVideo now fully integrates with YouTube!', 'sharing-twitter-url' => page_url('youtube'), 'sharing-facebook-url' => page_url('youtube') } }/
+    %video#youtube_sony.sublime{ poster: image_path("youtube/sony_poster_1.jpg"), width: 640, height: 360, preload: 'none', data: { uid: 'showcase-youtube-sony', name: 'NEX-EA50 NXCAM', settings: 'youtube-id:mEnSvSkwygc; player-kit:6;', 'info-enable' => 'true', 'product-url' => 'http://www.sony.co.uk/pro/product/35mmdigitalmotionpicturecamerascamcorders/nex-fs700ek/overview', 'sharing-enable' => 'true', 'sharing-embed-width' => '640px', 'sharing-embed-height' => '360px', 'sharing-embed-url' => "//#{cdn_host}/embeds/youtube_sony.html", 'sharing-default-text' => 'SublimeVideo now fully integrates with YouTube!', 'sharing-twitter-url' => page_url('youtube'), 'sharing-facebook-url' => page_url('youtube') } }/
   %p
     %em.caption= "This video, hosted on YouTube, plays inside the Sony tailor-made SublimeVideo Player."
   %a.sublime.lightbox{ href: "#video3", data: { settings: 'overlay-opacity:0.8' }}

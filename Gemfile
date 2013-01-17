@@ -3,7 +3,7 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'rails',                '3.2.9'
+gem 'rails',                '3.2.11'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Databases
@@ -12,7 +12,7 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'RedCloth'
-gem 'turbolinks'
+gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
 
 # Internals
@@ -23,7 +23,8 @@ gem 'rack-no-www'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
-gem 'librato-rails'
+gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
+
 gem 'lograge'
 gem 'countries'
 
@@ -51,6 +52,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'rack-livereload'
+  gem 'rack-nocache'
   gem 'quiet_assets'
 end
 

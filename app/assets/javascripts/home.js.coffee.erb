@@ -13,9 +13,12 @@ SublimeVideo.setupHomeSublime = ->
       horizon_lightbox.on
         didopen: ->
           SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
+          SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
         didclose: ->
           SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
-        contentready: (player) ->
+          SublimeVideo.showcasesSlideshow.startTimer() if SublimeVideo.showcasesSlideshow?
+        contentready: (lightbox, player) ->
+          player = lightbox unless player
           player.on 'action:showcases', ->
             go = -> document.location.href = '/tailor-made-players'
             if player.isFullscreen() then player.exitFullscreen(go) else go()
@@ -42,6 +45,10 @@ SublimeVideo.setupSolutionsSlideshow = ->
 SublimeVideo.setupShowcasesSlideshow = ->
   if ($showcases = $('section.tailor_made')).exists()
     SublimeVideo.showcasesSlideshow = new SublimeVideo.HomeSlideshow($showcases, $('#showcases_selector'), 6)
+
+    $showcases.find('a').each (index, el) ->
+      $(el).on 'click', (event) ->
+        SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
 
 SublimeVideo.setupHighlightsSlideshow = ->
   if ($highlights = $('section.highlights')).exists()

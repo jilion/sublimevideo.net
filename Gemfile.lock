@@ -1,14 +1,31 @@
+GIT
+  remote: git://github.com/jilion/turbolinks.git
+  revision: c800a62e398ffa4724f8b83c49fc66090409325b
+  branch: ios_video_issue
+  specs:
+    turbolinks (1.0.0)
+      coffee-rails
+
+GIT
+  remote: git://github.com/librato/librato-rails.git
+  revision: 82a95ae54f2ed990135a7b655293107384da2796
+  branch: feature/rack_first
+  specs:
+    librato-rails (0.8.1)
+      librato-metrics (~> 1.0.2)
+      rails (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/
   specs:
     RedCloth (4.2.9)
-    actionmailer (3.2.9)
-      actionpack (= 3.2.9)
+    actionmailer (3.2.11)
+      actionpack (= 3.2.11)
       mail (~> 2.4.4)
-    actionpack (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
+    actionpack (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -16,18 +33,18 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activemodel (3.2.9)
-      activesupport (= 3.2.9)
+    activemodel (3.2.11)
+      activesupport (= 3.2.11)
       builder (~> 3.0.0)
-    activerecord (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
+    activerecord (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.9)
-      activemodel (= 3.2.9)
-      activesupport (= 3.2.9)
-    activesupport (3.2.9)
+    activeresource (3.2.11)
+      activemodel (= 3.2.11)
+      activesupport (= 3.2.11)
+    activesupport (3.2.11)
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.3.2)
@@ -65,13 +82,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    connection_pool (0.9.2)
+    connection_pool (0.9.3)
     countries (0.8.4)
       currencies (>= 0.4.0)
     crack (0.3.1)
     currencies (0.4.0)
     daemons (1.1.9)
-    dalli (2.5.0)
+    dalli (2.6.0)
     diff-lcs (1.1.3)
     em-websocket (0.3.8)
       addressable (>= 2.1.1)
@@ -81,7 +98,7 @@ GEM
     excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    facter (1.6.16)
+    facter (1.6.17)
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.1.0)
@@ -107,18 +124,18 @@ GEM
       connection_pool (~> 0.9.0)
       rubinius-actor
     google-analytics-turbolinks (0.0.1)
-    guard (1.5.4)
-      listen (>= 0.4.2)
+    guard (1.6.1)
+      listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-livereload (1.1.2)
+    guard-livereload (1.1.3)
       em-websocket (>= 0.2.0)
       guard (>= 1.5.0)
       multi_json (~> 1.0)
     guard-pow (1.0.0)
       guard (>= 1.1)
-    guard-rspec (2.3.1)
+    guard-rspec (2.3.3)
       guard (>= 1.1)
       rspec (~> 2.11)
     haml (3.1.7)
@@ -129,19 +146,16 @@ GEM
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.7.5)
-    librato-metrics (0.7.5)
+    json (1.7.6)
+    librato-metrics (1.0.2)
       aggregate (~> 0.2.2)
       faraday (~> 0.7)
       multi_json
-    librato-rails (0.8.0)
-      librato-metrics (~> 0.7.4)
-      rails (>= 3.0)
     libwebsocket (0.1.7.1)
       addressable
       websocket
     libxml-ruby (2.3.3)
-    listen (0.6.0)
+    listen (0.7.0)
     lograge (0.1.2)
       actionpack
       activesupport
@@ -160,8 +174,8 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.6.2)
-    newrelic_rpm (3.5.3.25)
-    nokogiri (1.5.5)
+    newrelic_rpm (3.5.4.34)
+    nokogiri (1.5.6)
     pg (0.14.1)
     poltergeist (1.0.2)
       capybara (~> 1.1)
@@ -178,29 +192,30 @@ GEM
       slop (~> 3.3.1)
     quiet_assets (1.0.1)
       railties (~> 3.1)
-    rack (1.4.1)
+    rack (1.4.4)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-google-analytics (0.11.0)
-    rack-livereload (0.3.9)
+    rack-livereload (0.3.10)
       rack
     rack-no-www (0.0.2)
+    rack-nocache (0.1.0)
     rack-ssl (1.3.2)
       rack
     rack-ssl-enforcer (0.2.5)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.9)
-      actionmailer (= 3.2.9)
-      actionpack (= 3.2.9)
-      activerecord (= 3.2.9)
-      activeresource (= 3.2.9)
-      activesupport (= 3.2.9)
+    rails (3.2.11)
+      actionmailer (= 3.2.11)
+      actionpack (= 3.2.11)
+      activerecord (= 3.2.11)
+      activeresource (= 3.2.11)
+      activesupport (= 3.2.11)
       bundler (~> 1.0)
-      railties (= 3.2.9)
-    railties (3.2.9)
-      actionpack (= 3.2.9)
-      activesupport (= 3.2.9)
+      railties (= 3.2.11)
+    railties (3.2.11)
+      actionpack (= 3.2.11)
+      activesupport (= 3.2.11)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -208,7 +223,7 @@ GEM
     rake (10.0.3)
     ratom (0.7.2)
       libxml-ruby (~> 2.3.2)
-    rb-fsevent (0.9.2)
+    rb-fsevent (0.9.3)
     rb-readline (0.4.2)
     rdoc (3.12)
       json (~> 1.4)
@@ -221,9 +236,9 @@ GEM
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
     rspec-core (2.12.2)
-    rspec-expectations (2.12.0)
+    rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
-    rspec-mocks (2.12.0)
+    rspec-mocks (2.12.1)
     rspec-rails (2.12.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -237,7 +252,7 @@ GEM
     ruby-hmac (0.4.0)
     ruby_gntp (0.3.4)
     rubyzip (0.9.9)
-    sass (3.2.3)
+    sass (3.2.4)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -250,7 +265,7 @@ GEM
     shoulda-matchers (1.4.2)
       activesupport (>= 3.0.0)
       bourne (~> 1.1.2)
-    sidekiq (2.5.4)
+    sidekiq (2.6.0)
       celluloid (~> 0.12.0)
       connection_pool (~> 0.9.2)
       multi_json (~> 1)
@@ -263,7 +278,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sublime_video_layout (2.5.13)
+    sublime_video_layout (2.5.15)
       coffee-rails
       haml
       jquery-rails
@@ -278,9 +293,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (0.6.1)
-      coffee-rails
-    twitter (4.4.1)
+    twitter (4.4.2)
       faraday (~> 0.8)
       multi_json (~> 1.3)
       simple_oauth (~> 0.2)
@@ -295,7 +308,7 @@ GEM
     webmock (1.6.4)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
-    websocket (1.0.4)
+    websocket (1.0.6)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -318,7 +331,7 @@ DEPENDENCIES
   guard-pow
   guard-rspec
   haml
-  librato-rails
+  librato-rails!
   lograge
   newrelic_rpm
   pg
@@ -329,8 +342,9 @@ DEPENDENCIES
   rack-google-analytics
   rack-livereload
   rack-no-www
+  rack-nocache
   rack-ssl-enforcer
-  rails (= 3.2.9)
+  rails (= 3.2.11)
   ratom
   rb-fsevent
   rb-readline
@@ -342,7 +356,7 @@ DEPENDENCIES
   sidekiq
   sublime_video_layout (~> 2.0)
   thin
-  turbolinks
+  turbolinks!
   twitter
   typhoeus (~> 0.2.0)
   uglifier

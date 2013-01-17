@@ -15,8 +15,6 @@
 # Ensure we don't have new relic errors
 window.NREUMQ = window.NREUMQ || []
 
-$.fn.exists = -> @length > 0
-
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady() if $('body.home').exists()
@@ -32,12 +30,6 @@ $(window).bind 'page:change', ->
   SublimeVideo.documentReady()
   SublimeVideo.wwwDocumentReady()
   SublimeVideo.UI.updateActiveItemMenus()
-  setTimeout scrollToHash, 500
-
-scrollToHash = ->
-  if document.location.hash isnt ''
-    if ($elToScrollTo = $(document.location.hash)).exists()
-      $(document.body).animate({ scrollTop: $elToScrollTo.offset()['top'] })
 
 SublimeVideo.isMobile = ->
   /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
@@ -57,5 +49,6 @@ SublimeVideo.prepareVideoPlayers = ->
   sublime.load()
 
 SublimeVideo.setupProductInfo = (player) ->
-  player.on 'action:productinfo', ->
-    window.open $("##{player.videoId()}").attr('data-product-url')
+  if $("##{player.videoId()}").attr('data-info-enable') is 'true'
+    player.on 'action:productinfo', ->
+      window.open $("##{player.videoId()}").attr('data-product-url')

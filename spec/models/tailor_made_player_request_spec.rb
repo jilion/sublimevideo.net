@@ -18,12 +18,22 @@ describe TailorMadePlayerRequest do
       it { should allow_mass_assignment_of(attribute) }
     end
 
-    [:name, :email, :job_title, :company, :url, :country, :topic, :description].each do |attribute|
-      it { should validate_presence_of(attribute) }
-    end
+    # [:name, :email, :job_title, :company, :url, :country, :topic, :description].each do |attribute|
+    #   it { should validate_presence_of(attribute) }
+    # end
 
     described_class::TOPICS.each do |topic|
       it { should allow_value(topic).for(:topic) }
+    end
+
+    describe 'email format' do
+      it 'accepts email with email format' do
+        build(:tailor_made_player_request).should be_valid
+      end
+
+      it 'do not accept email with non-email format' do
+        build(:tailor_made_player_request, email: 'foo').should_not be_valid
+      end
     end
   end # Validations
 

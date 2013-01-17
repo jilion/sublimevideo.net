@@ -18,6 +18,6 @@ describe TailorMadePlayerRequestDocumentUploader do
 
   it 'has the token in its url' do
     tailor_made_player_request.token.should =~ /[a-z0-9]{8}/i
-    @uploader.url.should eq "/uploads/tailor_made_requests/#{tailor_made_player_request.token}.jpg"
+    @uploader.url.should eq "/uploads/tailor_made_player_requests/#{tailor_made_player_request.token}.jpg"
   end
 end

@@ -38,7 +38,8 @@ describe Api::TailorMadePlayerRequestsController do
       it "sets pagination headers" do
         get '/api/tailor_made_player_requests.json', {}, @env
         response.headers['X-Page'].should eq '1'
-        response.headers['X-Per-Page'].should eq '25'
+        response.headers['X-Limit'].should eq '25'
+        response.headers['X-Offset'].should eq '0'
         response.headers['X-Total-Count'].should eq '0'
       end
     end

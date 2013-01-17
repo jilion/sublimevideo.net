@@ -1,9 +1,9 @@
-require_dependency 'responders/kaminari_api_responder'
+require_dependency 'responders/pagination_headers_responder'
 
 class Api::ApiController < ActionController::Base
   respond_to :json
   before_filter :authenticate
-  responders Responders::KaminariApiResponder
+  responders Responders::PaginationHeadersResponder
 
   private
 

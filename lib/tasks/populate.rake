@@ -9,7 +9,7 @@ namespace :db do
 end
 
 def make_tailor_made_player_requests
-  100.times do
+  51.times do
     TailorMadePlayerRequest.create({
       name:        Faker::Name.name,
       email:       Faker::Internet.email,

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205172815) do
+ActiveRecord::Schema.define(:version => 20130117111013) do
 
   create_table "tailor_made_player_requests", :force => true do |t|
     t.string   "name",                    :null => false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20121205172815) do
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
     t.integer  "highrise_kase_id"
+    t.integer  "zendesk_ticket_id"
   end
 
   add_index "tailor_made_player_requests", ["created_at"], :name => "index_tailor_made_player_requests_on_created_at"

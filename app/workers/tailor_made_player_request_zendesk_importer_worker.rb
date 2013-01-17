@@ -1,11 +1,11 @@
-require 'tailor_made_player_request_highrise_importer'
+require 'tailor_made_player_request_zendesk_importer'
 
-class TailorMadePlayerRequestHighriseImporterWorker
+class TailorMadePlayerRequestZendeskImporterWorker
   include Sidekiq::Worker
   sidekiq_options queue: :www
 
   def perform(tailor_made_player_request_id)
     tailor_made_player_request = TailorMadePlayerRequest.find(tailor_made_player_request_id)
-    TailorMadePlayerRequestHighriseImporter.new(tailor_made_player_request).import
+    TailorMadePlayerRequestZendeskImporter.new(tailor_made_player_request).import
   end
 end

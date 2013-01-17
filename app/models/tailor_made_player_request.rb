@@ -17,6 +17,7 @@ class TailorMadePlayerRequest < ActiveRecord::Base
 
   def initialize(*args)
     super
+    # Token is used in document's URL!!
     ensure_unique_token
   end
 
@@ -49,6 +50,7 @@ end
 #  topic_standalone_detail :string(255)
 #  updated_at              :datetime         not null
 #  url                     :string(255)
+#  zendesk_ticket_id       :integer
 #
 # Indexes
 #

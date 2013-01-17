@@ -66,6 +66,7 @@ end
 #  topic_standalone_detail :string(255)
 #  updated_at              :datetime         not null
 #  url                     :string(255)
+#  zendesk_ticket_id       :integer
 #
 # Indexes
 #

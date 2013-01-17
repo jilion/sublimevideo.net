@@ -1,10 +1,14 @@
 defaults: &defaults_dev_test
-  url:       https://jilion.highrisehq.com
-  api_token: bf26a52fe7ea66caad3b9eca117e07bb # remy's token
+  base_url:  https://sublimevideo.zendesk.com
+  api_url:   https://sublimevideo.zendesk.com/api/v2
+  username:  zendesk@sublimevideo.net
+  api_token: oxVzosGyu7DaZrQ0fhmKngHATvd78UhEqTzMszZy
 
 # sublimevideo's credentials
 defaults_stage_prod: &defaults_stage_prod
-  url:       env_var
+  base_url:  env_var
+  api_url:   env_var
+  username:  env_var
   api_token: env_var
 
 development:

@@ -25,7 +25,7 @@ gem 'kaminari'
 gem 'sidekiq'
 gem 'airbrake'
 gem 'twitter'
-gem 'highrise'
+gem 'zendesk_api'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']

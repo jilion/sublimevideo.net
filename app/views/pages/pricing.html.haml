@@ -141,6 +141,32 @@
         %span.stroke
   %tr
     %th{ colspan: 2 }
+      = link_to page_path('modular-player', anchor: 'on_video_logo') do
+        = "Sharing"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "Popular social networks sharing"
+        %small= "(Facebook, Twitter, Google+, Pinterest)"
+    %td.price
+      %strong
+        = "$4"
+        %sup><
+          = ".90"
+  %tr
+    %th{ colspan: 2 }
+      = link_to page_path('modular-player', anchor: 'on_video_logo') do
+        = "Embed"
+        %span.icon-arrow
+  %tr
+    %td.name
+      %h4
+        = "Manual embedding"
+    %td.price
+      %strong= "Free"
+  %tr
+    %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'real_time_stats') do
         = "Analytics"
         %span.icon-arrow

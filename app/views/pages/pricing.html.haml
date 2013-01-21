@@ -136,8 +136,7 @@
       %em= "free during Beta"
       %strong.disabled
         = "$19"
-        %sup><
-          = ".90"
+        %sup><= ".90"
         %span.stroke
   %tr
     %th{ colspan: 2 }
@@ -150,10 +149,11 @@
         = "Popular social networks sharing"
         %small= "(Facebook, Twitter, Google+, Pinterest)"
     %td.price
-      %strong
+      %em= "free during Beta"
+      %strong.disabled
         = "$4"
-        %sup><
-          = ".90"
+        %sup><= ".90"
+        %span.stroke
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'on_video_logo') do

@@ -71,5 +71,12 @@ describe Api::TailorMadePlayerRequestsController do
         TailorMadePlayerRequest.count.should eq 0
       end
     end
+
+    describe "topics" do
+      it "returns all tailor_made_player_request topics" do
+        get '/api/tailor_made_player_requests/topics.json', {}, @env
+        response.body.should eq TailorMadePlayerRequest::TOPICS.to_json
+      end
+    end
   end
 end

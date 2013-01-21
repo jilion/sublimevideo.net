@@ -14,6 +14,8 @@ class TailorMadePlayerRequest < ActiveRecord::Base
 
   scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
   scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }
+  scope :with_topic, lambda { |topic| where(topic: topic) }
+  scope :created_before, lambda { |time| where{ created_at <= date } }
 
   def initialize(*args)
     super
@@ -27,7 +29,6 @@ class TailorMadePlayerRequest < ActiveRecord::Base
       self.token = Array.new(options[:length]) { options[:chars].to_a[rand(options[:chars].to_a.size)] }.join
     end while self.class.exists?(token: token)
   end
-
 end
 
 # == Schema Information

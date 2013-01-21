@@ -18,6 +18,10 @@ class Api::TailorMadePlayerRequestsController < Api::ApiController
     respond_with(@tailor_made_player_request)
   end
 
+  def topics
+    respond_with(TailorMadePlayerRequest::TOPICS)
+  end
+
   private
 
   def find_tailor_made_player_request

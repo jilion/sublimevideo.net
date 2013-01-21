@@ -3,7 +3,8 @@ require 'file_size_validator'
 class TailorMadePlayerRequest < ActiveRecord::Base
   TOPICS = %w[agency standalone platform other]
 
-  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document
+  attr_accessor :honeypot
+  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot
 
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
@@ -11,6 +12,9 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   validates :email, format: { with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/ }
   validates :topic, inclusion: TOPICS, allow_blank: true
   validates :document, file_size: { maximum: 10.megabytes.to_i }
+  validate do
+    errors.add(:base, "Honeypot must be left blank!") unless honeypot.blank?
+  end
 
   scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
   scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }

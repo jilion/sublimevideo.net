@@ -42,6 +42,16 @@ describe TailorMadePlayerRequest do
         build(:tailor_made_player_request, email: 'foo').should_not be_valid
       end
     end
+
+    describe 'email format' do
+      it 'accepts a blank honeypot' do
+        build(:tailor_made_player_request, honeypot: '').should be_valid
+      end
+
+      it 'do not accept a non-blank honeypot' do
+        build(:tailor_made_player_request, honeypot: 'fooo').should_not be_valid
+      end
+    end
   end # Validations
 
 end

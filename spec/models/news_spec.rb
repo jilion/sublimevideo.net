@@ -17,10 +17,10 @@ describe News do
     describe "entry" do
       subject { News.get_latest_sublimevideo_news(3).first }
 
-      its(:title)      { should eq "A Closer Look at SublimeVideo’s Universal Real-Time Statistics" }
-      its(:url)        { should eq "http://blog.jilion.com/2012/02/15/a-closer-look-at-sublimevideo-s-universal-real-time-statistics" }
+      its(:title)      { should eq "Introducing SublimeVideo Horizon Framework" }
+      its(:url)        { should eq "http://blog.jilion.com/2012/12/14/introducing-sublimevideo-horizon-framework" }
       its(:categories) { should eq ['SublimeVideo'] }
-      its(:date)       { should eq Time.utc(2012,2,14,23) }
+      its(:date)       { should eq Time.utc(2012,12,14) }
     end
 
   end

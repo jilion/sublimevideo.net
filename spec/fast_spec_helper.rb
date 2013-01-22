@@ -7,20 +7,11 @@ rescue LoadError
   Bundler.setup
 end
 
-unless defined?(VCR)
-  require 'vcr'
-  require 'webmock'
-  VCR.configure do |c|
-    c.cassette_library_dir = 'spec/cassettes'
-    c.hook_into :webmock
-    c.configure_rspec_metadata!
+require_relative 'config/rspec'
+
+unless defined?(Rails)
+  module Rails
+    def self.root; Pathname.new(File.expand_path('')); end
+    def self.env; 'test'; end
   end
-end
-
-RSpec.configure do |c|
-  c.treat_symbols_as_metadata_keys_with_true_values = true
-  c.run_all_when_everything_filtered = true
-  c.filter_run_including focus: true
-
-  c.mock_with :rspec
 end

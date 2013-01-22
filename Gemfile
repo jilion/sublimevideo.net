@@ -8,6 +8,7 @@ gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Databases
 gem 'pg'
+gem 'squeel'
 
 # Views
 gem 'haml'
@@ -15,11 +16,16 @@ gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
 
+# Controllers
+gem 'has_scope'
+gem 'responders'
+gem 'kaminari'
+
 # Internals
 gem 'sidekiq'
 gem 'airbrake'
 gem 'twitter'
-gem 'rack-no-www'
+gem 'zendesk_api'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
@@ -45,31 +51,38 @@ group :staging, :production do
   gem 'thin'
   gem 'dalli'
   gem 'rack-cache'
+  gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', github: 'rspec/rspec-rails'
   gem 'rack-livereload'
   gem 'rack-nocache'
   gem 'quiet_assets'
+  gem 'ffaker'
 end
 
 group :test do
-  gem 'shoulda-matchers'
-  gem 'capybara', '~> 1.1.4'
-  gem 'poltergeist'
+  gem 'rspec',              github: 'rspec/rspec'
+  gem 'rspec-core',         github: 'rspec/rspec-core'
+  gem 'rspec-expectations', github: 'rspec/rspec-expectations'
+  gem 'rspec-mocks',        github: 'rspec/rspec-mocks'
+  gem 'shoulda-matchers',   github: 'thoughtbot/shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'poltergeist', github: 'brutuscat/poltergeist'
 
-  gem 'webmock', '~> 1.6.0'
-  gem 'typhoeus', '~> 0.2.0'
-  gem 'vcr', '~> 1.10.3'
-  gem 'factory_girl'
-  gem 'factory_girl_rails' # loaded in spec_helper Spork.each_run
+  gem 'vcr'
+  gem 'webmock'
+  gem 'typhoeus', '~> 0.5.3'
+  gem 'factory_girl_rails'
 end
 
 group :tools do
   gem 'powder'
+  gem 'annotate'
 
   # Guard
   gem 'ruby_gntp'

@@ -213,7 +213,7 @@ GEM
     i18n (0.6.1)
     inflection (1.0.0)
     journey (1.0.4)
-    jquery-rails (2.1.4)
+    jquery-rails (2.2.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
@@ -337,7 +337,7 @@ GEM
       activerecord (~> 3.0)
       activesupport (~> 3.0)
       polyamorous (~> 0.5.0)
-    sublime_video_layout (2.5.15)
+    sublime_video_layout (2.5.16)
       coffee-rails
       haml
       jquery-rails

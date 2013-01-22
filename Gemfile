@@ -40,7 +40,7 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  gem 'asset_sync', '0.5.3'
+  gem 'asset_sync', '0.5.0'
 end
 
 group :production do

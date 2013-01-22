@@ -23,6 +23,13 @@ module SublimeVideo
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
+    # http://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets
+    # For faster asset precompiles, you can partially load your application
+    # by setting config.assets.initialize_on_precompile to false
+    # in config/application.rb, though in that case templates cannot see
+    # application objects or methods. Heroku requires this to be false.
+    config.assets.initialize_on_precompile = false
+
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 

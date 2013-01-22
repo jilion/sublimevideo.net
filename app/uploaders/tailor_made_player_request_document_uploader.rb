@@ -11,7 +11,7 @@ class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   end
 
   def fog_directory
-    S3.buckets['tailor_made_player_requests']
+    S3Config.buckets['tailor_made_player_requests']
   end
 
   # Override the directory where uploaded files will be stored

@@ -10,8 +10,8 @@ module CarrierWave
         config.fog_attributes  = {}
         config.fog_credentials = {
           provider:              'AWS',
-          aws_access_key_id:     S3.access_key_id,
-          aws_secret_access_key: S3.secret_access_key,
+          aws_access_key_id:     S3Config.access_key_id,
+          aws_secret_access_key: S3Config.secret_access_key,
           region:                'us-east-1'
         }
       end

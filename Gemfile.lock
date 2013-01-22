@@ -382,7 +382,7 @@ DEPENDENCIES
   RedCloth
   airbrake
   annotate
-  asset_sync (= 0.5.0)
+  asset_sync
   capybara
   carrierwave
   coffee-rails

@@ -1,9 +1,9 @@
 # coding: utf-8
 require 'spec_helper'
 
-feature "Com Pages" do
+feature "Com Pages", :vcr do
 
-  describe "menu", :vcr do
+  describe "menu" do
     scenario 'links are clickable and routable' do
       visit '/'
 
@@ -40,7 +40,7 @@ feature "Com Pages" do
     end
   end
 
-  describe "footer", :vcr do
+  describe "footer" do
     scenario 'links are clickable and routable' do
       visit '/'
 

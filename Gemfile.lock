@@ -114,7 +114,7 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
-    asset_sync (0.5.4)
+    asset_sync (0.5.3)
       activemodel
       fog
     bourne (1.2.1)
@@ -382,7 +382,7 @@ DEPENDENCIES
   RedCloth
   airbrake
   annotate
-  asset_sync
+  asset_sync (= 0.5.3)
   capybara
   carrierwave
   coffee-rails

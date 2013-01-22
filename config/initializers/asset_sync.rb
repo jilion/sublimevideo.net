@@ -1,8 +1,8 @@
 if defined?(AssetSync)
   AssetSync.configure do |config|
-    config.fog_provider          = 'AWS'
     config.aws_access_key_id     = ENV['ASSETS_AWS_ACCESS_KEY_ID']
     config.aws_secret_access_key = ENV['ASSETS_AWS_SECRET_ACCESS_KEY']
+    config.fog_provider          = 'AWS'
     config.fog_directory         = 'sublimevideo'
 
     # Increase upload performance by configuring your region

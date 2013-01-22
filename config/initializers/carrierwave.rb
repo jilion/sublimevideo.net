@@ -1,4 +1,4 @@
-require_dependency 's3'
+require_dependency 's3_config'
 
 module CarrierWave
   class << self

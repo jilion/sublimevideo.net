@@ -1,5 +1,5 @@
 # encoding: utf-8
-require_dependency 's3'
+require_dependency 's3_config'
 
 class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes

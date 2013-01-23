@@ -1,0 +1,8 @@
+# Options here can still be overridden by cmd line args.
+#   sidekiq -C config.yml
+---
+# :verbose: true
+:concurrency:  5
+:timeout: 30
+:queues:
+  - [www, 1]

@@ -14,13 +14,13 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: msv_development_<%= suffix %>
+  database: wwsv_development_<%= suffix %>
   pool: 25
   host: localhost
 
 test:
   adapter: postgresql
   encoding: utf8
-  database: msv_test_<%= suffix %>
+  database: wwsv_test_<%= suffix %>
   pool: 25
   host: localhost

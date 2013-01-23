@@ -17,6 +17,12 @@ class PRConstraint
 end
 
 SublimeVideo::Application.routes.draw do
+  namespace :api do
+    resources :tailor_made_player_requests, only: [:index, :show, :destroy] do
+      get :topics, on: :collection
+    end
+  end
+
   # Redirects
   %w[demo features].each { |action| get action => redirect('/modular-player') }
   %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }

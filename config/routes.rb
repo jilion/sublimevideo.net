@@ -1,6 +1,6 @@
 require_dependency 'page_constraint'
 class PagesConstraint < PageConstraint; end
-class PressReleaseConstraint < PageConstraint; end
+class PressReleasesConstraint < PageConstraint; end
 
 SublimeVideo::Application.routes.draw do
   namespace :api do
@@ -38,7 +38,7 @@ SublimeVideo::Application.routes.draw do
     get "/tailor-made-players/#{showcase}" => redirect { |params, req| "/tailor-made-players##{showcase}" }
   end
 
-  get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleaseConstraint, format: false
+  get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleasesConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false

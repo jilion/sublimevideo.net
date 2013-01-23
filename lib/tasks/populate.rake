@@ -15,7 +15,7 @@ def make_tailor_made_player_requests
       company:     Faker::Company.name,
       url:         Faker::Internet.http_url,
       country:     Country.all.sample[1],
-      topic:       TailorMadePlayerRequest::TOPICS.sample,
+      topic:       TailorMadePlayerRequest.topics.sample,
       description: Faker::Company.bs,
       created_at:  random_date },
       without_protection: true)

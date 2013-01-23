@@ -1,13 +1,12 @@
+require_dependency 'controller_helpers/cached_page_renderer'
+
 class PagesController < ApplicationController
+  include ControllerHelpers::CachedPageRenderer
   before_filter :handle_help_page, :redirect_to_my
 
   def show
     @body_class = params[:page]
-
-    expires_in 5.minutes, public: true
-    if stale?(etag: page_file.path, last_modified: page_file.mtime, public: true)
-      render params[:page]
-    end
+    render_cached_page
   end
 
 private
@@ -27,11 +26,6 @@ private
     if logged_in_cookie? && %w[login signup].include?(params[:p])
       redirect_to "https://my.sublimevideo.net/#{params[:p]}"
     end
-  end
-
-  def page_file
-    @page_files ||= {}
-    @page_files[params[:page]] ||= File.new(Rails.root.join("app/views/pages/#{params[:page]}.html.haml"))
   end
 
 end

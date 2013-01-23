@@ -5,7 +5,7 @@ require 'carrierwave/test/matchers'
 describe TailorMadePlayerRequestDocumentUploader do
   include CarrierWave::Test::Matchers
 
-  let(:tailor_made_player_request) { build(:tailor_made_player_request) }
+  let(:tailor_made_player_request) { create(:tailor_made_player_request) }
 
   before do
     @uploader = described_class.new(tailor_made_player_request, :document)

@@ -133,5 +133,4 @@ feature "Com Pages", :vcr do
       end
     end
   end
-
 end

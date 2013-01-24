@@ -7,12 +7,12 @@ module TweetsHelper
 
   # Fetch +count+ last favorite tweets and cache the array for 1 hour
   def cached_last_favorite_tweets(count)
-    Rails.cache.fetch "what_people_say_#{count}", expires_in: 1.hour do
+    Rails.cache.fetch "what_people_say_#{count}", expires_in: 5.minutes do
       TwitterApi.pretty_remote_favorites(
         user_doublon: false,
         count: count,
         random: true,
-        since_date: Time.utc(2011,3,29),
+        since_date: Time.utc(2011, 3, 29),
         include_entities: true
       )
     end

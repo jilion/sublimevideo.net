@@ -1,5 +1,5 @@
 class Api::TailorMadePlayerRequestsController < Api::ApiController
-  has_scope :by_topic, :by_date
+  has_scope :by_topic, :by_date, :with_topic, :created_before
   before_filter :find_tailor_made_player_request, only: [:show, :destroy]
 
   def index

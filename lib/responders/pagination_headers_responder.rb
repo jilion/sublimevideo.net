@@ -23,10 +23,14 @@ module Responders
     end
 
     def set_headers
-      controller.response.headers['X-Page']        = resource.current_page.to_s
-      controller.response.headers['X-Offset']      = resource.offset_value.to_s
-      controller.response.headers['X-Limit']       = resource.limit_value.to_s
-      controller.response.headers['X-Total-Count'] = resource.total_count.to_s
+      set_header('X-Page',        resource.current_page)
+      set_header('X-Offset',      resource.offset_value)
+      set_header('X-Limit',       resource.limit_value)
+      set_header('X-Total-Count', resource.total_count)
+    end
+
+    def set_header(header_name, value)
+      controller.response.headers[header_name] = value.to_s
     end
 
   end

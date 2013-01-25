@@ -6,32 +6,28 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   attr_accessor :honeypot
   attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot
 
+  uniquify :token
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
   validates :name, :email, :job_title, :company, :url, :country, :topic, :description, presence: true
   validates :email, format: { with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/ }
   validates :topic, inclusion: TOPICS, allow_blank: true
   validates :document, file_size: { maximum: 10.megabytes.to_i }
-  validate do
-    errors.add(:base, "Honeypot must be left blank!") unless honeypot.blank?
-  end
+  validate :honeypot_validation
 
   scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
   scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }
   scope :with_topic, lambda { |topic| where(topic: topic) }
   scope :created_before, lambda { |time| where{ created_at <= date } }
 
-  def initialize(*args)
-    super
-    # Token is used in document's URL!!
-    ensure_unique_token
+  def self.topics
+    TOPICS
   end
 
-  def ensure_unique_token
-    options = { :length => 8, :chars => ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a }
-    begin
-      self.token = Array.new(options[:length]) { options[:chars].to_a[rand(options[:chars].to_a.size)] }.join
-    end while self.class.exists?(token: token)
+  private
+
+  def honeypot_validation
+    errors.add(:base, "Honeypot must be left blank!") unless honeypot.blank?
   end
 end
 

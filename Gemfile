@@ -30,6 +30,7 @@ gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
+gem 'uniquify'
 
 gem 'lograge'
 gem 'countries'

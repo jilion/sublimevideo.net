@@ -19,7 +19,7 @@ class Api::TailorMadePlayerRequestsController < Api::ApiController
   end
 
   def topics
-    respond_with(TailorMadePlayerRequest::TOPICS)
+    respond_with(TailorMadePlayerRequest.topics)
   end
 
   private

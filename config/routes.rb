@@ -1,20 +1,6 @@
-class PagesConstraint
-  def self.matches?(request)
-    pages = Dir.glob('app/views/pages/*.html.haml').map { |p|
-      p.match(%r(app/views/pages/(.*)\.html\.haml))[1]
-    }
-    pages.include?(request.params["page"])
-  end
-end
-
-class PRConstraint
-  def self.matches?(request)
-    pages = Dir.glob('app/views/press_releases/*.html.haml').map { |p|
-      p.match(%r(app/views/press_releases/(.*)\.html\.haml))[1]
-    }
-    pages.include?(request.params["page"])
-  end
-end
+require_dependency 'page_constraint'
+class PagesConstraint < PageConstraint; end
+class PressReleasesConstraint < PageConstraint; end
 
 SublimeVideo::Application.routes.draw do
   namespace :api do
@@ -52,7 +38,7 @@ SublimeVideo::Application.routes.draw do
     get "/tailor-made-players/#{showcase}" => redirect { |params, req| "/tailor-made-players##{showcase}" }
   end
 
-  get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PRConstraint, format: false
+  get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleasesConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false

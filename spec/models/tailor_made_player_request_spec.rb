@@ -29,7 +29,7 @@ describe TailorMadePlayerRequest do
     it { should validate_presence_of(:topic).with_message('Please choose the Topic of your request') }
     it { should validate_presence_of(:description).with_message('Please enter a Description') }
 
-    described_class::TOPICS.each do |topic|
+    described_class.topics.each do |topic|
       it { should allow_value(topic).for(:topic) }
     end
 

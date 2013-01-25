@@ -11,7 +11,7 @@ if ENV['HEROKU_APP']
 
   Sidekiq.configure_server do |config|
     config.server_middleware do |chain|
-      chain.add Autoscaler::Sidekiq::Server, heroku, 10, %w[www]
+      chain.add Autoscaler::Sidekiq::Server, heroku, 30, %w[www]
     end
   end
 end

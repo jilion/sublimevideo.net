@@ -10,6 +10,15 @@ GIT
       multi_json (~> 1.0)
 
 GIT
+  remote: git://github.com/jilion/autoscaler.git
+  revision: 3a0825c44437908ba4a59876c25ae0b0b4971ace
+  branch: respect_specified_queues
+  specs:
+    autoscaler (0.1.0)
+      heroku-api
+      sidekiq (~> 2.2)
+
+GIT
   remote: git://github.com/jilion/turbolinks.git
   revision: c800a62e398ffa4724f8b83c49fc66090409325b
   branch: ios_video_issue
@@ -208,6 +217,8 @@ GEM
     haml (3.1.7)
     has_scope (0.5.1)
     hashie (1.2.0)
+    heroku-api (0.3.7)
+      excon (~> 0.16.10)
     hike (1.2.1)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
@@ -384,6 +395,7 @@ DEPENDENCIES
   airbrake
   annotate
   asset_sync
+  autoscaler!
   capybara
   carrierwave
   coffee-rails

@@ -23,6 +23,7 @@ gem 'kaminari'
 
 # Internals
 gem 'sidekiq'
+gem 'autoscaler'
 gem 'airbrake'
 gem 'twitter'
 gem 'zendesk_api'

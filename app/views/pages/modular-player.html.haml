@@ -51,7 +51,7 @@
       <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
       <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
     .spacer
-    
+
   %a#social_sharing
   %section.social_sharing.f.left
     .i_wrap= image_tag "features/social_sharing_icon.jpg", alt: "Social sharing"
@@ -59,15 +59,18 @@
       = "Social sharing"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to "Let us know", ""} about which other social networks you would like to have and #{link_to "learn more", ""} on how to integrate it on your site."
+    %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to "Let us know", ""} which other social networks you would like to have and #{link_to "learn more", ""} on how to integrate it on your site."
 
   %section.embed.f.right
     .i_wrap= image_tag "features/embed_icon.jpg", alt: "Spread your videos with embed"
     %h3.title
       = "Spread your videos with embed"
-      %span.addon= "Add-on"
-      %span.new= "New"
-    %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. With the new add-on, we improved this feature by adding an embed button directly into the player, which give more opportunities for your video to be embedded from anywhere. #{link_to "Learn more", docs_url('beta/embeds')}."
+      -#%span.addon= "Add-on"
+      -#%span.new= "New"
+    %p
+      = "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web."
+      = link_to "Learn more", docs_url('beta/embeds')
+    -#%p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. With the new add-on, we improved this feature by adding an embed button directly into the player, which give more opportunities for your video to be embedded from anywhere. #{link_to "Learn more", docs_url('beta/embeds')}."
     .spacer
 
   %a#on_video_logo

@@ -23,7 +23,7 @@ gem 'kaminari'
 
 # Internals
 gem 'sidekiq'
-gem 'autoscaler', github: 'jilion/autoscaler', branch: 'respect_specified_queues'
+gem 'autoscaler'
 gem 'airbrake'
 gem 'twitter'
 gem 'zendesk_api'

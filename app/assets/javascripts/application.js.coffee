@@ -1,7 +1,7 @@
 #= require sublimevideo
 # TODO: Replace with minified http://ricostacruz.com/jquery.transit/ v0.1.4 when it's out
 #       It should contain a fix for jQuery 1.8
-#= require jquery.transit
+#= require jquery.transit.min
 #= require jquery.slidify
 #= require home
 #= require horizon_framework

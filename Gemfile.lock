@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/brutuscat/poltergeist.git
-  revision: aace49057e4691aa8e1de3c5b1729693a14a71f0
+  revision: 09edc918c1b0e926692e694d42b3e5d874f795db
   specs:
     poltergeist (1.0.2)
       capybara (~> 2.0, >= 2.0.1)
@@ -8,15 +8,6 @@ GIT
       faye-websocket (~> 0.4, >= 0.4.4)
       http_parser.rb (~> 0.5.3)
       multi_json (~> 1.0)
-
-GIT
-  remote: git://github.com/jilion/autoscaler.git
-  revision: 3a0825c44437908ba4a59876c25ae0b0b4971ace
-  branch: respect_specified_queues
-  specs:
-    autoscaler (0.1.0)
-      heroku-api
-      sidekiq (~> 2.2)
 
 GIT
   remote: git://github.com/jilion/turbolinks.git
@@ -126,6 +117,9 @@ GEM
     asset_sync (0.5.4)
       activemodel
       fog
+    autoscaler (0.2.0)
+      heroku-api
+      sidekiq (>= 2.6.1, < 3.0)
     bourne (1.2.1)
       mocha (= 0.12.7)
     builder (3.0.4)
@@ -142,7 +136,7 @@ GEM
     celluloid (0.12.4)
       facter (>= 1.6.12)
       timers (>= 1.0.0)
-    childprocess (0.3.6)
+    childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
     coderay (1.0.8)
     coffee-rails (3.2.2)
@@ -279,7 +273,7 @@ GEM
       rack
     rack-no-www (0.0.2)
     rack-nocache (0.1.0)
-    rack-ssl (1.3.2)
+    rack-ssl (1.3.3)
       rack
     rack-ssl-enforcer (0.2.5)
     rack-test (0.6.2)
@@ -345,7 +339,7 @@ GEM
       activerecord (~> 3.0)
       activesupport (~> 3.0)
       polyamorous (~> 0.5.0)
-    sublime_video_layout (2.5.16)
+    sublime_video_layout (2.5.19)
       coffee-rails
       haml
       jquery-rails
@@ -354,7 +348,7 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    thor (0.16.0)
+    thor (0.17.0)
     tilt (1.3.3)
     timers (1.1.0)
     treetop (1.4.12)
@@ -375,7 +369,7 @@ GEM
     webmock (1.9.0)
       addressable (>= 2.2.7)
       crack (>= 0.1.7)
-    websocket (1.0.6)
+    websocket (1.0.7)
     xpath (1.0.0)
       nokogiri (~> 1.3)
     zendesk_api (0.2.2)
@@ -395,7 +389,7 @@ DEPENDENCIES
   airbrake
   annotate
   asset_sync
-  autoscaler!
+  autoscaler
   capybara
   carrierwave
   coffee-rails

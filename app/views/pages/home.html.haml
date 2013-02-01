@@ -206,6 +206,13 @@
       .wrap
         %ul
           %li.box.new
+            = link_to page_path('modular-player', anchor: 'social_sharing') do
+              = image_tag "home/highlights/social_sharing.png", alt: "Social Sharing Add-on", size: "240x124", style: "margin-top:5px"
+              %span.text
+                %strong= "Social sharing add-on"
+                %span.desc= raw "Make your videos spread around<br /> popular social networks."
+              %span.badge
+          %li.box.new
             = link_to page_path('youtube') do
               = image_tag "home/highlights/youtube@2x.png", alt: "Video Code Generator", size: "147x65", style: "margin-top:30px"
               %span.text

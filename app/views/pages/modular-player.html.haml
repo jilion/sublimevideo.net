@@ -61,15 +61,14 @@
       %span.new= "New"
     %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to 'Let us know', 'https://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_the_social_sharing_add_on'} which other social networks you would like to have and #{link_to 'learn more', docs_url('beta/addons/sharing')} on how to integrate it on your site."
 
+  %a#embed
   %section.embed.f.right
     .i_wrap= image_tag "features/embed_icon.jpg", alt: "Spread your videos with embed"
     %h3.title
       = "Spread your videos with embed"
-      -#%span.addon= "Add-on"
-      -#%span.new= "New"
-    %p
-      = raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. #{link_to "Learn more", docs_url('beta/embeds')}."
-    -#%p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. With the new add-on, we improved this feature by adding an embed button directly into the player, which give more opportunities for your video to be embedded from anywhere. #{link_to "Learn more", docs_url('beta/embeds')}."
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. The in-player embed button gives more opportunities for your video to be embedded from anywhere. #{link_to "Learn more", docs_url('beta/addons/embed')}."
     .spacer
 
   %a#on_video_logo
@@ -281,12 +280,6 @@
     %p.sub= raw "Thanks to SublimeVideo Horizon, the SublimeVideo Modular Player can now easily be enriched with future features and add-ons. Below, we would like to share with you some possible upcoming features and add-ons. We would be delighted if you #{link_to "let us know about any other add-on you may need", get_satisfaction_next_features_discussion_url}."
 
   %ul.upcoming_list
-    %li
-      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_social_sharing_and_embed_buttons_comments_suggestions', class: "tell_us" do
-        %span.icon-mail
-        = "Tell us what you think"
-      %h4= "Embed button"
-      %p= "The embed button will easily provide the embed code to your viewers."
     %li
       = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_subtitles_comments_suggestions', class: "tell_us" do
         %span.icon-mail

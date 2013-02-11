@@ -3,7 +3,7 @@ source 'https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg' # thibaud@jilion.com acco
 
 ruby '1.9.3'
 
-gem 'rails',                '3.2.11'
+gem 'rails',                '3.2.12'
 gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
 
 # Databases
@@ -32,6 +32,7 @@ gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'uniquify'
+gem 'json'
 
 gem 'lograge'
 gem 'countries'

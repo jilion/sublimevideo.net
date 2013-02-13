@@ -59,7 +59,7 @@
       = "Social sharing"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to 'Let us know', 'https://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_the_social_sharing_add_on'} which other social networks you would like to have and #{link_to 'learn more', docs_url('beta/addons/sharing')} on how to integrate it on your site."
+    %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to 'Let us know', 'https://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_the_social_sharing_add_on'} which other social networks you would like to have and #{link_to 'learn more', docs_url('addons/sharing')} on how to integrate it on your site."
 
   %a#embed
   %section.embed.f.right
@@ -68,7 +68,7 @@
       = "Spread your videos with embed"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. With this new add-on, you can add an embed button and pane showing the embed code directly in the player, which gives more opportunities for your video to spread. #{link_to "Learn more", docs_url('beta/addons/embed')}."
+    %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. With this new add-on, you can add an embed button and pane showing the embed code directly in the player, which gives more opportunities for your video to spread. #{link_to "Learn more", docs_url('addons/embed')}."
     .spacer
 
   %a#on_video_logo
@@ -95,7 +95,7 @@
     %h3.title
       = "Responsive design support"
       %span.new= "New"
-    %p= raw "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting #{link_to "one single autoresize", docs_url('beta/responsive-layout')} parameter."
+    %p= raw "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting #{link_to "one single autoresize", docs_url('responsive-layout')} parameter."
     .spacer
 
   %a#keyboard
@@ -104,7 +104,7 @@
     %h3.title
       = "Keyboard control"
       %span.new= "New"
-    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('beta/keyboard')}."
+    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
     .spacer
 
   %a#lightbox
@@ -126,7 +126,7 @@
   %section.hd.f.left
     .i_wrap= image_tag "features/hd_icon.jpg", alt: "A simple way to deliver HD to your audience"
     %h3.title= "A simple way to deliver HD to your audience"
-    %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('beta/hd-switching')}."
+    %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
     .spacer
 
   %section#playlist.playlist.f
@@ -158,14 +158,14 @@
             %span.play
       .spacer
     %h3.title= "Playlist support"
-    %p= raw "Playlist support using our powerful API makes it possible for you to link multiple videos or chapters to the same player. Integrated playlists that are even easier to use will be available soon. #{link_to "Learn more", docs_url('beta/playlists')}."
+    %p= raw "Playlist support using our powerful API makes it possible for you to link multiple videos or chapters to the same player. Integrated playlists that are even easier to use will be available soon. #{link_to "Learn more", docs_url('playlists')}."
     .spacer
 
   %a#player_api
   %section.player_api.f.left
     .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Flexible integration with our player API"
     %h3.title= "Flexible integration with our player API"
-    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality. The basic version comes for free with the player and we will soon offer an advanced API for even more control. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('beta/javascript-api')}."
+    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality. The basic version comes for free with the player and we will soon offer an advanced API for even more control. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
     .spacer
 
   %section.seamless_integration.f.right
@@ -199,7 +199,7 @@
   %section.always_up_to_date.f.right
     .i_wrap= image_tag "features/up_to_date_icon.jpg", alt: "Always up-to-date"
     %h3.title= "Always up-to-date"
-    %p= raw "SublimeVideo is the world's first zero maintenance HTML5 video player offered as a service solution. You'll always have the latest version of the player; we provide automatic browser support #{link_to "updates", docs_url('beta/releases')}, bug fixes and new features so you never have to lift a finger."
+    %p= raw "SublimeVideo is the world's first zero maintenance HTML5 video player offered as a service solution. You'll always have the latest version of the player; we provide automatic browser support #{link_to "updates", docs_url('releases')}, bug fixes and new features so you never have to lift a finger."
     .spacer
 
   %a#real_time_stats
@@ -257,7 +257,7 @@
   %section.wordpress.f.right
     .i_wrap= image_tag "features/wordpress_icon.jpg", alt: "WordPress plugin"
     %h3.title= "WordPress plugin"
-    %p= raw "Our plugin makes it easier than ever for you to use SublimeVideo in your WordPress blog. Once installed, just click on the SV button in the toolbar to start embedding your videos. #{link_to "Learn more", docs_url('beta/wordpress')}."
+    %p= raw "Our plugin makes it easier than ever for you to use SublimeVideo in your WordPress blog. Once installed, just click on the SV button in the toolbar to start embedding your videos. #{link_to "Learn more", docs_url('wordpress')}."
     .spacer
 
   %a#video_publishing_assistant

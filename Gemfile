@@ -33,6 +33,7 @@ gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'uniquify'
 gem 'json'
+gem 'net-scp', '1.0.4'
 
 gem 'lograge'
 gem 'countries'
@@ -56,7 +57,7 @@ group :staging, :production do
   gem 'rack-cache'
   gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
-  gem 'newrelic_rpm'
+  gem 'newrelic_rpm', '3.5.5.38'
 end
 
 group :development, :test do

@@ -6,7 +6,6 @@ SublimeVideo.setupHorizonFrameworkSublime = ->
     if ($videoTrigger = $('#video_horizon_trigger')).exists()
       $videoTrigger.on 'click', (event) ->
         event.preventDefault()
-        $videoTrigger.hide()
         sublime.prepare 'video_horizon', (player) ->
           player.on 'action:showcases', ->
             go = -> document.location.href = '/tailor-made-players'
@@ -17,4 +16,5 @@ SublimeVideo.setupHorizonFrameworkSublime = ->
           player.on 'action:signup', ->
             go = -> SublimeVideo.UI.Utils.openAccountPopup('signup')
             if player.isFullscreen() then player.exitFullscreen(go) else go()
-          player.play()
+          # player.play() # not needed anymore, because we have autoplay:true in the <video> now
+        $videoTrigger.hide()

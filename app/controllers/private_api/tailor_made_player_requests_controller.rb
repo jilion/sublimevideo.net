@@ -1,4 +1,4 @@
-class Api::TailorMadePlayerRequestsController < Api::ApiController
+class PrivateApi::TailorMadePlayerRequestsController < SublimeVideoPrivateApiController
   has_scope :by_topic, :by_date, :with_topic, :created_before
   before_filter :find_tailor_made_player_request, only: [:show, :destroy]
 
@@ -27,5 +27,4 @@ class Api::TailorMadePlayerRequestsController < Api::ApiController
   def find_tailor_made_player_request
     @tailor_made_player_request = TailorMadePlayerRequest.find(params[:id])
   end
-
 end

@@ -74,6 +74,15 @@ GIT
       activesupport (>= 3.0.0)
       bourne (~> 1.2.0)
 
+PATH
+  remote: /Users/Thibaud/Codes/Jilion/Products/SublimeVideo/sublime_video_private_api
+  specs:
+    sublime_video_private_api (0.0.1)
+      her
+      kaminari
+      rails (>= 3.2.12)
+      responders
+
 GEM
   remote: https://rubygems.org/
   remote: https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/
@@ -210,6 +219,10 @@ GEM
     haml (3.1.7)
     has_scope (0.5.1)
     hashie (1.2.0)
+    her (0.4)
+      activesupport (>= 3.0.0)
+      faraday (~> 0.8)
+      multi_json (~> 1.5)
     heroku-api (0.3.7)
       excon (~> 0.16.10)
     hike (1.2.1)
@@ -433,6 +446,7 @@ DEPENDENCIES
   sidekiq
   squeel
   sublime_video_layout (~> 2.0)
+  sublime_video_private_api!
   thin
   turbolinks!
   twitter

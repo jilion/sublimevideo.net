@@ -76,7 +76,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
-  remote: https://gems.gemfury.com/8dezqz7z7HWea9vtaFwg/
+  remote: https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/
   specs:
     RedCloth (4.2.9)
     actionmailer (3.2.12)

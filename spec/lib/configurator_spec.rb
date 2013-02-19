@@ -1,5 +1,6 @@
-require "fast_spec_helper"
-require File.expand_path('lib/configurator')
+require 'fast_spec_helper'
+
+require 'configurator'
 
 describe Configurator do
 

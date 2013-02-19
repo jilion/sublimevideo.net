@@ -1,4 +1,3 @@
-require_dependency 'page_constraint'
 class PagesConstraint < PageConstraint; end
 class PressReleasesConstraint < PageConstraint; end
 

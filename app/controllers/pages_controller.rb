@@ -1,7 +1,5 @@
-require_dependency 'controller_helpers/cached_page_renderer'
-
 class PagesController < ApplicationController
-  include ControllerHelpers::CachedPageRenderer
+  include CachedPageRendererControllerHelper
   before_filter :handle_help_page, :redirect_to_my
 
   def show

@@ -1,5 +1,3 @@
-require 'file_size_validator'
-
 class TailorMadePlayerRequest < ActiveRecord::Base
   TOPICS = %w[agency standalone platform other]
 

@@ -1,5 +1,3 @@
-require 'tailor_made_player_request_zendesk_importer'
-
 class TailorMadePlayerRequestZendeskImporterWorker
   include Sidekiq::Worker
   sidekiq_options queue: 'www'

@@ -1,4 +1,9 @@
-TailorMadePlayerRequestCreator = Struct.new(:tailor_made_player_request) do
+class TailorMadePlayerRequestCreator
+  attr_reader :tailor_made_player_request
+
+  def initialize(tailor_made_player_request)
+    @tailor_made_player_request = tailor_made_player_request
+  end
 
   def create
     if tailor_made_player_request.save

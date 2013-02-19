@@ -81,7 +81,6 @@ group :test do
 
   gem 'vcr'
   gem 'webmock'
-  gem 'typhoeus', '~> 0.5.3'
   gem 'factory_girl_rails'
 end
 

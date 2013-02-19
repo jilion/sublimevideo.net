@@ -1,6 +1,9 @@
-require_dependency 'zendesk_wrapper'
+class TailorMadePlayerRequestZendeskImporter
+  attr_reader :tailor_made_player_request
 
-TailorMadePlayerRequestZendeskImporter = Struct.new(:tailor_made_player_request) do
+  def initialize(tailor_made_player_request)
+    @tailor_made_player_request = tailor_made_player_request
+  end
 
   def import
     create_ticket_in_zendesk
@@ -63,5 +66,4 @@ TailorMadePlayerRequestZendeskImporter = Struct.new(:tailor_made_player_request)
       [tmp_file]
     end
   end
-
 end

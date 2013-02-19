@@ -10,6 +10,13 @@ GIT
       multi_json (~> 1.0)
 
 GIT
+  remote: git://github.com/jilion/configurator.git
+  revision: 57089e9dc6d16a9b147d9ca7998ea2a5d19e43bf
+  specs:
+    configurator (1.0.0)
+      activesupport (>= 3.2.12)
+
+GIT
   remote: git://github.com/jilion/turbolinks.git
   revision: c800a62e398ffa4724f8b83c49fc66090409325b
   branch: ios_video_issue
@@ -394,6 +401,7 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails
+  configurator!
   countries
   dalli
   factory_girl_rails

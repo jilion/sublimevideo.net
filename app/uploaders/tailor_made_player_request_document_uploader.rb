@@ -1,6 +1,4 @@
 # encoding: utf-8
-require_dependency 's3_config'
-
 class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
 
@@ -11,7 +9,7 @@ class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   end
 
   def fog_directory
-    S3Config.buckets['tailor_made_player_requests']
+    S3Wrapper.buckets['tailor_made_player_requests']
   end
 
   # Override the directory where uploaded files will be stored

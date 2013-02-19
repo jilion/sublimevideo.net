@@ -1,6 +1,6 @@
-require_dependency 'configurator'
+require 'configurator'
 
-module TwitterApi
+module TwitterWrapper
   include Configurator
 
   config_file 'twitter.yml'
@@ -9,7 +9,7 @@ module TwitterApi
   class << self
 
     def remote_favorites(user, options={})
-      TwitterApi.favorites(user, page: options[:page], include_entities: options[:include_entities])
+      favorites(user, page: options[:page], include_entities: options[:include_entities])
     end
 
     # Return a certain number of random favorites tweets of a user, ordered by date desc FROM Twitter.

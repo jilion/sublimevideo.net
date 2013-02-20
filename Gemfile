@@ -13,6 +13,7 @@ gem 'squeel'
 
 # Views
 gem 'haml'
+gem 'haml-contrib'
 gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'

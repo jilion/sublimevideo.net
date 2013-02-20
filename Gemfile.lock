@@ -207,7 +207,10 @@ GEM
     guard-rspec (2.4.0)
       guard (>= 1.1)
       rspec (~> 2.11)
-    haml (3.1.8)
+    haml (4.0.0)
+      tilt
+    haml-contrib (1.0.0)
+      haml (>= 3.2.0.alpha.13)
     has_scope (0.5.1)
     hashie (1.2.0)
     her (0.4)
@@ -249,7 +252,7 @@ GEM
     mime-types (1.21)
     mocha (0.12.7)
       metaclass (~> 0.0.1)
-    multi_json (1.6.0)
+    multi_json (1.6.1)
     multipart-post (1.1.5)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -339,7 +342,7 @@ GEM
       activerecord (~> 3.0)
       activesupport (~> 3.0)
       polyamorous (~> 0.5.0)
-    sublime_video_layout (2.5.20)
+    sublime_video_layout (2.5.22)
       coffee-rails
       haml
       jquery-rails
@@ -408,6 +411,7 @@ DEPENDENCIES
   guard-pow
   guard-rspec
   haml
+  haml-contrib
   has_scope
   json
   kaminari

@@ -126,18 +126,15 @@
     %td.price
       %strong
         = "$9"
-        %sup><
-          = ".90"
+        %sup><= ".90"
   %tr
     %td.name
       %h4
         = "Your logo"
     %td.price
-      %em= "free during Beta"
-      %strong.disabled
+      %strong
         = "$19"
         %sup><= ".90"
-        %span.stroke
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'social_sharing') do
@@ -149,11 +146,9 @@
         = "Social sharing"
         %small= "(Twitter, Facebook, Google+, Pinterest)"
     %td.price
-      %em= "free during Beta"
-      %strong.disabled
+      %strong
         = "$6"
         %sup><= ".90"
-        %span.stroke
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'embed') do
@@ -177,8 +172,7 @@
     %td.price
       %strong
         = "$9"
-        %sup><
-          = ".90"
+        %sup><= ".90"
   %tr
     %th{ colspan: 2 }
       = link_to '#forum_and_support' do
@@ -197,8 +191,7 @@
     %td.price
       %strong
         = "$99"
-        %sup><
-          = ".90"
+        %sup><= ".90"
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'upcoming_features') do
@@ -233,11 +226,11 @@
         = "for a few seconds after video playback begins."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option. #{link_to "Read more", docs_url('beta/site-settings')}."
+      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option. #{link_to "Read more", docs_url('site-settings')}."
   .col_right
     .box
       %h4= "Advanced domain settings"
-      %p= raw "We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('beta/site-settings')}."
+      %p= raw "We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('site-settings')}."
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."

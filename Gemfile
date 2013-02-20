@@ -33,6 +33,7 @@ gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
+gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
 gem 'json'
 gem 'net-scp', '1.0.4'
@@ -82,7 +83,6 @@ group :test do
 
   gem 'vcr'
   gem 'webmock'
-  gem 'typhoeus', '~> 0.5.3'
   gem 'factory_girl_rails'
 end
 

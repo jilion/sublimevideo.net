@@ -1,17 +1,22 @@
-require 'spec_helper'
+require 'fast_spec_helper'
+require 'configurator'
+require 'twitter'
+require 'rescue_me'
+require 'config/vcr'
 
-describe TwitterApi do
+require 'wrappers/twitter_wrapper'
+
+describe TwitterWrapper do
 
   describe "method_missing" do
     it "delegates to Twitter if possible" do
-      TwitterApi.should_receive(:favorites)
-
-      TwitterApi.favorites
+      Twitter.should_receive(:favorites)
+      TwitterWrapper.favorites
     end
   end
 
   describe "pretty_remote_favorites", :vcr do
-    subject { TwitterApi.pretty_remote_favorites(
+    subject { TwitterWrapper.pretty_remote_favorites(
         user_doublon: false,
         count: 3,
         random: true,
@@ -23,5 +28,4 @@ describe TwitterApi do
       subject.should have(3).tweets
     end
   end
-
 end

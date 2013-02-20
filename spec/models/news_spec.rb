@@ -1,10 +1,10 @@
 # coding: utf-8
-# require 'spec_helper'
 require 'fast_spec_helper'
-require 'active_support/deprecation'
 require 'active_support/core_ext'
+require 'config/vcr'
 require 'atom'
-require File.expand_path('app/models/news')
+
+require 'models/news'
 
 describe News do
 

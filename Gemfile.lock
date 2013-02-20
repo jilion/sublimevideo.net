@@ -10,6 +10,13 @@ GIT
       multi_json (~> 1.0)
 
 GIT
+  remote: git://github.com/jilion/configurator.git
+  revision: 57089e9dc6d16a9b147d9ca7998ea2a5d19e43bf
+  specs:
+    configurator (1.0.0)
+      activesupport (>= 3.2.12)
+
+GIT
   remote: git://github.com/jilion/turbolinks.git
   revision: c800a62e398ffa4724f8b83c49fc66090409325b
   branch: ios_video_issue
@@ -159,9 +166,6 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
-    ethon (0.5.8)
-      ffi (~> 1.2.0)
-      mime-types (~> 1.18)
     eventmachine (1.0.0)
     excon (0.16.10)
     execjs (1.4.0)
@@ -367,8 +371,6 @@ GEM
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
       simple_oauth (~> 0.2)
-    typhoeus (0.5.4)
-      ethon (~> 0.5.7)
     tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -402,6 +404,7 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails
+  configurator!
   countries
   dalli
   factory_girl_rails
@@ -451,7 +454,6 @@ DEPENDENCIES
   thin
   turbolinks!
   twitter
-  typhoeus (~> 0.5.3)
   uglifier
   uniquify
   vcr

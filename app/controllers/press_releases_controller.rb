@@ -1,7 +1,5 @@
-require_dependency 'controller_helpers/cached_page_renderer'
-
 class PressReleasesController < ApplicationController
-  include ControllerHelpers::CachedPageRenderer
+  include CachedPageRendererControllerHelper
 
   def show
     @body_class = 'press_release'

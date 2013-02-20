@@ -1,6 +1,4 @@
-require_dependency 'configurator'
-
-module S3Config
+module S3Wrapper
   include Configurator
 
   config_file 's3.yml'

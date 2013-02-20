@@ -4,6 +4,7 @@ SublimeVideo::Application.configure do
     [u, p] == ['jilion', ENV['PRIVATE_CODE']]
   end
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, except_hosts: 'sublimevideo-staging.net', strict: true
+  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, :only => %r{^/private_api/}, strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
   # One-line logs

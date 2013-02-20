@@ -6,6 +6,6 @@
 
 = content_for :javascript do
   = javascript_include_tag '//use.typekit.net/qxb6miz.js'
-  = sublimevideo_loader_tag(:www, host: cdn_host, stage: 'beta').html_safe
+  = sublimevideo_loader_tag(:www, host: cdn_host).html_safe
 
 = render template: 'layouts/sublimevideo'

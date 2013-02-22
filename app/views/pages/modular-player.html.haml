@@ -129,6 +129,16 @@
     %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
     .spacer
 
+  %a#cue_points
+  %section.cue_points.f.right
+    .i_wrap= image_tag "features/cue_points.jpg", alt: "Spread your videos with embed"
+    %h3.title
+      = "Cue Points"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "The Cue Points API allows you to perform a JavaScript action once the viewer reaches a certain point of the video. For instance, you could display a side-advertising that changes depending on the video progression or synchronise slides alongside a video presentation. #{link_to "Learn more", docs_url('addons/cue-points')}."
+    .spacer
+    
   %section#playlist.playlist.f
     .box
       .video_wrap.active
@@ -292,12 +302,6 @@
         = "Tell us what you think"
       %h4= "Advanced Player API"
       %p= "Our upcoming advanced API will push the integration boundaries further: With more than 50 additional methods and events, it will give you unprecedented player's control and flexibility to integrate it into your web site."
-    %li
-      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_cuepoints_comments_suggestions', class: "tell_us" do
-        %span.icon-mail
-        = "Tell us what you think"
-      %h4= "CuePoints"
-      %p= "In many integration cases you may want to trigger an event once the viewer reaches a certain point of the video. With the CuePoints API you can trigger any action and get the video's progression to control JavaScript-handled actions, such as displaying side-advertising or synchronizing slides alongside a video presentation."
     %li
       = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_colors_customization_comments_suggestions', class: "tell_us" do
         %span.icon-mail

@@ -3,8 +3,8 @@ source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com accou
 
 ruby '1.9.3'
 
-gem 'rails',                '3.2.12'
-gem 'sublime_video_layout', '~> 2.0' # hosted on gemfury
+gem 'rails',                     '3.2.12'
+gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases
@@ -39,7 +39,7 @@ gem 'json'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
-gem 'countries'
+gem 'countries', github: 'jilion/countries', branch: 'fix_country_select'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -60,7 +60,7 @@ group :staging, :production do
   gem 'rack-cache'
   gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
-  gem 'newrelic_rpm', '3.5.5.38'
+  gem 'newrelic_rpm'
 end
 
 group :development, :test do

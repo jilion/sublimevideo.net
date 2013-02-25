@@ -61,15 +61,8 @@ class TailorMadePlayerRequestZendeskImporter
   def ticket_uploaded_files
     if tailor_made_player_request.document.present?
       tmp_file = Tempfile.new(['tailor_made_player_request_document', File.extname(tailor_made_player_request.document.path)], encoding: 'ASCII-8BIT')
-
-      begin
-        tmp_file.write(tailor_made_player_request.document.read)
-        [tmp_file]
-      rescue NoMethodError => ex
-        # Remove document, temporary hack...
-        tailor_made_player_request.document = nil
-        []
-      end
+      tmp_file.write(tailor_made_player_request.document.read)
+      [tmp_file]
     end
   end
 end

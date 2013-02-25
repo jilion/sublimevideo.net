@@ -2,7 +2,7 @@ module ZendeskWrapper
   include Configurator
 
   config_file 'zendesk.yml'
-  config_accessor :base_url, :api_url, :username, :api_token
+  config_accessor :api_url, :username, :api_token
 
   class << self
 
@@ -28,8 +28,8 @@ module ZendeskWrapper
         config.retry = true
 
         # Logger prints to STDERR by default, to e.g. print to stdout:
-        # require 'logger'
-        # config.logger = Logger.new(STDOUT)
+        require 'logger'
+        config.logger = Logger.new(STDOUT)
       end
     end
 

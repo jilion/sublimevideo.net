@@ -4,7 +4,6 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   attr_accessor :honeypot
   attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot
 
-  uniquify :token
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
   validates :name, :email, :job_title, :company, :url, :country, :topic, :description, presence: true

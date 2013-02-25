@@ -22,10 +22,6 @@ class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
     end
   end
 
-  def filename
-    "#{model.token}.#{file.extension}" if original_filename.present?
-  end
-
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

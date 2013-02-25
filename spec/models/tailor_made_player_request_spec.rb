@@ -8,7 +8,6 @@ describe TailorMadePlayerRequest do
     its(:email)       { should eq 'john@doe.com' }
     its(:topic)       { should eq 'agency' }
     its(:description) { should eq 'Want a player.' }
-    its(:token)       { should =~ /^[a-z0-9]{8}$/i }
 
     it { should be_valid }
   end

@@ -98,13 +98,14 @@
     %p= raw "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting #{link_to "one single autoresize", docs_url('responsive-layout')} parameter."
     .spacer
 
-  %a#keyboard
-  %section.keyboard.f.right
-    .i_wrap= image_tag "features/keyboard_icon.jpg", alt: "Keyboard control"
+  %a#cue_zones
+  %section.cue_zones.f.right
+    .i_wrap= image_tag "features/cue_zones.jpg", alt: "Cue Zones"
     %h3.title
-      = "Keyboard control"
+      = "Cue Zones: more powerful cue points"
+      %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
+    %p= raw "This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline. For instance, you could display side-advertising that changes depending on the video progression or synchronize slides alongside a video presentation. #{link_to "Learn more", docs_url('addons/cue-zones')}."
     .spacer
 
   %a#lightbox
@@ -116,10 +117,13 @@
     %p= "Quickly and easily give your audience another great way to view your videos with SublimeVideo's integrated lightbox. The new lightbox works great over a liquid layout and a responsive design. You can also use it to display images to offer a more consistent UI."
     .spacer
 
-  %section.browsers_and_devices.f.right
-    .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device"
-    %h3.title= "Play video on any browser or device"
-    %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+  %a#keyboard
+  %section.keyboard.f.right
+    .i_wrap= image_tag "features/keyboard_icon.jpg", alt: "Keyboard control"
+    %h3.title
+      = "Keyboard control"
+      %span.new= "New"
+    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
     .spacer
 
   %a#hd
@@ -129,14 +133,10 @@
     %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
     .spacer
 
-  %a#cue_zones
-  %section.cue_zones.f.right
-    .i_wrap= image_tag "features/cue_zones.jpg", alt: "Cue Zones"
-    %h3.title
-      = "Cue Zones: more powerful cue points"
-      %span.addon= "Add-on"
-      %span.new= "New"
-    %p= raw "This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline. For instance, you could display side-advertising that changes depending on the video progression or synchronize slides alongside a video presentation. #{link_to "Learn more", docs_url('addons/cue-zones')}."
+  %section.browsers_and_devices.f.right
+    .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device"
+    %h3.title= "Play video on any browser or device"
+    %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
     .spacer
 
   %section#playlist.playlist.f

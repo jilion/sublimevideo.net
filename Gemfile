@@ -39,7 +39,7 @@ gem 'json'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
-gem 'countries', github: 'jilion/countries', branch: 'fix_country_select'
+gem 'countries', github: 'hexorx/countries' # until 0.9.2 is out!
 
 # Gems used only for assets and not required
 # in production environments by default.

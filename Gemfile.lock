@@ -10,19 +10,18 @@ GIT
       multi_json (~> 1.0)
 
 GIT
+  remote: git://github.com/hexorx/countries.git
+  revision: 71c62d7706091ae5011c9e76cda3886f3c5be918
+  specs:
+    countries (0.9.1)
+      currencies (>= 0.4.0)
+
+GIT
   remote: git://github.com/jilion/configurator.git
   revision: 3a8df3f51dea0e414bc9cd86fea1f85b1a30745a
   specs:
     configurator (1.0.0)
       activesupport (>= 3.2.12)
-
-GIT
-  remote: git://github.com/jilion/countries.git
-  revision: c8405609185ec4ad5e46523fa33a8254f7d94a72
-  branch: fix_country_select
-  specs:
-    countries (0.9.1)
-      currencies (>= 0.4.0)
 
 GIT
   remote: git://github.com/jilion/turbolinks.git
@@ -223,7 +222,7 @@ GEM
       haml (>= 3.2.0.alpha.13)
     has_scope (0.5.1)
     hashie (2.0.0)
-    her (0.4)
+    her (0.4.1)
       activesupport (>= 3.0.0)
       faraday (~> 0.8)
       multi_json (~> 1.5)
@@ -231,7 +230,7 @@ GEM
       excon (~> 0.16.10)
     hike (1.2.1)
     http_parser.rb (0.5.3)
-    i18n (0.6.1)
+    i18n (0.6.4)
     inflection (1.0.0)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -263,7 +262,7 @@ GEM
     mocha (0.12.7)
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
-    multipart-post (1.1.5)
+    multipart-post (1.2.0)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.6.5)

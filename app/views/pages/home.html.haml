@@ -264,7 +264,7 @@
         %span= "next"
       .news_ticker
         %h4.custom_break.t2= "Latest News"
-        -# - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
-        -#   .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
-        -#     = link_to news.title, news.url
+        - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
+          .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
+            = link_to news.title, news.url
         .spacer

@@ -170,9 +170,17 @@
   %tr
     %td.name
       %h4
-        = "Manual embedding"
+        = "Manual embed"
     %td.price
       %strong= "Free"
+  %tr
+    %td.name
+      %h4
+        = "Auto embed"
+    %td.price
+      %strong
+        = "$9"
+        %sup><= ".90"
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'stats') do

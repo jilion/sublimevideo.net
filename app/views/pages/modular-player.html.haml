@@ -71,7 +71,7 @@
     %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. #{link_to 'Subscribe to this add-on', my_url('addons?h=embed-auto')} and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything! #{link_to 'Learn more', docs_url('addons/embed')}."
     .spacer
 
-  %a#on_video_logo
+  %a#logo
   %section.logo.f.left
     .i_wrap= image_tag "features/your_logo_icon.jpg", alt: "On video logo", size: "322x244"
     %h3.title
@@ -98,7 +98,7 @@
     %p= raw "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting #{link_to "one single autoresize", docs_url('responsive-layout')} parameter."
     .spacer
 
-  %a#cue_zones
+  %a#cuezones
   %section.cue_zones.f.right
     .i_wrap= image_tag "features/cue_zones.jpg", alt: "Cue zones", size: "364x287"
     %h3.title
@@ -212,7 +212,7 @@
     %p= raw "SublimeVideo is the world's first zero maintenance HTML5 video player offered as a service solution. You'll always have the latest version of the player; we provide automatic browser support #{link_to "updates", docs_url('releases')}, bug fixes and new features so you never have to lift a finger."
     .spacer
 
-  %a#real_time_stats
+  %a#stats
   %section.real_time_stats.f
     .left
       %a.sublime.watch{ href: '#video_stats' }

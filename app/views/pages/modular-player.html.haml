@@ -63,9 +63,9 @@
 
   %a#embed
   %section.embed.f.right
-    .i_wrap= image_tag "features/auto_embed_icon.jpg", alt: "Spread your videos with embed", size: "299x214"
+    .i_wrap= image_tag "features/auto_embed_icon.jpg", alt: "Spread your videos with auto embeds", size: "299x214"
     %h3.title
-      = "Spread your videos with embed"
+      = "Spread your videos with auto embeds"
       %span.addon= "Add-on"
       %span.new= "New"
     %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. #{link_to 'Subscribe to this add-on', my_url('addons?h=embed-auto')} and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything! #{link_to 'Learn more', docs_url('addons/embed')}."
@@ -78,7 +78,7 @@
       = "On-video logo"
       %span.addon= "Add-on"
       %span.new= "New"
-    %p= "With this new add-on, you can display your logo on video and define its placement and link."
+    %p= raw "With this new add-on, you can display your logo on video and define its placement and link. #{link_to "Learn more", docs_url('addons/on-video-logo')}."
     .spacer
 
   %section.retina.f.right

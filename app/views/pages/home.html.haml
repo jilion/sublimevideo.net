@@ -205,6 +205,13 @@
       .wrap
         %ul
           %li.box.new
+            = link_to page_path('modular-player', anchor: 'embed') do
+              = image_tag "home/highlights/auto_embed.png", alt: "Auto Embed Add-on", size: "134x96", style: "margin-top:17px"
+              %span.text
+                %strong= "Auto embed add-on"
+                %span.desc= raw "Let your audience easily<br>  share your videos."
+              %span.badge
+          %li.box.new
             = link_to page_path('modular-player', anchor: 'cuezones') do
               = image_tag "home/highlights/cue_zones.png", alt: "Cue Zones Add-on", size: "199x145", style: "margin-top:-5px"
               %span.text
@@ -218,14 +225,14 @@
                 %strong= "Social sharing add-on"
                 %span.desc= raw "Make your videos spread around<br /> popular social networks."
               %span.badge
-          %li.box.new
+          %li.box
             = link_to page_path('youtube') do
-              = image_tag "home/highlights/youtube@2x.png", alt: "Video Code Generator", size: "147x65", style: "margin-top:30px"
+              = image_tag "home/highlights/youtube@2x.png", alt: "SublimeVideo YouTube", size: "147x65", style: "margin-top:30px"
               %span.text
                 %strong= "Seamless integration"
                 %span.desc= raw "Bringing together the world's most functional HTML5 Video Player with the biggest video platform."
               %span.badge
-          %li.box.new
+          %li.box
             = link_to page_path('modular-player', anchor: 'player_designs') do
               = image_tag "home/highlights/new_player_designs.png", alt: "New Player Designs", size: "123x108", style: "margin-top:12px"
               %span.text
@@ -257,7 +264,7 @@
         %span= "next"
       .news_ticker
         %h4.custom_break.t2= "Latest News"
-        - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
-          .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
-            = link_to news.title, news.url
+        -# - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
+        -#   .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
+        -#     = link_to news.title, news.url
         .spacer

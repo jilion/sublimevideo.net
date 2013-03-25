@@ -196,19 +196,22 @@
         %sup><= ".90"
   %tr
     %th{ colspan: 2 }
-      = link_to '#forum_and_support' do
+      = link_to '#support' do
         = "Support"
         %span.icon-arrow
   %tr
     %td.name
       %h4
-        = "Forum & email support"
+        = "Documentation, community forum & email support"
     %td.price
-      %strong= "Free"
+      %strong
+        = "Free"
+        %span.text><= link_to '*', '#support'
   %tr
     %td.name
       %h4
         = "VIP email support"
+        %small= "(Guaranteed response time of 1 business day)"
     %td.price
       %strong
         = "$99"
@@ -255,7 +258,10 @@
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
-    .box#forum_and_support
-      %h4= "Forum & Support"
-      %p= raw "All users have access to our extensive #{link_to "documentation", page_path('help', anchor: 'documentation')}, #{link_to "community forum", page_path('help', anchor: 'community_forum')} and #{link_to "email support", page_path('help', anchor: 'email_support')}. Additionally, we offer a VIP support to customers who need answers within the business day. #{link_to "Find out more on the help page", page_path('help')}."
+    .box#support
+      %h4= "Support"
+      %p
+        = raw "All users have access to our extensive #{link_to "documentation", page_path('help', anchor: 'documentation')} and #{link_to "community forum", page_path('help', anchor: 'community_forum')}."
+        = raw "Dedicated email support is offered to all customers with at least a paid add-on. If you need extra support and enhanced reactivity, we also offer a #{link_to 'VIP support add-on', page_path('modular-player', anchor: 'support'), class: 'hl'} with a guaranteed response within the next business day."
+        = raw "#{link_to "Read  more on our help page", page_path('help')}."
   .spacer

@@ -181,7 +181,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    faraday (0.8.6)
+    faraday (0.8.7)
       multipart-post (~> 1.1)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
@@ -221,7 +221,7 @@ GEM
     haml-contrib (1.0.0)
       haml (>= 3.2.0.alpha.13)
     has_scope (0.5.1)
-    hashie (2.0.0)
+    hashie (2.0.3)
     her (0.4.1)
       activesupport (>= 3.0.0)
       faraday (~> 0.8)
@@ -258,7 +258,7 @@ GEM
       treetop (~> 1.4.8)
     metaclass (0.0.1)
     method_source (0.8.1)
-    mime-types (1.21)
+    mime-types (1.22)
     mocha (0.12.7)
       metaclass (~> 0.0.1)
     multi_json (1.7.1)
@@ -388,10 +388,10 @@ GEM
     websocket (1.0.7)
     xpath (1.0.0)
       nokogiri (~> 1.3)
-    zendesk_api (0.3.0)
+    zendesk_api (0.3.5)
       faraday (>= 0.8.0)
       faraday_middleware (>= 0.8.7)
-      hashie
+      hashie (>= 1.2)
       inflection
       json
       mime-types

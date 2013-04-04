@@ -38,7 +38,10 @@ module ZendeskWrapper
         ticket.comment.uploads << { file: upload.path, filename: File.basename(upload) }
       end
 
-      ticket.save!
+      rescue_and_retry do
+        ticket.save!
+      end
+
       Librato.increment 'support.new_ticket', source: 'zendesk'
 
       ticket

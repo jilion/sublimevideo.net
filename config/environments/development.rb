@@ -1,7 +1,6 @@
 SublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.middleware.insert_before Rack::Lock, Rack::LiveReload
-  config.middleware.insert_before Rack::Lock, Rack::Nocache
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -23,6 +22,9 @@ SublimeVideo::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  # Use a different cache store in production
+  config.cache_store = :null_store
 
   # Raise exception on mass assignment protection for Active Record models
   # config.active_record.mass_assignment_sanitizer = :strict

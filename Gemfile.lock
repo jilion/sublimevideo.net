@@ -1,15 +1,4 @@
 GIT
-  remote: git://github.com/brutuscat/poltergeist.git
-  revision: 09edc918c1b0e926692e694d42b3e5d874f795db
-  specs:
-    poltergeist (1.0.2)
-      capybara (~> 2.0, >= 2.0.1)
-      childprocess (~> 0.3)
-      faye-websocket (~> 0.4, >= 0.4.4)
-      http_parser.rb (~> 0.5.3)
-      multi_json (~> 1.0)
-
-GIT
   remote: git://github.com/hexorx/countries.git
   revision: 71c62d7706091ae5011c9e76cda3886f3c5be918
   specs:
@@ -39,54 +28,6 @@ GIT
     librato-rails (0.8.1)
       librato-metrics (~> 1.0.2)
       rails (>= 3.0)
-
-GIT
-  remote: git://github.com/rspec/rspec-core.git
-  revision: eb0a45d62cf44435101847f58f064d6dc8dfb96e
-  specs:
-    rspec-core (2.13.0)
-
-GIT
-  remote: git://github.com/rspec/rspec-expectations.git
-  revision: ffeb26a35902b5a47a8d3742f82b20503033c1e7
-  specs:
-    rspec-expectations (2.13.0)
-      diff-lcs (>= 1.1.3, < 2.0)
-
-GIT
-  remote: git://github.com/rspec/rspec-mocks.git
-  revision: e652a0212977fe95a0b6f39a6ae2f5bb722e0ab3
-  specs:
-    rspec-mocks (2.13.0)
-
-GIT
-  remote: git://github.com/rspec/rspec-rails.git
-  revision: 5442aa32a81f3fef8779b13fe3cd6a7962e4afd8
-  specs:
-    rspec-rails (2.13.0)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 2.13.0)
-      rspec-expectations (~> 2.13.0)
-      rspec-mocks (~> 2.13.0)
-
-GIT
-  remote: git://github.com/rspec/rspec.git
-  revision: 3fdda41ff7dc5dbf4b0ea77ceaf11c9828cf2283
-  specs:
-    rspec (2.13.0)
-      rspec-core (~> 2.13.0)
-      rspec-expectations (~> 2.13.0)
-      rspec-mocks (~> 2.13.0)
-
-GIT
-  remote: git://github.com/thoughtbot/shoulda-matchers.git
-  revision: d07774623d2521360ae7119543498a3873630667
-  specs:
-    shoulda-matchers (1.4.2)
-      activesupport (>= 3.0.0)
-      bourne (~> 1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -135,8 +76,11 @@ GEM
     autoscaler (0.2.0)
       heroku-api
       sidekiq (>= 2.6.1, < 3.0)
-    bourne (1.2.1)
-      mocha (= 0.12.7)
+    better_errors (0.8.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -166,7 +110,8 @@ GEM
     currencies (0.4.0)
     daemons (1.1.9)
     dalli (2.6.2)
-    diff-lcs (1.2.1)
+    debug_inspector (0.0.2)
+    diff-lcs (1.2.2)
     em-websocket (0.4.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
@@ -256,11 +201,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.22)
-    mocha (0.12.7)
-      metaclass (~> 0.0.1)
     multi_json (1.7.1)
     multipart-post (1.2.0)
     net-scp (1.0.4)
@@ -269,6 +211,10 @@ GEM
     newrelic_rpm (3.5.7.59)
     nokogiri (1.5.6)
     pg (0.14.1)
+    poltergeist (1.1.0)
+      capybara (~> 2.0, >= 2.0.1)
+      faye-websocket (~> 0.4, >= 0.4.4)
+      http_parser.rb (~> 0.5.3)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -287,7 +233,6 @@ GEM
     rack-livereload (0.3.11)
       rack
     rack-no-www (0.0.2)
-    rack-nocache (0.1.0)
     rack-ssl (1.3.3)
       rack
     rack-ssl-enforcer (0.2.5)
@@ -312,7 +257,6 @@ GEM
     ratom (0.7.2)
       libxml-ruby (~> 2.3.2)
     rb-fsevent (0.9.3)
-    rb-readline (0.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.2)
@@ -321,6 +265,21 @@ GEM
     rescue_me (0.1.1)
     responders (0.9.3)
       railties (~> 3.1)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rspec-rails (2.13.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
     ruby-hmac (0.4.0)
     ruby_gntp (0.3.4)
     rubyzip (0.9.9)
@@ -334,6 +293,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    shoulda-matchers (2.0.0)
+      activesupport (>= 3.0.0)
     sidekiq (2.7.4)
       celluloid (~> 0.12.0)
       connection_pool (~> 1.0)
@@ -406,6 +367,8 @@ DEPENDENCIES
   annotate
   asset_sync
   autoscaler
+  better_errors
+  binding_of_caller
   capybara
   carrierwave
   coffee-rails
@@ -429,29 +392,23 @@ DEPENDENCIES
   net-scp (= 1.0.4)
   newrelic_rpm
   pg
-  poltergeist!
+  poltergeist
   powder
   quiet_assets
   rack-cache
   rack-google-analytics
   rack-livereload
   rack-no-www
-  rack-nocache
   rack-ssl-enforcer
   rails (= 3.2.12)
   ratom
   rb-fsevent
-  rb-readline
   rescue_me
   responders
-  rspec!
-  rspec-core!
-  rspec-expectations!
-  rspec-mocks!
-  rspec-rails!
+  rspec-rails
   ruby_gntp
   sass-rails
-  shoulda-matchers!
+  shoulda-matchers
   sidekiq
   squeel
   sublime_video_layout (~> 2.0)

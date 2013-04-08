@@ -173,9 +173,11 @@
 
   %a#player_api
   %section.player_api.f.left
-    .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Flexible integration with our player API", size: "403x361"
-    %h3.title= "Flexible integration with our player API"
-    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality. The basic version comes for free with the player and we will soon offer an advanced API for even more control. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
+    .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Advanced Player API", size: "403x361"
+    %h3.title
+      = "Advanced Player API"
+      %span.new= "New"
+    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
     .spacer
 
   %section.seamless_integration.f.right

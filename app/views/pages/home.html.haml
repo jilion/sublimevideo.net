@@ -205,6 +205,13 @@
       .wrap
         %ul
           %li.box.new
+            = link_to page_path('modular-player', anchor: 'player_api') do
+              = image_tag "home/highlights/js_api.png", alt: "Advanced Player API", size: "168x138", style: "margin-top:8px"
+              %span.text
+                %strong= "Advanced Player API"
+                %span.desc= raw "Implement custom and<br> advanced functionality."
+              %span.badge
+          %li.box.new
             = link_to page_path('modular-player', anchor: 'embed') do
               = image_tag "home/highlights/auto_embed.png", alt: "Auto Embed Add-on", size: "134x96", style: "margin-top:17px"
               %span.text

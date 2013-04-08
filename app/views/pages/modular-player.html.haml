@@ -126,11 +126,13 @@
     %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
     .spacer
 
-  %a#hd
-  %section.hd.f.left
-    .i_wrap= image_tag "features/hd_icon.jpg", alt: "A simple way to deliver HD to your audience", size: "243x137"
-    %h3.title= "A simple way to deliver HD to your audience"
-    %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
+  %a#player_api
+  %section.player_api.f.left
+    .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Advanced Player API", size: "403x361"
+    %h3.title
+      = "Advanced Player API"
+      %span.new= "New"
+    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
     .spacer
 
   %section.browsers_and_devices.f.right
@@ -171,13 +173,11 @@
     %p= raw "Playlist support using our powerful API makes it possible for you to link multiple videos or chapters to the same player. Integrated playlists that are even easier to use will be available soon. #{link_to "Learn more", docs_url('playlists')}."
     .spacer
 
-  %a#player_api
-  %section.player_api.f.left
-    .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Advanced Player API", size: "403x361"
-    %h3.title
-      = "Advanced Player API"
-      %span.new= "New"
-    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
+  %a#hd
+  %section.hd.f.left
+    .i_wrap= image_tag "features/hd_icon.jpg", alt: "A simple way to deliver HD to your audience", size: "243x137"
+    %h3.title= "A simple way to deliver HD to your audience"
+    %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
     .spacer
 
   %section.seamless_integration.f.right

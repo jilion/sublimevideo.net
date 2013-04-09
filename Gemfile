@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com account
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '3.2.12' # until 3.2.14 is out!
 gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
@@ -35,7 +35,7 @@ gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
-gem 'json'
+gem 'oj'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
@@ -55,7 +55,7 @@ group :production do
 end
 
 group :staging, :production do
-  gem 'thin'
+  gem 'unicorn'
   gem 'dalli'
   gem 'rack-cache'
   gem 'rack-no-www'

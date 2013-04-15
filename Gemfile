@@ -26,7 +26,7 @@ gem 'kaminari'
 # Internals
 gem 'sidekiq'
 gem 'autoscaler'
-gem 'airbrake'
+gem 'honeybadger'
 gem 'twitter'
 gem 'zendesk_api'
 gem 'ratom', require: 'atom'

@@ -316,7 +316,7 @@ GEM
       activerecord (~> 3.0)
       activesupport (~> 3.0)
       polyamorous (~> 0.5.0)
-    sublime_video_layout (2.6.4)
+    sublime_video_layout (2.6.5)
       coffee-rails
       haml
       jquery-rails

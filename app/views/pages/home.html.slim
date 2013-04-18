@@ -1,0 +1,151 @@
+h2.headline
+  | Yesterday SublimeVideo played 500K+ Videos.
+  br
+  em
+    small
+      | The HTML5 Video Player people trust.
+    / a href="" Sign Up Now
+section.demo-player.l-full-width-wrap
+  section.demo-video-player
+    video.sublime#home_demo_player data-player-kit="10" data-name='SV.net Prototype Video Demo' data-uid='proto-demo-video' data-settings='autoresize:fit;' data-embed-url="http://google.com" data-embed-enable="false" data-sharing-enable="false" data-logo-enable="false" height='243' poster='http://cdn.sublimevideo.net/assets/demo/midnight_sun2_800-c6d73d0c7bcde93ad1f405b66f003ecc.jpg' preload='none' width='432' style="visibility:hidden"
+      source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4"
+      source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm"
+  section.demo-sidebar-1
+    h3 Choose a design
+    ul.l-grid.demo-choose-design
+      li.active
+        a href="" data-kit="10"
+         / Flat
+         = image_tag "home/player_flat.svg", alt: "Flat", width: "100%"
+      li
+        a href="" data-kit="9"
+          / Classic
+          = image_tag "home/player_classic.svg", alt: "Classic", width: "100%"
+      li
+        a href="" data-kit="11"
+          / Light
+          = image_tag "home/player_light.svg", alt: "Light", width: "100%"
+    .spacer
+    h3 Enable features & add-ons
+    ul.l-grid.demo-video-actions
+      li
+        a href="" data-feature="sharing" Social Sharing
+      li
+        a href="" data-feature="subtitles" Subtitles
+      li
+        a href="" data-feature="logo" Logo
+      li
+        a href="" data-feature="embed" Embed
+      li
+        a href="" data-feature="youtube" YouTube
+      li
+        a href="" data-feature="cue_zones" Cue Zones
+    .spacer
+    p.view-all-features
+      'Try every features (28+) SublimeVideo comes with on our
+      strong
+        a href=""
+          em all features demo page
+          small.icon-uniF473
+  .spacer
+  .tagline
+    h2
+      .btn-wrap
+        a.btn.orange href=""
+          | Get It Now
+          / span.icon-uniF473
+      '  It's
+      strong Free
+      |  with unlimited plays!
+    h2
+      ' You just pay for the extra add-ons you need!
+      a href="" style="white-space:nowrap"
+        ' View Pricing
+        small.icon-uniF473
+  .l-separator
+  .customers-quotes-box
+    h5.l-center What our customers say
+    ul#customers-quotes-slideshow.customers-quotes
+      li
+        = image_tag "home/customers/1.jpg", alt: "Customer 1"
+        blockquote
+          | “In five minutes SublimeVideo was up and running across everything, perfectly. You have saved me incredible money and time.”
+          em —Thomas Drotar, Founder of drotardesign.com.
+      li
+        = image_tag "home/customers/2.jpg", alt: "Customer 2"
+        blockquote
+          | “SublimeVideo has the solution we need to showcase the music that we create for video, while creating a consistent experience across all platforms.”
+          em —Paul Riggio, So Loud Music.
+      li
+        = image_tag "home/customers/3.jpg", alt: "Customer 3"
+        blockquote
+          | “When we ran into problems with video encoding, the folks at SublimeVideo walked us through solving the issues step-by-step.”
+          em —Chara Odhner, Communications Manager at ANC Schools.
+    .spacer
+    .view-all-testimonials-box.l-center
+      strong
+        a href="" style="white-space:nowrap"
+          ' Read all testimonials
+          small.icon-uniF473
+  .l-separator
+  .spacer
+  .customers-logos-box
+    h5 They use SublimeVideo
+    ul.l-grid.customers-logos
+      li
+        = image_tag "home/logos/logo-01.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-02.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-03.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-04.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-05.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-06.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-07.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-08.svg", alt: "Logo"
+      li
+        = image_tag "home/logos/logo-09.svg", alt: "Logo"
+    .spacer
+  .horizon-box
+    h5 The Technology
+    a.sublime#lightbox_horizon href="#video_horizon"
+      = image_tag "home/thumb_1.jpg", class: "video_thumb", width: "100%"
+    video#video_horizon width="800" height="450" style='display:none' poster="#{image_path "home/poster_1.jpg"}" data-uid='home' data-name='Home' data-action-enable='true' data-embed-size='640x360' data-embed-url="/embeds/horizon.html" data-sharing-text='Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework' data-sharing-url="http://sublimevideo.net"
+      source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'
+      source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'
+      source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'
+      source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd'
+    strong
+      a href=""
+        | Learn more about Horizon
+        small.icon-uniF473
+  .tailor-made-box
+    h5 Tailor-Made Players
+    a href=""
+      = image_tag "home/blueprint.png", alt:"Blueprint", width: "60%"
+    p
+      strong Need a tailor-made player?
+    strong
+      a href=""
+        | View our showcases and contact us
+        small.icon-uniF473
+  .spacer
+
+/ #home_video{ style: "display:none" }
+/   .v_shadow
+/   = link_to "#video_horizon", class: "sublime", id: "lightbox_horizon" do
+/     - (1..6).each do |n|
+/       = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
+/     %span.overlay
+/     %span.play
+/   %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+/     <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
+/     <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
+/     <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
+/     <source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
+

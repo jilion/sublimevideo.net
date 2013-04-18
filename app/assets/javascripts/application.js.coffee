@@ -14,9 +14,18 @@
 # Ensure we don't have new relic errors
 window.NREUMQ = window.NREUMQ || []
 
+# iPhone/iPad viewport fix
+if navigator.userAgent.match(/iPhone/i) or navigator.userAgent.match(/iPad/i)
+  viewportmeta = document.querySelector("meta[name=\"viewport\"]")
+  if viewportmeta
+    viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0"
+    document.addEventListener("gesturestart", (()->
+      viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6"
+    ), false)
+
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
-  SublimeVideo.homeReady() if $('body.home').exists()
+  SublimeVideo.homeReady()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()

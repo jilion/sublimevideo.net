@@ -1,6 +1,6 @@
 class PageConstraint
   def self.matches?(request)
-    Dir.glob("app/views/#{resources}/#{request.params["page"]}.html.haml").any?
+    Dir.glob("app/views/#{resources}/#{request.params["page"]}.html.{haml,slim}").any?
   end
 
   private

@@ -29,13 +29,14 @@
       %span.new= "New"
     %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
     .spacer
-
-  %section.tablets.f.left
-    .i_wrap= image_tag "features/tablets_icon.jpg", alt: "Design and features working even on tablets", size: "311x252"
+  
+  %section.google_analytics.f.left
+    .i_wrap= image_tag "features/google_analytics_icon.jpg", alt: "Google Analytics", size: "440x371"
     %h3.title
-      = "Design and features working even on tablets"
+      = "Google Analytics integration"
+      %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
+    %p= raw "Get advanced stats for all your videos like plays, complete or even sharing clicks and quality switch. All of this directly in your existing Google Analytics account without having to add a single line of code in your website. #{link_to "Learn more", docs_url('addons/google-analytics')}."
     .spacer
 
   %a#player_designs
@@ -139,6 +140,14 @@
     .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device", size: "361x256"
     %h3.title= "Play video on any browser or device"
     %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+    .spacer
+
+  %section.tablets.f.left
+    .i_wrap= image_tag "features/tablets_icon.jpg", alt: "Design and features working even on tablets", size: "311x252"
+    %h3.title
+      = "Design and features working even on tablets"
+      %span.new= "New"
+    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
     .spacer
 
   %section#playlist.playlist.f

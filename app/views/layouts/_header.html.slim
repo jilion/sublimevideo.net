@@ -1,10 +1,11 @@
 header.l-dark
   h1.l-site-logo
-    = image_tag "global/sublimevideo.svg", alt:"SublimeVideo", width:"260"
+    = link_to "/" do
+      = image_tag "global/sublimevideo.svg", alt:"SublimeVideo", width:"260"
   nav.l-inline.main-nav
     ul
       li
-        a.is-active href="/features" Features
+        a *{:class => params[:page] == "features" ? "is-active" : ""} href="/features" Features
       li
         a href="" Pricing
       li.l-popup

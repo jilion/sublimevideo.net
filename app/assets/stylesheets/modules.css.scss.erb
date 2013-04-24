@@ -37,17 +37,25 @@ $darkblue:#003165;
 }
 
 .main-nav ul > li {
-  margin:8px 16px;
+  margin:8px 14px;
   @media screen and (max-width:568px) {
     margin:4px 5px;
   }
 }
 
 .main-nav li a {
+  padding:0 8px 2px;
   font-size:1.3em;
   @media screen and (max-width:568px) {
    font-size:1em;
   }
+}
+
+.main-nav li > a.is-active {
+  background:transparentize(#7690B3, 0.5);
+  color:#fff;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
 }
 
 .main-nav .l-popup > a:hover {
@@ -64,6 +72,7 @@ $darkblue:#003165;
   position:relative;
   z-index:3;
   cursor:default;
+  padding:0;
 }
 
 .main-nav .l-popup > a small {
@@ -516,4 +525,29 @@ $darkblue:#003165;
   padding:40px 20px 0;
   text-align:center;
   font-size:0.8em;
+}
+
+section.features {
+  padding-top:30px;
+}
+
+// Go to anchor
+
+.go-to-anchor {
+  text-align:center;
+}
+
+.go-to-anchor > li {
+  font-size:1.4em;
+  margin:35px 1.4% 25px;
+  width:24%;
+}
+
+.go-to-anchor li > a {
+  display:block;
+  padding:14px 14px;
+  background:#98a5b9;
+  color:#fff;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
 }

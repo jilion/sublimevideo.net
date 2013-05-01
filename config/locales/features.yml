@@ -1,0 +1,24 @@
+en:
+  features:
+    youtube:
+      title: Seamless YouTube integration
+      subtitle: SublimeVideo now fully integrates with YouTube.
+      description: "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform."
+
+    player_designs:
+      title: 3 sleek player designs to choose from
+      subtitle: Get the player design that fits best your website
+      description: "Along with the Classic SublimeVideo player design, you can now select two additional player designs, Light and Flat, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, check what we can do for you."
+
+    # Add-ons
+    
+    google_analytics:
+      title: Google Analytics integration
+      subtitle: Get advanced stats for all your videos with Google Analytics.
+      description: "Get advanced stats for all your videos like plays, complete or even sharing clicks and quality switch. All of this directly in your existing Google Analytics account without having to add a single line of code in your website."
+
+    social_sharing:
+      title: Social sharing
+      subtitle: Get the player design that fits best your website
+      description: "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. Let us know which other social networks you would like to have and learn more on how to integrate it on your site."
+

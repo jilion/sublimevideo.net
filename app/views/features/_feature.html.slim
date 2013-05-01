@@ -1,0 +1,14 @@
+li
+  h3= t("features.#{feature}.title")
+  p.l-small= t("features.#{feature}.subtitle")
+  - if demo
+    a.feature-demo Demo
+    '  |
+  a.feature-more More
+  .feature-more-wrap
+    p
+      = raw t("features.#{feature}.description")
+      - if learn_more_url
+        '
+        = link_to 'Learn more', learn_more_url
+        '.

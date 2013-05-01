@@ -9,32 +9,21 @@ section.features.l-full-width-wrap
       a href="" Add-ons
     li
       a href="" Upcoming Features
-  
+
   p.l-center
-    'Start using the SublimeVideo Player for free with all the 
+    'Start using the SublimeVideo Player for free with all the
     a href="" Core Features
-    '  included. Then just pay for the 
+    '  included. Then just pay for the
     a href="" Add-ons
-    '  you need. And don't forget to check out and give us your feedback on our 
+    '  you need. And don't forget to check out and give us your feedback on our
     a href="" Upcoming features
     '.
-  
+
   h3 Core Features
-  
+
   ul.l-stacked.features-list
-    li
-      h3 Seamless YouTube integration
-      p.l-small SublimeVideo now fully integrates with YouTube.
-      a.feature-demo Demo
-      '  |
-      a.feature-more More
-      .feature-more-wrap
-        p That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. Learn more.
-    li
-      h3 Seamless YouTube integration
-      p.l-small SublimeVideo now fully integrates with YouTube.
-      a.feature-demo Demo
-      '  |
-      a.feature-more More
-      .feature-more-wrap
-        p That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. Learn more. 
+    = feature('youtube', learn_more_url: page_path('youtube'))
+    = feature('player_designs')
+    = feature('retina')
+    / = feature('google_analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'))
+    / = feature('social_sharing', learn_more_url: docs_url('addons/social-sharing'))

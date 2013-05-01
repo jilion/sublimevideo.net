@@ -10,105 +10,68 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - Twitter Ruby Gem 4.4.3
+      - Twitter Ruby Gem 4.5.0
       Authorization:
-      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="5e863ecfd10307e380d3f595733cd9b4",
-        oauth_signature="33p1RWWztHEogemJyiF1zbNi2zA%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1357747206", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
+      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="422590161db32096f4c3e28c232fd31a",
+        oauth_signature="h7KQPFHwFddLbXE4lwQYzr%2BAb4Q%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365500118", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "WC1BY2Nlc3MtTGV2ZWw=":
-      - !binary |-
-        cmVhZC13cml0ZQ==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDowNyBHTVQ=
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        VHVlLCAzMSBNYXIgMTk4MSAwNTowMDowMCBHTVQ=
-      !binary "UHJhZ21h":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByZS1jaGVj
-        az0wLCBwb3N0LWNoZWNrPTA=
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        Z3Vlc3RfaWQ9djElM0ExMzU3NzQ3MjA3Mzg2MTI0ODg7IEV4cGlyZXM9RnJp
-        LCA5LUphbi0yMDE1IDE2OjAwOjA3IEdNVDsgUGF0aD0vOyBEb21haW49LnR3
-        aXR0ZXIuY29t
-      - !binary |-
-        bGFuZz1lbg==
-      !binary "WC1UcmFuc2FjdGlvbg==":
-      - !binary |-
-        OTY5M2E0OThlNmEwZjllZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDowNyBHTVQ=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTE0MA==
-      !binary "WC1SYXRlLUxpbWl0LUxpbWl0":
-      - !binary |-
-        MTgw
-      !binary "WC1SYXRlLUxpbWl0LVJlbWFpbmluZw==":
-      - !binary |-
-        MTcw
-      !binary "WC1SYXRlLUxpbWl0LVJlc2V0":
-      - !binary |-
-        MTM1Nzc0Nzg2Mg==
-      !binary "U2VydmVy":
-      - !binary |-
-        dGZl
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '1191'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Apr 2013 09:35:18 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Apr 2013 09:35:18 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - guest_id=v1%3A136550011845078865; Domain=.twitter.com; Path=/; Expires=Thu,
+        09-Apr-2015 09:35:18 UTC
+      - lang=en
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '172'
+      X-Rate-Limit-Reset:
+      - '1365501014'
+      X-Transaction:
+      - fed3a693e285343e
+      X-Xss-Protection:
+      - 1; mode=block
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAALRWbW/bNhD+K5w+DBvm2RIlWbKBYkmb5cPQdhuSrhiqQKCk
-        k82GJlWSSpoF+e87SrItO026YZhhwNa9PLw73j2ne6/UwCxUObPe0nsPFXnD
-        NAl9EsyXUbCkKfnBxw+hfhB4E49X3jIOgzBK4sWcUhokCU2dODdWI8AjHfpY
-        +OywL9pC8A38wStQhBsi1S0p1WYDuuRMiDvCbhgXrBAwJe+BtAYIt0RJcrIB
-        u1YVk1WpWW0J/iGsMEq0FtBNqBtn+U0mM7m2tllms2xmp6XKZvxTXak0cJps
-        Vpbk5CMXXEmMyahWl4BRZa3vhyUjaw31i8zbAXDbSjBT1jQYD4aZzVqTzfAR
-        sW+5taDRpor8RZIuFov0p419EdDMIxoEwkhVKyHUbdbjw2XvQmqlsb5lfyjC
-        9VpXI93K0t2Dt6yZMIAllbmGRtzlVmFtmW1N7oovWyGeUPZX8NgAK6mf8B1U
-        T3kabA6QuWQb2Kqdh7e87xshStIoouPr7yWYUO/jvVVsTS6sugbjqj7G8zbK
-        rkHXre1uRCjM310OdgqT5HWLLfJrwU2jJuTVKRpUgO68GWzOwPCVdLdwBjcg
-        VIPVZZacFEpUaNxqgUZH7RDbsnz97k+OepCWW45BYSqdbfeDjx/uv+77ucEW
-        xJE5MgRTtCDVVGLOpkvZNY6LHLMQ7G6wf9KMy4qXLqQP/oT6Vw9XD0dJ72K8
-        ekBVo5WFctwyfc+BNnmpWokzN4/pAsWag6x2wiBGmeDGDf0gihJ/ckgEly2Q
-        00YTGhEaLGN/Gfg7IvATDLZmNzhC3MIeN4yw7rbMVV0bQMGPNE19BLY49flf
-        Sro7/42VvOYluUQZ+e7dBfmWvGKSVex7xFyBykE6BtjndAMaHUaCvt1hnE6Q
-        YEJMrlxxXSuVSlrNC2wsLMUxIDe51UwawVC9k2Ixay4gL1h5vdKI7GojnIFH
-        X9LzyPHYF2z4hq3guA+YP0WK2Kx62uhMkDqw1ze73yCbFatpgyE/D5s7UDOA
-        mw7d8P8Mb/H5Ueb/IJUDUzwr9Od+it/Ez2bzhEZVFKZJSOOABiFLFzRKizCk
-        BU3KRZ1LpTdMTD82MI7qX2T6P5xeMIkUMkr62YN7azx5YLlsFoRxGM3jaBGN
-        QAWX17vmCU/D0+hspDW4/gqm80LpCo/e2p3HZy+T+At2+CD2Vuc/nx2c5Vbr
-        Tut3n5EWx+RRV+3uvYKatcLmg/FT8iOvnmK4m7UDCe6MTy0YmxtwQznopLJu
-        2jteN4P0oZvz7TopFdaBSyQesxUhVZaw1+9HeSvTYG8B7JYA/EM2XzOztmzV
-        0eTkK6Q+vB88w+nVtMEV8/b3c/mIxw9Ue+5epJMgSJC9+12Zb1xwXfoYxdEC
-        PHiv2S/NN53cUeMgd8s2oOmc+vPAH63bnewggjiZJBSXx/Fxv2xffo6fHfw8
-        DhM/8YMR+lZ0AB7QcBKEw3ZyS8DtgD27DnczkjTKGF7g+wR2hsFbutk208Pf
-        AAAA//8DAOAs0OB8CgAA
+      encoding: UTF-8
+      string: '{"created_at":"Wed Mar 30 16:41:28 +0000 2011","id":53134759622217728,"id_str":"53134759622217728","text":"SublimeVideo
+        is now commercially available. We use it on @methodandcraft and absolutely
+        love it!\n\nhttp:\/\/t.co\/iqfdo81\n\n\/cc @jilion","source":"\u003ca href=\"http:\/\/itunes.apple.com\/us\/app\/twitter\/id409789998?mt=12\"
+        rel=\"nofollow\"\u003eTwitter for Mac\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":5478442,"id_str":"5478442","name":"Noah
+        Stokes","screen_name":"motherfuton","location":"I live where you vacation.","description":"Partner
+        @bold. Designer\/Developer. Co-Founder of one boy, angel investor in two others.","url":"http:\/\/t.co\/V64HhrU6CC","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/V64HhrU6CC","expanded_url":"http:\/\/esbueno.noahstokes.com","display_url":"esbueno.noahstokes.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":7136,"friends_count":148,"listed_count":480,"created_at":"Tue
+        Apr 24 21:50:10 +0000 2007","favourites_count":204,"utc_offset":-28800,"time_zone":"Pacific
+        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":17348,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"2B2F48","profile_background_image_url":"http:\/\/a0.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/si0.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/3060860870\/6724d43873251213a89248b332b27c9f_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/3060860870\/6724d43873251213a89248b332b27c9f_normal.jpeg","profile_banner_url":"https:\/\/si0.twimg.com\/profile_banners\/5478442\/1353465494","profile_link_color":"3A3A4D","profile_sidebar_border_color":"F5DB75","profile_sidebar_fill_color":"FFED94","profile_text_color":"000000","profile_use_background_image":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":8,"entities":{"hashtags":[],"urls":[{"url":"http:\/\/t.co\/iqfdo81","expanded_url":"http:\/\/d.pr\/NQFn","display_url":"d.pr\/NQFn","indices":[98,117]}],"user_mentions":[{"screen_name":"methodandcraft","name":"Method
+        & Craft","id":128620610,"id_str":"128620610","indices":[57,72]},{"screen_name":"Jilion","name":"Jilion","id":65370701,"id_str":"65370701","indices":[123,130]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}'
     http_version: 
-  recorded_at: Wed, 09 Jan 2013 16:00:07 GMT
+  recorded_at: Tue, 09 Apr 2013 09:35:18 GMT
 recorded_with: VCR 2.4.0

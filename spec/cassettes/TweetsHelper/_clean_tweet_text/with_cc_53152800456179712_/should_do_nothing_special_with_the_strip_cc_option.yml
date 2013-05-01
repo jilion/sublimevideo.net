@@ -10,103 +10,69 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - Twitter Ruby Gem 4.4.3
+      - Twitter Ruby Gem 4.5.0
       Authorization:
-      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="6331891f5ae06ede4a51a20d67bc9e69",
-        oauth_signature="kfjK%2B2nHw7PlD4rcTeMYMhtM%2B0M%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1357747207", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
+      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="bc3ce797191b7f36e99aa1330623fdff",
+        oauth_signature="ceGJjAOocKmVjWSYnbbVnwc4Kro%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365500117", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "WC1BY2Nlc3MtTGV2ZWw=":
-      - !binary |-
-        cmVhZC13cml0ZQ==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDowOCBHTVQ=
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        VHVlLCAzMSBNYXIgMTk4MSAwNTowMDowMCBHTVQ=
-      !binary "UHJhZ21h":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByZS1jaGVj
-        az0wLCBwb3N0LWNoZWNrPTA=
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        Z3Vlc3RfaWQ9djElM0ExMzU3NzQ3MjA4MzQwMzkzMzE7IEV4cGlyZXM9RnJp
-        LCA5LUphbi0yMDE1IDE2OjAwOjA4IEdNVDsgUGF0aD0vOyBEb21haW49LnR3
-        aXR0ZXIuY29t
-      - !binary |-
-        bGFuZz1lbg==
-      !binary "WC1UcmFuc2FjdGlvbg==":
-      - !binary |-
-        MzAyZmY3Y2M0OTM1NTFiMA==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDowOCBHTVQ=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTA0MA==
-      !binary "WC1SYXRlLUxpbWl0LUxpbWl0":
-      - !binary |-
-        MTgw
-      !binary "WC1SYXRlLUxpbWl0LVJlbWFpbmluZw==":
-      - !binary |-
-        MTY5
-      !binary "WC1SYXRlLUxpbWl0LVJlc2V0":
-      - !binary |-
-        MTM1Nzc0Nzg2Mg==
-      !binary "U2VydmVy":
-      - !binary |-
-        dGZl
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '1072'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Apr 2013 09:35:17 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Apr 2013 09:35:17 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - guest_id=v1%3A136550011746514163; Domain=.twitter.com; Path=/; Expires=Thu,
+        09-Apr-2015 09:35:17 UTC
+      - lang=en
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '174'
+      X-Rate-Limit-Reset:
+      - '1365501014'
+      X-Transaction:
+      - d69ba819ad436991
+      X-Xss-Protection:
+      - 1; mode=block
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAALRWbW/bNhD+K5y+5MMMm5ItyzIwoNmWAU0RdFgHFOgcCJR0
-        sjjTpEZSVpPA/31HvcVOYrTAMH0x+NzdQ967n7xMA7OQJ8x6a+8z5OSOaTKn
-        xI/W4XxNY/IjxY8E1Pe9icdzD2E/DFaULsKlH8WRHzg4MVYjwSsZ2lj46rjf
-        k4ZJS6wiKRDBd0De3XLBlSRNCZK8J1utGlJXU/JnCVyTA89BkUqwB9CkVMZy
-        uSUG9IFnaK/UzhC2Z4+ITsmHOlfmB7KZkSwj7x5BqgwvNqrWGeDVm5rSecZI
-        qaH4aeOV1lbrzWwza5pmClmpCiWnmdoj5BENAlUkYkKoZtPZwk2n1RFtZqxD
-        nXO6lpkLoLcumDCAsZCJhko8JFZhUJitTeKiJmshLgi72L1WqNHbC7a96JKl
-        wayCTCTbwyB2Ft76qc1gtPLjeXiatx5Bhzob7zrXnEnyQZk9yx6hMTvuInrK
-        67GdkyIsFIYAM4nY74JJsOSGaVuiJAc04VUv/KQK2zANJIcDCFWBnhCrGZeY
-        YSZzkmJWSaO5BT0l17UtlSaqIFd3KuUCyC07sE8tHbmuKsG7S8mvHdkepL0i
-        VZ0Kbkqs4/SBfLz6A7gQD4RLcltLcFUcTPFZtRb4nLEOdideTvH5qIFk3HIw
-        LmStdvuDx7+evsf6a4X+YFe1qkN+cqxcx0Anwfz+eH98EZ7xhvsjiiqtLGSn
-        hdVVJGiTZKqW2FL+chEjrDnIfAQDihiGwPX0oBeuJud9fqdcQETb5/P1YrWm
-        /tjnNEIHCnbA5sFEjLyRv8C42SxRRWHQyfV8SSnWP99D8qikq4efQUu03YJK
-        QLJUuLdjf+DTD6B5wU986Wr/mT1YBPMlvpvJLRKBo8mUtJqntVXo8cg3NJlJ
-        sHCkEQzFI4oxK7BQkpRlO5wmtXQhEE7B+639vDd1+J5tIXmRVUantuH7bTcY
-        WhWzmdkS9uNvvJml2+mWF9+gTRyp6clNy274f6a3eH7l+Xe4cqaKdwURjcNl
-        OI+jzSwMQohpEMSUxVEahsuY5ZmfFnG4SiGOg0QqvWdi+ncFW++NW7/t6f9w
-        u+ByN+aZtt+J1OAaSZlOUqVznJmDnr/yr/2bN/TwIC5Xjdtll+/Cin5VAGOK
-        cihYLWzSK1/CX1h1Tc9dW5whOOv/qcHYxIDrn14mlcU+6+ai6dFj25HDFMoU
-        xoFLHAVmgHDFZvAsf+66AdNgGwA79Co9n44lM6Vl23ZwTcYR1i2cxA3l7i04
-        N8+3R7f8nzfOeHYbCisiohH1T1bUAHmno9RfTYIQJ+lL8uEvQH/8gkfyi+a4
-        KATvr4j8kC7P/rz0yPkFdDHxfdqNazcV3VB8nkN9aEbk+C8AAAD//wMAE+3L
-        7VEJAAA=
+      encoding: UTF-8
+      string: '{"created_at":"Wed Mar 30 17:53:09 +0000 2011","id":53152800456179712,"id_str":"53152800456179712","text":"I
+        want to be like @Jilion when I grow up. Their video player hosting service
+        looks amazing. Kudos! \/ cc @zenoc","source":"\u003ca href=\"http:\/\/www.echofon.com\/\"
+        rel=\"nofollow\"\u003eEchofon\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":7819352,"id_str":"7819352","name":"the
+        akosma","screen_name":"akosma","location":"","description":"Software developer,
+        teacher and author of: \u201fMobile JavaScript Application Development\u201d
+        and \u201fSencha Touch 2 Up and Running\u201d. My next book is \u201fAndroid
+        Testing.\u201d","url":"http:\/\/t.co\/7Ey9H1HyEw","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/7Ey9H1HyEw","expanded_url":"http:\/\/akos.ma\/st2ur","display_url":"akos.ma\/st2ur","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1703,"friends_count":227,"listed_count":158,"created_at":"Mon
+        Jul 30 13:48:01 +0000 2007","favourites_count":757,"utc_offset":3600,"time_zone":"Bern","geo_enabled":true,"verified":false,"statuses_count":25412,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"FFFFFF","profile_background_image_url":"http:\/\/a0.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_image_url_https":"https:\/\/si0.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_link_color":"000000","profile_sidebar_border_color":"181A1E","profile_sidebar_fill_color":"FFFFFF","profile_text_color":"000000","profile_use_background_image":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":3,"entities":{"hashtags":[],"urls":[],"user_mentions":[{"screen_name":"Jilion","name":"Jilion","id":65370701,"id_str":"65370701","indices":[18,25]},{"screen_name":"zenoc","name":"Zeno
+        Crivelli","id":7150612,"id_str":"7150612","indices":[104,110]}]},"favorited":false,"retweeted":false,"lang":"en"}'
     http_version: 
-  recorded_at: Wed, 09 Jan 2013 16:00:09 GMT
+  recorded_at: Tue, 09 Apr 2013 09:35:17 GMT
 recorded_with: VCR 2.4.0

@@ -19,9 +19,6 @@ class News
       categories.include?('sublimevideo') && categories.exclude?('sublimevideo-showcase')
     }
     entries.first(count).map { |entry| News.new(entry) }
-    # news[0...count].inject([]) do |news, entry|
-    #   news << News.new(entry)
-    # end
   end
 
 end

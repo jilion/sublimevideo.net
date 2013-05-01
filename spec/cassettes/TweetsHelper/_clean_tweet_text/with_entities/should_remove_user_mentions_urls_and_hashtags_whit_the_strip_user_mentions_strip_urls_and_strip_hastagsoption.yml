@@ -10,108 +10,69 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - Twitter Ruby Gem 4.4.3
+      - Twitter Ruby Gem 4.5.0
       Authorization:
-      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="9297eaaa0f741ce1a38ca3b2f6f5a861",
-        oauth_signature="95jeeql%2BOpCbWDtjVbHY0W%2BclZA%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1357747211", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
+      - OAuth oauth_consumer_key="KTWk4ZrufEHjncLCsNwhw", oauth_nonce="ed03330be4177f3c3c82823890b16d09",
+        oauth_signature="7RMGUiyoSoJrqiSEqfxUzv5%2BhO0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1365500116", oauth_token="6797462-Sz009rpFmcLGIBANAyJRsKoUlHtf2Rl5YuufnZeiI",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "WC1BY2Nlc3MtTGV2ZWw=":
-      - !binary |-
-        cmVhZC13cml0ZQ==
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04
-      !binary "TGFzdC1Nb2RpZmllZA==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDoxMiBHTVQ=
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        VHVlLCAzMSBNYXIgMTk4MSAwNTowMDowMCBHTVQ=
-      !binary "UHJhZ21h":
-      - !binary |-
-        bm8tY2FjaGU=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGUsIHByZS1jaGVj
-        az0wLCBwb3N0LWNoZWNrPTA=
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        Z3Vlc3RfaWQ9djElM0ExMzU3NzQ3MjEyODA3ODMyNzY7IEV4cGlyZXM9RnJp
-        LCA5LUphbi0yMDE1IDE2OjAwOjEyIEdNVDsgUGF0aD0vOyBEb21haW49LnR3
-        aXR0ZXIuY29t
-      - !binary |-
-        bGFuZz1lbg==
-      !binary "WC1UcmFuc2FjdGlvbg==":
-      - !binary |-
-        Yjk3YTlkZjM4NTQxZDJkNg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "RGF0ZQ==":
-      - !binary |-
-        V2VkLCAwOSBKYW4gMjAxMyAxNjowMDoxMiBHTVQ=
-      !binary "Q29udGVudC1FbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-      !binary "Q29udGVudC1MZW5ndGg=":
-      - !binary |-
-        MTI2OA==
-      !binary "WC1SYXRlLUxpbWl0LUxpbWl0":
-      - !binary |-
-        MTgw
-      !binary "WC1SYXRlLUxpbWl0LVJlbWFpbmluZw==":
-      - !binary |-
-        MTY1
-      !binary "WC1SYXRlLUxpbWl0LVJlc2V0":
-      - !binary |-
-        MTM1Nzc0Nzg2Mg==
-      !binary "U2VydmVy":
-      - !binary |-
-        dGZl
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '1287'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Apr 2013 09:35:16 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Apr 2013 09:35:16 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - guest_id=v1%3A136550011697884717; Domain=.twitter.com; Path=/; Expires=Thu,
+        09-Apr-2015 09:35:16 UTC
+      - lang=en
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '175'
+      X-Rate-Limit-Reset:
+      - '1365501014'
+      X-Transaction:
+      - 6f128c2ce9d50be8
+      X-Xss-Protection:
+      - 1; mode=block
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAALxWbW/bNhD+K4QGDBum2nq1JAMDGrQrVqBFi6VFP1SBQEln
-        hy1NqiQVxw3833eUZFlKmnXdh7kfGt0r+dzdc7xzKgXUQF1Q46ydD1CT1/RA
-        ghUJvHUYr/2A/ObhDz99z3EdVjtrP0rSVRJnQeZZQaGNQteJFO0M3Np4fwJv
-        yJ6Za2KugUjGiW4Y56TVTGzJU9o0FXBQ1EhFfjLMUMHaHaGi7uzpHrTcAXnK
-        hFGsBkreYIS/oJHKgCIXb1+SBbk2plnny3xZMrPgh3xZP2vh1Ts8g5atqgBP
-        kbeeF1aUXCvY/J47o8d+v1+YPYCpofq8qOQud4gCjiZCbiTncp/3vvDOWj1H
-        qz5UvqS93N5UtaKyCDrrDeUaEBJRKGj4oTASsaGm1YWFTbScP6LsIXxo0GpQ
-        j/gOqsc8NZYVRCHoDk5q6+Gs7/oSxmkWBkk8rd8gwiv1Xo7+0lJEjFZYHQvn
-        NOR9JZeIAZMCNW8UxwJKl7x4hYoa0I81g+4DEBSwrehqXMMNcNlgnamqsU2E
-        sF2BxcaOqAy7AQK3DSgGogJNNtgjeyhdspMl4+ASLStGeRdpJxUsMFurOGYZ
-        Czw9pK0vWoDANmOgLRKddfcffn68+zfetw2mw2npTE+w16yyAT96bhBeHa+O
-        9249Zrg6oqpR0kA17Ze+1UDpopKtwLEJwxVK7b3rUZb4CDLTdlIHSZC68+F9
-        LQW5aLfET4m/WuP8xuk4vF6Kp9/QGxwJZuAcFSEzVSE3Gw34+cRP0Rx7mu2g
-        +CqFLfQfFJMqQd6hjPzy/pL8TJ5RQWv6K0bcgixA0JLb6+Ak4G1usGAbNrle
-        3+WTnDYDtsgWg4PAIJW04122CLM+RzsNky6MokJzyxGjFEHcYA8UJa0+bxXG
-        tahwa+B4zz0vsBT0DRu2o1so7pWZekgCbLftCGD5mJfOl0kQJV4cZUG+XEWb
-        MqFRXUVVucq8OC7DMIQ4rMNsswqjbPGpge13zlDYE+jhJLrvOPb/nsXg9wNM
-        fwCk02n81SqIsixJUrzDhsutDAoh1Y5yTD7N/R8u/8M5SioEcuP5At/B1lrb
-        +AP/4V9hHAV+EsTTLuJMfB577MXFReRnE63G7VRSVZRS1Zh77MXu9w07/ODn
-        aN1vYmWX56iNX9h/Ey3O0oOOOA1fjXTVclMMtmNt78lPTjMCYnYiZxJcJ19a
-        0KbQYAd30AlpcMB7uteD9NhRgaU6c2gsa7yVSOPdbCMiTCBJWQIM0sUqzmLP
-        d5+k/iLMwswPLV3OrL4T4+zpjuFsjIZTu+z7/eZA5KEmyVY19aM0yWa7oW8I
-        2jDbEAbZrW8Jf+HnS7xGvmR1vrwfYfFJS8tWXZ5iOGLFzOG8MC+4oTskMyCX
-        jUI4teVc3BHFY/phR3bEqA5Y8tqavb88y+ynQMauyaXpAHCd0pYdvbHZbmdo
-        8cNWigd4fewQi6IwDpIOsTBLo+zK7YGMwlWW/pM4w2dOPIgnQXrxlQWemp69
-        u9odj3M+Py1JBd1Da9xw80V8TfW1odt+Cw9Px9Nr0Jlu2ChyY7ti3XGl9u+a
-        YmfDdf2IEeYvlekjc1KrudQ2TYYMgxecvIkGyewIoedGtmnvpzm9Uc8pXg4S
-        l5CXolqMr+cojuMonT2de9EsT+K5Sda/Juzetmv7vBUHOEfJ8W8AAAD//wMA
-        zg8KVcgLAAA=
+      encoding: UTF-8
+      string: '{"created_at":"Wed May 26 20:35:12 +0000 2010","id":14786759290,"id_str":"14786759290","text":"Help
+        with the oil spill using @appcelerator #titanium and the awesome @intridea
+        Oil Reporter API . http:\/\/bit.ly\/dCueLT","source":"\u003ca href=\"http:\/\/www.tweetdeck.com\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":15893275,"id_str":"15893275","name":"squarefactor","screen_name":"squarefactor","location":"Orlando,
+        FL","description":"We design and develop award winning interactive experiences
+        for web, mobile, social and more.","url":"http:\/\/squarefactor.com","entities":{"url":{"urls":[{"url":"http:\/\/squarefactor.com","expanded_url":null,"indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":338,"friends_count":65,"listed_count":28,"created_at":"Mon
+        Aug 18 16:20:58 +0000 2008","favourites_count":7,"utc_offset":-18000,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":703,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"0D0020","profile_background_image_url":"http:\/\/a0.twimg.com\/profile_background_images\/724705492\/64fb7a4dc4cb69055b333e53d39f6349.jpeg","profile_background_image_url_https":"https:\/\/si0.twimg.com\/profile_background_images\/724705492\/64fb7a4dc4cb69055b333e53d39f6349.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1662499778\/sflogo2_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1662499778\/sflogo2_normal.jpg","profile_banner_url":"https:\/\/si0.twimg.com\/profile_banners\/15893275\/1354217250","profile_link_color":"FAA419","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"FFFFFF","profile_text_color":"5F5F5F","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":{"type":"Point","coordinates":[28.659501,-81.393913]},"coordinates":{"type":"Point","coordinates":[-81.393913,28.659501]},"place":{"id":"e40595796da14879","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/e40595796da14879.json","place_type":"city","name":"Altamonte
+        Springs","full_name":"Altamonte Springs, FL","country_code":"US","country":"United
+        States","polylines":[],"bounding_box":{"type":"Polygon","coordinates":[[[-81.443527,28.639849],[-81.343698,28.639849],[-81.343698,28.690035],[-81.443527,28.690035]]]},"attributes":{}},"contributors":null,"retweet_count":3,"favorite_count":0,"entities":{"hashtags":[{"text":"titanium","indices":[44,53]}],"urls":[],"user_mentions":[{"screen_name":"appcelerator","name":"Appcelerator","id":9662352,"id_str":"9662352","indices":[30,43]},{"screen_name":"intridea","name":"Intridea,  Inc.","id":14455548,"id_str":"14455548","indices":[70,79]}]},"favorited":false,"retweeted":false,"lang":"en"}'
     http_version: 
-  recorded_at: Wed, 09 Jan 2013 16:00:12 GMT
+  recorded_at: Tue, 09 Apr 2013 09:35:17 GMT
 recorded_with: VCR 2.4.0

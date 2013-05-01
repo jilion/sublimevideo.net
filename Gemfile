@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com account
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '3.2.12' # until 3.2.14 is out!
 gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
@@ -26,7 +26,7 @@ gem 'kaminari'
 # Internals
 gem 'sidekiq'
 gem 'autoscaler'
-gem 'airbrake'
+gem 'honeybadger'
 gem 'twitter'
 gem 'zendesk_api'
 gem 'ratom', require: 'atom'
@@ -35,11 +35,12 @@ gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
 gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
-gem 'json'
+gem 'oj'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
 gem 'countries', github: 'hexorx/countries' # until 0.9.2 is out!
+gem 'rack-status'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -55,7 +56,7 @@ group :production do
 end
 
 group :staging, :production do
-  gem 'thin'
+  gem 'unicorn'
   gem 'dalli'
   gem 'rack-cache'
   gem 'rack-no-www'
@@ -64,22 +65,22 @@ group :staging, :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails', github: 'rspec/rspec-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
   gem 'rack-livereload'
-  gem 'rack-nocache'
   gem 'quiet_assets'
   gem 'ffaker'
 end
 
 group :test do
-  gem 'rspec',              github: 'rspec/rspec'
-  gem 'rspec-core',         github: 'rspec/rspec-core'
-  gem 'rspec-expectations', github: 'rspec/rspec-expectations'
-  gem 'rspec-mocks',        github: 'rspec/rspec-mocks'
-  gem 'shoulda-matchers',   github: 'thoughtbot/shoulda-matchers'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
-  gem 'poltergeist', github: 'brutuscat/poltergeist'
+  gem 'poltergeist'
 
   gem 'vcr'
   gem 'webmock'
@@ -93,7 +94,6 @@ group :tools do
   # Guard
   gem 'ruby_gntp'
   gem 'rb-fsevent'
-  gem 'rb-readline'
 
   gem 'guard-pow'
   gem 'guard-livereload'

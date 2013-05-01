@@ -6,52 +6,41 @@
   %p.sub= "The SublimeVideo Horizon Framework opens the door to tailor-made video players that allow all features and pixel perfect rendering on any platform!"
 
 .main_copy
-  %p= raw "#{content_tag :strong, "Web agencies and IT companies"}: Let's team-up to deliver your customers with all the advantages #{link_to "SublimeVideo Horizon has to offer", page_path('horizon-framework')}."
-  %p= raw "#{content_tag :strong, "Web publishers"}: Bring your audience both an unseen brand experience and custom interactions that suit your business requirements."
+  %p
+    = succeed ':' do
+      = content_tag :strong, 'Web agencies and IT companies'
+    Let's team-up to deliver your customers with all the advantages
+    = succeed '.' do
+      = link_to "SublimeVideo Horizon has to offer", page_path('horizon-framework')
+  %p
+    = succeed ':' do
+      = content_tag :strong, 'Web publishers'
+    Bring your audience both an unseen brand experience and custom interactions that suit your business requirements.
 
-  .need_a_tailor
-    = link_to new_tailor_made_player_request_path, class: "button" do
-      = "Need a tailor-made player?"
-      %strong= "Contact us"
+  = render 'shared/need_a_tailor_button'
   .big_break
 
-  %h3.title= "Tailor-Made Players Showcases"
+  %h3.title Tailor-Made Players Showcases
 
-  = render "showcases"
+  %p See examples of what's possible today.
+  = render 'showcases'
 
-  %h3.title= "Partnership Program"
+  %h3.title Branded Video Player Design
 
-  = image_tag "tailor_made/partner_certificate_icon.jpg", alt: "SublimeVideo Partnership Program", class: "partnership"
-  %p= raw "Our objective is to build a network of Integration Partners to deliver tailor-made video players based on SublimeVideo Horizon technology. We welcome web agencies and IT firms around the world to join our partnership program. Please #{link_to "contact us", new_tailor_made_player_request_path} if you are interested in becoming such an Integration Partner."
+  %p
+    Web publishers can increase the consistency and immersivity of their user experience with a branded player. Our team will collaborate with their web agency to design custom players which will embody their brand identity, colors, logo, fonts, layout, etc. This design will be implemented with our unique HTML5 SublimeVideo Horizon technology ensuring that the design will work seamlessly across browsers and devices, and carry the web publisher's identity in all embeds.
+    = succeed '.' do
+      = link_to 'Contact us to share your requests and ideas', new_tailor_made_player_request_path
 
-  .big_break
+  %h3.title Custom Modules
 
-  %h3.title= "Branded Video Player Design"
+  %p
+    A Tailor-made based on completely new add-ons or "exotic" features is probably not immediately possible, unless you come to us with convincing arguments so we accept to derive from our planned roadmap. The good news is that we are working on a solution.
 
-  %p= raw "Web publishers can increase the consistency and immersivity of their user experience with a branded player. Our team will collaborate with their web agency to design custom players which will embody their brand identity, colors, logo, fonts, layout, etc. This design will be implemented with our unique HTML5 SublimeVideo Horizon technology ensuring that the design will work seamlessly across browsers and devices, and carry the web publisher's identity in all embeds. #{link_to "Contact us to share your requests and ideas", new_tailor_made_player_request_path}."
-
-  %h3.title= "Custom Modules"
-
-  %p= raw "Web publishers may require a number of interactive extension modules to thoroughly engage their users. Upon request, we can implement custom modules to complement your branded player with additional interactive functions. Examples include specific social sharing functions, personalized information, e-commerce features and more. #{link_to "Contact us to share your requests and ideas", new_tailor_made_player_request_path}."
-
-  %section.modules
-    .wrap
-      %ul
-        %li.box
-          = image_tag "tailor_made/modules/sketch_1.jpg", alt: "SublimeVideo Custom Module #1"
-          %em.caption= "Buy Song Button (iTunes, Amazon, etc)"
-        %li.box
-          = image_tag "tailor_made/modules/sketch_2.jpg", alt: "SublimeVideo Custom Module #2"
-          %em.caption= "360° Car Viewer"
-        %li.box
-          = image_tag "tailor_made/modules/sketch_3.jpg", alt: "SublimeVideo Custom Module #3"
-          %em.caption= "Live Stock Information and Buy Button"
-    %button.previous.arrow
-      %span= "previous"
-    %button.next.arrow
-      %span= "next"
-  .spacer
-  .need_a_tailor
-    = link_to new_tailor_made_player_request_path, class: "button" do
-      = "Need a tailor-made player?"
-      %strong= "Contact us"
+  %p
+    Implementing your Tailor-Made Player(s) ourselves is a temporary solution we propose today. Our goal is to
+    = succeed ',' do
+      = link_to 'bring this capability to any designer or developer', page_path('horizon-framework', anchor: 'opening-horizon-to-developers')
+    in a convenient and scalable way as soon as possible. You will be notified of our progress in that domain in due time.
+    = succeed '.' do
+      = link_to 'Contact us to share your requests and ideas', new_tailor_made_player_request_path

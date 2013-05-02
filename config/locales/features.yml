@@ -7,11 +7,56 @@ en:
 
     player_designs:
       title: 3 sleek player designs to choose from
-      subtitle: Get the player design that fits best your website
+      subtitle: Get the player design that fits best your website.
       description: "Along with the Classic SublimeVideo player design, you can now select two additional player designs, Light and Flat, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, check what we can do for you."
 
+    retina:
+      title: Beautiful Retina® and pixel-perfect rendering
+      subtitle: Thanks to our vector-based graphics library.
+      description: "Because SublimeVideo Players are drawn with our vector-based graphics library, part of the SublimeVideo Horizon Framework, the rendering of every control and UI element is resolution independent and delivers a pixel-perfect rendering which is incredibly crisp on Retina® displays."
+
+    responsive:
+      title: Responsive design support
+      subtitle: "No coding required, it will automatically adapt to your responsive site."
+      description: "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting one single autoresize parameter."
+
+    lightbox:
+      title: Integrated lightbox
+      subtitle: Thanks to our vector-based graphics library.
+      description: "Quickly and easily give your audience another great way to view your videos with SublimeVideo's integrated lightbox. The new lightbox works great over a liquid layout and a responsive design. You can also use it to display images to offer a more consistent UI."
+
+    keyboard:
+      title: Keyboard control
+      subtitle: Improve the accessibility in your site.
+      description: "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility."
+
+    player_api:
+      title: Advanced Player API
+      subtitle: Easily implement custom and advanced functionality.
+      description: "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project."
+
+    browsers_and_devices:
+      title: Play video on any browser or device
+      subtitle: Reaching your audience on any platform is paramount.
+      description: "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+
+    hd:
+      title: A simple way to deliver HD to your audience
+      subtitle: Improve your user's viewwing experience.
+      description: "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI."
+
+    seamless_integration:
+      title: Highly compatible with any web page
+      subtitle: "No need to change something, add SublimeVideo and free your mind."
+      description: "We've designed SublimeVideo to be highly compatible with your site's existing code, CSS in particular, which means that you don't need to recode a thing to insert our Player in any of your pages."
+
+    library_independent:
+      title: JS library independent
+      subtitle: "No need to change anything, add SublimeVideo into any pages and free your mind."
+      description: "SublimeVideo is not using any third-party JavaScript library and is designed to run safely alongside other JavaScript libraries present on your page and never creates conflicts."
+
     # Add-ons
-    
+
     google_analytics:
       title: Google Analytics integration
       subtitle: Get advanced stats for all your videos with Google Analytics.

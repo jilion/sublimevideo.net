@@ -37,7 +37,7 @@ en:
         name: "Your name"
         email: "Email address"
         url: "Website URL"
-        topic_agency: "I am an agency and I would like to join the partner program to design and sell tailor-made players to my customers."
+        topic_agency: "I am an agency and I would like to design and sell tailor-made players to my customers."
         topic_standalone: "I need a custom player for my site. Here's the name of my main agency:"
         topic_platform: "I am a CMS, OVP or other platform and I would like to integrate SublimeVideo Player Technology in my platform."
         topic_other: "Other, please specify:"

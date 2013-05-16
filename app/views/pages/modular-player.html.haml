@@ -30,12 +30,14 @@
     %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
     .spacer
 
-  %section.tablets.f.left
-    .i_wrap= image_tag "features/tablets_icon.jpg", alt: "Design and features working even on tablets", size: "311x252"
+  %a#google_analytics
+  %section.google_analytics.f.left
+    .i_wrap= image_tag "features/google_analytics_icon.jpg", alt: "Google Analytics", size: "440x371"
     %h3.title
-      = "Design and features working even on tablets"
+      = "Google Analytics integration"
+      %span.addon= "Add-on"
       %span.new= "New"
-    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
+    %p= raw "Get advanced stats for all your videos like plays, completes or even sharing clicks and quality switches. All of this directly in your existing Google Analytics account without having to add a single line of code to your website. #{link_to "Learn more", docs_url('addons/google-analytics')}."
     .spacer
 
   %a#player_designs
@@ -99,8 +101,8 @@
     .spacer
 
   %a#cuezones
-  %section.cue_zones.f.right
-    .i_wrap= image_tag "features/cue_zones.jpg", alt: "Cue zones", size: "364x287"
+  %section.cuezones.f.right
+    .i_wrap= image_tag "features/cuezones_icon.jpg", alt: "Cue zones", size: "364x287"
     %h3.title
       = "Cue zones: more powerful cue points"
       %span.addon= "Add-on"
@@ -126,9 +128,9 @@
     %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
     .spacer
 
-  %a#player_api
-  %section.player_api.f.left
-    .i_wrap= image_tag "features/player_api_icon.jpg", alt: "Advanced Player API", size: "403x361"
+  %a#api
+  %section.api.f.left
+    .i_wrap= image_tag "features/api_icon.jpg", alt: "Advanced Player API", size: "403x361"
     %h3.title
       = "Advanced Player API"
       %span.new= "New"
@@ -139,6 +141,14 @@
     .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device", size: "361x256"
     %h3.title= "Play video on any browser or device"
     %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+    .spacer
+
+  %section.tablets.f.left
+    .i_wrap= image_tag "features/tablets_icon.jpg", alt: "Design and features working even on tablets", size: "311x252"
+    %h3.title
+      = "Design and features working even on tablets"
+      %span.new= "New"
+    %p= raw "Thanks to SublimeVideo Horizon, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
     .spacer
 
   %section#playlist.playlist.f
@@ -215,7 +225,7 @@
     .spacer
 
   %a#stats
-  %section.real_time_stats.f
+  %section.stats.f
     .left
       %a.sublime.watch{ href: '#video_stats' }
         = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video", size: "196x111"

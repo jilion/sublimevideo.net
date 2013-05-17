@@ -1,5 +1,5 @@
 class PrivateApi::TailorMadePlayerRequestsController < SublimeVideoPrivateApiController
-  has_scope :by_topic, :by_date, :with_topic, :created_before
+  has_scope :per, :by_topic, :by_date, :with_topic, :created_before
   before_filter :find_tailor_made_player_request, only: [:show, :destroy]
 
   def index

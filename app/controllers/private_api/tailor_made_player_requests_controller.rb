@@ -3,8 +3,7 @@ class PrivateApi::TailorMadePlayerRequestsController < SublimeVideoPrivateApiCon
   before_filter :find_tailor_made_player_request, only: [:show, :destroy]
 
   def index
-    @tailor_made_player_requests = apply_scopes(TailorMadePlayerRequest.scoped)
-    @tailor_made_player_requests = @tailor_made_player_requests.page(params[:page])
+    @tailor_made_player_requests = apply_scopes(TailorMadePlayerRequest.page(params[:page]))
 
     respond_with(@tailor_made_player_requests)
   end

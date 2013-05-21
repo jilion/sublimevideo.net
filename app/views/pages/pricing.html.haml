@@ -123,6 +123,9 @@
     %td.name
       %h4
         = "No SublimeVideo logo on video"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/logo?p=disabled'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -131,6 +134,9 @@
     %td.name
       %h4
         = "Your logo"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/logo?p=custom'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$19"
@@ -144,6 +150,9 @@
     %td.name
       %h4
         = "Cue Zones API"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/cuezones?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -157,7 +166,10 @@
     %td.name
       %h4
         = "Social sharing"
-        %small= "(Twitter, Facebook, Google+, Pinterest)"
+        %small
+          = "(Twitter, Facebook, Google+, Pinterest)"
+          –
+          = link_to 'Subscribe', my_url('addons/social_sharing?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -177,6 +189,9 @@
     %td.name
       %h4
         = "Auto embed"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/embed?p=auto'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -190,6 +205,9 @@
     %td.name
       %h4
         = "Real-time statistics"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/stats?p=realtime'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -203,6 +221,9 @@
     %td.name
       %h4
         = "Google Analytics integration"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/google_analytics?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -224,7 +245,10 @@
     %td.name
       %h4
         = "VIP email support"
-        %small= "(Guaranteed response time of 1 business day)"
+        %small
+          = "(Guaranteed response time of 1 business day)"
+          –
+          = link_to 'Subscribe', my_url('addons/support?p=vip'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$99"
@@ -235,6 +259,8 @@
         = "Enterprise email support"
         %small
           = "(Guaranteed response time of 1 hour and 7/7 availability)"
+          –
+          = link_to 'Subscribe', my_url('addons/support?p=enterprise'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$499"

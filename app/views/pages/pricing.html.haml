@@ -230,6 +230,16 @@
         = "$99"
         %sup><= ".90"
   %tr
+    %td.name
+      %h4
+        = "Enterprise email support"
+        %small
+          = "(Guaranteed response time of 1 hour and 7/7 availability)"
+    %td.price
+      %strong
+        = "$499"
+        %sup><= ".90"
+  %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'upcoming_features') do
         = "More Add-ons"
@@ -263,18 +273,34 @@
         = "for a few seconds after video playback begins."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option. #{link_to "Read more", docs_url('site-settings')}."
+      %p
+        Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option.
+        = succeed '.' do
+          = link_to 'Read more', docs_url('site-settings')
   .col_right
     .box
       %h4= "Advanced domain settings"
-      %p= raw "We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('site-settings')}."
+      %p
+        We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain.
+        = succeed '.' do
+          = link_to 'Read more', docs_url('site-settings')
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
     .box#support
       %h4= "Support"
       %p
-        = raw "All users have access to our extensive #{link_to "documentation", page_path('help', anchor: 'documentation')} and #{link_to "community forum", page_path('help', anchor: 'community_forum')}."
-        = raw "Dedicated email support is offered to all customers with at least a paid add-on. If you need extra support and enhanced reactivity, we also offer a #{link_to 'VIP support add-on', page_path('modular-player', anchor: 'support'), class: 'hl'} with a guaranteed response within the next business day."
-        = raw "#{link_to "Read  more on our help page", page_path('help')}."
+        All users have access to our extensive
+        = link_to 'documentation', page_path('help', anchor: 'documentation')
+        and
+        = succeed '.' do
+          = link_to 'community forum', page_path('help', anchor: 'community_forum')
+        Dedicated email support is offered to all customers with at least a paid add-on.
+        If you need extra support and enhanced reactivity, we also offer a
+        = link_to 'VIP support add-on', docs_url('addons/support#vip-email-support'), class: 'hl'
+        with a guaranteed response within the next business day, and an
+        = link_to 'Enterprise support add-on', docs_url('addons/support#enterprise-email-support'), class: 'hl'
+        with 1h response time during business hours and 7/7 availability.
+        = succeed '.' do
+          = link_to 'Read  more', docs_url('addons/support')
   .spacer

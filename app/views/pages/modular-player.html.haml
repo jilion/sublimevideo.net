@@ -257,7 +257,18 @@
     %h3.title
       = "Technical support"
       %span.addon= "Add-on"
-    %p= raw "Our video player comes with a comprehensive documentation and a community forum. Dedicated email support is offered to all customers with at least a paid add-on. We also offer a VIP support add-on with a guaranteed response within the next business day."
+    %p
+      Our video player comes with a comprehensive
+      = link_to 'documentation', page_path('help', anchor: 'documentation')
+      and
+      = succeed '.' do
+        = link_to 'community forum', page_path('help', anchor: 'community_forum')
+      Dedicated email support is offered to all customers with at least a paid add-on.
+      We also offer a
+      = link_to 'VIP support add-on', docs_url('addons/support#vip-email-support'), class: 'hl'
+      with a guaranteed response within the next business day, and an
+      = link_to 'Enterprise support add-on', docs_url('addons/support#enterprise-email-support'), class: 'hl'
+      with 1h response time during business hours and 7/7 availability.
     .spacer
 
 .big_break

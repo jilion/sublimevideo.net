@@ -30,6 +30,15 @@
     %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
     .spacer
 
+  %a#subtitles
+  %section.subtitles.f.left
+    .i_wrap= image_tag "features/subtitles_icon.jpg", alt: "Subtitles", size: "253x226"
+    %h3.title
+      = "Subtitles"
+      %span.new= "New"
+    %p= raw "Grow drastically your audience and improve the accessibility of your site by adding subtitles to your videos. SublimeVideo supports multi-language subtitles from all desktop browsers to the latest mobile platforms. #{link_to "Learn more", docs_url('subtitles')}."
+    .spacer
+
   %a#google_analytics
   %section.google_analytics.f.left
     .i_wrap= image_tag "features/google_analytics_icon.jpg", alt: "Google Analytics", size: "440x371"

@@ -88,7 +88,7 @@ en:
     video_publishing_assistant:
       title: Video Publishing Assistant
       subtitle: "Easily generate properly configured <video> tags."
-      description: "Our Video Publishing Assistant lets you easily generate properly configured <video> tags, optimized for SublimeVideo. It is also the easiest way to quickly test the SublimeVideo Player with your own video sources."
+      description: "Our Video Publishing Assistant lets you easily generate properly configured &lt;video&gt; tags, optimized for SublimeVideo. It is also the easiest way to quickly test the SublimeVideo Player with your own video sources."
 
     # Add-ons
 
@@ -103,4 +103,26 @@ en:
       description: "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. Let us know which other social networks you would like to have and learn more on how to integrate it on your site."
 
     on_video_logo:
-      title:
+      title: On-video logo
+      subtitle: Increase your brand's visibility by displaying your logo on your videos.
+      description: "Customize your player and increase your brand's visibility by displaying your logo on your videos. Plus SublimeVideo let you define its placement on the frame and add a custom link when clicked."
+
+    cue_zones:
+      title: "Cue zones: more powerful cue points"
+      subtitle: Perform custom actions when the viewer enters or exits a certain zone in the video timeline.
+      description: "This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline. You could use it to synchronize slides alongside a video presentation, display side-advertising or create chapters in your video."
+
+    embed:
+      title: "Spread your videos with auto embeds"
+      subtitle: Get your audience to embed your videos without having to code anything.
+      description: "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. Subscribe to this add-on and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything! Learn more."
+
+    stats:
+      title: "Universal, Real-Time stats"
+      subtitle: "Get a real-time overview of your site's video traffic."
+      description: "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, HTML5 / Flash usage and more. Check out our live demo."
+
+    support:
+      title: "Technical support"
+      subtitle: "SublimeVideo comes with all support levels you might need."
+      description: "Our video player comes with a comprehensive documentation and a community forum. Dedicated email support is offered to all customers with at least a paid add-on. We also offer a VIP support add-on with a guaranteed response within the next business day."

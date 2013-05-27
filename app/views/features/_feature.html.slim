@@ -7,8 +7,9 @@ li
   a.feature-more More
   .feature-more-wrap
     p
-      = t("features.#{feature}.description")
+      = raw t("features.#{feature}.description")
       - if learn_more_url
         '
         = link_to 'Learn more', learn_more_url
         '.
+    = pricing

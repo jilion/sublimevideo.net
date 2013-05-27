@@ -1,0 +1,7 @@
+tr
+  td
+    input type="radio" id="#{CGI::escape(plan+parent_template)}" name=parent_template
+    label for="#{CGI::escape(plan+parent_template)}"
+      = plan
+  td
+    = display_amount_with_sup(price)

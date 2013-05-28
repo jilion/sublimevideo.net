@@ -123,6 +123,9 @@
     %td.name
       %h4
         = "No SublimeVideo logo on video"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/logo?p=disabled'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -132,6 +135,9 @@
     %td.name
       %h4
         = "Your logo"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/logo?p=custom'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$19"
@@ -146,6 +152,9 @@
     %td.name
       %h4
         = "Cue Zones API"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/cuezones?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -160,7 +169,10 @@
     %td.name
       %h4
         = "Social sharing"
-        %small= "(Twitter, Facebook, Google+, Pinterest)"
+        %small
+          = "(Twitter, Facebook, Google+, Pinterest)"
+          –
+          = link_to 'Subscribe', my_url('addons/social_sharing?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -181,6 +193,9 @@
     %td.name
       %h4
         = "Auto embed"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/embed?p=auto'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -195,6 +210,9 @@
     %td.name
       %h4
         = "Real-time statistics"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/stats?p=realtime'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$9"
@@ -209,6 +227,9 @@
     %td.name
       %h4
         = "Google Analytics integration"
+        %small
+          –
+          = link_to 'Subscribe', my_url('addons/google_analytics?p=standard'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$6"
@@ -231,12 +252,27 @@
     %td.name
       %h4
         = "VIP email support"
-        %small= "(Guaranteed response time of 1 business day)"
+        %small
+          = "(Guaranteed response time of 1 business day)"
+          –
+          = link_to 'Subscribe', my_url('addons/support?p=vip'), onclick: 'window.open(this); return false'
     %td.price
       %strong
         = "$99"
         %sup><= ".90"
         %small= '/mo'
+  %tr
+    %td.name
+      %h4
+        = "Enterprise email support"
+        %small
+          = "(Guaranteed response time of 1 hour and 7/7 availability)"
+          –
+          = link_to 'Subscribe', my_url('addons/support?p=enterprise'), onclick: 'window.open(this); return false'
+    %td.price
+      %strong
+        = "$499"
+        %sup><= ".90"
   %tr
     %th{ colspan: 2 }
       = link_to page_path('modular-player', anchor: 'upcoming_features') do
@@ -271,18 +307,34 @@
         = "for a few seconds after video playback begins."
     .box
       %h4= "What does 'per-site' mean?"
-      %p= raw "Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option. #{link_to "Read more", docs_url('site-settings')}."
+      %p
+        Add-ons are purchased per-site. Each license is associated with a given site domain. You can use the wildcard option to extend your SublimeVideo player license to any subdomains of your main domain. Also, if you have multiple domains showing or pointing to the same content as your main domain, you can share the same license across these via our Alias domains option.
+        = succeed '.' do
+          = link_to 'Read more', docs_url('site-settings')
   .col_right
     .box
       %h4= "Advanced domain settings"
-      %p= raw "We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain. #{link_to "Read more", docs_url('site-settings')}."
+      %p
+        We offer advanced domain settings, including the ability to specify staging domains and a wildcard option to extend your SublimeVideo license to subdomains of your main domain.
+        = succeed '.' do
+          = link_to 'Read more', docs_url('site-settings')
     .box
       %h4= "Can I add or remove add-ons at any time?"
       %p= "Absolutely! You can add or remove add-ons at any time. Any change is accounted for the next day, and changes happening in the middle of a month will be pro-rated so you only pay for the exact number of days you use a feature."
     .box#support
       %h4= "Support"
       %p
-        = raw "All users have access to our extensive #{link_to "documentation", page_path('help', anchor: 'documentation')} and #{link_to "community forum", page_path('help', anchor: 'community_forum')}."
-        = raw "Dedicated email support is offered to all customers with at least a paid add-on. If you need extra support and enhanced reactivity, we also offer a #{link_to 'VIP support add-on', page_path('modular-player', anchor: 'support'), class: 'hl'} with a guaranteed response within the next business day."
-        = raw "#{link_to "Read  more on our help page", page_path('help')}."
+        All users have access to our extensive
+        = link_to 'documentation', page_path('help', anchor: 'documentation')
+        and
+        = succeed '.' do
+          = link_to 'community forum', page_path('help', anchor: 'community_forum')
+        Dedicated email support is offered to all customers with at least a paid add-on.
+        If you need extra support and enhanced reactivity, we also offer a
+        = link_to 'VIP support add-on', docs_url('addons/support#vip-email-support'), class: 'hl'
+        with a guaranteed response within the next business day, and an
+        = link_to 'Enterprise support add-on', docs_url('addons/support#enterprise-email-support'), class: 'hl'
+        with a 1-hour response time during business hours and 7/7 availability.
+        = succeed '.' do
+          = link_to 'Read  more', docs_url('addons/support')
   .spacer

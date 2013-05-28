@@ -106,6 +106,11 @@ en:
       title: Social sharing
       subtitle: Make your videos spread around popular social networks.
       description: "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. Let us know which other social networks you would like to have and learn more on how to integrate it on your site."
+      my_name: social_sharing
+      plans:
+        standard:
+          label: "Social sharing (Twitter, Facebook, Google+, Pinterest)"
+          price: 690
 
     on_video_logo:
       title: On-video logo

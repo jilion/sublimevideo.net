@@ -1,0 +1,62 @@
+en:
+  add_on_categories:
+    google_analytics:
+      my_name: google_analytics
+      add_ons:
+        standard:
+          label: Google Analytics Integration
+          price: 690
+
+    social_sharing:
+      my_name: social_sharing
+      add_ons:
+        standard:
+          label: 'Social sharing (Twitter, Facebook, Google+, Pinterest)'
+          price: 690
+
+    on_video_logo:
+      my_name: logo
+      add_ons:
+        sublime:
+          label: SublimeVideo logo
+          price: 0
+        disabled:
+          label: No SublimeVideo logo
+          price: 990
+        custom:
+          label: Your logo
+          price: 1990
+
+    cue_zones:
+      my_name: cue_zones
+      add_ons:
+        standard:
+          label: Cue Zones API
+          price: 690
+
+    embed:
+      my_name: embed
+      add_ons:
+        manual:
+          label: Manual embed
+          price: 0
+        auto:
+          label: Auto embed
+          price: 990
+
+    stats:
+      my_name: stats
+      add_ons:
+        realtime:
+          label: Real-Time Statistics
+          price: 990
+
+    support:
+      my_name: support
+      add_ons:
+        standard:
+          label: 'Documentation, community forum & email support'
+          price: 0
+        vip:
+          label: VIP email support
+          price: 9990

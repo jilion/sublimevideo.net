@@ -1,2 +1,2 @@
-= render layout: "features/subscribe" do
-  = render "features/addon_radio", plan: "Google Analytics Integration", price: "690", parent_template: "ga"
+= render layout: "features/subscribe", locals: { action: my_url('addons/google_analytics') } do
+  = render "features/addon_radio", addon: 'google_analytics', plan: 'standard'

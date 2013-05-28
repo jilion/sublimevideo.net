@@ -96,6 +96,11 @@ en:
       title: Google Analytics integration
       subtitle: Get advanced stats for all your videos with Google Analytics.
       description: "Get advanced stats for all your videos like plays, completes or even sharing clicks and quality switches. All of this directly in your existing Google Analytics account without having to add a single line of code to your website."
+      my_name: google_analytics
+      plans:
+        standard:
+          label: Google Analytics Integration
+          price: 690
 
     social_sharing:
       title: Social sharing
@@ -106,6 +111,13 @@ en:
       title: On-video logo
       subtitle: Increase your brand's visibility by displaying your logo on your videos.
       description: "Customize your player and increase your brand's visibility by displaying your logo on your videos. Plus SublimeVideo let you define its placement on the frame and add a custom link when clicked."
+      my_name: logo
+      plans:
+        sublime:
+          label: SublimeVideo logo
+          price: 990
+        disabled:
+        custom:
 
     cue_zones:
       title: "Cue zones: more powerful cue points"

@@ -1,7 +1,8 @@
+- id = "#{addon}_#{plan}"
 tr
   td
-    input type="radio" id="#{CGI::escape(plan+parent_template)}" name=parent_template
-    label for="#{CGI::escape(plan+parent_template)}"
-      = plan
+    input type="radio" id=id name="p" value=plan
+    label for=id
+      = t("features.#{addon}.plans.#{plan}.label")
   td
-    = display_amount_with_sup(price)
+    = display_amount_with_sup(t("features.#{addon}.plans.#{plan}.price"))

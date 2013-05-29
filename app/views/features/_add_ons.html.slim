@@ -1,3 +1,5 @@
-= render layout: "features/subscribe", locals: { action: my_url("addons/#{t("add_on_categories.#{add_on_category}.my_name")}") } do
-  - add_ons.each do |add_on|
-    = render 'features/add_on_radio', add_on_category: add_on_category, add_on: add_on
+.feature-add-on
+  = render layout: "features/subscribe", locals: { action: my_url("addons/#{t("add_on_categories.#{add_on_category}.my_name")}") } do
+    - add_ons.each do |add_on|
+      = render 'features/add_on_radio', add_on_category: add_on_category, add_on: add_on
+    - reset_cycle("row_class")

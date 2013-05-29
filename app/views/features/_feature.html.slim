@@ -1,15 +1,27 @@
-li
-  h3= t("features.#{feature}.title")
-  p.l-small= t("features.#{feature}.subtitle")
-  - if demo
-    a.feature-demo Demo
-    '  |
-  a.feature-more More
-  .feature-more-wrap
-    p
-      = raw t("features.#{feature}.description")
-      - if learn_more_url
-        '
-        = link_to 'Learn more', learn_more_url
-        '.
-    = add_ons
+li.feature class="#{cycle("b-violet","b-crimson","b-orange","b-blue")}"
+  .feature-left
+    .feature-img.l-center
+      / = image_tag "features/#{feature}.svg", alt: feature, height: 56
+      = image_tag "features/check.svg", alt: feature, height: 56
+  .feature-right
+    .feature-top-box
+      .feature-box-actions
+        - if demo
+          a.feature-demo href=""
+            ' Demo
+            small.icon-uniF473
+        a.feature-more href=""
+          ' More
+          small.icon-uniF48B
+      h3= t("features.#{feature}.title")
+      p.l-normal.feature-summary= t("features.#{feature}.subtitle")
+    .feature-more-wrap style="display:none"
+      = add_ons
+      p.l-normal
+        = raw t("features.#{feature}.description")
+        - if learn_more_url
+          '
+          = link_to 'Learn more', learn_more_url
+          '.
+      .spacer
+  .spacer

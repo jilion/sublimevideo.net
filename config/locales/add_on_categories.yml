@@ -11,7 +11,7 @@ en:
       my_name: social_sharing
       add_ons:
         standard:
-          label: 'Social sharing (Twitter, Facebook, Google+, Pinterest)'
+          label: Social sharing
           price: 690
 
     on_video_logo:
@@ -55,7 +55,7 @@ en:
       my_name: support
       add_ons:
         standard:
-          label: 'Documentation, community forum & email support'
+          label: 'Docs, forum & email support'
           price: 0
         vip:
           label: VIP email support

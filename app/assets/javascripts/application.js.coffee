@@ -5,7 +5,7 @@
 #= require jquery.slidify
 #= require home
 #= require horizon_framework
-#= require modular_player
+#= require features
 #= require tailor_made_players
 #= require_self
 #= require google-analytics-turbolinks
@@ -26,10 +26,10 @@ if navigator.userAgent.match(/iPhone/i) or navigator.userAgent.match(/iPad/i)
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady()
-  SublimeVideo.modularPlayerReady() if $('body.features').exists()
+  SublimeVideo.featuresReady() if $('section.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
-  SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
+  # SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
 $(document).ready ->
   SublimeVideo.wwwDocumentReady()

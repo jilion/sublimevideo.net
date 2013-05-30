@@ -19,6 +19,14 @@
   %tr
     %td.name
       %h4
+        = "Subtitles"
+        = link_to page_path('modular-player', anchor: 'subtitles'), class: "arrow" do
+          %span.icon-arrow
+    %td.price
+      %strong= "Free"
+  %tr
+    %td.name
+      %h4
         = "HD switching"
         = link_to page_path('modular-player', anchor: 'hd'), class: "arrow" do
           %span.icon-arrow

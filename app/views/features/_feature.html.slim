@@ -1,8 +1,9 @@
-li.feature class="#{cycle("b-violet","b-crimson","b-orange","b-blue")}"
+li.feature class="#{cycle("b-violet","b-crimson","b-green","b-blue")}"
   .feature-left
     .feature-img.l-center
-      / = image_tag "features/#{feature}.svg", alt: feature, height: 56
-      = image_tag "features/check.svg", alt: feature, height: 56
+      = image_tag "features/#{feature}.png", alt: feature
+      / = image_tag "features/check.svg", alt: feature, height: 56
+      / = image_tag "features/stats@2x.png", alt: feature, height: 56
   .feature-right
     .feature-top-box
       .feature-box-actions

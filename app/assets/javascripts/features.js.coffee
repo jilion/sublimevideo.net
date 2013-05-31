@@ -7,18 +7,12 @@ SublimeVideo.moreLinks = ->
     event.preventDefault()
     a = $(this)
     a.parents().eq(2).find('.feature-more-wrap').toggle()
+    a.toggleClass('close')
+    if a.hasClass('close')
+      a.html('Close <small class="icon-uniF48A"></small>')
+    else
+      a.html('More <small class="icon-uniF48B"></small>')
 
-    # a.toggle(function() {
-    #   a.html('Close <small class="icon-uniF48A"></small>')
-    # }, function() {
-    #   a.html('More <small class="icon-uniF48B"></small>')
-    # });
-
-    # a.toggle((->
-    #   a.html('Close <small class="icon-uniF48A"></small>')
-    # ), (->
-    #   a.html('More <small class="icon-uniF48B"></small>')
-    # ))
 
 
 # SublimeVideo.setupDesignsDemo = ->

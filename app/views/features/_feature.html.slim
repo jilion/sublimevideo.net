@@ -1,28 +1,23 @@
-li.feature class="#{cycle("b-violet","b-crimson","b-green","b-blue")}"
+- cycle_classes = add_ons.blank? ? %w[b-blue b-blue-alt] : %w[b-violet b-violet-alt]
+li.feature class="#{cycle(*cycle_classes)}"
   .feature-left
     .feature-img.l-center
       = image_tag "features/#{feature}.png", alt: feature
       / = image_tag "features/check.svg", alt: feature, height: 56
       / = image_tag "features/stats@2x.png", alt: feature, height: 56
   .feature-right
-    .feature-top-box
-      .feature-box-actions
-        - if demo
-          a.feature-demo href=""
-            ' Demo
-            small.icon-uniF473
-        a.feature-more href=""
-          ' More
-          small.icon-uniF48B
-      h3= t("features.#{feature}.title")
-      p.l-normal.feature-summary= t("features.#{feature}.subtitle")
-    .feature-more-wrap style="display:none"
-      = add_ons
-      p.l-normal
-        = raw t("features.#{feature}.description")
-        - if learn_more_url
-          '
-          = link_to 'Learn more', learn_more_url
-          '.
-      .spacer
+    .feature-box-actions
+      - if demo
+        a.feature-demo href=""
+          ' Demo
+          small.icon-uniF473
+    h3= t("features.#{feature}.title")
+    = add_ons
+    p.l-normal.feature-description
+      = raw t("features.#{feature}.description")
+      - if learn_more_url
+        '
+        = link_to 'Learn more', learn_more_url
+        '.
+    .spacer
   .spacer

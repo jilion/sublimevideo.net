@@ -610,6 +610,8 @@ section.features {
 .feature-left {
 //  float:left;
   width:170px;
+  @include display-box;
+  @include box-align(center);
   @include border-left-radius(4px);
 }
 
@@ -627,8 +629,9 @@ section.features {
 
 .feature-img {
   width:170px;
-  height:170px;
-  line-height:164px;
+  @include box-flex(1);
+//  height:170px;
+//  line-height:164px;
 }
 
 .feature-img img {

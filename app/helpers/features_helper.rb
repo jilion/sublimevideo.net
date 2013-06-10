@@ -6,6 +6,11 @@ module FeaturesHelper
     render 'features/feature', options
   end
 
+  def feature_thumb(feature, opts = {})
+    options = { feature: feature, addon: false }.merge(opts)
+    render 'features/thumb', options
+  end
+
   def add_on(feature, opts = {})
     feature(feature, opts.merge(add_ons: render('features/add_ons', add_on_category: feature, add_ons: opts.delete(:add_ons))))
   end

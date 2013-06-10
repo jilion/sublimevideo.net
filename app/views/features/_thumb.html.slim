@@ -1,0 +1,5 @@
+li class="#{addon == true ? "addon":""}"
+  a href="##{feature}"
+    span.feature-thumb-img-wrap= image_tag "features/#{feature}.png", alt: feature, width: "56"
+    / h4= t("features.#{feature}.title")
+    h4= feature.titleize

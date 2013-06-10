@@ -20,4 +20,10 @@ describe PageConstraint do
     let(:request) { stub('request', params: { 'page' => '**' }) }
     it { expect(PagesConstraint.matches?(request)).to be_false }
   end
+
+  context "request with invalid param" do
+    let(:request) { stub('request') }
+    before { request.stub(:params).and_raise(ArgumentError) }
+    it { expect(PagesConstraint.matches?(request)).to be_false }
+  end
 end

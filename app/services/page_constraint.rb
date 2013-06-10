@@ -3,6 +3,8 @@ class PageConstraint
     param = request.params["page"]
     return unless param =~ /^[a-z-]+$/
     Dir.glob("app/views/#{_resources}/#{param}.html.haml").any?
+  rescue
+    false
   end
 
   private

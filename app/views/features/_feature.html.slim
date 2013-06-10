@@ -13,12 +13,13 @@ li.feature class="#{cycle(*cycle_classes)}"
           ' Demo
           small.icon-uniF473
     h3= t("features.#{feature}.title")
-    = add_ons
-    p.l-normal.feature-description
-      = raw t("features.#{feature}.description")
-      - if learn_more_url
-        '
-        = link_to 'Learn more', learn_more_url
-        '.
+    .feature-bottom
+      p.l-normal.feature-description
+        = raw t("features.#{feature}.description")
+        - if learn_more_url
+          '
+          = link_to 'Learn more', learn_more_url
+          '.
+      = add_ons
     .spacer
   .spacer

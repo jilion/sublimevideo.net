@@ -63,8 +63,8 @@ $b-violet:#a389d5;
   font-size:3em;
   font-weight:300;
   padding:0.4em 0 0.8em;
-  @media screen and (max-width:920px) {
-//    font-size:1em;
+  @media screen and (max-width:568px) {
+    font-size:2em;
   }
 }
 
@@ -606,6 +606,13 @@ section.features {
     margin-left:1%;
     margin-right:1%;
   }
+
+  @media screen and (max-width:568px) {
+    display:block;
+    width:auto;
+    margin-top:20px;
+    margin-bottom:0px;
+  }
 }
 
 .go-to-anchor li > a {
@@ -633,10 +640,20 @@ section.features {
   text-align:center;
   @include border-left-radius(4px);
   @include border-right-radius(4px);
+  @media screen and (max-width:568px) {
+    width:47%;
+    margin:0 6% 6% 0;
+  }
 }
 
 .features-thumbs li:nth-child(6n) {
   margin-right:0;
+}
+
+@media screen and (max-width:568px) {
+  .features-thumbs li:nth-child(2n) {
+    margin-right:0;
+  }
 }
 
 .features-thumbs li.empty-feature {
@@ -674,7 +691,9 @@ section.features {
   @include display-box;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
-//  @include box-shadow(rgba(0,0,0,0.1) 0 1px 2px);
+  @media screen and (max-width:568px) {
+    @include box-orient(vertical);
+  }
 }
 
 .feature.b-blue {background:transparentize($b-blue,0.7);color:darken($b-blue,10%);}
@@ -690,6 +709,12 @@ section.features {
   @include display-box;
   @include box-align(center);
   @include border-left-radius(4px);
+  @media screen and (max-width:568px) {
+    width:auto;
+    padding:2em 0;
+    @include border-top-radius(4px);
+    @include border-bottom-radius(0);
+  }
 }
 
 .feature.b-blue .feature-left,
@@ -707,8 +732,6 @@ section.features {
 .feature-img {
   width:170px;
   @include box-flex(1);
-//  height:170px;
-//  line-height:164px;
 }
 
 .feature-img img {
@@ -727,17 +750,26 @@ section.features {
   float:right;
   text-align:center;
   margin:1em 1em 0;
+  @media screen and (max-width:568px) {
+    float:none;
+    margin:0;
+    padding:1em 1em 0 0;
+  }
 }
 
 .feature-box-actions a {
-  width:86px;
+//  width:86px;
   display:block;
-  padding:4px 0 5px;
+  padding:4px 10px 5px;
   color:#fff;
   font-weight:500;
   text-shadow:rgba(0,0,0,0.2) 0 -1px 0;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
+  @media screen and (max-width:568px) {
+    font-size:1.2em;
+    padding:8px 0;
+  }
 }
 
 //.feature-box-actions a:first-child {
@@ -791,6 +823,9 @@ section.features {
     margin:10px 1em 30px 0;
     width:auto;
   }
+  @media screen and (max-width:568px) {
+    min-width:0;
+  }
 }
 
 .feature-add-on-plans {
@@ -830,9 +865,15 @@ section.features {
   @include border-left-radius(0);
 }
 
+.feature-add-on-plans tr td input[type=radio] {
+  position:relative;
+  top:-1px;
+}
+
 .feature-add-on-plans tr td label {
   margin-left:10px;
-  @include inline-block;
+  margin-top:5px;
+//  @include inline-block;
 }
 
 .feature-add-on-price {

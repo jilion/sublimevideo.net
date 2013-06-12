@@ -7,11 +7,11 @@ li.feature class="#{cycle(*cycle_classes)}"
       / = image_tag "features/check.svg", alt: feature, height: 56
       / = image_tag "features/stats@2x.png", alt: feature, height: 56
   .feature-right
-    .feature-box-actions
-      - if demo
-        a.feature-demo href=""
-          ' Demo
-          small.icon-uniF473
+    - if demo
+      .feature-box-actions
+          a.feature-demo href=""
+            ' Demo
+            small.icon-uniF473
     h3= t("features.#{feature}.title")
     .feature-bottom
       p.l-normal.feature-description

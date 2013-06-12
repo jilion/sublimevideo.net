@@ -47,6 +47,16 @@ $b-violet:#a389d5;
   color:#fff;
 }
 
+.light-blue {
+  background:transparentize($b-blue,0.6);
+  color:darken($b-blue,25%);
+}
+
+.light-violet {
+  background:transparentize($b-violet,0.5);
+  color:darken($b-violet,25%);
+}
+
 // Titles
 
 .section-title {
@@ -601,8 +611,7 @@ section.features {
 .go-to-anchor li > a {
   display:block;
   padding:14px 14px;
-  background:#98a5b9;
-  color:#fff;
+//  color:#fff;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
 }
@@ -622,13 +631,8 @@ section.features {
   margin:0 2% 2% 0;
   padding:10px 0 0;
   text-align:center;
-  background:transparentize($b-blue,0.6);
   @include border-left-radius(4px);
   @include border-right-radius(4px);
-}
-
-.features-thumbs li.addon {
-  background:transparentize($b-violet,0.5);
 }
 
 .features-thumbs li:nth-child(6n) {

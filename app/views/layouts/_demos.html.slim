@@ -1,0 +1,12 @@
+.demo-wrapper
+  .demo-sidebar.light-blue
+    ul.l-stacked
+      - %w[youtube playlists lightbox social_sharing subtitles cue_zones player_api on_video_logo embed].each do |feature|
+        li
+          h4.demo-menu-title = t("features.#{feature}.short_title")
+          ul.l-stacked
+            - Demos.for(feature).each do |demo|
+              li
+                a href=demo_path(feature, demo) class=demo_active_class(feature, demo) = demo.titleize
+
+  .demo-content= yield

@@ -1,4 +1,5 @@
 class PagesConstraint < PageConstraint; end
+class DemosConstraint < PageConstraint; end
 class PressReleasesConstraint < PageConstraint; end
 
 SublimeVideo::Application.routes.draw do
@@ -16,6 +17,7 @@ SublimeVideo::Application.routes.draw do
   get 'plans' => redirect('/pricing')
   get 'customer-showcase' => redirect('/testimonials')
   get 'horizon-video' => redirect('/#horizon-video')
+  get 'demo' => redirect('/demos'), as: :demo_redirect
 
   # Docs routes
   %w[javascript-api releases].each do |path|
@@ -36,6 +38,8 @@ SublimeVideo::Application.routes.draw do
   %w[sony twit blackhandcinema next15 html5].each do |showcase|
     get "/tailor-made-players/#{showcase}" => redirect { |params, req| "/tailor-made-players##{showcase}" }
   end
+
+  get '/demos/:feature/:demo' => 'demos#show', as: :demo, constraints: DemosConstraint, format: false
 
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleasesConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit

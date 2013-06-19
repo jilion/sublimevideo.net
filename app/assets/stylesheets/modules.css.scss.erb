@@ -92,6 +92,7 @@ $b-violet:#a389d5;
 }
 
 .main-nav li a {
+  display:block;
   padding:0 8px 2px;
   font-size:1.3em;
   @media screen and (max-width:568px) {
@@ -156,7 +157,13 @@ $b-violet:#a389d5;
   @include box-shadow(0 1px 4px 0 rgba(0,0,0,0.3));
 }
 
+.l-mini .main-nav .l-stacked {
+  padding-top:32px;
+  left:-10px;
+}
+
 .main-nav .l-stacked > li {
+  display:block;
   margin:0 16px 8px;
 }
 

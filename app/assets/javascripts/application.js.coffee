@@ -6,7 +6,7 @@
 #= require home
 #= require horizon_framework
 #= require features
-#= require tailor_made_players
+#= require demos
 #= require_self
 #= require google-analytics-turbolinks
 #= require turbolinks
@@ -28,7 +28,7 @@ SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.homeReady()
   SublimeVideo.featuresReady() if $('section.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
-  SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
+  SublimeVideo.demosReady() if $('.demo-wrapper').exists()
   # SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
 $(document).ready ->

@@ -10,6 +10,10 @@ header {
   padding:27px 30px 25px;
 }
 
+header.l-mini {
+  padding:12px 10px 8px;
+}
+
 .l-dark {
   background:$darkblue;
   color:#505b78;
@@ -31,10 +35,15 @@ header {
 
 .l-site-logo {
   float:left;
+  line-height:0;
   @media screen and (max-width: 900px) {
     float:none;
     text-align:center;
   }
+}
+
+.l-mini .l-site-logo img {
+  width:190px;
 }
 
 .l-inline {

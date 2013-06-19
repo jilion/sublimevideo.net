@@ -171,6 +171,7 @@ GEM
     hike (1.2.2)
     honeybadger (1.6.2)
       json
+    htmlentities (4.3.1)
     http_parser.rb (0.5.3)
     i18n (0.6.4)
     inflection (1.0.0)
@@ -391,6 +392,7 @@ DEPENDENCIES
   haml-contrib
   has_scope
   honeybadger
+  htmlentities
   kaminari
   launchy
   librato-rails!

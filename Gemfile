@@ -19,6 +19,7 @@ gem 'bourbon'
 gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
+gem 'htmlentities'
 
 # Controllers
 gem 'has_scope'

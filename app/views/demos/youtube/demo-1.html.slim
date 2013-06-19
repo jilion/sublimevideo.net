@@ -1,5 +1,28 @@
 - @page_title = 'YouTube demo #1!'
 
+style
+  = "ul.demo_source_switch a.active { background:white; }"
+
 = render layout: 'layouts/demos' do
   h2 YouTube demo #1!
   p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  ul.demo_source_switch
+    li
+      a.active href='' Demo
+    li
+      a href='' Source
+
+  #demo= render_demo 'html'
+  /= self.inspect
+
+  #demo_source style='display:none'
+    h3 HTML
+    pre
+      code= render_demo_source 'html'
+
+    h3 JavaScript
+    pre
+      code= render_demo_source 'js'
+
+  script= render_demo 'js'

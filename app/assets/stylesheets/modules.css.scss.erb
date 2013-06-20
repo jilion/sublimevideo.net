@@ -69,6 +69,33 @@ $b-violet:#a389d5;
 }
 
 
+// Header
+
+.site-logo {
+  float:left;
+  line-height:0.4;
+  @media screen and (max-width: 900px) {
+    float:none;
+    text-align:center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .l-mini .site-logo img {
+    width:190px;
+  }
+}
+
+.site-logo-label {
+  float:right;
+  font-weight:200;
+  font-style:italic;
+  line-height:30px;
+  margin-left:8px;
+//  @include inline-block;
+}
+
+
 // Main navigation
 
 .main-nav {
@@ -955,7 +982,47 @@ section.features {
   @include box-shadow(inset rgba(255,255,255,0.13) 0 1px 0);
 }
 
-.demo-content {
+.demo-container {
   @include box-flex(1);
-  padding:0 2em;
+  padding:0;
+}
+
+.demo-header {
+  background:#fff;
+  padding:0.7em 0;
+  border-bottom:1px solid rgba(0,0,0,0.15);
+}
+
+.demo-title {
+  font-size:1.2em;
+  float:left;
+  padding:0 0.8em;
+}
+
+.demo-actions-menu {
+  float:right;
+}
+
+.demo-actions-menu li {
+  float:left;
+  padding:0 0.6em 0 0;
+}
+
+.demo-actions-menu li a {
+  font-size:0.9em;
+  font-weight:400;
+  background:transparentize(lighten($darkblue, 50%),0.75);
+  padding:0.12em 0.7em 0.2em;
+  @include inline-block;
+  @include border-left-radius(20px);
+  @include border-right-radius(20px);
+}
+
+.demo-actions-menu li a.active {
+  background:#1f3044;
+  color:#fff;
+}
+
+.demo-content {
+  padding:2em;
 }

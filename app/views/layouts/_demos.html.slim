@@ -9,4 +9,15 @@
               li
                 a href=demo_path(feature, demo) class=demo_active_class(feature, demo) = demo.titleize
 
-  .demo-content= yield
+  .demo-container
+    .demo-header
+      h3.demo-title= @page_title
+      ul.demo-actions-menu
+        li
+          a#show_demo.demo-action-button.active href='' Demo
+        li
+          a#show_source.demo-action-button href='' Source
+        li
+          a#show_doc href='#' Documentation
+      .spacer
+    .demo-content= yield

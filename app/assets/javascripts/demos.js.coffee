@@ -1,9 +1,14 @@
 SublimeVideo.demosReady = ->
   SublimeVideo.demoSourceSwitch()
+  SublimeVideo.hightlightCode()
 
 SublimeVideo.demoSourceSwitch = ->
-  $('ul.demo_source_switch a').on 'click', (event) ->
-    event.preventDefault()
+  $demoActionButtons = $('a.demo-action-button')
+  $demoActionButtons.on 'click', (e) ->
+    e.preventDefault()
     $('#demo').toggle()
     $('#demo_source').toggle()
-    $('ul.demo_source_switch a').toggleClass('active')
+    $demoActionButtons.toggleClass('active')
+
+SublimeVideo.hightlightCode = ->
+  Prism.highlightAll()

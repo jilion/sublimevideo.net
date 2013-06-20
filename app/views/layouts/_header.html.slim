@@ -1,7 +1,9 @@
 header.l-dark class=@header_class
-  h1.l-site-logo
+  h1.site-logo
     = link_to "/" do
       = image_tag "global/sublimevideo.svg", alt:"SublimeVideo", width:"260"
+      - if @header_class == 'l-mini'
+        span.site-logo-label Demo
   nav.l-inline.main-nav
     ul
       li

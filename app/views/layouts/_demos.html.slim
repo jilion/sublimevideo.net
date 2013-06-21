@@ -1,5 +1,5 @@
 .demo-wrapper
-  .demo-sidebar
+  .demo-sidebar.l-scrollable
     ul.l-stacked
       - %w[youtube playlists lightbox social_sharing subtitles cue_zones player_api on_video_logo embed].each do |feature|
         li
@@ -9,8 +9,9 @@
               li
                 a href=demo_path(feature, demo) class=demo_active_class(feature, demo) = demo.titleize
 
-  .demo-container
+  .demo-container#demo-container
     .demo-header
+      a.icon-list href=""
       h3.demo-title= @page_title
       ul.demo-actions-menu
         li
@@ -18,6 +19,8 @@
         li
           a#show_source.demo-action-button href='' Source
         li
-          a#show_doc href='#' Documentation
+          a#show_doc href='#'
+            ' Documentation
+            small.icon-uniF473
       .spacer
     .demo-content= yield

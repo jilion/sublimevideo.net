@@ -9,6 +9,7 @@
 #= require demos
 #= require_self
 #= require prism-line-highlight
+#= require snap.min
 #= require google-analytics-turbolinks
 #= require turbolinks
 

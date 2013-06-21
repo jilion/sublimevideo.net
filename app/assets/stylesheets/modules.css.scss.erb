@@ -10,7 +10,6 @@ $b-violet:#a389d5;
 // Buttons
 
 .btn {
-  display:inline-block;
   padding:0.6em 1em;
   background:#4088cb;
   color:#fff;
@@ -20,6 +19,7 @@ $b-violet:#a389d5;
   font-size:1em;
   font-weight:normal;
   cursor:pointer;
+  @include inline-block;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
   @include border-left-radius(4px);
@@ -92,7 +92,9 @@ $b-violet:#a389d5;
   font-style:italic;
   line-height:30px;
   margin-left:8px;
-//  @include inline-block;
+  @media screen and (max-width: 900px) {
+    display:none;
+  }
 }
 
 
@@ -939,15 +941,22 @@ section.features {
 // Demo
 
 .demo-wrapper {
+  position:relative;
   @include display-box;
 }
 
 .demo-sidebar {
-  @include box-flex(1);
-//  width:25%;
-  min-width:200px;
+//  @include box-flex(1);
+  min-width:220px;
   background:#BBCCE2;
-//  border-right:1px solid rgba(0,0,0,0.15);
+  @media screen and (max-width: 900px) {
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    @include box-shadow(inset -6px 0 10px rgba(0,0,0,0.2))
+  }
 }
 
 .demo-sidebar ul ul li {
@@ -985,18 +994,38 @@ section.features {
 .demo-container {
   @include box-flex(1);
   padding:0;
+  background-color:#eef2f6;
+  position:relative;
+  z-index:1;
 }
 
 .demo-header {
   background:#fff;
-  padding:0.7em 0;
+  height:50px;
+//  padding:0.7em 0;
   border-bottom:1px solid rgba(0,0,0,0.15);
+}
+
+.demo-header .icon-list {
+  @include inline-block;
+  float:left;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  font-size:1.2em;
+  color:$darkblue;
+  border-right:1px solid transparentize(#1f3044, 0.8);
+  margin-left:0;
+  @media screen and (min-width: 900px) {
+    display:none;
+  }
 }
 
 .demo-title {
   font-size:1.2em;
   float:left;
-  padding:0 0.8em;
+  padding:0.4em 0.8em;
 }
 
 .demo-actions-menu {
@@ -1005,10 +1034,10 @@ section.features {
 
 .demo-actions-menu li {
   float:left;
-  padding:0 0.6em 0 0;
+  padding:0.65em 0.6em 0 0;
 }
 
-.demo-actions-menu li a {
+.demo-actions-menu li a.demo-action-button {
   font-size:0.9em;
   font-weight:400;
   background:transparentize(lighten($darkblue, 50%),0.75);

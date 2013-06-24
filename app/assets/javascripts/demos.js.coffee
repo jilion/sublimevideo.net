@@ -24,6 +24,9 @@ SublimeVideo.sidebarMenu = ->
     touchToDrag: false
 
   snapper.disable()
+  $(window).resize ->
+    snapper.close()
+
   # if Modernizr.mq("screen and (min-width:900px)")
   #   snapper.disable()
   #

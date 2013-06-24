@@ -22,7 +22,7 @@ header.l-dark class=@header_class
           li
             a href="" Support
       li
-        a.btn.orange href="" Sign Up
+        = link_to 'Sign Up', my_url('signup'), class: "btn orange"
       li
-        a href="" Login
+        = link_to 'Login', my_url('login')
   .spacer

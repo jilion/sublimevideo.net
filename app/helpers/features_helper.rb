@@ -12,7 +12,7 @@ module FeaturesHelper
   end
 
   def add_on(feature, opts = {})
-    feature(feature, opts.merge(add_ons: render('features/add_ons', add_on_category: feature, add_ons: opts.delete(:add_ons))))
+    feature(feature, opts.merge(add_ons: render('features/add_ons', add_on: feature, plans: opts.delete(:plans))))
   end
 
   def display_amount_with_sup(amount_in_cents)

@@ -49,7 +49,7 @@ section.features.l-full-width-wrap
   h3.l-center.section-title Core Features
 
   ul.l-stacked.features-list
-    = feature('youtube', learn_more_url: page_path('youtube'))
+    = feature('youtube')
     = feature('player_designs')
     = feature('responsive')
     = feature('lightbox')
@@ -57,10 +57,9 @@ section.features.l-full-width-wrap
     = feature('keyboard')
     = feature('player_api')
     = feature('browsers_and_devices')
-    = feature('hd', learn_more_url: docs_url('hd-switching'))
+    = feature('hd')
     = feature('retina', demo: false)
     = feature('seamless_integration', demo: false)
-    / = feature('library_independent', demo: false)
     = feature('instant_setup', demo: false)
     = feature('up_to_date', demo: false)
     = feature('fast_and_reliable', demo: false)
@@ -72,13 +71,13 @@ section.features.l-full-width-wrap
   h3.l-center.section-title Add-ons
 
   ul.l-stacked.features-list
-    = add_on('google_analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'), add_ons: %w[standard])
-    = add_on('social_sharing', learn_more_url: docs_url('addons/social-sharing'), add_ons: %w[standard])
-    = add_on('on_video_logo', learn_more_url: docs_url('addons/on-video-logo'), add_ons: %w[disabled custom])
-    = add_on('cue_zones', learn_more_url: docs_url('addons/cue-zones'), add_ons: %w[standard])
-    = add_on('embed', learn_more_url: docs_url('addons/cue-zones'), add_ons: %w[auto])
-    = add_on('stats', add_ons: %w[realtime])
-    = add_on('support', demo: false, add_ons: %w[vip])
+    = add_on('google_analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'), plans: %w[standard])
+    = add_on('social_sharing', learn_more_url: docs_url('addons/social-sharing'), plans: %w[standard])
+    = add_on('on_video_logo', learn_more_url: docs_url('addons/on-video-logo'), plans: %w[disabled custom])
+    = add_on('cue_zones', learn_more_url: docs_url('addons/cue-zones'), plans: %w[standard])
+    = add_on('embed', learn_more_url: docs_url('addons/cue-zones'), plans: %w[auto])
+    = add_on('stats', plans: %w[realtime])
+    = add_on('support', demo: false, plans: %w[vip])
 
   = render "layouts/signup_banner"
 .l-height-margin

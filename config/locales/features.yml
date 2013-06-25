@@ -2,18 +2,21 @@ en:
   features:
     youtube:
       title: Seamless YouTube integration
-      short_title: YouTube
+      short_title: YouTube integration
       subtitle: SublimeVideo now fully integrates with YouTube.
-      description: "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform."
+      description: "SublimeVideo fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform."
+      docs_path: youtube
 
     player_designs:
       title: 3 sleek player designs to choose from
       short_title: Player Designs
       subtitle: Get the player design that fits best your website.
       description: 'Along with the Classic SublimeVideo player design, you can now select two additional player designs, Light and Flat, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, check what we can do for you.'
+      docs_path: 'settings/player-settings#player-kit'
 
     playlists:
-      short_title: Playlists
+      short_title: Playlists integration
+      docs_path: playlists
 
     retina:
       title: Beautiful Retina® and pixel-perfect rendering
@@ -26,41 +29,48 @@ en:
       short_title: Responsive
       subtitle: 'No coding required, it will automatically adapt to your responsive site.'
       description: 'SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting one single autoresize parameter.'
+      docs_path: responsive-layout
 
     lightbox:
       title: Integrated lightbox
       short_title: Lightbox
       subtitle: Thanks to our vector-based graphics library.
       description: "Quickly and easily give your audience another great way to view your videos with SublimeVideo's integrated lightbox. The new lightbox works great over a liquid layout and a responsive design. You can also use it to display images to offer a more consistent UI."
+      docs_path: lightbox
 
     subtitles:
       title: Subtitles
       short_title: Subtitles
       subtitle: Increase your videos' global reach and accessibility.
       description: "Increase your videos' global reach and provide a great experience to your hearing-impaired audience by adding subtitles to your videos. SublimeVideo supports multi-language subtitles on all desktop browsers and the latest mobile platforms."
+      docs_path: subtitles
 
     keyboard:
       title: Keyboard control
       short_title: Keyboard
       subtitle: Improve the accessibility in your site.
       description: "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility."
+      docs_path: keyboard
 
     player_api:
       title: Advanced Player API
       short_title: Player API
       subtitle: Easily implement custom and advanced functionality.
       description: 'Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project.'
+      docs_path: javascript-api
 
     browsers_and_devices:
       title: Play video on any browser or device
       subtitle: Reaching your audience on any platform is paramount.
       description: 'Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms.'
+      docs_path: supported-platforms
 
     hd:
       title: A simple way to deliver HD to your audience
       short_title: HD
       subtitle: Improve your user's viewwing experience.
       description: "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI."
+      docs_path: hd-switching
 
     seamless_integration:
       title: Highly compatible with any web page
@@ -96,11 +106,13 @@ en:
       title: WordPress plugin
       subtitle: Easily use SublimeVideo in your WordPress blog.
       description: 'Our plugin makes it easier than ever for you to use SublimeVideo in your WordPress blog. Once installed, just click on the SV button in the toolbar to start embedding your videos.'
+      docs_path: wordpress
 
     video_publishing_assistant:
       title: Video Publishing Assistant
       subtitle: Easily generate properly configured <video> tags.
       description: 'Our Video Publishing Assistant lets you easily generate properly configured &lt;video&gt; tags, optimized for SublimeVideo. It is also the easiest way to quickly test the SublimeVideo Player with your own video sources.'
+      docs_path: video-publishing-assistant
 
     # Add-ons
 
@@ -108,6 +120,7 @@ en:
       title: Google Analytics integration
       subtitle: Get advanced stats for all your videos with Google Analytics.
       description: 'Get advanced stats for all your videos like plays, completes or even sharing clicks and quality switches. All of this directly in your existing Google Analytics account without having to add a single line of code to your website.'
+      docs_path: addons/google-analytics
       my_name: google_analytics
       plans:
         standard:
@@ -119,10 +132,11 @@ en:
       short_title: Social sharing
       subtitle: Make your videos spread around popular social networks.
       description: 'Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. Let us know which other social networks you would like to have and learn more on how to integrate it on your site.'
+      docs_path: addons/sharing
       my_name: social_sharing
       plans:
         standard:
-          label: 'Social sharing (Twitter, Facebook, Google+, Pinterest)'
+          label: Social sharing
           price: 690
 
     on_video_logo:
@@ -130,32 +144,67 @@ en:
       short_title: On-video logo
       subtitle: Increase your brand's visibility by displaying your logo on your videos.
       description: "Customize your player and increase your brand's visibility by displaying your logo on your videos. Plus SublimeVideo let you define its placement on the frame and add a custom link when clicked."
+      docs_path: addons/on-video-logo
       my_name: logo
       plans:
         sublime:
           label: SublimeVideo logo
-          price: 990
+          price: 0
         disabled:
+          label: No SublimeVideo logo
+          price: 990
         custom:
+          label: Your logo
+          price: 1990
 
     cue_zones:
       title: 'Cue zones: more powerful cue points'
       short_title: Cue zones
       subtitle: Perform custom actions when the viewer enters or exits a certain zone in the video timeline.
       description: 'This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline. You could use it to synchronize slides alongside a video presentation, display side-advertising or create chapters in your video.'
+      docs_path: addons/cue-zones
+      my_name: cue_zones
+      plans:
+        standard:
+          label: Cue Zones API
+          price: 690
 
     embed:
       title: Spread your videos with auto embeds
       short_title: Embed
       subtitle: Get your audience to embed your videos without having to code anything.
       description: "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. Subscribe to this add-on and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything! Learn more."
+      docs_path: addons/embed
+      my_name: embed
+      plans:
+        manual:
+          label: Manual embed
+          price: 0
+        auto:
+          label: Auto embed
+          price: 990
 
     stats:
       title: 'Universal, Real-Time stats'
       subtitle: Get a real-time overview of your site's video traffic.
       description: "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, HTML5 / Flash usage and more. Check out our live demo."
+      docs_path: addons/stats
+      my_name: stats
+      plans:
+        realtime:
+          label: Real-Time Statistics
+          price: 990
 
     support:
       title: Technical support
       subtitle: SublimeVideo comes with all support levels you might need.
       description: 'Our video player comes with a comprehensive documentation and a community forum. Dedicated email support is offered to all customers with at least a paid add-on. We also offer a VIP support add-on with a guaranteed response within the next business day.'
+      docs_path: addons/support
+      my_name: support
+      plans:
+        standard:
+          label: 'Docs, forum & email support'
+          price: 0
+        vip:
+          label: VIP email support
+          price: 9990

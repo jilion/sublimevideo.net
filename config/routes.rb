@@ -18,7 +18,7 @@ SublimeVideo::Application.routes.draw do
   get 'customer-showcase' => redirect('/testimonials')
   get 'horizon-video' => redirect('/#horizon-video')
   get 'demo' => redirect('/demos'), as: :demo_redirect
-  get 'demos' => redirect('/demos/youtube/demo-1')
+  get 'demos' => redirect('/demos/youtube/classic-player')
 
   # Docs routes
   %w[javascript-api releases].each do |path|

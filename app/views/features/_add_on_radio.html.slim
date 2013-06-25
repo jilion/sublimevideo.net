@@ -1,8 +1,8 @@
-- id = "#{add_on_category}_#{add_on}"
+- id = "#{add_on}_#{plan}"
 tr class="#{cycle "", "alt", name: "row_class"}"
   td.feature-add-on-plan
-    input type="radio" id=id name="p" value=add_on
+    input type="radio" id=id name="p" value=plan
     label for=id
-      = t("add_on_categories.#{add_on_category}.add_ons.#{add_on}.label")
+      = t("features.#{add_on}.plans.#{plan}.label")
   td.feature-add-on-price
-    = display_amount_with_sup(t("add_on_categories.#{add_on_category}.add_ons.#{add_on}.price"))
+    = display_amount_with_sup(t("features.#{add_on}.plans.#{plan}.price"))

@@ -1,6 +1,6 @@
 class PageConstraint
   def self.matches?(request)
-    pattern = [Rails.root, 'app', 'views', resources, "#{request.env['PATH_INFO'].sub(resources, '')}.html.{haml,slim}"]
+    pattern = [Rails.root, 'app', 'views', resources, "#{request.path.sub(resources, '')}.html.{haml,slim}"]
               .join('/').squeeze('/')
 
     Dir[pattern].any?

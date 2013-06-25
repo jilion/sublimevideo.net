@@ -7,9 +7,10 @@ h2.headline
     / a href="" Sign Up Now
 section.demo-player.l-full-width-wrap
   section.demo-video-player
-    video.sublime#home_demo_player data-player-kit="10" data-name='SV.net Prototype Video Demo' data-uid='proto-demo-video' data-settings='autoresize:fit;' data-embed-url="http://google.com" data-embed-enable="false" data-sharing-enable="false" data-logo-enable="false" height='243' poster='http://cdn.sublimevideo.net/assets/demo/midnight_sun2_800-c6d73d0c7bcde93ad1f405b66f003ecc.jpg' preload='none' width='432' style="visibility:hidden"
+    video.sublime#home_demo_player data-player-kit="10" data-name='SV.net Prototype Video Demo' data-uid='proto-demo-video' data-settings='autoresize:fit;' data-embed-url="http://google.com" data-embed-enable="false" data-sharing-enable="false" data-logo-enable="false" data-subtitles-enable="false" height='243' poster='http://cdn.sublimevideo.net/assets/demo/midnight_sun2_800-c6d73d0c7bcde93ad1f405b66f003ecc.jpg' preload='none' width='432' style="visibility:hidden"
       source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4"
       source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm"
+      track src=asset_path('home-demo-en.vtt') srclang='en' default="true"
   section.demo-sidebar-1
     h3 Choose a design
     ul.l-grid.demo-choose-design
@@ -44,7 +45,7 @@ section.demo-player.l-full-width-wrap
     p.view-all-features.l-normal.l-no-padding
       'Try every features (28+) SublimeVideo comes with on our
       strong
-        a href=""
+        a href="/demos"
           em demo page
           small.icon-uniF473
   .spacer

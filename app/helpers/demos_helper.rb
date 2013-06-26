@@ -5,7 +5,7 @@ module DemosHelper
   end
 
   def demo_title(demo)
-    demo.sub(/\A(\d+-)?/, '').underscore.humanize
+    t("demos.#{demo.dasherize}", default: demo.sub(/\A(\d+-)?/, '').underscore.humanize)
   end
 
   def demo_active_class(feature, demo)

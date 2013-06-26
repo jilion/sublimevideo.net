@@ -1,0 +1,14 @@
+- @page_title = 'Background image and title update at every video sequence change'
+
+= render layout: 'layouts/demos' do
+  p The background image and title are updated at every video sequence change.
+
+  = inject_demo_css
+
+  = render_demo_html
+
+  = render_demo_sources 'html', 'js', 'css'
+
+  = render 'use_a_different_design_note'
+
+  = inject_demo_js

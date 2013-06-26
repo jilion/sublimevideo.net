@@ -1,5 +1,5 @@
 class PagesConstraint < PageConstraint; end
-class DemosConstraint < PageConstraint; end
+class DemosConstraint < DemoPageConstraint; end
 class PressReleasesConstraint < PageConstraint; end
 
 SublimeVideo::Application.routes.draw do
@@ -18,7 +18,7 @@ SublimeVideo::Application.routes.draw do
   get 'customer-showcase' => redirect('/testimonials')
   get 'horizon-video' => redirect('/#horizon-video')
   get 'demo' => redirect('/demos'), as: :demo_redirect
-  get 'demos' => redirect('/demos/youtube/classic-player')
+  get 'demos' => redirect('/demos/youtube/classic-design')
 
   # Docs routes
   %w[javascript-api releases].each do |path|
@@ -26,7 +26,7 @@ SublimeVideo::Application.routes.draw do
   end
 
   # Stats demo
-  %w[stats stats-demo].each do |path|
+  %w[stats stats-demo demos/stats].each do |path|
     get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/stats-demo" }
   end
 

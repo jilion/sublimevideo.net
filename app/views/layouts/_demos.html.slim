@@ -11,8 +11,9 @@
 
   .demo-container#demo-container
     .demo-header
-      a.icon-list href=""
-      h3.demo-title= @page_title
+      h3.demo-title
+        a.icon-list href=""
+        strong= @page_title
       .spacer-iphone
       ul.demo-actions-menu
         li
@@ -24,4 +25,6 @@
             ' Documentation
             small.icon-uniF473
       .spacer
-    .demo-content= yield
+    .demo-content
+      = yield
+      .spacer

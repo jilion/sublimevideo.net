@@ -27,21 +27,21 @@ SublimeVideo.setupHomeSublime = ->
     #           sublime('lightbox_horizon').close()
     #           SublimeVideo.UI.Utils.openAccountPopup('signup')
     #         if player.isFullscreen() then player.exitFullscreen(go) else go()
-    #   
+    #
     #
     # if document.location.hash == '#horizon-video'
     #   horizon_lightbox.open()
-    
-  if $("#customers-quotes-slideshow")    
+
+  if $("#customers-quotes-slideshow")
     $("#customers-quotes-slideshow > li:gt(0)").hide().addClass("blur")
 
-    setInterval -> 
+    setInterval ->
       $el = $('#customers-quotes-slideshow > li:first')
       $el.addClass("blur").fadeOut 800, ->
         $el.next().fadeIn(800).removeClass("blur")
         $el.appendTo('#customers-quotes-slideshow')
     , 9000
-    
+
 
 # SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
@@ -68,20 +68,23 @@ SublimeVideo.fadeInHackForChrome = ($div) ->
     $div.css('left', '49px')
     setTimeout((-> $div.css('left', '50px')), 10)
 
-  
+
 class SublimeVideo.HomeDemo
   constructor: (player) ->
     @player = $(player)
     @features = $('ul.demo-video-actions')
     @kitSelector = $('ul.demo-choose-design')
     @setupObservers()
-    
+
   setupObservers: ->
     @features.find('li a').each (index, element) =>
-      @manageTogglerBtn(element, 'feature')
+      if $(element).data('feature') == 'lightbox'
+        @setupLightbox(element)
+      else
+        @manageTogglerBtn(element, 'feature')
     @kitSelector.find('li a').each (index, element) =>
       @manageTogglerBtn(element, 'kit')
-  
+
   manageTogglerBtn: (element, attribute) ->
     btn = $(element)
     autoplay = true
@@ -92,30 +95,32 @@ class SublimeVideo.HomeDemo
       event.preventDefault()
       @setupAttribute btn.data(attribute), autoplay
       btn.parent().toggleClass('active')
-    
+
   setupAttribute: (value, autoplay) ->
     @unprepareVideo()
+    @updatePlayersValues(@player, value)
+    @updatePlayersValues(@lightboxPlayer, value)
+    @prepareAndPlayVideo(autoplay)
+
+  updatePlayersValues: (player, value) ->
     switch value
       when 9, 10, 11
-        @player.attr('data-player-kit',value)
+        player.attr('data-player-kit',value)
       when "youtube"
-        if @player.attr('data-youtube-id')?
-          @player.removeAttr('data-youtube-id')
+        if player.attr('data-youtube-id')?
+          player.removeAttr('data-youtube-id')
         else
-          @player.attr('data-youtube-id','rAq2rNEru8A')
-      when "cue_zones"
-        # console.log "Cue Zones"
+          player.attr('data-youtube-id','rAq2rNEru8A')
       else
         attribute_data = 'data-'+value+'-enable'
-        if @player.attr(attribute_data ) is "true"
-          @player.attr(attribute_data , "false")
+        if player.attr(attribute_data) is "true"
+          player.attr(attribute_data , "false")
         else
-          @player.attr(attribute_data , "true")
-    @prepareAndPlayVideo(autoplay)
-    
+          player.attr(attribute_data , "true")
+
   unprepareVideo: ->
     sublime.unprepare @player[0]
-  
+
   prepareAndPlayVideo: (autoplay) ->
     # Don't autoplay if it change the design
     if autoplay
@@ -123,4 +128,13 @@ class SublimeVideo.HomeDemo
     else
       @player.removeAttr('data-autoplay')
     sublime.prepare @player[0]
-    
+
+  setupLightbox: (element) ->
+    @lightboxPlayer = @player.clone().removeAttr('style class')
+      .attr('id','lightbox_home_demo')
+      .attr('width','800').attr('height','450')
+      .hide()
+      .appendTo('section.demo-video-player')
+    $(element).attr('href','#lightbox_home_demo')
+    sublime.prepare element
+

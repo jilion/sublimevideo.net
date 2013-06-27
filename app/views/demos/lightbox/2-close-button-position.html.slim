@@ -1,9 +1,9 @@
-- @page_title = 'Lightbox with the close button positioned in the top-right of the player'
+- @page_title = 'Lightbox close button in the top-right of the player'
 
 = render layout: 'layouts/demos' do
 
   p Here the close button is positioned in the top-right of the player.
 
+  = inject_demo_css
   = render_demo_html
-
-  = render_demo_sources 'html'
+  = render_demo_sources 'html', 'css'

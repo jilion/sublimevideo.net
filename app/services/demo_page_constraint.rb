@@ -2,11 +2,12 @@ require 'page_constraint'
 
 class DemoPageConstraint < PageConstraint
   def self.matches?(request)
-    path_parts = request.path.split('/')
-    demo_page = path_parts.pop
-    pattern = [Rails.root, 'app', 'views', resources, path_parts.join('/').sub(resources, ''), "{,*-}#{demo_page}.html.{haml,slim}"]
-              .join('/').squeeze('/')
+    path_parts = request.path.sub(%r{\A/#{resources}/}, '').split('/')
+    demo_page  = path_parts.many? ? path_parts.pop : nil
 
-    Dir[pattern].any?
+    pattern = [Rails.root, 'app', 'views', resources, path_parts.join('/')]
+    pattern << "{,*-}#{demo_page}.html.slim" if demo_page
+
+    Dir[pattern.join('/').squeeze('/')].any?
   end
 end

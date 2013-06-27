@@ -4,7 +4,6 @@ h2.headline
   em
     small
       | The HTML5 Video Player people trust.
-    / a href="" Sign Up Now
 section.demo-player.l-full-width-wrap
   section.demo-video-player
     video.sublime#home_demo_player data-player-kit="10" data-name='SV.net Prototype Video Demo' data-uid='proto-demo-video' data-settings='autoresize:fit;' data-embed-url="http://google.com" data-embed-enable="false" data-sharing-enable="false" data-logo-enable="false" data-subtitles-enable="false" height='360' poster='http://cdn.sublimevideo.net/assets/demo/midnight_sun2_800-c6d73d0c7bcde93ad1f405b66f003ecc.jpg' preload='none' width='640' style="visibility:hidden"
@@ -15,17 +14,11 @@ section.demo-player.l-full-width-wrap
     h3 Choose a design
     ul.l-grid.demo-choose-design
       li.active
-        a href="" data-kit="10"
-         / Flat
-         = image_tag "home/player_flat.svg", alt: "Flat", width: "100%"
+        a href="" data-kit="10" = image_tag "home/player_flat.svg", alt: "Flat", width: "100%"
       li
-        a href="" data-kit="9"
-          / Classic
-          = image_tag "home/player_classic.svg", alt: "Classic", width: "100%"
+        a href="" data-kit="9" = image_tag "home/player_classic.svg", alt: "Classic", width: "100%"
       li
-        a href="" data-kit="11"
-          / Light
-          = image_tag "home/player_light.svg", alt: "Light", width: "100%"
+        a href="" data-kit="11" = image_tag "home/player_light.svg", alt: "Light", width: "100%"
     .spacer
     h3 Enable features & add-ons
     ul.l-grid.demo-video-actions
@@ -45,7 +38,7 @@ section.demo-player.l-full-width-wrap
     p.view-all-features.l-normal.l-no-padding
       'Try every features (28+) SublimeVideo comes with on our
       strong
-        a href="/demos"
+        = link_to page_path('demos') do
           em demo page
           small.icon-uniF473
   .spacer
@@ -60,7 +53,7 @@ section.demo-player.l-full-width-wrap
       |  with unlimited plays!
     h2
       ' You just pay for the extra add-ons you need!
-      a href="/features#add-ons" style="white-space:nowrap"
+      = link_to page_path('features', anchor: 'add-ons'), style: 'white-space:nowrap' do
         ' View Pricing
         small.icon-uniF473
   .l-separator
@@ -85,7 +78,7 @@ section.demo-player.l-full-width-wrap
     .spacer
     .view-all-testimonials-box.l-center
       strong
-        a href="" style="white-space:nowrap"
+        = link_to page_path('testimonials'), style: 'white-space:nowrap' do
           ' Read all testimonials
           small.icon-uniF473
   .l-separator
@@ -122,19 +115,19 @@ section.demo-player.l-full-width-wrap
       source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'
       source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd'
     strong
-      a href=""
+      = link_to page_path('horizon-framework') do
         | Learn more about Horizon
         small.icon-uniF473
-  .tailor-made-box
-    h5 Tailor-Made Players
-    a href=""
-      = image_tag "home/blueprint.png", alt:"Blueprint", width: "60%"
-    div
-      strong Need a tailor-made player?
-    strong
-      a href=""
-        | View our showcases and contact us
-        small.icon-uniF473
+  /.tailor-made-box
+  /  h5 Tailor-Made Players
+  /  a href=""
+  /    = image_tag "home/blueprint.png", alt:"Blueprint", width: "60%"
+  /  div
+  /    strong Need a tailor-made player?
+  /  strong
+  /    a href=""
+  /      | View our showcases and contact us
+  /      small.icon-uniF473
   .spacer
 .l-height-margin
 / #home_video{ style: "display:none" }

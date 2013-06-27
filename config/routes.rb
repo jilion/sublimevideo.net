@@ -9,16 +9,18 @@ SublimeVideo::Application.routes.draw do
     end
   end
 
-  # Redirects
-  %w[modular-player].each { |action| get action => redirect('/features') }
-  %w[signup sign_up register].each { |action| get action => redirect('/?p=signup') }
-  %w[login log_in sign_in signin].each { |action| get action => redirect('/?p=login') }
-  get 'why' => redirect('/horizon-framework')
-  get 'plans' => redirect('/pricing')
+  # Legacy redirects
+  %w[why horizon-video].each { |action| get action => redirect('/horizon-framework') }
+  %w[plans pricing modular-player].each { |action| get action => redirect('/features') }
+  get 'tailor-made-players' => redirect('/')
+  %w[sony twit blackhandcinema next15 html5].each do |showcase|
+    get "/tailor-made-players/#{showcase}" => redirect('/')
+  end
   get 'customer-showcase' => redirect('/testimonials')
-  get 'horizon-video' => redirect('/#horizon-video')
-  get 'demo' => redirect('/demos'), as: :demo_redirect
-  get 'demos' => redirect('/demos/youtube/classic-design')
+  get 'youtube' => redirect('/demos/youtube')
+
+  # Shortcut redirects
+  %w[demo demos].each { |action| get action => redirect('/demos/youtube') }
 
   # Docs routes
   %w[javascript-api releases].each do |path|
@@ -27,20 +29,21 @@ SublimeVideo::Application.routes.draw do
 
   # Stats demo
   %w[stats stats-demo demos/stats].each do |path|
-    get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/stats-demo" }
+    get path => redirect { |params, req| "https://my.#{req.domain}/stats-demo" }
   end
 
   # My routes
+  %w[signup sign_up register].each do |action|
+    get action => redirect { |params, req| "https://my.#{req.domain}/signup" }
+  end
+  %w[login log_in sign_in signin].each do |action|
+    get action => redirect { |params, req| "https://my.#{req.domain}/login" }
+  end
   %w[privacy terms sites account].each do |path|
-    get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/#{path}" }
+    get path => redirect { |params, req| "https://my.#{req.domain}/#{path}" }
   end
 
-  # Showcase redirects
-  %w[sony twit blackhandcinema next15 html5].each do |showcase|
-    get "/tailor-made-players/#{showcase}" => redirect { |params, req| "/tailor-made-players##{showcase}" }
-  end
-
-  get '/demos/:feature/:demo' => 'demos#show', as: :demo, constraints: DemosConstraint, format: false
+  get '/demos/:feature(/:demo)' => 'demos#show', as: :demo, constraints: DemosConstraint, format: false
 
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleasesConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit

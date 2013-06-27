@@ -8,8 +8,13 @@ describe DemoPageConstraint do
   end
 
   describe '.matches?' do
-    let(:request_simple_path) { stub(path: '/demos/youtube/classic-player')}
-    let(:request_numbered_path) { stub(path: '/demos/lightbox/1-custom-overlay-opacity')}
+    let(:request_simple_path) { stub(path: '/demos/youtube/classic-design')}
+    let(:request_numbered_path) { stub(path: '/demos/lightbox/custom-overlay-opacity')}
+    let(:request_path_without_demo_page) { stub(path: '/demos/lightbox')}
+
+    it 'returns true for path without demo page' do
+      DemosConstraint.matches?(request_path_without_demo_page).should be_true
+    end
 
     it 'returns true for simple path' do
       DemosConstraint.matches?(request_simple_path).should be_true

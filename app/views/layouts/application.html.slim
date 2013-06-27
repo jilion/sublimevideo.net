@@ -23,7 +23,6 @@ html
 
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
     = javascript_include_tag '//use.typekit.com/ohx8nqt.js'
-    / = javascript_include_tag '//use.typekit.net/qxb6miz.js'
     = sublimevideo_loader_tag(:www, host: cdn_host, stage: 'beta').html_safe
     = yield :javascript
     = javascript_include_tag 'application'
@@ -32,6 +31,6 @@ html
 
   body
     section#page
-      = render "layouts/header"
+      = render 'layouts/header'
       = yield
-    = render "layouts/footer"
+    = render 'layouts/footer'

@@ -1,3 +1,4 @@
-# [SublimeVideo's main site app](http://sublimevideo.net) [![Build Status](https://semaphoreapp.com/api/v1/projects/51be23295bd26d5ab03c14c9d15814c623f011b3/18611/badge.png)](https://semaphoreapp.com/projects/1218/branches/18611) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/repos/50ee930f56b1026bdf0104d4/feed)
+# [SublimeVideo's main site app](http://sublimevideo.net)
+[![Build Status](https://circleci.com/gh/jilion/sublimevideo.net.png?circle-token=9665c0d580743c31f23b9d2cbdfd90767fcc4a5a)](https://circleci.com/gh/jilion/sublimevideo.net) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/repos/50ee930f56b1026bdf0104d4/feed)
 
 This app is using the [SublimeVideo layout gem](https://github.com/jilion/sublimevideo_layout).

@@ -3,13 +3,13 @@ source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com accou
 
 ruby '2.0.0'
 
-gem 'rails', '3.2.12' # until 3.2.14 is out!
+gem 'rails', '~> 4.0.0' # until 3.2.14 is out!
 gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases
 gem 'pg'
-gem 'squeel'
+gem 'squeel', github: 'ernie/squeel'
 
 # Views
 gem 'haml'
@@ -42,7 +42,7 @@ gem 'oj'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
-gem 'countries', github: 'hexorx/countries' # until 0.9.2 is out!
+gem 'countries'
 gem 'rack-status'
 
 # Gems used only for assets and not required

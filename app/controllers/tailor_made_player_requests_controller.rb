@@ -22,11 +22,8 @@ class TailorMadePlayerRequestsController < ApplicationController
 
   private
 
-  def tailor_made_player_request_params
-    params.require(:tailor_made_player_request).permit(:name, :email, :job_title,
-                                                       :company, :url, :country, :topic,
-                                                       :topic_standalone_detail, :topic_other_detail,
-                                                       :description, :document, :honeypot)
-  end
+  def tailor_made_player_request_params
+    params.require(:tailor_made_player_request).permit(:name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot)
+  end
 
 end

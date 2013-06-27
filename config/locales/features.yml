@@ -99,11 +99,9 @@ en:
 
     choose_your_hosting:
       title: Choose your preferred hosting platform freely
+      short_title: Hosting platform
       subtitle: Your videos can be hosted anywhere.
       description: 'We provide the video player, while you keep full control of your videos by freely using your preferred hosting and encoding service(s). Your videos can be hosted anywhere, including Vimeo Pro, Amazon S3/CloudFront. In addition, we now also seamlessly integrate with YouTube.'
-
-    vimeo_pro:
-      short_title: Vimeo Pro
 
     wordpress_plugin:
       title: WordPress plugin

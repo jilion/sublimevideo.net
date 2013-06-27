@@ -20,7 +20,7 @@ SublimeVideo::Application.routes.draw do
   get 'youtube' => redirect('/demos/youtube')
 
   # Shortcut redirects
-  %w[demo demos].each { |action| get action => redirect('/demos/youtube') }
+  %w[demo demos].each { |action| get action => redirect('/demos/youtube'), as: :"redirect_#{action}" }
 
   # Docs routes
   %w[javascript-api releases].each do |path|

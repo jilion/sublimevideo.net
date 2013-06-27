@@ -1,7 +1,7 @@
 - id = "#{add_on}_#{plan}"
 tr class="#{cycle "", "alt", name: "row_class"}"
   td.feature-add-on-plan
-    input type="radio" id=id name="p" value=plan
+    input type="radio" id=id name="p" value=plan checked=checked
     label for=id
       = t("features.#{add_on}.plans.#{plan}.label")
   td.feature-add-on-price

@@ -5,7 +5,7 @@ class Demos
     Rails.cache.fetch ['Demos.filenames_for', feature], expires_in: 1.hour do
       Dir[Rails.root.join('app', 'views', 'demos', feature, '*.html.slim')].map do |demo|
         File.basename(demo, '.html.slim')
-      end
+      end.sort
     end
   end
 

@@ -1,13 +1,12 @@
 .demo-wrapper
   .demo-sidebar.l-scrollable
     ul.l-stacked
-      - %w[youtube player-designs responsive lightbox subtitles player-api hd playlists social-sharing on-video-logo cue-zones embed].each do |feature|
+      - %w[youtube player-designs responsive lightbox subtitles player-api hd vimeo-pro playlists social-sharing on-video-logo cue-zones embed].each do |feature|
         li
           h4.demo-menu-title= t("features.#{feature.underscore}.short_title")
           ul.l-stacked
             - Demos.paths_for(feature).each do |demo|
-              li
-                a href=demo_path(feature, demo) class=demo_active_class(feature, demo) = demo_title(demo)
+              li= link_to demo_title(demo), demo_path(feature, demo), class: demo_active_class(feature, demo)
 
   .demo-container#demo-container
     .demo-header

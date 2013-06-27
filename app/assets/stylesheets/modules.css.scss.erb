@@ -981,12 +981,15 @@ section.features {
 .demo-sidebar-active {
   background:#1f3044 !important;
   color:rgba(255,255,255,0.8) !important;
+  border-color:transparentize(lighten($darkblue, 65%),0.9) !important;
 }
 
 .demo-menu-title {
   color:transparentize($darkblue,0.3);
-  font-size:0.9em;
-  padding:0.6em 0.5em;
+  font-size:0.7em;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  padding:0.8em 0.5em;
   border-bottom:1px solid rgba(0,0,0,0.15);
   @include box-shadow(inset rgba(255,255,255,0.13) 0 1px 0);
 }

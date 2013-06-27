@@ -36,7 +36,6 @@ gem 'ratom', require: 'atom'
 gem 'rescue_me'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_first'
-gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
 gem 'oj'
 gem 'net-scp', '1.0.4'
@@ -73,6 +72,7 @@ group :development, :test do
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'rack-livereload'
   gem 'quiet_assets'

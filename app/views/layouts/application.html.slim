@@ -23,7 +23,7 @@ html
 
     = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
     = javascript_include_tag '//use.typekit.com/ohx8nqt.js'
-    = sublimevideo_loader_tag(:www, host: cdn_host, stage: 'beta').html_safe
+    = sublimevideo_loader_tag(:www, host: cdn_host, stage: 'alpha').html_safe
     = yield :javascript
     = javascript_include_tag 'application'
     javascript:

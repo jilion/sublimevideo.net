@@ -2,7 +2,6 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   TOPICS = %w[agency standalone platform other]
 
   attr_accessor :honeypot
-  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot
 
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 

@@ -304,7 +304,6 @@ GEM
     slim (2.0.0)
       temple (~> 0.6.5)
       tilt (~> 1.3, >= 1.3.3)
-    slop (3.4.4)
     slop (3.4.5)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -381,9 +380,9 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails
-  configurator!
   countries
   dalli
+  dotenv-rails
   factory_girl_rails
   ffaker
   google-analytics-turbolinks

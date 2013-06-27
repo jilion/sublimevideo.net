@@ -9,7 +9,7 @@ class TailorMadePlayerRequestDocumentUploader < CarrierWave::Uploader::Base
   end
 
   def fog_directory
-    S3Wrapper.buckets['tailor_made_player_requests']
+    'dev-sublimevideo-tailor-made-player-requests'
   end
 
   # Override the directory where uploaded files will be stored

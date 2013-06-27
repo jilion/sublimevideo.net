@@ -7,6 +7,8 @@ SublimeVideo::Application.configure do
   config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, only: %r{^/private_api/}, strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
+  config.eager_load = true
+
   # One-line logs
   config.lograge.enabled = true
 

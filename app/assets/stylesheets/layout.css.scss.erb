@@ -76,6 +76,32 @@ header {
   padding:0.3em 0;
 }
 
+.l-text {
+  font-size:1.3em;
+  line-height:1.6em;
+  padding:0.3em 0;
+}
+
+.l-text-list {
+  font-size:1.3em;
+  line-height:1.4em;
+  padding:0;
+}
+
+.l-text-list > li {
+  padding:0 0 0.5em;
+}
+
+.l-text-list > li:before {
+  @include inline-block;
+  content:"\e004";
+  font-family:'SV-Icons'; /* or whatever */
+  font-size:0.4em;
+  padding-right:1.5em;
+  position:relative;
+  top:-0.4em;
+}
+
 .l-no-padding {
   padding:0;
 }

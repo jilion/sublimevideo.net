@@ -949,15 +949,18 @@ section.features {
 
 .demo-sidebar {
 //  @include box-flex(1);
-  min-width:220px;
+  width:240px;
+  max-height:800px;
   background:#BBCCE2;
+  @include box-shadow(inset 0px 0 16px rgba(0,0,0,0.5));
   @media screen and (max-width: 900px) {
+    max-height:none;
     height:100%;
     position:absolute;
     top:0;
     left:0;
     z-index:0;
-    @include box-shadow(inset -6px 0 10px rgba(0,0,0,0.2))
+    @include box-shadow(inset -6px 0 10px rgba(0,0,0,0.2));
   }
 }
 

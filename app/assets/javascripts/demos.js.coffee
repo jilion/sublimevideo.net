@@ -19,8 +19,8 @@ SublimeVideo.sidebarMenu = ->
   snapper = new Snap
     element: $("#demo-container")[0]
     disable: 'right'
-    maxPosition: 220
-    minPosition: -220
+    maxPosition: 240
+    minPosition: -240
     touchToDrag: false
 
   snapper.disable()

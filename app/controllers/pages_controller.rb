@@ -21,9 +21,7 @@ private
   end
 
   def redirect_to_my
-    if logged_in_cookie? && %w[login signup].include?(params[:p])
-      redirect_to "https://my.sublimevideo.net/#{params[:p]}"
-    end
+    redirect_to "http://my.#{request.host}/#{params[:p]}" if %w[login signup].include?(params[:p])
   end
 
 end

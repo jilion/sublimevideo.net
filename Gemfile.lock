@@ -25,7 +25,7 @@ GIT
       rails (>= 3.0)
 
 PATH
-  remote: ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
+  remote: ~/Projects/Jilion/Products/SublimeVideo/sublime_video_layout
   specs:
     sublime_video_layout (2.6.6)
       coffee-rails

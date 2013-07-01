@@ -5,7 +5,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0.0' # until 3.2.14 is out!
 # gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
-gem 'sublime_video_layout',      path: '~/Code/Jilion/Products/SublimeVideo/sublime_video_layout' # change to your own path
+gem 'sublime_video_layout',      path: '~/Projects/Jilion/Products/SublimeVideo/sublime_video_layout' # change to your own path
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases

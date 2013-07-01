@@ -1,11 +1,8 @@
 - @page_title = "About"
-= content_for :header do
-  %h2= "About SublimeVideo"
-  %p.sub= "SublimeVideo is the world's first cloud-based HTML5 video player; a unique solution that delivers all of the benefits of HTML5 video with none of the associated complexity."
 
-%section.box
-  :textile
-    h3(title). About Us
+section.l-full-width-wrap
+  textile:
+    h3(section-title). About Us
 
     Jilion is a pioneer and leading provider of no-compromises HTML5 Video Technologies.
 
@@ -29,16 +26,17 @@
 
     From that moment on, we decided to focus on the mission of providing the Web with the best possible HTML5 Video solution in order to truly enable the HTML5 Video age.
 
-  %p= raw "#{link_to "Read more about our story", "", id: "expand_story"}"
-  :javascript
+  p= raw "#{link_to "Read more about our story", "", id: "expand_story"}"
+
+  javascript:
     $("#expand_story").click(function() {
          var txt = $("#extended_story").is(':visible') ? 'Read more about our story' : 'Close the extended story';
          $('#extended_story').slideToggle('slow', function(){$("#expand_story").text(txt)});
          return false;
     });
 
-  #extended_story{ style: "display:none"}
-    :textile
+  #extended_story style="display:none"
+    textile:
       _Everything started with a tweet..._
       <small>Updated December 11, 2012</small>
 
@@ -116,44 +114,44 @@
       Now there are so many things to do! The roadmap is full to the brim and the company is now ready to accelerate its growth. Stay tuned for upcoming developments and thank you for supporting our work.
 
 
-  :textile
+  textile:
     h3(title). Our Team
 
     Jilion's core team met at EPFL (Swiss Federal Institute of Technology of Lausanne), and initially started to work on a completely different Web project. This is how we "muscled" knowledge in Rails, JavaScript, CSS, etc. Thank you EPFL for creating the conditions for people like us to meet and start working together.
 
-  %ul.profiles.team
-    %li
+  ul.l-grid.two-columns-grid.team
+    li
       = image_tag "about/mehdi.jpg", size: "70x70", alt: "Mehdi Aminian"
-      %h4= "Mehdi Jacques Aminian"
-      %p= "Co-Founder"
+      h4= "Mehdi Jacques Aminian"
+      p= "Co-Founder"
       .spacer
-    %li
+    li
       = image_tag "about/zeno.jpg", size: "70x70", alt: "Zeno Crivelli"
-      %h4= "Zeno Crivelli"
-      %p= "Co-Founder"
+      h4= "Zeno Crivelli"
+      p= "Co-Founder"
       .spacer
-    %li
+    li
       = image_tag "about/thibaud.jpg", size: "70x70", alt: "Thibaud Guillaume-Gentil"
-      %h4= "Thibaud Guillaume-Gentil"
-      %p= "Software Engineer"
+      h4= "Thibaud Guillaume-Gentil"
+      p= "Software Engineer"
       .spacer
-    %li
+    li
       = image_tag "about/octave.jpg", size: "70x70", alt: "Octave Zangs"
-      %h4= "Octave Zangs"
-      %p= "Web & UI Designer"
+      h4= "Octave Zangs"
+      p= "Web & UI Designer"
       .spacer
-    %li
+    li
       = image_tag "about/remy.jpg", size: "70x70", alt: "Rémy Coutable"
-      %h4= "Rémy Coutable"
-      %p= "Software Engineer"
+      h4= "Rémy Coutable"
+      p= "Software Engineer"
       .spacer
-    %li
+    li
       = image_tag "about/andrea.jpg", size: "70x70", alt: "Andrea Coiro"
-      %h4= "Andrea Coiro"
-      %p= "Software Engineer"
+      h4= "Andrea Coiro"
+      p= "Software Engineer"
       .spacer
   .spacer
-  :textile
+  textile:
     h3(title). Our Supporters
 
     In this section we would like to take the opportunity to express our warmest gratitude to all our supporters, whether they have been with us for a long or short time.
@@ -161,95 +159,95 @@
 
     It is clear we would not have come this far without your combined support.
 
-  %ul.profiles
-    %li
+  ul.l-grid.two-columns-grid.one-column-900
+    li
       = image_tag "about/supporters/pierre_fazan.jpg", size: "70x70", alt: "Prof. Pierre Fazan"
-      %h4= "Prof. Pierre Fazan"
-      %p= "Jilion’s angel investor, entrepreneur and co-founder of InnovativeSilicon (acquired by Micron)."
+      h4= "Prof. Pierre Fazan"
+      p= "Jilion’s angel investor, entrepreneur and co-founder of InnovativeSilicon (acquired by Micron)."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/stelio_tzonis.jpg", size: "70x70", alt: "Stelio Tzonis"
-      %h4= "Stelio Tzonis"
-      %p= raw "Jilion’s angel investor, entrepreneur and co-founder of Lysis (acquired by Nagra-Kudelski) and #{link_to "Webdoc", "http://webdoc.com"}."
+      h4= "Stelio Tzonis"
+      p= raw "Jilion’s angel investor, entrepreneur and co-founder of Lysis (acquired by Nagra-Kudelski) and #{link_to "Webdoc", "http://webdoc.com"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/amin_shokrollahi.jpg", size: "70x70", alt: "Amin Shokrollahi"
-      %h4= "Prof. Amin Shokrollahi"
-      %p= raw "Jilion’s angel investor, head of EPFL Algorithmics Laboratory, entrepreneur and co-founder of #{link_to "Kandou Bus", "http://www.kandou.com"}."
+      h4= "Prof. Amin Shokrollahi"
+      p= raw "Jilion’s angel investor, head of EPFL Algorithmics Laboratory, entrepreneur and co-founder of #{link_to "Kandou Bus", "http://www.kandou.com"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/family.png", size: "70x70", alt: "Family"
-      %h4= "The Crivelli Family"
-      %p= "Jilion’s angel investor."
+      h4= "The Crivelli Family"
+      p= "Jilion’s angel investor."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/family.png", size: "70x70", alt: "Family"
-      %h4= "The Aminian Family"
-      %p= "Jilion’s angel investor."
+      h4= "The Aminian Family"
+      p= "Jilion’s angel investor."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/family.png", size: "70x70", alt: "Family"
-      %h4= "The Beltrametti Family"
-      %p= "Jilion’s angel investor."
+      h4= "The Beltrametti Family"
+      p= "Jilion’s angel investor."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/francois_stieger.jpg", size: "70x70", alt: "François Stieger"
-      %h4= "François Stieger"
-      %p= "Jilion’s angel investor, former senior exec at Verisign, Oracle and Broadvision."
+      h4= "François Stieger"
+      p= "Jilion’s angel investor, former senior exec at Verisign, Oracle and Broadvision."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/colas_overkott.jpg", size: "70x70", alt: "Colas Overkott"
-      %h4= "Colas Overkott"
-      %p= raw "Jilion’s angel investor, CEO at #{link_to "Visiware", "http://www.visiware.com"}, former co-founding director of e-TF1 and CEO of Lysis (acquired by Nagra-Kudelski)."
+      h4= "Colas Overkott"
+      p= raw "Jilion’s angel investor, CEO at #{link_to "Visiware", "http://www.visiware.com"}, former co-founding director of e-TF1 and CEO of Lysis (acquired by Nagra-Kudelski)."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/dave_brown.jpg", size: "70x70", alt: "Dave Brown"
-      %h4= "Dave Brown"
-      %p= "Jilion’s angel investor, entrepreneur and co-founder of Buy.at (acquired by AOL)."
+      h4= "Dave Brown"
+      p= "Jilion’s angel investor, entrepreneur and co-founder of Buy.at (acquired by AOL)."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/laurent_haug.jpg", size: "70x70", alt: "Laurent Haug"
-      %h4= "Laurent Haug"
-      %p= raw "Jilion’s advisor, entrepreneur and co-founder of #{link_to "Lift Conference", "http://liftconference.com"}."
+      h4= "Laurent Haug"
+      p= raw "Jilion’s advisor, entrepreneur and co-founder of #{link_to "Lift Conference", "http://liftconference.com"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/willy_zwaenepoel.jpg", size: "70x70", alt: "Prof. Willy Zwaenepoel"
-      %h4= "Prof. Willy Zwaenepoel"
-      %p= raw "Jilion’s advisor, head of EPFL Operating Systems Lab, entrepreneur and co-founder of #{link_to "BugBuster", "http://bugbuster.com"}, former Dean of EPFL Computer Sciences."
+      h4= "Prof. Willy Zwaenepoel"
+      p= raw "Jilion’s advisor, head of EPFL Operating Systems Lab, entrepreneur and co-founder of #{link_to "BugBuster", "http://bugbuster.com"}, former Dean of EPFL Computer Sciences."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/pierre_vandergheynst.jpg", size: "70x70", alt: "Prof. Pierre Vandergheynst"
-      %h4= "Prof. Pierre Vandergheynst"
-      %p= raw "Jilion’s advisor, head of EPFL Signal Processing Lab, entrepreneur and co-founder of #{link_to "Immersive Vision Technologies", "http://www.immersive-vision.com"}."
+      h4= "Prof. Pierre Vandergheynst"
+      p= raw "Jilion’s advisor, head of EPFL Signal Processing Lab, entrepreneur and co-founder of #{link_to "Immersive Vision Technologies", "http://www.immersive-vision.com"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/epfl.png", size: "70x70", alt: "EPFL - Swiss Federal Institute of Technology of Lausanne"
-      %h4= "EPFL - Swiss Federal Institute of Technology of Lausanne"
-      %p= raw "Spin-off support and financial innovation grants (#{link_to "innogrants", "http://vpiv.epfl.ch/page-22998-en.html"})."
+      h4= "EPFL - Swiss Federal Institute of Technology of Lausanne"
+      p= raw "Spin-off support and financial innovation grants (#{link_to "innogrants", "http://vpiv.epfl.ch/page-22998-en.html"})."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/fit.jpg", size: "70x70", alt: "Foundation for Technology Innovation"
-      %h4= "Foundation for Technology Innovation"
-      %p= raw "No-interest long term loans (#{link_to "link", "http://www.fondation-fit.ch"})."
+      h4= "Foundation for Technology Innovation"
+      p= raw "No-interest long term loans (#{link_to "link", "http://www.fondation-fit.ch"})."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/venture_kick.png", size: "70x70", alt: "venture kick"
-      %h4= "venture kick"
-      %p= raw "Private initiative providing swiss startups with financial grants (#{link_to "link", "http://venturekick.ch"})."
+      h4= "venture kick"
+      p= raw "Private initiative providing swiss startups with financial grants (#{link_to "link", "http://venturekick.ch"})."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/vaud.png", size: "70x70", alt: "Canton of Vaud"
-      %h4= "Canton of Vaud"
-      %p= raw "Various start-up financial #{link_to "support", "http://www.vaud.ch/en/our-services/companies/starting-up-developing/"}."
+      h4= "Canton of Vaud"
+      p= raw "Various start-up financial #{link_to "support", "http://www.vaud.ch/en/our-services/companies/starting-up-developing/"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/jura.png", size: "70x70", alt: "Canton of Jura"
-      %h4= "Canton of Jura"
-      %p= raw "Various start-up financial #{link_to "support", "http://eco.jura.ch/en/index.html"}."
+      h4= "Canton of Jura"
+      p= raw "Various start-up financial #{link_to "support", "http://eco.jura.ch/en/index.html"}."
       .spacer
-    %li
+    li
       = image_tag "about/supporters/swiss_confederation.png", size: "70x70", alt: "Swiss Confederation"
-      %h4= "Swiss Confederation"
-      %p= raw "Governmental #{link_to "Commission for Technology and Innovation CTI", "http://www.kti.admin.ch/index.html?lang=en"} providing academia with financial grants to support start-up innovation."
+      h4= "Swiss Confederation"
+      p= raw "Governmental #{link_to "Commission for Technology and Innovation CTI", "http://www.kti.admin.ch/index.html?lang=en"} providing academia with financial grants to support start-up innovation."
       .spacer
   .spacer

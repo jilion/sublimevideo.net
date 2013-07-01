@@ -62,12 +62,62 @@ $b-violet:#a389d5;
 .section-title {
   font-size:3em;
   font-weight:300;
-  padding:0.4em 0 0.8em;
+  padding:0.4em 0;
   @media screen and (max-width:568px) {
     font-size:2em;
   }
 }
 
+.title {
+  padding:1em 0 0.3em;
+}
+
+// Grids
+
+.two-columns-grid {
+  padding:1em 0 0;
+}
+
+.two-columns-grid > li {
+  display:block;
+  padding:1em 6% 1em 0;
+  margin:0;
+  width:44%;
+  height:9em;
+  float:left;
+  font-size:0.85em;
+  @media screen and (max-width:568px) {
+    width:100%;
+    height:auto;
+    float:none;
+    padding:1em 0;
+    font-size:0.9em;
+  }
+}
+
+.one-column-900 > li {
+  @media screen and (max-width:900px) {
+    width:100%;
+    height:auto;
+    float:none;
+    padding:1em 0;
+    font-size:0.9em;
+  }
+}
+
+
+.two-columns-grid > li > img {
+  float:left;
+  margin:0 20px 0px 0;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
+}
+
+.two-columns-grid > li > p {
+  font-size:1.15em;
+  padding-top:0;
+  line-height:1.4em;
+}
 
 // Header
 
@@ -678,7 +728,7 @@ section.features {
 // Features & Add-ons
 
 .features-thumbs {
-//  @include display-box;
+  padding:1em 0 0;
 }
 
 .features-thumbs li {
@@ -733,6 +783,10 @@ section.features {
 
 .feature-thumb-img-wrap img {
   vertical-align:middle;
+}
+
+.features-list {
+  padding:1em 0 0;
 }
 
 .feature {
@@ -1096,3 +1150,4 @@ section.features {
     padding:1em;
   }
 }
+

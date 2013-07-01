@@ -6,31 +6,6 @@ SublimeVideo.homeReady = ->
 SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
     SublimeVideo.HomeDemoInstance = new SublimeVideo.HomeDemo("#home_demo_player")
-    # if horizon_lightbox = sublime('lightbox_horizon')
-    #   horizon_lightbox.on
-    #     didopen: ->
-    #       SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
-    #       SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
-    #     didclose: ->
-    #       SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
-    #       SublimeVideo.showcasesSlideshow.startTimer() if SublimeVideo.showcasesSlideshow?
-    #     contentready: (lightbox, player) ->
-    #       player = lightbox unless player
-    #       player.on 'action:showcases', ->
-    #         go = -> document.location.href = '/tailor-made-players'
-    #         if player.isFullscreen() then player.exitFullscreen(go) else go()
-    #       player.on 'action:teamup', ->
-    #         go = -> document.location.href = '/tailor-made-players-requests/new'
-    #         if player.isFullscreen() then player.exitFullscreen(go) else go()
-    #       player.on 'action:signup', ->
-    #         go = ->
-    #           sublime('lightbox_horizon').close()
-    #           SublimeVideo.UI.Utils.openAccountPopup('signup')
-    #         if player.isFullscreen() then player.exitFullscreen(go) else go()
-    #
-    #
-    # if document.location.hash == '#horizon-video'
-    #   horizon_lightbox.open()
 
   if $("#customers-quotes-slideshow")
     $("#customers-quotes-slideshow > li:gt(0)").hide().addClass("blur")

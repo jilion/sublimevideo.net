@@ -519,7 +519,11 @@ h2.title {
   -webkit-filter:blur(10px);
 }
 
-.customers-quotes img {
+.customers-quotes.list > li h5 {
+  padding-bottom:1.5em;
+}
+
+.customers-quotes img, .customers-quotes.list img {
   width:130px;
   float:left;
   margin:6px 4% 20px 10%;
@@ -534,6 +538,13 @@ h2.title {
     width:100px;
     display:block;
     float:none;
+    margin:0 auto 13px;
+  }
+}
+
+.customers-quotes.list img {
+  margin:0 2% 0px;
+  @media screen and (max-width:920px) {
     margin:0 auto 13px;
   }
 }
@@ -1152,3 +1163,9 @@ section.features {
   }
 }
 
+// Twitter Quotes
+
+.twitter-quotes > li {
+  width:30%;
+  float:left;
+}

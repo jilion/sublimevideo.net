@@ -1,5 +1,5 @@
 #cuezones_demo .container {
-  width:610px;
+  width:100%;
   height:440px;
   overflow:hidden;
   position:relative;
@@ -13,11 +13,17 @@
 }
 
 #cuezones_demo img.bg {
-  width:782px;
+  width:100%;
+  height:auto;
   position: absolute;
   top:0;
-  left:-86px;
+  left:0;
   display:none;
+}
+
+#cuezones_demo .background.tall img.bg {
+  width:auto;
+  height:100%;
 }
 
 #title {
@@ -34,10 +40,11 @@
 }
 
 #cuezones_demo .player {
-  position: absolute;
-  top:107px;
-  left:105px;
+  position:relative;
+  width:400px;
+  height:225px;
+  margin:110px auto;
   -webkit-box-shadow: rgba(0,0,0,0.7) 0px 2px 30px;
-   -moz-box-shadow: rgba(0,0,0,0.7) 0px 2px 30px;
-        box-shadow: rgba(0,0,0,0.7) 0px 2px 30px;
+     -moz-box-shadow: rgba(0,0,0,0.7) 0px 2px 30px;
+          box-shadow: rgba(0,0,0,0.7) 0px 2px 30px;
 }

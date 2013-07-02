@@ -71,4 +71,23 @@ sublime.ready(function() {
       }
     });
   });
+
 });
+
+// Adjust background img ratio
+$(document).ready(function(){
+  fixBackgroundImageSize();
+});
+$(window).resize(function(){
+  fixBackgroundImageSize();
+});
+
+function fixBackgroundImageSize() {
+  var container = $('#cuezones_demo');
+  var background = $('#cuezones_demo .background');
+  if (container.width()/container.height() < 16/9) {
+    background.addClass('tall');
+  } else {
+    background.removeClass('tall');
+  }
+}

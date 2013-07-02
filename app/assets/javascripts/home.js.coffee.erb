@@ -4,8 +4,9 @@ SublimeVideo.homeReady = ->
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
 SublimeVideo.setupHomeSublime = ->
+  homeDemo = new SublimeVideo.HomeDemo("#home_demo_player")
   sublime.ready ->
-    SublimeVideo.HomeDemoInstance = new SublimeVideo.HomeDemo("#home_demo_player")
+    homeDemo.setupObservers()
 
   if $("#customers-quotes-slideshow")
     $("#customers-quotes-slideshow > li:gt(0)").hide().addClass("blur")
@@ -49,7 +50,7 @@ class SublimeVideo.HomeDemo
     @player = $(player)
     @features = $('ul.demo-video-actions')
     @kitSelector = $('ul.demo-choose-design')
-    @setupObservers()
+    # @setupObservers()
 
   setupObservers: ->
     @features.find('li a').each (index, element) =>
@@ -105,7 +106,7 @@ class SublimeVideo.HomeDemo
     sublime.prepare @player[0]
 
   setupLightbox: (element) ->
-    @lightboxPlayer = @player.clone().removeAttr('style class')
+    @lightboxPlayer = @player.clone().removeAttr('style class src')
       .attr('id','lightbox_home_demo')
       .attr('width','800').attr('height','450')
       .hide()

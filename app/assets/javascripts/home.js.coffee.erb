@@ -106,11 +106,19 @@ class SublimeVideo.HomeDemo
     sublime.prepare @player[0]
 
   setupLightbox: (element) ->
+    btn = $(element)
+    btn.attr('href','#lightbox_home_demo')
+
     @lightboxPlayer = @player.clone().removeAttr('style class src')
       .attr('id','lightbox_home_demo')
       .attr('width','800').attr('height','450')
       .hide()
       .appendTo('section.demo-video-player')
-    $(element).attr('href','#lightbox_home_demo')
-    sublime.prepare element
+
+    sublime.prepare element, (lightbox) ->
+      lightbox.on 'didClose', ->
+        btn.parent().removeClass('active')
+
+    btn.on 'click', (event) ->
+      btn.parent().addClass('active')
 

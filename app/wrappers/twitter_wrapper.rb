@@ -20,7 +20,7 @@ module TwitterWrapper
       random: false,
       since_date: nil,
       include_entities: false
-      }.merge(args.extract_options!)
+    }.merge(args.extract_options!)
     options.assert_valid_keys([:user, :user_doublon, :count, :random, :since_date, :include_entities])
 
     tweets = _all_favorites(options)
@@ -51,6 +51,7 @@ module TwitterWrapper
           Twitter.send(method_name, *args)
         end
       rescue => ex
+        raise ex if Rails.env.development?
         nil
       end
     else

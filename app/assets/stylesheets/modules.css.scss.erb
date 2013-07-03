@@ -1164,7 +1164,36 @@ section.features {
 
 // Twitter Quotes
 
+.twitter-quotes {
+  padding-top:2em;
+}
+
 .twitter-quotes > li {
-  width:30%;
+  width:29%;
   float:left;
+  min-height:12em;
+  padding:0 2%;
+}
+
+.twitter-quotes > li blockquote {
+  text-align:center;
+  line-height:1.5em;
+}
+
+.twitter-quotes > li img {
+  margin:0.4em 0.6em 0 0.4em;
+  float:left;
+  @include border-top-radius(50%);
+  @include border-bottom-radius(50%);
+}
+
+.twitter-quotes > li h4 {
+  font-size:0.9em;
+  line-height:0.8em;
+  padding-top:0.9em;
+}
+
+.twitter-quotes > li em.date {
+  font-size:0.7em;
+  font-style:normal;
 }

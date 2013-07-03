@@ -1,4 +1,5 @@
 require 'page_constraint'
+require 'demo_page_constraint'
 
 SublimeVideo::Application.routes.draw do
   namespace :private_api do
@@ -42,10 +43,8 @@ SublimeVideo::Application.routes.draw do
   end
 
   get '/demos/:feature(/:demo)' => 'demos#show', as: :demo, constraints: DemosConstraint, format: false
-
   get '/pr/:page' => 'press_releases#show', as: :pr, constraints: PressReleasesConstraint, format: false
   get '/press-kit' => redirect('http://cl.ly/1x3x2b3J3Z2i/content'), as: :press_kit
-
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
 
   resources :tailor_made_player_requests, only: [:new, :create], path: 'tailor-made-players-requests' do

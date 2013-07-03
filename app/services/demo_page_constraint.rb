@@ -11,3 +11,5 @@ class DemoPageConstraint < PageConstraint
     Dir[pattern.join('/').squeeze('/')].any?
   end
 end
+
+class DemosConstraint < DemoPageConstraint; end

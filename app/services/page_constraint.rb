@@ -16,5 +16,4 @@ class PageConstraint
 end
 
 class PagesConstraint < PageConstraint; end
-class DemosConstraint < DemoPageConstraint; end
 class PressReleasesConstraint < PageConstraint; end

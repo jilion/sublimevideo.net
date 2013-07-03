@@ -10,20 +10,26 @@ $b-violet:#a389d5;
 // Buttons
 
 .btn {
-  padding:0.6em 1em;
+  padding:0.4em 1em;
   background:#4088cb;
   color:#fff;
   font-weight:500;
-  border:none;
+  border:3px solid transparent;
   font-family:inherit;
   font-size:1em;
   font-weight:normal;
   cursor:pointer;
+  @include box-sizing(border-box);
   @include inline-block;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
   @include border-left-radius(4px);
   @include border-right-radius(4px);
+}
+
+.btn:focus {
+  outline:none;
+  border:3px solid transparentize(rgba(255,255,255,0.6),0.2);
 }
 
 .full {

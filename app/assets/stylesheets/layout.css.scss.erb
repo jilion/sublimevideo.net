@@ -99,11 +99,15 @@ header {
 .l-text-list > li:before {
   @include inline-block;
   content:"\e004";
-  font-family:'SV-Icons'; /* or whatever */
+  font-family:'SV-Icons';
   font-size:0.4em;
   padding-right:1.5em;
   position:relative;
   top:-0.4em;
+}
+
+.l-height-padding {
+  padding:1em 0;
 }
 
 .l-no-padding {
@@ -115,18 +119,17 @@ header {
 }
 
 .l-scrollable {
-  overflow: auto;
-  -webkit-transition-property: top, bottom;
-  transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;
-  transition-duration: .2s, .2s;
-  -webkit-transition-timing-function: linear, linear;
-  transition-timing-function: linear, linear;
-  -webkit-overflow-scrolling: touch;
+  overflow:auto;
+  -webkit-transition-property:top, bottom;
+  transition-property:top, bottom;
+  -webkit-transition-duration:.2s, .2s;
+  transition-duration:.2s, .2s;
+  -webkit-transition-timing-function:linear, linear;
+  transition-timing-function:linear, linear;
+  -webkit-overflow-scrolling:touch;
 }
 
 footer {
-  position: relative;
+  position:relative;
   padding:20px 0 50px;
-//  margin-top:20px;
 }

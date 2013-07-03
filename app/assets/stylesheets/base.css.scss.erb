@@ -78,6 +78,43 @@ code {
   font-size:0.85em;
 }
 
+input[type=text] {
+  @include inline-block;
+  min-width:40%;
+  padding:0.2em 0.4em;
+  margin-right:0.5em;
+  line-height:1.5em;
+  font-family:inherit;
+  font-size:1.2em;
+  font-weight:300;
+  color:$darkblue;
+  border:3px solid transparent;
+  @include box-sizing(border-box);
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
+}
+
+input[type=text]:focus {
+  outline:none;
+  border:3px solid transparentize($darkblue,0.8);
+}
+
+::-webkit-input-placeholder {
+   color:#7690B3;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:#7690B3;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:#7690B3;
+}
+
+:-ms-input-placeholder {
+   color:#7690B3;
+}
+
 .spacer {
   clear:both;
 }

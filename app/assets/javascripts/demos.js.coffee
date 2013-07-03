@@ -1,7 +1,8 @@
 SublimeVideo.demosReady = ->
   SublimeVideo.demoSourceSwitch()
   SublimeVideo.hightlightCode()
-  SublimeVideo.sidebarMenu()
+  SublimeVideo.setupSmallSidebarMenuButton()
+  SublimeVideo.setupSidebarScrolling()
 
 SublimeVideo.demoSourceSwitch = ->
   $demoActionButtons = $('a.demo-action-button')
@@ -14,10 +15,9 @@ SublimeVideo.demoSourceSwitch = ->
 SublimeVideo.hightlightCode = ->
   Prism.highlightAll()
 
-SublimeVideo.sidebarMenu = ->
-  # $('#show-menu').sidr()
+SublimeVideo.setupSmallSidebarMenuButton = ->
   snapper = new Snap
-    element: $("#demo-container")[0]
+    element: $('#demo-container')[0]
     disable: 'right'
     maxPosition: 240
     minPosition: -240
@@ -27,18 +27,18 @@ SublimeVideo.sidebarMenu = ->
   $(window).resize ->
     snapper.close()
 
-  # if Modernizr.mq("screen and (min-width:900px)")
-  #   snapper.disable()
-  #
-  # $(window).resize ->
-  #   if Modernizr.mq("screen and (max-width:900px)")
-  #     snapper.enable()
-  #   else
-  #     snapper.disable()
-
   $('a.icon-list').on 'click', (e) ->
     e.preventDefault()
-    if snapper.state().state == "left"
+    if snapper.state().state is "left"
       snapper.close()
     else
       snapper.open('left')
+
+SublimeVideo.setupSidebarScrolling = ->
+  $sidebar = $('.demo-sidebar')
+
+  if SublimeVideo.scrollPosition?
+    $sidebar.scrollTop(SublimeVideo.scrollPosition)
+
+  $sidebar.on 'scroll', (e) ->
+    SublimeVideo.scrollPosition = $sidebar.scrollTop()

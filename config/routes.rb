@@ -1,6 +1,4 @@
-class PagesConstraint < PageConstraint; end
-class DemosConstraint < DemoPageConstraint; end
-class PressReleasesConstraint < PageConstraint; end
+require 'page_constraint'
 
 SublimeVideo::Application.routes.draw do
   namespace :private_api do

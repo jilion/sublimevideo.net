@@ -14,3 +14,7 @@ class PageConstraint
     self.to_s.underscore.gsub(/_constraint$/, '')
   end
 end
+
+class PagesConstraint < PageConstraint; end
+class DemosConstraint < DemoPageConstraint; end
+class PressReleasesConstraint < PageConstraint; end

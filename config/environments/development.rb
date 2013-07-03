@@ -23,7 +23,8 @@ SublimeVideo::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # Use a different cache store in production
-  config.cache_store = :null_store
+  # config.cache_store = :null_store
+  config.cache_store = :dalli_store
 
   # Raise exception on mass assignment protection for Active Record models
   # config.active_record.mass_assignment_sanitizer = :strict

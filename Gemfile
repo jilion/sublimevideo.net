@@ -4,13 +4,14 @@ source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com accou
 ruby '2.0.0'
 
 gem 'rails', '~> 4.0.0' # until 3.2.14 is out!
+gem 'rails_12factor'
 gem 'sublime_video_layout',      '~> 3.0.0.alpha' # hosted on gemfury
 # gem 'sublime_video_layout',      path: '~/Code/Jilion/Products/SublimeVideo/sublime_video_layout' # change to your own path
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases
 gem 'pg'
-gem 'squeel', github: 'ernie/squeel'
+gem 'squeel', github: 'ernie/squeel' # Rails 4 support, until 1.1.0
 
 # Views
 gem 'haml'

@@ -56,18 +56,12 @@ SublimeVideo.pickRandomVideoThumb = ->
     $video = $("#video_horizon")
     $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
 
-SublimeVideo.fadeInHackForChrome = ($div) ->
-  if /Chrome/i.test(navigator.userAgent)
-    $div.css('left', '49px')
-    setTimeout((-> $div.css('left', '50px')), 10)
-
-
 class SublimeVideo.HomeDemo
   constructor: (playerId) ->
     @playerId = playerId
 
   reload: ->
-    @player = $(@playerId)
+    @$player = $(@playerId)
     @featuresButtons = $('ul.demo-video-actions')
     @kitsButtons = $('ul.demo-choose-design')
 
@@ -79,7 +73,7 @@ class SublimeVideo.HomeDemo
 
     @featuresButtons.find('li a').each (index, element) =>
       $element = $(element)
-      if $element.data('feature') == 'lightbox'
+      if $element.data('feature') is 'lightbox'
         @setupLightbox($element)
       else
         @manageTogglerBtn($element, 'feature')
@@ -91,52 +85,51 @@ class SublimeVideo.HomeDemo
       if attribute is "kit"
         @kitsButtons.find('li').removeClass('active')
         autoplay = false
-      @setupAttribute $element.data(attribute), autoplay
+      @setupAttribute($element.data(attribute), autoplay)
       $element.parent().toggleClass('active')
 
   setupAttribute: (value, autoplay) ->
     @unprepareVideo()
-    @updatePlayersValues(@player, value)
+    @updatePlayersValues(@$player, value)
     @updatePlayersValues(@lightboxPlayer, value)
     @prepareAndPlayVideo(autoplay)
 
   updatePlayersValues: (player, value) ->
     switch value
       when 9, 10, 11
-        player.attr('data-player-kit',value)
+        player.attr('data-player-kit', value)
       when "youtube"
         if player.attr('data-youtube-id')?
           player.removeAttr('data-youtube-id')
         else
-          player.attr('data-youtube-id','rAq2rNEru8A')
+          player.attr('data-youtube-id', 'rAq2rNEru8A')
       else
-        attribute_data = 'data-'+value+'-enable'
-        if player.attr(attribute_data) is "true"
-          player.attr(attribute_data , "false")
+        attribute_data = "data-#{value}-enable"
+        if player.attr(attribute_data) is 'true'
+          player.attr(attribute_data, 'false')
         else
-          player.attr(attribute_data , "true")
+          player.attr(attribute_data, 'true')
 
   unprepareVideo: ->
-    sublime.unprepare @player[0]
+    sublime.unprepare @$player[0]
 
   prepareAndPlayVideo: (autoplay) ->
     # Don't autoplay if it change the design
     if autoplay
-      @player.attr('data-autoplay','true')
+      @$player.attr('data-autoplay', 'true')
     else
-      @player.removeAttr('data-autoplay')
-    sublime.prepare @player[0]
+      @$player.removeAttr('data-autoplay')
+    sublime.prepare @$player[0]
 
   setupLightbox: ($element) ->
-    $element.attr('href','#lightbox_home_demo')
+    $element.attr('href', '#lightbox_home_demo')
 
-    @lightboxPlayer = @player.clone().removeAttr('style class src')
-      .attr('id','lightbox_home_demo')
-      .attr('width','800').attr('height','450')
+    @lightboxPlayer = @$player.clone().removeAttr('style class src')
+      .attr(id: 'lightbox_home_demo', width: 800, height: 450)
       .hide()
       .appendTo('section.demo-video-player')
 
-    sublime.prepare $element.id, (lightbox) ->
+    sublime.prepare $element[0], (lightbox) ->
       lightbox.on 'didClose', ->
         $element.parent().removeClass('active')
 

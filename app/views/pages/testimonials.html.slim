@@ -70,7 +70,7 @@ section.l-full-width-wrap
   section.twitter_love
     h3.section-title.l-center= "Twitter Love"
     ul.twitter-quotes
-      - random_favorite_tweets(16).each do |tweet|
+      - random_favorite_tweets(18).each do |tweet|
         li
           blockquote
             = clean_tweet_text(tweet, strip_cc: true, strip_urls: true)

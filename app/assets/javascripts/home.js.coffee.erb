@@ -1,23 +1,40 @@
 SublimeVideo.homeReady = ->
-  SublimeVideo.setupHomeSublime()
+  SublimeVideo.setupDemo()
+  SublimeVideo.setupQuotesSlideshow()
   SublimeVideo.pickRandomVideoThumb()
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
-SublimeVideo.setupHomeSublime = ->
-  homeDemo = new SublimeVideo.HomeDemo("#home_demo_player")
+SublimeVideo.setupDemo = ->
+  unless SublimeVideo.homeDemo?
+    SublimeVideo.homeDemo = new SublimeVideo.HomeDemo('#home_demo_player')
+
   sublime.ready ->
-    homeDemo.setupObservers()
+    SublimeVideo.homeDemo.setupObservers()
 
-  if $("#customers-quotes-slideshow")
-    $("#customers-quotes-slideshow > li:gt(0)").hide().addClass("blur")
+SublimeVideo.setupQuotesSlideshow = ->
+  if $('#customers-quotes-slideshow').exists()
+    unless SublimeVideo.quotesSlideshow?
+      SublimeVideo.quotesSlideshow = new SublimeVideo.QuotesSlideshow('#customers-quotes-slideshow', 3)
+    SublimeVideo.quotesSlideshow.start()
 
-    setInterval ->
-      $el = $('#customers-quotes-slideshow > li:first')
-      $el.addClass("blur").fadeOut 800, ->
-        $el.next().fadeIn(800).removeClass("blur")
-        $el.appendTo('#customers-quotes-slideshow')
-    , 9000
+class SublimeVideo.QuotesSlideshow
+  constructor: (@slideshowDivSelector, @delay = 9) ->
 
+  start: ->
+    @stop()
+    $("#{@slideshowDivSelector} > li:gt(0)").hide().addClass('blur')
+    @interval = setInterval =>
+      @nextQuote()
+    , @delay*1000
+
+  stop: ->
+    clearInterval @interval
+
+  nextQuote: ->
+    $el = $("#{@slideshowDivSelector} > li:first")
+    $el.addClass('blur').fadeOut 800, =>
+      $el.next().fadeIn(800).removeClass('blur')
+      $el.appendTo(@slideshowDivSelector)
 
 # SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
@@ -46,31 +63,36 @@ SublimeVideo.fadeInHackForChrome = ($div) ->
 
 
 class SublimeVideo.HomeDemo
-  constructor: (player) ->
-    @player = $(player)
-    @features = $('ul.demo-video-actions')
-    @kitSelector = $('ul.demo-choose-design')
-    # @setupObservers()
+  constructor: (playerId) ->
+    @playerId = playerId
+
+  reload: ->
+    @player = $(@playerId)
+    @featuresButtons = $('ul.demo-video-actions')
+    @kitsButtons = $('ul.demo-choose-design')
 
   setupObservers: ->
-    @features.find('li a').each (index, element) =>
-      if $(element).data('feature') == 'lightbox'
-        @setupLightbox(element)
-      else
-        @manageTogglerBtn(element, 'feature')
-    @kitSelector.find('li a').each (index, element) =>
-      @manageTogglerBtn(element, 'kit')
+    @reload()
 
-  manageTogglerBtn: (element, attribute) ->
-    btn = $(element)
+    @kitsButtons.find('li a').each (index, element) =>
+      @manageTogglerBtn($(element), 'kit')
+
+    @featuresButtons.find('li a').each (index, element) =>
+      $element = $(element)
+      if $element.data('feature') == 'lightbox'
+        @setupLightbox($element)
+      else
+        @manageTogglerBtn($element, 'feature')
+
+  manageTogglerBtn: ($element, attribute) ->
     autoplay = true
-    btn.on 'click', (event) =>
-      if attribute is "kit"
-        @kitSelector.find('li').removeClass('active')
-        autoplay = false
+    $element.on 'click', (event) =>
       event.preventDefault()
-      @setupAttribute btn.data(attribute), autoplay
-      btn.parent().toggleClass('active')
+      if attribute is "kit"
+        @kitsButtons.find('li').removeClass('active')
+        autoplay = false
+      @setupAttribute $element.data(attribute), autoplay
+      $element.parent().toggleClass('active')
 
   setupAttribute: (value, autoplay) ->
     @unprepareVideo()
@@ -105,9 +127,8 @@ class SublimeVideo.HomeDemo
       @player.removeAttr('data-autoplay')
     sublime.prepare @player[0]
 
-  setupLightbox: (element) ->
-    btn = $(element)
-    btn.attr('href','#lightbox_home_demo')
+  setupLightbox: ($element) ->
+    $element.attr('href','#lightbox_home_demo')
 
     @lightboxPlayer = @player.clone().removeAttr('style class src')
       .attr('id','lightbox_home_demo')
@@ -115,10 +136,10 @@ class SublimeVideo.HomeDemo
       .hide()
       .appendTo('section.demo-video-player')
 
-    sublime.prepare element, (lightbox) ->
+    sublime.prepare $element.id, (lightbox) ->
       lightbox.on 'didClose', ->
-        btn.parent().removeClass('active')
+        $element.parent().removeClass('active')
 
-    btn.on 'click', (event) ->
-      btn.parent().addClass('active')
+    $element.on 'click', (event) ->
+      $element.parent().addClass('active')
 

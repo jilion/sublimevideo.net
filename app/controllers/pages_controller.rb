@@ -12,7 +12,7 @@ private
   def handle_help_page
     if params[:page] == 'help'
       if logged_in_cookie?
-        redirect_to 'https://my.sublimevideo.net/help'
+        redirect_to "http://my.#{request.host}/help"
       else # no cache
         @body_class = 'help'
         render 'help'

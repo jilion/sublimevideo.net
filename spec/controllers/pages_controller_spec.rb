@@ -13,7 +13,7 @@ describe PagesController do
     %w[login signup].each do |param|
       it "responds with success to /?p=#{param}" do
         get :show, page: 'home', p: param
-        response.should render_template("pages/home")
+        response.should redirect_to("http://my.test.host/#{param}")
       end
     end
   end
@@ -24,13 +24,13 @@ describe PagesController do
     %w[login signup].each do |param|
       it "/?p=#{param} redirects" do
         get :show, page: 'home', p: param
-        response.should redirect_to("https://my.sublimevideo.net/#{param}")
+        response.should redirect_to("http://my.test.host/#{param}")
       end
     end
 
     it "/help redirects" do
       get :show, page: 'help'
-      response.should redirect_to("https://my.sublimevideo.net/help")
+      response.should redirect_to("http://my.test.host/help")
     end
   end
 

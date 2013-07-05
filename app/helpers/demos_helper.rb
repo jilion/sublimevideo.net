@@ -9,7 +9,7 @@ module DemosHelper
   end
 
   def demo_active_class(feature, demo)
-    'demo-sidebar-active' if request.path == "/demos/#{feature}/#{demo}"
+    'two-col-sidebar-active' if request.path == "/demos/#{feature}/#{demo}"
   end
 
   def render_demo_html
@@ -25,7 +25,7 @@ module DemosHelper
   end
 
   def render_demo_sources(*languages)
-    content_tag(:div, id: 'demo_source', class: 'demo-content-source', style: 'display:none') do
+    content_tag(:div, id: 'demo_source', class: 'two-col-content-source', style: 'display:none') do
       languages.inject('') do |memo, language|
         memo += content_tag(:h4, _title_for_language(language), class: 'code-label')
         memo += content_tag(:pre, content_tag(:code, render_demo_source(language), class: _class_for_language(language)), class: _class_for_language(language))

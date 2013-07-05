@@ -3,6 +3,7 @@ class DemosController < ApplicationController
 
   def show
     @header_class = 'l-mini'
+    @page_category = "Demo"
 
     redirect_to demo_path(params[:feature], Demos.paths_for(params[:feature]).first) and return unless params[:demo]
 

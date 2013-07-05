@@ -30,7 +30,7 @@ SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.homeReady()
   SublimeVideo.featuresReady() if $('section.features').exists()
   SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
-  SublimeVideo.demosReady() if $('.demo-wrapper').exists()
+  SublimeVideo.demosReady() if $('.two-col-wrapper').exists()
   # SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
 $(document).ready ->

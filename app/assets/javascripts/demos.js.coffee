@@ -5,7 +5,7 @@ SublimeVideo.demosReady = ->
   SublimeVideo.setupSidebarScrolling()
 
 SublimeVideo.demoSourceSwitch = ->
-  $demoActionButtons = $('a.demo-action-button')
+  $demoActionButtons = $('a.two-col-action-button')
   $demoActionButtons.on 'click', (e) ->
     e.preventDefault()
     $('#demo').toggle()
@@ -17,7 +17,7 @@ SublimeVideo.hightlightCode = ->
 
 SublimeVideo.setupSmallSidebarMenuButton = ->
   snapper = new Snap
-    element: $('#demo-container')[0]
+    element: $('#two-col-container')[0]
     disable: 'right'
     maxPosition: 240
     minPosition: -240
@@ -35,7 +35,7 @@ SublimeVideo.setupSmallSidebarMenuButton = ->
       snapper.open('left')
 
 SublimeVideo.setupSidebarScrolling = ->
-  $sidebar = $('.demo-sidebar')
+  $sidebar = $('.two-col-sidebar')
 
   if SublimeVideo.scrollPosition?
     $sidebar.scrollTop(SublimeVideo.scrollPosition)

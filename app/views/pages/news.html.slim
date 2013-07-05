@@ -1,0 +1,128 @@
+- @page_title = "News"
+
+section.l-full-width-wrap
+  h2.section-title= @page_title
+
+  section.content_left
+    h3.title= "Our Blog"
+    ul.l-text-list
+      - cached_latest_sublimevideo_news(3).each do |news|
+        li
+          = link_to news.title, news.url
+          em.l-date
+            small.icon-calendar
+            = l news.date, format: :date
+
+    p
+      strong
+        = link_to "http://blog.jilion.com/tags/sublimevideo" do
+          ' Read the blog
+          small.icon-uniF473
+    .break
+    h3.title= "Press Highlights"
+    ul.l-text-list.l-normal-font
+      li.tnw
+        = image_tag "news/logos/tnw.png", alt: "The Next Web", class: "l-li-logo"
+        = link_to "SublimeVideo, Grab Magic and more take the TV innovation prizes at MIPCube", "http://thenextweb.com/mipcube/2012/04/01/sublimevideo-grab-magic-and-more-take-the-tv-innovation-prizes-at-mipcube/"
+        em.l-date
+          small.icon-calendar
+          = "The Next Web, "
+          = l Time.parse("2012-04-01"), format: :date
+      li.techcrunch
+        = image_tag "news/logos/techcrunch.png", alt: "TechCrunch", class: "l-li-logo"
+        = link_to "SublimeVideo's Cloud-Based HTML5 Player Goes Freemium", "http://techcrunch.com/2011/11/29/sublimevideos-cloud-based-html5-player-goes-freemium/"
+        em.l-date
+          small.icon-calendar
+          = "TechCrunch, "
+          = l Time.parse("2011-11-29"), format: :date
+      li.rww
+        = image_tag "news/logos/rww.png", alt: "ReadWrite", class: "l-li-logo"
+        = link_to "Top Trends of 2011: HTML5", "http://www.readwriteweb.com/archives/top_trends_of_2011_html5.php"
+        em.l-date
+          small.icon-calendar
+          = "ReadWrite, "
+          = l Time.parse("2011-07-26"), format: :date
+      li.wired
+        = image_tag "news/logos/wired.png", alt: "Wired", class: "l-li-logo"
+        = link_to "SublimeVideo Hopes to Simplify HTML5 Web Video", "http://www.webmonkey.com/2010/02/sublimevideo_hopes_to_simplify_html5_web_video/"
+        em.l-date
+          small.icon-calendar
+          = "Wired, "
+          = l Time.parse("2010-02-02"), format: :date
+      li.rww
+        = image_tag "news/logos/rww.png", alt: "ReadWrite", class: "l-li-logo"
+        = link_to "SublimeVideo: Demoing the Future of HTML5 Video", "http://www.readwriteweb.com/archives/sublimevideo_demoing_the_future_of_html5_video.php"
+        em.l-date
+          small.icon-calendar
+          = "ReadWrite, "
+          = l Time.parse("2010-02-02"), format: :date
+      li.df
+        = image_tag "news/logos/daringfireball.png", alt: "Daring Fireball", class: "l-li-logo"
+        = link_to "Better in every single regard than any video player ever made with Flash.", "http://daringfireball.net/linked/2010/02/01/sublimevideo/"
+        em.l-date
+          small.icon-calendar
+          = "Daring Fireball, "
+          = l Time.parse("2010-02-01"), format: :date
+    .break
+    h3.title= "SublimeVideo Newsletters"
+    ul.l-text-list.l-normal-font
+      li
+        = link_to "SublimeVideo Newsletter #4", "http://email.jilion.com/t/r-FA49D61FC8C7A41D2540EF23F30FEDED"
+        em.l-date
+          small.icon-calendar
+          = "June 6, 2013"
+      li
+        = link_to "SublimeVideo Newsletter #3", "http://email.jilion.com/t/r-3401631A1C3B163E2540EF23F30FEDED"
+        em.l-date
+          small.icon-calendar
+          = "April 4, 2013"
+      li
+        = link_to "SublimeVideo Newsletter #2", "http://email.jilion.com/t/ViewEmailArchive/r/C45782C1DF922E69/C67FD2F38AC4859C/"
+        em.l-date
+          small.icon-calendar
+          = "May 8, 2012"
+      li
+        = link_to "SublimeVideo Newsletter #1", "http://email.jilion.com/t/ViewEmailArchive/r/602180142201C954/C67FD2F38AC4859C/"
+        em.l-date
+          small.icon-calendar
+          = "February 16, 2012"
+    h3.title= "Press releases"
+    ul.l-text-list.l-normal-font
+      li
+        = link_to "Jilion Announces SublimeVideo Horizon HTML5 Video Player Framework - Perfectly Branded, Feature-Rich Video Players Working Seamlessly Across Mobile and Browser Platforms", "http://www.prnewswire.com/news-releases/jilion-announces-sublimevideo-horizon-html5-video-player-framework---perfectly-branded-feature-rich-video-players-working-seamlessly-across-mobile-and-browser-platforms-183510331.html"
+        em.l-date
+          small.icon-calendar
+          = l Time.parse("2012-12-14"), format: :date
+      li
+        = link_to "SublimeVideo - The World's First Cloud-based HTML5 Video Player Launches Free and Unlimited Player, Alongside Enhanced Paid Plans and Universal, Real-Time Stats Platform", pr_url("2011-11-29")
+        em.l-date
+          small.icon-calendar
+          = l Time.parse("2011-11-29"), format: :date
+      li
+        = link_to "Jilion Commercializes Highly Anticipated SublimeVideo Cloud-based HTML5 Player Service", pr_url("2011-03-30")
+        em.l-date
+          small.icon-calendar
+          = l Time.parse("2011-03-30"), format: :date
+  section.awards
+    h3.title= "Awards"
+    ul.l-text-list.l-normal-font
+      li.vivendi
+        = image_tag "news/awards/vivendi.png", alt: "Vivendi", class: "l-li-logo"
+        = link_to 'Vivendi "Coup de Coeur" Prize MIPCube Lab 2012', "http://blog.jilion.com/2012/04/03/vivendi-awards-sublimevideo-its-coup-de-coeur-prize-at-mipcube-lab-2012", class: "read_more"
+      li.mipcube
+        = image_tag "news/awards/mipcube.png", alt: "MIPCube", class: "l-li-logo"
+        = link_to "Most Promising Disruptive TV Start-up MIPCube Lab 2012", "http://blog.jilion.com/2012/04/02/sublimevideo-awarded-most-promising-disruptive-tv-start-up-at-mipcube-lab-2012", class: "read_more"
+      li.perl
+        = image_tag "news/awards/perl.png", alt: "Perl 2012", class: "l-li-logo"
+        = link_to "Trophées PERL 2012 1st Prize", "http://blog.jilion.com/2012/04/05/sublimevideo-awarded-1st-prize-of-the-trophees-perl-2012", class: "read_more"
+  section.press_kit
+    h3.title= "Press materials"
+    p.l-normal= "Download our Press Pack, it includes Jilion & SublimeVideo logos (vector & raster), promotional graphics and recent press release."
+    p= link_to press_kit_url, class: "btn", data: { "no-turbolink" => true } do
+      span= "Download the Press Pack"
+
+  h4.title= "Press Contact"
+  p.l-normal= raw "Please use our #{link_to "contact form", "http://jilion.com/contact"}."
+
+  .spacer
+.l-height-margin

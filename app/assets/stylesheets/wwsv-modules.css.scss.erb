@@ -233,19 +233,31 @@ $b-violet:#a389d5;
   }
 }
 
+.customers-logos {
+  width:70%;
+  margin:1em auto 0;
+  @media screen and (max-width:920px) {
+    width:100%;
+  }
+}
+
 .customers-logos li {
   @include display-box;
   @include box-pack(center);
   @include box-align(center);
   float:left;
   margin:0;
-  width:33%;
-  height:64px;
+  width:25%;
+  height:80px;
+  text-align:center;
+  @media screen and (max-width:568px) {
+    width:50%;
+  }
 }
 
 .customers-logos img {
   width:auto;
-  max-width:80%;
+  max-width:86%;
   max-height:90%;
 }
 

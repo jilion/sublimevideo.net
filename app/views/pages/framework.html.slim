@@ -51,32 +51,37 @@ section.l-full-width-wrap
     .big_break
 
     a#technology
-    textile:
-      h3. A ground-breaking HTML5 Video Framework Technology
+    h3 A ground-breaking HTML5 Video Framework Technology
 
-      h4. Tackling the heterogeneity of web browsers’ supported technologies
+    h4 Tackling the heterogeneity of web browsers’ supported technologies
 
-      In order to reach aforementioned goal, we first had to find a way to tackle the huge problem of devices, browsers and web technologies fragmentation.
+    p In order to reach aforementioned goal, we first had to find a way to tackle the huge problem of devices, browsers and web technologies fragmentation.
 
-      Today, there are many different Web technologies available in various forms on even more different web platforms. For instance, on the graphic side, if you want to draw something, you have to choose between SVG, Canvas, CSS, VML, Flash or images. Those web technologies are in a way or another, available or not, depending on the platform. How can you deal with such fragmentation? Which technology can you use to create a web application such as a video player in such a heterogeneous context?
+    p Today, there are many different Web technologies available in various forms on even more different web platforms. For instance, on the graphic side, if you want to draw something, you have to choose between SVG, Canvas, CSS, VML, Flash or images. Those web technologies are in a way or another, available or not, depending on the platform. How can you deal with such fragmentation? Which technology can you use to create a web application such as a video player in such a heterogeneous context?
 
-      It's often a nightmare.
+    p It's often a nightmare.
 
-      h4. What’s the solution?
+    h4 What’s the solution?
 
-      We came to the conclusion that we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
+    p We came to the conclusion that we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
 
-      * *Abstraction* - It should provide a new level of abstraction which would hide all the complexity of various web technologies. In other words, the developer should no longer worry about which web technology he should use to have his player running on any browsing platform.
+    ul.l-text-list
+      li
+        strong Abstraction
+        '  - It should provide a new level of abstraction which would hide all the complexity of various web technologies. In other words, the developer should no longer worry about which web technology he should use to have his player running on any browsing platform.
+      li
+        strong Single codebase
+        '  - The framework should provide the developer or the designer with a simple way to program his player just once using a single JavaScript codebase which works on absolutely any platform, either desktop or touch, without the need for modifications or hacks. Simply the Holy Grail for any developer.
+      li
+        strong Technologies harmonization
+        '  - It should have the knowledge to automatically and transparently use every appropriate technology on any browser to perform any action necessary, such as drawing a button, playing a video; absolutely any action and with no limitations, from the old IE6 to modern tablets such as the Nexus or the iPad.
+      li
+        strong Fully Modular
+        '  - Its architecture should be modular in order to allow the creation of any new functionality in the form of a plug-in.
 
-      * *Single codebase* - The framework should provide the developer or the designer with a simple way to program his player just once using a single JavaScript codebase which works on absolutely any platform, either desktop or touch, without the need for modifications or hacks. Simply the Holy Grail for any developer.
+    p If we could build such a framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
 
-      * *Technologies harmonization* - It should have the knowledge to automatically and transparently use every appropriate technology on any browser to perform any action necessary, such as drawing a button, playing a video; absolutely any action and with no limitations, from the old IE6 to modern tablets such as the Nexus or the iPad.
-
-      * *Fully Modular* - Its architecture should be modular in order to allow the creation of any new functionality in the form of a plug-in.
-
-      If we could build such a framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
-
-      h4. A truly difficult journey
+    h4 A truly difficult journey
 
     = image_tag "framework/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing the SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team"
 
@@ -111,7 +116,7 @@ section.l-full-width-wrap
 
       h4. Dynamic and resolution-independent graphics
 
-    = image_tag "features/retina_icon.jpg", alt: "SublimeVideo Retina", class: "retina"
+    = image_tag "features/retina.png", alt: "SublimeVideo Retina", class: "retina"
 
     textile:
       The whole rendering engine is also dynamic, which means you can control the UI elements in real time, and say, change their color or their appearance.
@@ -161,8 +166,6 @@ section.l-full-width-wrap
       * An advanced support of the newest tablets and smartphones operating systems, unique on the market, that goes way beyond basic HTML5 video playback, so that your player retains all its features and identity and works perfectly as it does on desktop browsers without any degradation.
       * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
       * And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
-
-      In this first phase, we are also starting a partnership program to allow Web agencies or IT companies to immediately design and provide their customers with never before seen, tailor-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, managing the relationship, defining their needs, designing their tailor-made player, integrating it in their websites, and providing, along with us, the tailored-made player they want, according to their specifications. #{link_to "Learn more about our Partnership Program", page_path('tailor-made-players')}.
 
       <a id='opening-horizon-to-developers'></a>
 

@@ -1,0 +1,6 @@
+- %w[youtube player-designs responsive-layout lightbox subtitles player-api hd-switching choose-your-hosting playlists social-sharing on-video-logo cue-zones embed].each do |feature|
+  li
+    h4.two-col-menu-title= t("features.#{feature}.short_title")
+    ul.l-stacked
+      - Demos.paths_for(feature).each do |demo|
+        li= link_to demo_title(demo), demo_url(feature, demo), class: demo_active_class(feature, demo)

@@ -9,7 +9,7 @@ li.feature class="#{cycle(*cycle_classes)}"
   .feature-right
     - if demo
       .feature-box-actions
-          a.feature-demo href=page_path("demos/#{feature.dasherize}")
+          a.feature-demo href=page_path("demos/#{feature}")
             ' Demo
             small.icon-uniF473
     h3= t("features.#{feature}.title")

@@ -22,7 +22,7 @@ en:
       title: Beautiful Retina® and pixel-perfect rendering
       short_title: Retina
       subtitle: Thanks to our vector-based graphics library.
-      description: "Because SublimeVideo Players are drawn with our vector-based graphics library, part of the SublimeVideo Horizon Framework, the rendering of every control and UI element is resolution independent and delivers a pixel-perfect rendering which is incredibly crisp on Retina® displays."
+      description: "Because SublimeVideo Players are drawn with our vector-based graphics library, part of the SublimeVideo Framework, the rendering of every control and UI element is resolution independent and delivers a pixel-perfect rendering which is incredibly crisp on Retina® displays."
 
     responsive:
       title: Responsive design support

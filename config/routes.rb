@@ -9,7 +9,7 @@ SublimeVideo::Application.routes.draw do
   end
 
   # Legacy redirects
-  %w[why horizon-video].each { |action| get action => redirect('/horizon-framework') }
+  %w[why horizon-video horizon-framework].each { |action| get action => redirect('/framework') }
   %w[plans pricing modular-player].each { |action| get action => redirect('/features') }
   get 'tailor-made-players' => redirect('/')
   %w[sony twit blackhandcinema next15 html5].each do |showcase|

@@ -14,11 +14,11 @@ SublimeVideo.setupDemo = ->
 SublimeVideo.setupQuotesSlideshow = ->
   if $('#customers-quotes-slideshow').exists()
     unless SublimeVideo.quotesSlideshow?
-      SublimeVideo.quotesSlideshow = new SublimeVideo.QuotesSlideshow('#customers-quotes-slideshow', 3)
+      SublimeVideo.quotesSlideshow = new SublimeVideo.QuotesSlideshow('#customers-quotes-slideshow')
     SublimeVideo.quotesSlideshow.start()
 
 class SublimeVideo.QuotesSlideshow
-  constructor: (@slideshowDivSelector, @delay = 9) ->
+  constructor: (@slideshowDivSelector, @delay = 11) ->
 
   start: ->
     @stop()

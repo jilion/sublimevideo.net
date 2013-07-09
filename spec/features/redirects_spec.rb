@@ -2,10 +2,10 @@
 require 'spec_helper'
 
 feature 'Legacy redirects' do
-  %w[why horizon-video].each do |page|
-    scenario "/#{page} redirects to /horizon-framework" do
+  %w[why horizon-video horizon-framework].each do |page|
+    scenario "/#{page} redirects to /framework" do
       visit "/#{page}"
-      current_url.should eq "http://sublimevideo.dev/horizon-framework"
+      current_url.should eq "http://sublimevideo.dev/framework"
     end
   end
 

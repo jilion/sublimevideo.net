@@ -43,8 +43,8 @@ feature 'Footer navigation links' do
       click_link 'Testimonials'
       current_url.should eq "http://sublimevideo.dev/testimonials"
 
-      click_link 'Horizon Framework'
-      current_url.should eq "http://sublimevideo.dev/horizon-framework"
+      click_link 'Technology'
+      current_url.should eq "http://sublimevideo.dev/framework"
 
       # Support
       click_link 'Documentation'

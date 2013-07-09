@@ -21,9 +21,9 @@ feature 'Demos redirects' do
 
   context 'feature has several demos' do
     scenario '/demos/:feature redirects to this feature first demo' do
-      visit '/demos/responsive/fit-resizing'
+      visit '/demos/responsive-layout/fit-resizing'
 
-      current_url.should eq 'http://sublimevideo.dev/demos/responsive/fit-resizing'
+      current_url.should eq 'http://sublimevideo.dev/demos/responsive-layout/fit-resizing'
     end
   end
 

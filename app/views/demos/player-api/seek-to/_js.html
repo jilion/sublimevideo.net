@@ -1,8 +1,8 @@
 sublime.ready(function() {
-  sublime.prepare('video1', function(player) {
+  sublime.prepare("video1", function(player) {
     var duration = null, currentSeekPercentage = null;
 
-    player.on('metadata', function(p) {
+    player.on("metadata", function(p) {
       duration = p.duration();
 
       // User wants to seek, let's seek!
@@ -11,9 +11,9 @@ sublime.ready(function() {
       }
     });
 
-    $('.seek_to').on('click', function(event) {
+    $(".seek_to").on("click", function(event) {
       event.preventDefault();
-      currentSeekPercentage = parseInt($(event.target).data('seek-to'));
+      currentSeekPercentage = parseInt($(event.target).data("seek-to"));
       player.play();
 
       // We need the video duration in order to seek!

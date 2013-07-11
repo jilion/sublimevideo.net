@@ -3,15 +3,15 @@
 #       It should contain a fix for jQuery 1.8
 #= require jquery.transit.min
 #= require jquery.slidify
-#= require home
-#= require horizon_framework
-#= require features
-#= require demos
-#= require_self
 #= require prism-line-highlight
 #= require snap.min
 #= require google-analytics-turbolinks
 #= require turbolinks
+#= require home
+#= require framework
+#= require features
+#= require demos
+#= require_self
 
 # Ensure we don't have new relic errors
 window.NREUMQ = window.NREUMQ || []
@@ -29,7 +29,7 @@ SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady()
   SublimeVideo.featuresReady() if $('section.features').exists()
-  # SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
+  SublimeVideo.frameworkReady() if $('section.framework').exists()
   SublimeVideo.demosReady() if $('.two-col-wrapper').exists()
   # SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 

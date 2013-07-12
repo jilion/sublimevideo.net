@@ -1,89 +1,89 @@
 sublime.ready(function() {
 
   // Every zone here ends when the next one begins, so in
-  // this case we don't need to specify the "to:" value.
+  // this case we don"t need to specify the "to:" value.
   var cuezones = [{
-    id: 'ch1',
+    id: "ch1",
     from: 0,
-    text: 'Lava'
+    text: "Lava"
   }, {
-    id: 'ch2',
+    id: "ch2",
     from: 13.95,
-    text: 'Icebergs in Jökulsárlón'
+    text: "Icebergs in Jökulsárlón"
   }, {
-    id: 'ch3',
+    id: "ch3",
     from: 19,
-    text: 'Plane wreck'
+    text: "Plane wreck"
   }, {
-    id: 'ch4',
+    id: "ch4",
     from: 22.8,
-    text: 'Budir Church'
+    text: "Budir Church"
   }, {
-    id: 'ch5',
+    id: "ch5",
     from: 28.2,
-    text: 'Lupin field'
+    text: "Lupin field"
   }, {
-    id: 'ch6',
+    id: "ch6",
     from: 34.15,
-    text: 'Landmannalaugar'
+    text: "Landmannalaugar"
   }, {
-    id: 'ch7',
+    id: "ch7",
     from: 38.15,
-    text: 'Lava field'
+    text: "Lava field"
   }, {
-    id: 'ch8',
+    id: "ch8",
     from: 44.3,
-    text: 'Dyrhólaey Beach'
+    text: "Dyrhólaey Beach"
   }, {
-    id: 'ch9',
+    id: "ch9",
     from: 51.8,
-    text: 'West Fjords'
+    text: "West Fjords"
   }, {
-    id: 'ch10',
+    id: "ch10",
     from: 59.5,
-    text: 'Dyrhólaey Beach'
+    text: "Dyrhólaey Beach"
   }, {
-    id: 'ch11',
+    id: "ch11",
     from: 64.55,
-    text: 'Landmannalaugar'
+    text: "Landmannalaugar"
   }, {
-    id: 'ch12',
+    id: "ch12",
     from: 69.4,
-    text: 'Hverfjall Crater'
+    text: "Hverfjall Crater"
   }];
 
   // Show default background image (the one displayed at the beginning, when the video is still stopped)
-  $('.bg.ch0').fadeIn();
+  $(".bg.ch0").fadeIn();
 
   // Build the chapters menu (hidden)
   $.each(cuezones, function(index, zone) {
-    $('#chapters').append('<li id="' + zone.id + '"><a href="#"><img width="60" alt="" src="'+ 'http://media.sublimevideo.net/misc/cuezones_demo/' + zone.id + '.jpg" /></a></li>').hide();
+    $("#chapters").append("<li id=\"" + zone.id + "\"><a href=\"#\"><img width=\"60\" alt=\"\" src=\"http://media.sublimevideo.net/misc/cuezones_demo/" + zone.id + ".jpg\" /></a></li>").hide();
   });
 
   // Set up the chapters menu
-  $('#chapters li').click(function(event) {
+  $("#chapters li").click(function(event) {
     event.preventDefault();
-    sublime('video1').cuezones.goTo('places.' + this.id);
+    sublime("video1").cuezones.goTo("places." + this.id);
   });
 
   // Cue Zones set up
-  sublime.prepare('video1', function(player) {
-    player.on('start', function() {
+  sublime.prepare("video1", function(player) {
+    player.on("start", function() {
       // Show the chapters menu when video is started
-      $('#chapters').show();
+      $("#chapters").show();
     });
 
     player.cuezones.addGroup({
-      id: 'places',
+      id: "places",
       cuezones: cuezones,
       onenter: function(player, groupId, cuezone, index) {
-        $('img.bg.' + cuezone.id).fadeIn('slow');
-        $('#title').html(cuezone.text);
-        $('#' + cuezone.id).addClass('active');
+        $("img.bg." + cuezone.id).fadeIn("slow");
+        $("#title").html(cuezone.text);
+        $("#" + cuezone.id).addClass("active");
       },
       onexit: function(player, groupId, cuezone, index) {
-        $('img.bg.' + cuezone.id).fadeOut('slow');
-        $('#' + cuezone.id).removeClass('active');
+        $("img.bg." + cuezone.id).fadeOut("slow");
+        $("#" + cuezone.id).removeClass("active");
       }
     });
   });
@@ -98,11 +98,11 @@ $(window).resize(function(){
 });
 
 function fixBackgroundImageSize() {
-  var container = $('#cuezones_demo');
-  var background = $('#cuezones_demo .background');
+  var container = $("#cuezones_demo");
+  var background = $("#cuezones_demo .background");
   if (container.width()/container.height() < 16/9) {
-    background.addClass('tall');
+    background.addClass("tall");
   } else {
-    background.removeClass('tall');
+    background.removeClass("tall");
   }
 }

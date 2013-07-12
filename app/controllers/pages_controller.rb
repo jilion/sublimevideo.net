@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   before_filter :handle_help_page, :redirect_to_my
 
   def show
-    @body_class = params[:page]
     render_cached_page
   end
 
@@ -14,7 +13,6 @@ private
       if logged_in_cookie?
         redirect_to "http://my.#{request.host}/help"
       else # no cache
-        @body_class = 'help'
         render 'help'
       end
     end

@@ -1,7 +1,7 @@
 - @page_title = "SublimeVideo Framework"
 
 section.framework.l-full-width-wrap
-  h2.section-title SublimeVideo HTML5 Video Framework
+  h2.section-title.l-center SublimeVideo HTML5 Video Framework
 
   ul.l-grid.go-to-anchor
     li= link_to "Origin", "#origin", class: "light-blue"
@@ -23,9 +23,9 @@ section.framework.l-full-width-wrap
   .main_copy
     a#origin
     textile:
-      h3. Origin and motivations for building SublimeVideo Framework
+      h3(text-title). Origin and motivations for building SublimeVideo Framework
 
-      h4. First goal already achieved: Reliable video play in any browser and device
+      h4(title). First goal already achieved: Reliable video play in any browser and device
 
       Before SublimeVideo Framework, we offered only one player; The SublimeVideo HTML5 Video Player.
       It was great because it was truly reliable. It is safe to say it was the most web-page friendly HTML5 video player out there, thanks to the countless hours we spent ensuring nothing would break when you used it on any of your pages. Not an easy task for an HTML5 Video player without iFrame.
@@ -37,23 +37,21 @@ section.framework.l-full-width-wrap
 
       We were therefore legitimately able to tick the "Reliability" check box. We were really pleased with this, but it was not enough!
 
-      h4. Second and third major goals to achieve: Features extensibility and design freedom
+      h4(title). Second and third major goals to achieve: Features extensibility and design freedom
 
       While being reliable, our player was limited in two important dimensions, namely Features Extensibility and Design Freedom.
       The former player architecture was not designed to accommodate new features seamlessly or to be graphically modified to  answer the various needs of thousands of potential web publishers.
 
       We had to find a way to break those barriers. it's worth noting that no-one else had gone beyond those limitations while keeping broad browser compatibility. In our opinion, this was a completely new frontier to surpass.
 
-      Something had to be done! That's why we created SublimeVideo Framework. We wanted...
-
-      h4. The Technology to create any number of unique players with no limitations and no compromises in quality
+      Something had to be done! That's why we created SublimeVideo Framework. We wanted *_the Technology to create any number of unique players with no limitations and no compromises in quality._*
 
     .big_break
 
     a#technology
-    h3 A ground-breaking HTML5 Video Framework Technology
+    h3.text-title A ground-breaking HTML5 Video Framework Technology
 
-    h4 Tackling the heterogeneity of web browsers’ supported technologies
+    h4.title Tackling the heterogeneity of web browsers’ supported technologies
 
     p In order to reach aforementioned goal, we first had to find a way to tackle the huge problem of devices, browsers and web technologies fragmentation.
 
@@ -61,7 +59,7 @@ section.framework.l-full-width-wrap
 
     p It's often a nightmare.
 
-    h4 What’s the solution?
+    h4.title What’s the solution?
 
     p We came to the conclusion that we should build a framework that could hide all this complexity and heterogeneity from the developer. Such framework should have the following characteristics:
 
@@ -81,29 +79,29 @@ section.framework.l-full-width-wrap
 
     p If we could build such a framework, it could be the ultimate solution to solve the huge problem mentioned above, and more importantly, it could solve them in a fully scalable way, leading to the possibility of quickly producing and easily maintaining hundreds of different state-of-the-art video players.
 
-    h4 A truly difficult journey
+    h3.text-title A truly difficult journey
 
-    = image_tag "framework/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing the SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team"
+    p.l-center= image_tag "framework/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing the SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team", style: "max-width:100%;height:auto"
 
     textile:
       It remained to be seen if such a framework could ever be built. Frankly, there were numerous times when we thought the technical challenges facing us were simply insurmountable. We really had the feeling we were embarking on a crazy journey, like a group of alpine mountain-climbing pioneers.
 
-      h4. Just like in the movies, it turned out to be a happy outcome!
+      h4(title). Just like in the movies, it turned out to be a happy outcome!
 
       The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Framework.
 
-    = image_tag "framework/framework_architecture_scheme.jpg", alt: "SublimeVideo Framework Architecture", class: "architecture_scheme"
-    p
+    p.l-center= image_tag "framework/framework_architecture_scheme.jpg", alt: "SublimeVideo Framework Architecture", class: "architecture_scheme", style: "max-width:100%;height:auto"
+    p.l-center
       em.caption= "SublimeVideo Framework Architecture"
 
     textile:
       Besides achieving the aforementioned goals of abstraction, having a single codebase, web technology harmonization and fully modular architecture, we would like to emphasize one of its most powerful aspects below, which is its capability to specifically unify graphics rendering and remove its complexity while not losing any creative freedom!
 
-      h4. Pushing the UI further up to vector drawing power
+      h4(title). Pushing the UI further up to vector drawing power
 
       With a hellish variety of mobile and tablet screen sizes and resolutions, we felt the need to push the envelope with a much more ambitious and elegant vector-based approach.
 
-    = image_tag "framework/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
+    p.l-center= image_tag "framework/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes", style: "max-width:100%;height:auto"
 
     textile:
       Nevertheless, here again, there is no single technology today that allows the consistent drawing of a graphic element across all browsers (unless one uses Flash, which is no longer an option for mobiles).
@@ -114,34 +112,35 @@ section.framework.l-full-width-wrap
 
       It allows you to draw a graphics element once, and get it rendered exactly in the same way everywhere by automatically using the most appropriate drawing engine depending on the device or browser capabilities.
 
-      h4. Dynamic and resolution-independent graphics
+      h4(title). Dynamic and resolution-independent graphics
 
-    = image_tag "features/retina.png", alt: "SublimeVideo Retina", class: "retina"
+    / = image_tag "features/retina.png", size: "112x112", alt: "SublimeVideo Retina", class: "retina", style: "float:right; margin:1em"
 
     textile:
       The whole rendering engine is also dynamic, which means you can control the UI elements in real time, and say, change their color or their appearance.
 
       Also, with the advent of very high resolution displays, many designers realize their creations become pixelated when seen on those screens. Because SublimeVideo Framework draws user interfaces in using its vector-based graphics library, all its components are always rendered perfectly, independently of the device screen resolution.
 
-      h4. SublimeVideo player's designs goes deeper than the usual skins
+      h4(title). SublimeVideo player's designs goes deeper than the usual skins
 
       In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Framework, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
 
-    = image_tag "framework/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
+    p.l-center= image_tag "framework/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch", style: "max-width:100%;height:auto"
+
+    h4.title Benefits of SublimeVideo Framework Graphic Engine Library:
+
+    ul.l-text-list
+      li A unified drawing API, which is completely abstracted from any rendering engine.
+      li A pixel perfect level of cross browser rendering.
+      li The ability to draw vector graphics which are resolution independent brings beautiful and crisp controls on Retina® displays especially when users pinch to zoom on touch devices.
+      li The possibility to dynamically adapt vector shapes to either modify, recolor or scale them.
+      li Supports complex shapes drawn with lines, arcs and even Bézier curves.
+      li Complete support for masking and clipping.
+      li A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows.
+      li Compatibility with font systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts.
 
     textile:
-      h4. Benefits of SublimeVideo Framework Graphic Engine Library:
-
-      * A unified drawing API, which is completely abstracted from any rendering engine.
-      * A pixel perfect level of cross browser rendering.
-      * The ability to draw vector graphics which are resolution independent brings beautiful and crisp controls on Retina® displays especially when users pinch to zoom on touch devices.
-      * The possibility to dynamically adapt vector shapes to either modify, recolor or scale them.
-      * Supports complex shapes drawn with lines, arcs and even Bézier curves.
-      * Complete support for masking and clipping.
-      * A fine-crafted management of Photoshop-level shadows (with distance, spread, size, angle), gradients and glows.
-      * Compatibility with font systems like Adobe Typekit, Edge Web Fonts or Google Fonts, which means a player can display a brand official fonts.
-
-      h3. Demos
+      h3(text-title). Demos
 
       Below you can test and play with various SublimeVideo Framework-based HTML5 Video players.
       We encourage you to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
@@ -152,9 +151,9 @@ section.framework.l-full-width-wrap
 
     a#roadmap
     textile:
-      h3. SublimeVideo Framework's Next Steps
+      h3(text-title). SublimeVideo Framework's Next Steps
 
-      h4. 1st Phase: SublimeVideo Framework Introduction
+      h4(title). 1st Phase: SublimeVideo Framework Introduction
 
       Today, as a first step, we are introducing the SublimeVideo HTML5 Video Framework, its powerful capabilities, and why we think it may be the best solution, if not the Holy Grail, to finally address the HTML5 Video fragmentation conundrum, elegantly and without compromise.
 
@@ -162,14 +161,16 @@ section.framework.l-full-width-wrap
 
       Our new Modular Player service provides a number of important improvements over the previous generation, including:
 
-      * A new modular business-model based on add-ons so you can shop only for the features you need.
-      * An advanced support of the newest tablets and smartphones operating systems, unique on the market, that goes way beyond basic HTML5 video playback, so that your player retains all its features and identity and works perfectly as it does on desktop browsers without any degradation.
-      * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
-      * And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
+    ul.l-text-list
+      li A new modular business-model based on add-ons so you can shop only for the features you need.
+      li An advanced support of the newest tablets and smartphones operating systems, unique on the market, that goes way beyond basic HTML5 video playback, so that your player retains all its features and identity and works perfectly as it does on desktop browsers without any degradation.
+      li A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
+      li And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
 
+    textile:
       <a id='opening-horizon-to-developers'></a>
 
-      h4. 2nd Phase: Opening SublimeVideo Framework to developers
+      h4(title). 2nd Phase: Opening SublimeVideo Framework to developers
 
       So what's next, now that we have announced SublimeVideo Framework?
 
@@ -180,3 +181,4 @@ section.framework.l-full-width-wrap
       All the options are on the table now!
       Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_horizon_to_developers_url}.
 
+.l-height-margin

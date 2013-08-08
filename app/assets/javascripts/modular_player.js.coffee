@@ -32,7 +32,7 @@ class SublimeVideo.Playlist
     @playlistWrapperId = playlistWrapperId
     @videosCount = jQuery("##{@playlistWrapperId} .video_wrap").size()
 
-    matches = jQuery("##{@playlistWrapperId} video").attr("id").match(/^video(\d+)$/)
+    matches = jQuery("##{@playlistWrapperId} video.sublime").attr("id").match(/^video(\d+)$/)
     @firstVideoIndex = parseInt(matches[1], 10)
     @lastVideoIndex = @firstVideoIndex + @videosCount - 1
 

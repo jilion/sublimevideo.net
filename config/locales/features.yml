@@ -13,8 +13,8 @@ en:
       description: 'Along with the Classic SublimeVideo player design, you can now select two additional player designs, Light and Flat, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, check what we can do for you.'
       docs_path: 'settings/player-settings#player-kit'
 
-    playlists:
-      short_title: Playlists integration
+    # playlists:
+    #   short_title: Playlists integration
 
     retina:
       title: Beautiful Retina® and pixel-perfect rendering

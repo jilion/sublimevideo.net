@@ -392,6 +392,8 @@ $b-violet:#a389d5;
   width:170px;
   @include display-box;
   @include box-align(center);
+  @include box-pack(center);
+//  @include box-orient(horizontal);
   @include border-left-radius(4px);
   @media screen and (max-width:568px) {
     width:auto;
@@ -417,7 +419,7 @@ $b-violet:#a389d5;
 }
 
 .feature-img img {
-  vertical-align:middle;
+//  vertical-align:middle;
   max-width:112px;
   max-height:112px;
 //  -webkit-filter: drop-shadow(0 -1px 0 rgba(0,0,0,0.3));
@@ -481,8 +483,8 @@ $b-violet:#a389d5;
   font-size:1.1em;
   line-height:1.6em;
   padding:0 1em 1em 0;
-  width:54%;
-  @include box-flex(1);
+//  width:54%;
+  @include box-flex(1);}
   @media screen and (max-width:920px) {
     width:auto;
   }
@@ -491,7 +493,7 @@ $b-violet:#a389d5;
 .feature-add-on {
   @include box-flex(1);
 //  float:right;
-  width:42%;
+  max-width:42%;
   min-width:300px;
   font-size:1.1em;
   margin:10px 1em 1em 30px;
@@ -500,6 +502,7 @@ $b-violet:#a389d5;
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
   @media screen and (max-width:920px) {
+    max-width:none;
     margin:10px 1em 30px 0;
     width:auto;
   }

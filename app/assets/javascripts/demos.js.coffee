@@ -21,9 +21,10 @@ SublimeVideo.setupSmallSidebarMenuButton = ->
     disable: 'right'
     maxPosition: 240
     minPosition: -240
-    touchToDrag: false
+    touchToDrag: true
+    tapToClose: true
 
-  snapper.disable()
+  # snapper.disable()
   $(window).resize ->
     snapper.close()
 

@@ -52,7 +52,7 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics'
+  gem 'rack-google-analytics', '0.11.0'
 end
 
 group :staging, :production do

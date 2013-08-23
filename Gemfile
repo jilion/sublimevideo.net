@@ -39,7 +39,7 @@ gem 'oj'
 gem 'net-scp', '1.0.4'
 
 gem 'lograge'
-gem 'countries', github: 'hexorx/countries' # until 0.9.2 is out!
+gem 'countries'
 gem 'rack-status'
 
 # Gems used only for assets and not required

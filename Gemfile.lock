@@ -1,27 +1,27 @@
 GIT
-  remote: git://github.com/hexorx/countries.git
-  revision: 083fac01dcac6e25b83a221843cf271529dae1cf
+  remote: https://github.com/hexorx/countries.git
+  revision: 0d8e4b4680bdaf0be021129e2767e13d594e6bfc
   specs:
     countries (0.9.1)
-      currencies (>= 0.4.0)
+      currencies (~> 0.4.2)
 
 GIT
-  remote: git://github.com/jilion/configurator.git
+  remote: https://github.com/jilion/configurator.git
   revision: 3a8df3f51dea0e414bc9cd86fea1f85b1a30745a
   specs:
     configurator (1.0.0)
       activesupport (>= 3.2.12)
 
 GIT
-  remote: git://github.com/jilion/turbolinks.git
-  revision: f5142ba901aa4ce7f2faf4b4e2cdc6c9a2f91c49
+  remote: https://github.com/jilion/turbolinks.git
+  revision: 0a192f579ec837dd616623592dcdaaf2305a9583
   branch: ios_video_issue
   specs:
-    turbolinks (1.0.0)
+    turbolinks (1.2.0)
       coffee-rails
 
 GIT
-  remote: git://github.com/librato/librato-rails.git
+  remote: https://github.com/librato/librato-rails.git
   revision: 82a95ae54f2ed990135a7b655293107384da2796
   branch: feature/rack_first
   specs:
@@ -31,7 +31,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
-  remote: https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/
+  remote: https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/
   specs:
     RedCloth (4.2.9)
     actionmailer (3.2.13)
@@ -100,7 +100,7 @@ GEM
     coffee-script-source (1.6.2)
     connection_pool (1.0.0)
     crack (0.3.2)
-    currencies (0.4.0)
+    currencies (0.4.2)
     dalli (2.6.2)
     debug_inspector (0.0.2)
     diff-lcs (1.2.3)
@@ -196,6 +196,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.3)
@@ -393,6 +394,7 @@ DEPENDENCIES
   launchy
   librato-rails!
   lograge
+  memcachier
   net-scp (= 1.0.4)
   newrelic_rpm
   oj

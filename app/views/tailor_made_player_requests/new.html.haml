@@ -1,67 +1,66 @@
 - @page_title = "Let's design your own Tailor-Made Player"
 
-= content_for :header do
-  %h2= @page_title
-  %p.sub= "If you are interested in designing a tailor-made player with us, please fill in the form below. We will contact you shortly."
+%section.l-full-width-wrap
+  %h2.l-center If you are interested in designing a tailor-made player with us, please fill in the form below. We will contact you shortly.
 
-.content_box
-  .content_wrap
-    .lights
-      = image_tag "tailor_made/form_visual.jpg", alt: "SublimeVideo Tailor-Made Players", class: "blueprint"
-      = form_for @tailor_made_player_request do |f|
-        .entry
-          = f.label :name
-          = f.text_field :name, class: 'text no_icon', required: true
+  .content_box
+    .content_wrap
+      .lights
+        = image_tag "tailor_made/form_visual.jpg", alt: "SublimeVideo Tailor-Made Players", class: "blueprint"
+        = form_for @tailor_made_player_request do |f|
+          .entry
+            = f.label :name
+            = f.text_field :name, class: 'text no_icon', required: true
 
-        .entry
-          = f.label :email
-          = f.text_field :email, class: 'text no_icon', required: true
+          .entry
+            = f.label :email
+            = f.text_field :email, class: 'text no_icon', required: true
 
-        .entry
-          = f.label :job_title
-          = f.text_field :job_title, class: 'text no_icon', required: true
+          .entry
+            = f.label :job_title
+            = f.text_field :job_title, class: 'text no_icon', required: true
 
-        .entry
-          = f.label :company, required: true
-          = f.text_field :company, class: 'text no_icon', required: true
+          .entry
+            = f.label :company, required: true
+            = f.text_field :company, class: 'text no_icon', required: true
 
-        .entry
-          = f.label :url
-          = f.text_field :url, class: 'text no_icon', required: true
+          .entry
+            = f.label :url
+            = f.text_field :url, class: 'text no_icon', required: true
 
-        .entry.select
-          = f.label :country
-          = f.country_select :country, options_for_select('Country'), required: true
+          .entry.select
+            = f.label :country
+            = f.country_select :country, [], iso_codes: true, required: true, include_blank: 'Country'
 
-        %h5= 'Please let us know about the topic of your request:'
+          %h5= 'Please let us know about the topic of your request:'
 
-        .radio_wrap
-          = f.radio_button :topic, 'agency', required: true
-          = f.label :topic_agency
+          .radio_wrap
+            = f.radio_button :topic, 'agency', required: true
+            = f.label :topic_agency
 
-        .radio_wrap
-          = f.radio_button :topic, 'standalone', required: true
-          = f.label :topic_standalone
-        .entry.indent= f.text_field :topic_standalone_detail, class: 'text no_icon'
+          .radio_wrap
+            = f.radio_button :topic, 'standalone', required: true
+            = f.label :topic_standalone
+          .entry.indent= f.text_field :topic_standalone_detail, class: 'text no_icon'
 
-        .radio_wrap
-          = f.radio_button :topic, 'platform', required: true
-          = f.label :topic_platform
+          .radio_wrap
+            = f.radio_button :topic, 'platform', required: true
+            = f.label :topic_platform
 
-        .radio_wrap
-          = f.radio_button :topic, 'other', required: true
-          = f.label :topic_other
-        .entry.indent= f.text_field :topic_other_detail, class: 'text no_icon'
+          .radio_wrap
+            = f.radio_button :topic, 'other', required: true
+            = f.label :topic_other
+          .entry.indent= f.text_field :topic_other_detail, class: 'text no_icon'
 
-        .entry.textarea
-          = f.label :description, 'How can we help you?'
-          = f.text_area :description, class: 'text'
+          .entry.textarea
+            = f.label :description, 'How can we help you?'
+            = f.text_area :description, class: 'text'
 
-        .entry
-          = f.label :document, 'Additional document (10MB max)'
-          = f.file_field :document
+          .entry
+            = f.label :document, 'Additional document (10MB max)'
+            = f.file_field :document
 
-        %div{ style: 'position: absolute; left: -2000px' }= f.text_field :honeypot
+          %div{ style: 'position: absolute; left: -2000px' }= f.text_field :honeypot
 
-        .actions.center
-          = f.submit 'Submit', class: 'submit blue_button'
+          .actions.center
+            = f.submit 'Submit', class: 'submit blue_button'

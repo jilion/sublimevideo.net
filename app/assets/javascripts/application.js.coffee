@@ -36,7 +36,7 @@ SublimeVideo.wwwDocumentReady = ->
 $(document).ready ->
   SublimeVideo.wwwDocumentReady()
 
-$(window).bind 'page:change', ->
+$(document).bind 'page:change', ->
   SublimeVideo.wwwDocumentReady()
   SublimeVideo.UI.updateActiveItemMenus()
 

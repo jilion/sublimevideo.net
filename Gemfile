@@ -3,7 +3,7 @@ source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com accou
 
 ruby '2.0.0'
 
-gem 'rails', '~> 4.0.0' # until 3.2.14 is out!
+gem 'rails', '~> 4.0.0'
 gem 'rails_12factor'
 # Pro-tip: bundle config local.sublime_video_layout ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
 # gem 'sublime_video_layout', '3.0.0.rc.2'
@@ -46,6 +46,7 @@ gem 'net-scp', '1.0.4'
 
 gem 'lograge'
 gem 'countries'
+gem 'country_select'
 gem 'rack-status'
 
 # Gems used only for assets and not required

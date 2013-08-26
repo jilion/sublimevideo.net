@@ -24,6 +24,7 @@ gem 'responders'
 gem 'kaminari'
 
 # Internals
+gem 'fog'
 gem 'sidekiq'
 gem 'autoscaler'
 gem 'honeybadger'
@@ -36,7 +37,6 @@ gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_firs
 gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
 gem 'oj'
-gem 'net-scp', '1.0.4'
 
 gem 'lograge'
 gem 'countries'

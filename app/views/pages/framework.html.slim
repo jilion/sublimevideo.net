@@ -150,7 +150,7 @@ section.framework.l-full-width-wrap
     = render "showcases"
 
     p.l-center
-      a.btn href=""
+      = link_to new_tailor_made_player_request_path, class: 'btn' do
         span Need a tailor-made player? Contact us
     .big_break
 
@@ -173,7 +173,7 @@ section.framework.l-full-width-wrap
       li And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
 
     textile:
-      <a id='opening-horizon-to-developers'></a>
+      <a id='opening-sublimevideo-framework-to-developers'></a>
 
       h4(title). 2nd Phase: Opening SublimeVideo Framework to developers
 
@@ -184,6 +184,6 @@ section.framework.l-full-width-wrap
       After more than a year of hard work creating the framework itself, we now want to properly explore what could be the best ways to give developers access to SublimeVideo Framework.
 
       All the options are on the table now!
-      Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_horizon_to_developers_url}.
+      Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_framework_to_developers_url}.
 
 .l-height-margin

@@ -15,7 +15,7 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
   scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }
   scope :with_topic, lambda { |topic| where(topic: topic) }
-  scope :created_before, lambda { |date| where{ created_at <= date } }
+  scope :created_before, lambda { |date| where('created_at <= ?', date) }
 
   def self.topics
     TOPICS

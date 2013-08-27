@@ -85,50 +85,56 @@ section.demo-player.l-full-width-wrap
           small.icon-uniF473
   .l-separator
   .spacer
-  / .customers-logos-box
-  h5.l-center They use SublimeVideo
-  ul.l-grid.customers-logos
-    li
-      = image_tag "home/logos/activision@2x.png", alt: "Activision"
-    li
-      = image_tag "home/logos/sony@2x.png", alt: "Sony"
-    li
-      = image_tag "home/logos/jquery@2x.png", alt: "jQuery"
-    li
-      = image_tag "home/logos/ford@2x.png", alt: "Ford"
-    li
-      = image_tag "home/logos/nissan@2x.png", alt: "Nissan"
-    li
-      = image_tag "home/logos/npr@2x.png", alt: "npr"
-    li
-      = image_tag "home/logos/ralph-lauren@2x.png", alt: "Ralph Lauren"
-    li
-      = image_tag "home/logos/tetra-pak@2x.png", alt: "Tetra Pak"
-    / li
-    /   = image_tag "home/logos/qualcomm@2x.png", alt: "Qualcomm"
+  .customers-logos-box
+    h5.l-center They use SublimeVideo
+    ul.l-grid.customers-logos
+      li
+        = image_tag "home/logos/activision@2x.png", alt: "Activision"
+      li
+        = image_tag "home/logos/sony@2x.png", alt: "Sony"
+      li
+        = image_tag "home/logos/jquery@2x.png", alt: "jQuery"
+      li
+        = image_tag "home/logos/ford@2x.png", alt: "Ford"
+      li
+        = image_tag "home/logos/nissan@2x.png", alt: "Nissan"
+      li
+        = image_tag "home/logos/npr@2x.png", alt: "npr"
+      li
+        = image_tag "home/logos/ralph-lauren@2x.png", alt: "Ralph Lauren"
+      li
+        = image_tag "home/logos/tetra-pak@2x.png", alt: "Tetra Pak"
+      / li
+      /   = image_tag "home/logos/qualcomm@2x.png", alt: "Qualcomm"
   .spacer
-  / .horizon-box
-  /   h5 The Technology
-  /   a.sublime#lightbox_horizon href="#video_framework"
-  /     = image_tag "home/thumb_1.jpg", class: "video_thumb", width: "100%"
-  /   video#video_framework width="800" height="450" style='display:none' poster="#{image_path "home/poster_1.jpg"}" data-uid='home' data-name='Home' data-action-enable='true' data-embed-size='640x360' data-embed-url="/embeds/horizon.html" data-sharing-text='Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework' data-sharing-url="http://sublimevideo.net"
-  /     source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'
-  /     source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'
-  /     source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'
-  /     source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd'
-  /   strong
-  /     = link_to page_path('horizon-framework') do
-  /       | Learn more about Horizon
-  /       small.icon-uniF473
-  /.tailor-made-box
-  /  h5 Tailor-Made Players
-  /  a href=""
-  /    = image_tag "home/blueprint.png", alt:"Blueprint", width: "60%"
-  /  div
-  /    strong Need a tailor-made player?
-  /  strong
-  /    a href=""
-  /      | View our showcases and contact us
-  /      small.icon-uniF473
+  .l-separator
+  h5.l-center The Technology
+  .technology-box.sv-framework-box
+    = link_to page_path('horizon-framework') do
+      = image_tag "home/sv-framework.jpg", alt:"SublimeVideo Framework"
+    div
+      strong
+        = link_to page_path('horizon-framework') do
+          | SublimeVideo Framework
+          small.icon-uniF473
+  .technology-box.sv-framework-video-box
+    a.sublime#lightbox_horizon href="#video_framework"
+      = image_tag "home/thumb_1.jpg", class: "video_thumb"
+    video#video_framework width="800" height="450" style='display:none' poster="#{image_path "home/poster_1.jpg"}" data-uid='home' data-name='Home' data-action-enable='true' data-embed-size='640x360' data-embed-url="/embeds/horizon.html" data-sharing-text='Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework' data-sharing-url="http://sublimevideo.net"
+      source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'
+      source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'
+      source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base'
+      source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd'
+    div
+      strong
+        | Discover the Framework
+  .technology-box.showcases-box
+   = link_to page_path('horizon-framework', anchor: 'showcases') do
+     = image_tag "home/showcases.png", alt:"SublimeVideo Framework Showcases"
+   div
+     strong
+       = link_to page_path('horizon-framework', anchor: 'showcases') do
+         | View our showcases
+         small.icon-uniF473
   .spacer
 .l-height-margin

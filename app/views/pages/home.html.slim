@@ -86,7 +86,7 @@ section.demo-player.l-full-width-wrap
   .l-separator
   .spacer
   .customers-logos-box
-    h5.l-center They use SublimeVideo
+    / h5.l-center They use SublimeVideo
     ul.l-grid.customers-logos
       li
         = image_tag "home/logos/activision@2x.png", alt: "Activision"
@@ -111,7 +111,7 @@ section.demo-player.l-full-width-wrap
   h5.l-center The Technology
   .technology-box.sv-framework-box
     = link_to page_path('horizon-framework') do
-      = image_tag "home/sv-framework.jpg", alt:"SublimeVideo Framework"
+      = image_tag "home/sv-framework.jpg", alt:"SublimeVideo Framework", class: "drop-shadow"
     div
       strong
         = link_to page_path('horizon-framework') do
@@ -119,7 +119,7 @@ section.demo-player.l-full-width-wrap
           small.icon-uniF473
   .technology-box.sv-framework-video-box
     a.sublime#lightbox_horizon href="#video_framework"
-      = image_tag "home/thumb_1.jpg", class: "video_thumb"
+      = image_tag "home/thumb_1.jpg", class: "video_thumb", class: "drop-shadow"
     video#video_framework width="800" height="450" style='display:none' poster="#{image_path "home/poster_1.jpg"}" data-uid='home' data-name='Home' data-action-enable='true' data-embed-size='640x360' data-embed-url="/embeds/horizon.html" data-sharing-text='Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework' data-sharing-url="http://sublimevideo.net"
       source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base'
       source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd'

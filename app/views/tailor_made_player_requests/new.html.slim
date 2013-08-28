@@ -90,7 +90,7 @@ section.l-full-width-wrap
             = f.label :document, 'Additional document (10MB max)'
             = f.file_field :document
 
-          div style='position: absolute; left: -2000px'= f.text_field :honeypot
+          div style='position: absolute; left: -2000px'= f.text_field :honeypot, tabindex: -1
 
           .entry
             = f.submit 'Submit', class: 'submit btn'

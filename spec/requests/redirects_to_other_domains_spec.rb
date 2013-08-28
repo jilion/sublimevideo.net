@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Redirects to other domains' do
+
   %w[javascript-api releases].each do |path|
     it "/#{path} redirects to DoSV /#{path}" do
       get "/#{path}"

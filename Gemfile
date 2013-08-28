@@ -6,8 +6,7 @@ ruby '2.0.0'
 gem 'rails', '~> 4.0.0'
 
 # Pro-tip: bundle config local.sublime_video_layout ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
-# gem 'sublime_video_layout', '3.0.0.rc.2'
-gem 'sublime_video_layout', git: 'git@github.com:jilion/sublime_video_layout.git', branch: 'new'
+gem 'sublime_video_layout', '~> 3.0.0.rc.3'
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases
@@ -40,7 +39,6 @@ gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails'
 gem 'uniquify'
 gem 'oj'
-gem 'net-scp', '1.0.4'
 
 gem 'lograge'
 gem 'countries'

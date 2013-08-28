@@ -1,0 +1,97 @@
+- @page_title = "Let's design your own Tailor-Made Player"
+
+section.l-full-width-wrap
+  h2.section-title= @page_title
+  / p If you are interested in designing a tailor-made player with us, please fill in the form below. We will contact you shortly.
+
+  p
+    ' Please note you can already use our Standard Player and existing add-ons right away for free. We encourage you to
+    = link_to 'sign up', my_url('signup')
+    '  and test it to see if it fits your needs.
+  p If you need a Tailor-made player, here is what you have to know:
+  p
+    strong What is possible today
+
+  ul.l-text-list
+    li
+      ' A Tailor-made player with a full custom design and branding based on the
+      = link_to 'existing features and add-ons', page_path('features')
+      '  of SublimeVideo is completely possible today. See the
+      = link_to 'Tailor-Made Players', page_path('horizon-framework', anchor: 'showcases')
+      '  page for some examples of such branded tailor-made players.
+    li
+      ' A Tailor-made player based on
+      = link_to 'upcoming functionalities already pre-announced', ""
+      ', can also be considered, but with possible time constraints.
+    li
+      ' A Tailor-made based on completely new add-ons or "exotic" features is probably not immediately possible, unless you come to us with convincing arguments so we accept to derive from our planned roadmap. The good news is that we are working on a solution, read on:
+  p
+    strong What will be possible in the future
+  p
+    ' Implementing your Tailor-Made Player(s) ourselves is a temporary solution we propose today. Our goal is to
+    = link_to 'bring this capability to any designer or developer', page_path('horizon-framework', anchor: 'opening-horizon-to-developers')
+    ', in a convenient and scalable way as soon as possible. You will be notified of our progress in that domain in due time.
+
+  .content_box
+    .content_wrap
+      .lights
+        / = image_tag "tailor_made/form_visual.jpg", alt: "SublimeVideo Tailor-Made Players", class: "blueprint"
+        = form_for @tailor_made_player_request do |f|
+          .entry
+            / = f.label :name
+            = f.text_field :name, placeholder: "Your name", class: 'text no_icon', required: true
+
+          .entry
+            / = f.label :email
+            = f.text_field :email, placeholder: "Email address", class: 'text no_icon', required: true
+
+          .entry
+            / = f.label :job_title
+            = f.text_field :job_title, placeholder: "Job title", class: 'text no_icon', required: true
+
+          .entry
+            / = f.label :company, required: true
+            = f.text_field :company, placeholder: "Company", class: 'text no_icon', required: true
+
+          .entry
+            / = f.label :url
+            = f.text_field :url, placeholder: "Website URL", class: 'text no_icon', required: true
+
+          .entry.select
+            / = f.label :country
+            = f.country_select :country, [], iso_codes: true, required: true, include_blank: 'Country'
+
+          p
+            strong Please let us know about the topic of your request:
+
+          .radio_wrap
+            = f.radio_button :topic, 'agency', required: true
+            = f.label :topic_agency
+
+          .radio_wrap
+            = f.radio_button :topic, 'standalone', required: true
+            = f.label :topic_standalone
+          .entry.l-indent= f.text_field :topic_standalone_detail, class: 'text no_icon'
+
+          .radio_wrap
+            = f.radio_button :topic, 'platform', required: true
+            = f.label :topic_platform
+
+          .radio_wrap
+            = f.radio_button :topic, 'other', required: true
+            = f.label :topic_other
+          .entry.l-indent= f.text_field :topic_other_detail, class: 'text no_icon'
+
+          .entry.textarea
+            = f.label :description, 'How can we help you?'
+            = f.text_area :description, class: 'text'
+
+          .entry
+            = f.label :document, 'Additional document (10MB max)'
+            = f.file_field :document
+
+          div style='position: absolute; left: -2000px'= f.text_field :honeypot
+
+          .entry
+            = f.submit 'Submit', class: 'submit btn'
+.l-height-margin

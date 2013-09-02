@@ -12,10 +12,7 @@ section.framework.l-full-width-wrap
   .big_break
 
   / .big_video
-  /   = link_to '', class: 'overlay', id: 'video_framework_trigger' do
-  /     = image_tag "framework/horizon_poster.jpg", alt: "Discover SublimeVideo's HTML5 Video framework", class: "video_poster"
-  /     span.overlay
-  /   video#video_framework width=960 height=540 poster=image_path('framework/horizon_poster.jpg') preload='none' style='display:none' data-uid='horizon-framework' data-name='Video Framework' data-autoplay='true' data-action-enable='true' data-embed-size='640x360' data-embed-url="//#{cdn_host}/embeds/horizon.html" data-sharing-text='Check out SublimeVideo's ground-breaking HTML5 Video framework' data-sharing-url=page_url('')
+  /   video#video_framework.sublime width=960 height=540 data-player-kit="10" poster=image_path('framework/horizon_poster.jpg') preload='none' data-uid='horizon-framework' data-name='Video Framework' data-autoresize='fill' data-action-enable='true' data-embed-size='640x360' data-embed-url="//#{cdn_host}/embeds/horizon.html" data-sharing-text="Check out SublimeVideo's ground-breaking HTML5 Video framework" data-sharing-url=page_url('')
   /     <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
   /     <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
   /     <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />

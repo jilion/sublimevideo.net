@@ -6,7 +6,7 @@ ruby '2.0.0'
 gem 'rails', '~> 4.0.0'
 
 # Pro-tip: bundle config local.sublime_video_layout ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
-gem 'sublime_video_layout', '~> 3.0.0.rc.3', github: "jilion/sublime_video_layout", branch: 'new'
+gem 'sublime_video_layout', '~> 3.0.0.rc.4' #, github: "jilion/sublime_video_layout", branch: 'new'
 gem 'sublime_video_private_api', '~> 1.0' # hosted on gemfury
 
 # Databases

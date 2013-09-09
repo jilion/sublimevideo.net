@@ -5,6 +5,11 @@ require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 Capybara.server_port = 2999
 
+Capybara.configure do |config|
+  config.match = :prefer_exact
+  config.ignore_hidden_elements = false
+end
+
 RSpec.configure do |config|
   config.before do
     if example.metadata[:js]

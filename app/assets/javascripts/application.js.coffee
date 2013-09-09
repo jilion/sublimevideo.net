@@ -18,7 +18,7 @@ SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady() if $('body.home').exists()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
-  SublimeVideo.sublimeVideoFrameworkReady() if $('body.horizon').exists()
+  SublimeVideo.sublimeVideoFrameworkReady() if $('body.framework').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 

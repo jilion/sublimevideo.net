@@ -3,10 +3,10 @@ SublimeVideo.sublimeVideoFrameworkReady = ->
 
 SublimeVideo.setupSublimeVideoFrameworkSublime = ->
   sublime.ready ->
-    if ($videoTrigger = $('#video_horizon_trigger')).exists()
+    if ($videoTrigger = $('#video_framework_trigger')).exists()
       $videoTrigger.on 'click', (event) ->
         event.preventDefault()
-        sublime.prepare 'video_horizon', (player) ->
+        sublime.prepare 'video_framework', (player) ->
           player.on 'action:showcases', ->
             go = -> document.location.href = '/tailor-made-players'
             if player.isFullscreen() then player.exitFullscreen(go) else go()

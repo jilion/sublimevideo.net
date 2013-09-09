@@ -1,12 +1,12 @@
 = content_for :header do
   #slides
     .slide.s_1.active
-      .s_click{ onclick: "location.href='/horizon-framework'" }
+      .s_click{ onclick: "location.href='/framework'" }
         .s_wrap
           %h2= "The HTML5 Video Age Starts Now"
           %p.desc
             = "Introducing SublimeVideo Framework, the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity, working perfectly on any browser and the latest mobile platforms"
-          = link_to page_path('horizon-framework'), class: "learn_more" do
+          = link_to page_path('framework'), class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
     .slide.s_2
@@ -29,19 +29,19 @@
               %span.icon-arrow
   #home_video{ style: "display:none" }
     .v_shadow
-    = link_to "#video_horizon", class: "sublime", id: "lightbox_horizon" do
+    = link_to "#video_framework", class: "sublime", id: "lightbox_framework" do
       - (1..6).each do |n|
         = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
       %span.overlay
       %span.play
-    %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+    %video#video_framework{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
       <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
       <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
       <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
       <source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
-      <track src="/subtitles/horizon_en.vtt" srclang='en' />
-      <track src="/subtitles/horizon_fr.vtt" srclang='fr' />
-      <track src="/subtitles/horizon_it.vtt" srclang='it' />
+      <track src="/subtitles/framework_en.vtt" srclang='en' />
+      <track src="/subtitles/framework_fr.vtt" srclang='fr' />
+      <track src="/subtitles/framework_it.vtt" srclang='it' />
 
 = content_for :middle do
   .selectors_wrap
@@ -49,7 +49,7 @@
     %ul.selectors.col#home_slide_selector><
       %li.s_1.active
         .l
-        = link_to "SublimeVideo Framework Powerful HTML5 Video Foundations", page_path('horizon-framework')
+        = link_to "SublimeVideo Framework Powerful HTML5 Video Foundations", page_path('framework')
         .r
       %li.s_2
         .l

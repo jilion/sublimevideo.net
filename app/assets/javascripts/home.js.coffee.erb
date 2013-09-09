@@ -9,8 +9,8 @@ SublimeVideo.homeReady = ->
 
 SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
-    if horizon_lightbox = sublime('lightbox_horizon')
-      horizon_lightbox.on
+    if framework_lightbox = sublime('lightbox_framework')
+      framework_lightbox.on
         didopen: ->
           SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
           SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
@@ -27,12 +27,12 @@ SublimeVideo.setupHomeSublime = ->
             if player.isFullscreen() then player.exitFullscreen(go) else go()
           player.on 'action:signup', ->
             go = ->
-              sublime('lightbox_horizon').close()
+              sublime('lightbox_framework').close()
               SublimeVideo.UI.Utils.openAccountPopup('signup')
             if player.isFullscreen() then player.exitFullscreen(go) else go()
 
-    if document.location.hash == '#horizon-video'
-      horizon_lightbox.open()
+    if _.contains(['#horizon-video', '#framework-video'], document.location.hash)
+      framework_lightbox.open()
 
 SublimeVideo.setupSolutionsSlideshow = ->
   if SublimeVideo.solutionSlideshow?
@@ -79,7 +79,7 @@ SublimeVideo.pickRandomVideoThumb = ->
     unless SublimeVideo.isMobile()
       posterImage = new Image()
       posterImage.src = SublimeVideo.postersPaths[imgIndex]
-    $video = $("#video_horizon")
+    $video = $("#video_framework")
     $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
 
 SublimeVideo.fadeInHackForChrome = ($div) ->

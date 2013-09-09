@@ -1,5 +1,4 @@
 - @page_title = "SublimeVideo Framework"
-- @body_class = "horizon"
 
 = content_for :header do
   %h2= "SublimeVideo HTML5 Video Framework"
@@ -13,17 +12,17 @@
 .big_break
 
 .big_video
-  = link_to '', class: 'overlay', id: 'video_horizon_trigger' do
-    = image_tag "horizon/horizon_poster.jpg", alt: "Discover SublimeVideo Framework", class: "video_poster"
+  = link_to '', class: 'overlay', id: 'video_framework_trigger' do
+    = image_tag "framework/framework_poster.jpg", alt: "Discover SublimeVideo Framework", class: "video_poster"
     %span.overlay
-  %video#video_horizon{ width: 960, height: 540, poster: image_path('horizon/horizon_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'SublimeVideo Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+  %video#video_framework{ width: 960, height: 540, poster: image_path('framework/framework_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'SublimeVideo Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
     <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
     <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
     <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
     <source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
-    <track src="/subtitles/horizon_en.vtt" srclang='en' />
-    <track src="/subtitles/horizon_fr.vtt" srclang='fr' />
-    <track src="/subtitles/horizon_it.vtt" srclang='it' />
+    <track src="/subtitles/framework_en.vtt" srclang='en' />
+    <track src="/subtitles/framework_fr.vtt" srclang='fr' />
+    <track src="/subtitles/framework_it.vtt" srclang='it' />
 
 .main_copy
   %a#origin
@@ -83,7 +82,7 @@
 
     h4. A truly difficult journey
 
-  = image_tag "horizon/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team"
+  = image_tag "framework/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team"
 
   :textile
     It remained to be seen if such a framework could ever be built. Frankly, there were numerous times when we thought the technical challenges facing us were simply insurmountable. We really had the feeling we were embarking on a crazy journey, like a group of alpine mountain-climbing pioneers.
@@ -92,7 +91,7 @@
 
     The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Framework.
 
-  = image_tag "horizon/sublimevideo_framework_architecture_scheme.jpg", alt: "SublimeVideo Framework Architecture", class: "architecture_scheme"
+  = image_tag "framework/sublimevideo_framework_architecture_scheme.jpg", alt: "SublimeVideo Framework Architecture", class: "architecture_scheme"
   %p
     %em.caption= "SublimeVideo Framework Architecture"
 
@@ -103,7 +102,7 @@
 
     With a hellish variety of mobile and tablet screen sizes and resolutions, we felt the need to push the envelope with a much more ambitious and elegant vector-based approach.
 
-  = image_tag "horizon/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
+  = image_tag "framework/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
 
   :textile
     Nevertheless, here again, there is no single technology today that allows the consistent drawing of a graphic element across all browsers (unless one uses Flash, which is no longer an option for mobiles).
@@ -127,7 +126,7 @@
 
     In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Framework, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
 
-  = image_tag "horizon/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
+  = image_tag "framework/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
 
   :textile
     h4. Benefits of SublimeVideo Framework Graphic Engine Library:
@@ -167,9 +166,7 @@
     * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
     * And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
 
-    In this first phase, we are also starting a partnership program to allow Web agencies or IT companies to immediately design and provide their customers with never before seen, tailor-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, managing the relationship, defining their needs, designing their tailor-made player, integrating it in their websites, and providing, along with us, the tailored-made player they want, according to their specifications. #{link_to "Learn more about our Partnership Program", page_path('tailor-made-players')}.
-
-    <a id='opening-horizon-to-developers'></a>
+    <a id='opening-framework-to-developers'></a>
 
     h4. 2nd Phase: Opening SublimeVideo Framework to developers and designers
 
@@ -179,4 +176,4 @@
 
     After more than a year of hard work creating the framework itself, we now want to properly explore what could be the best ways to give developers and designers access to SublimeVideo Framework.
 
-    All the options are on the table now! Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_horizon_to_developers_url}.
+    All the options are on the table now! Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_framework_to_developers_url}.

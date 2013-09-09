@@ -4,7 +4,7 @@
 #= require jquery.transit.min
 #= require jquery.slidify
 #= require home
-#= require horizon_framework
+#= require sublimevideo_framework
 #= require modular_player
 #= require tailor_made_players
 #= require_self
@@ -18,7 +18,7 @@ SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
   SublimeVideo.homeReady() if $('body.home').exists()
   SublimeVideo.modularPlayerReady() if $('body.features').exists()
-  SublimeVideo.horizonFrameworkReady() if $('body.horizon').exists()
+  SublimeVideo.sublimeVideoFrameworkReady() if $('body.horizon').exists()
   SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
   SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 

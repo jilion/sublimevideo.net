@@ -5,7 +5,7 @@
         .s_wrap
           %h2= "The HTML5 Video Age Starts Now"
           %p.desc
-            = "Introducing SublimeVideo Horizon, the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity, working perfectly on any browser and the latest mobile platforms"
+            = "Introducing SublimeVideo Framework, the Framework that finally sparks the HTML5 Video revolution, by enabling full graphic freedom and features modularity, working perfectly on any browser and the latest mobile platforms"
           = link_to page_path('horizon-framework'), class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
@@ -14,7 +14,7 @@
         .s_wrap
           %h2
             = "Start Assembling Your Player!"
-          %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Horizon™"
+          %p.desc= "Introducing the new modular SublimeVideo player for every website, powered by SublimeVideo Framwork"
           = link_to page_path('modular-player'), class: "learn_more" do
             = "Learn more"
             %span.icon-arrow
@@ -23,7 +23,7 @@
         .s_wrap
           %h2= "No limits, Just Draw your Player"
           %p.desc
-            = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Horizon™."
+            = "Web agencies and IT companies: Join our Partnership Program to provide your customers with first-rate branded players that work perfectly on any device, powered by SublimeVideo Framework."
             = link_to page_path('tailor-made-players') do
               = "Learn more"
               %span.icon-arrow
@@ -34,7 +34,7 @@
         = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
       %span.overlay
       %span.play
-    %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+    %video#video_horizon{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
       <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
       <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
       <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
@@ -49,7 +49,7 @@
     %ul.selectors.col#home_slide_selector><
       %li.s_1.active
         .l
-        = link_to "SublimeVideo Horizon Powerful HTML5 Video Foundations", page_path('horizon-framework')
+        = link_to "SublimeVideo Framework Powerful HTML5 Video Foundations", page_path('horizon-framework')
         .r
       %li.s_2
         .l
@@ -73,7 +73,7 @@
           = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
           = "integration!"
 %section.tailor_made
-  %h4.custom_break= "Horizon Tailor-Made Players Showcases"
+  %h4.custom_break= "Tailor-Made Players Showcases"
   .wrap
     %ul.demos
       %li.demo.slide.d_1.active
@@ -119,7 +119,7 @@
             %span.overlay= "See it in action"
         .desc{ style: "padding-top:50px" }
           %h3= "HTML5"
-          %p= "Here's a showcase paying homage to HTML5 itself! Like all other Horizon players, it is rendered purely using vector graphics. Enjoy it on Retina displays!"
+          %p= "Here's a showcase paying homage to HTML5 itself! Like all other SublimeVideo players, it is rendered purely using vector graphics. Enjoy it on Retina displays!"
         .spacer
   %ul.demo_switch#showcases_selector
     %li.d_1.active

@@ -1,7 +1,7 @@
-SublimeVideo.horizonFrameworkReady = ->
-  SublimeVideo.setupHorizonFrameworkSublime()
+SublimeVideo.sublimeVideoFrameworkReady = ->
+  SublimeVideo.setupSublimeVideoFrameworkSublime()
 
-SublimeVideo.setupHorizonFrameworkSublime = ->
+SublimeVideo.setupSublimeVideoFrameworkSublime = ->
   sublime.ready ->
     if ($videoTrigger = $('#video_horizon_trigger')).exists()
       $videoTrigger.on 'click', (event) ->

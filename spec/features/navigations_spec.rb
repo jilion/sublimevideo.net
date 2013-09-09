@@ -5,7 +5,7 @@ feature 'Header navigation links' do
   scenario 'links are clickable and routable' do
     visit '/'
 
-    within 'header' do
+    within '#menu' do
       current_url.should eq "http://sublimevideo.dev/"
 
       click_link 'Framework'

@@ -31,7 +31,7 @@ SublimeVideo.setupHomeSublime = ->
               SublimeVideo.UI.Utils.openAccountPopup('signup')
             if player.isFullscreen() then player.exitFullscreen(go) else go()
 
-    if _.contains(['#horizon-video', '#framework-video'], document.location.hash)
+    if (document.location.hash is '#horizon-video') or (document.location.hash is '#framework-video')
       framework_lightbox.open()
 
 SublimeVideo.setupSolutionsSlideshow = ->

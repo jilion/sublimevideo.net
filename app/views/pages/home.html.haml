@@ -30,8 +30,9 @@
   #home_video{ style: "display:none" }
     .v_shadow
     = link_to "#video_framework", class: "sublime", id: "lightbox_framework" do
-      - (1..6).each do |n|
-        = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
+      -# - (1..6).each do |n|
+      -#   = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
+      = image_tag "home/video/thumbs/thumb_6.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
       %span.overlay
       %span.play
     %video#video_framework{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }

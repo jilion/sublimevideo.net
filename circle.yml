@@ -1,3 +1,6 @@
+dependencies:
+  cache_directories:
+    - "bundle"
 deployment:
   staging:
     branch: remove_horizon

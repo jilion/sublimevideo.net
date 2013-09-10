@@ -22,7 +22,7 @@ SublimeVideo::Application.routes.draw do
   end
 
   # Stats demo
-  %w[stats stats-demo].each do |path|
+  %w[stats stats-demo demos/stats].each do |path|
     get path => redirect { |params, req| "#{req.scheme}://my.#{req.domain}/stats-demo" }
   end
 

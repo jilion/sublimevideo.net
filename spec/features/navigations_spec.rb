@@ -4,10 +4,9 @@ require 'spec_helper'
 feature 'Header navigation links' do
   scenario 'links are clickable and routable' do
     visit '/'
+    current_url.should eq "http://sublimevideo.dev/"
 
     within '#menu' do
-      current_url.should eq "http://sublimevideo.dev/"
-
       click_link 'Framework'
       current_url.should eq "http://sublimevideo.dev/framework"
 
@@ -84,6 +83,7 @@ end
 feature 'Home navigation links' do
   scenario 'Get It Know link is reachable and show signup popup' do
     visit '/'
+    current_url.should eq "http://sublimevideo.dev/"
 
     click_link 'Get It Now'
 

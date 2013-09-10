@@ -3,4 +3,8 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run_including focus: true
   config.mock_with :rspec
+
+  config.before :all, type: :request do
+    host! 'sublimevideo.dev'
+  end
 end

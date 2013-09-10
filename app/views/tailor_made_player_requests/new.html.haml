@@ -47,27 +47,27 @@
       = form_for @tailor_made_player_request do |f|
         .entry
           = f.label :name
-          = f.text_field :name, class: 'text no_icon', required: true
+          = f.text_field :name, placeholder: 'Your name', class: 'text no_icon', required: true
 
         .entry
           = f.label :email
-          = f.text_field :email, class: 'text no_icon', required: true
+          = f.text_field :email, placeholder: 'Email address', class: 'text no_icon', required: true
 
         .entry
           = f.label :job_title
-          = f.text_field :job_title, class: 'text no_icon', required: true
+          = f.text_field :job_title, placeholder: 'Job title', class: 'text no_icon', required: true
 
         .entry
-          = f.label :company, required: true
-          = f.text_field :company, class: 'text no_icon', required: true
+          = f.label :company
+          = f.text_field :company, placeholder: 'Company', class: 'text no_icon', required: true
 
         .entry
           = f.label :url
-          = f.text_field :url, class: 'text no_icon', required: true
+          = f.text_field :url, placeholder: 'Website URL', class: 'text no_icon', required: true
 
         .entry.select
           = f.label :country
-          = f.country_select :country, options_for_select('Country'), required: true
+          = f.country_select :country, [], iso_codes: true, required: true, include_blank: 'Country'
 
         %h5= 'Please let us know about the topic of your request:'
 

@@ -6,7 +6,7 @@ class TailorMadePlayerRequestsController < ApplicationController
   end
 
   def create
-    @tailor_made_player_request = TailorMadePlayerRequest.new(params[:tailor_made_player_request])
+    @tailor_made_player_request = TailorMadePlayerRequest.new(tailor_made_player_request_params)
 
     respond_with(@tailor_made_player_request) do |format|
       if TailorMadePlayerRequestCreator.new(@tailor_made_player_request).create
@@ -18,6 +18,12 @@ class TailorMadePlayerRequestsController < ApplicationController
   end
 
   def thank_you
+  end
+
+  private
+
+  def tailor_made_player_request_params
+    params.require(:tailor_made_player_request).permit(:name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot)
   end
 
 end

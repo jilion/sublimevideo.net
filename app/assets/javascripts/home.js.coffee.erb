@@ -62,31 +62,6 @@ SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
 
-SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
-
-SublimeVideo.pickRandomVideoThumb = ->
-  if ($homeVideo = $('#home_video')).exists()
-    imgIndex = Math.floor(Math.random()*6)
-
-    thumbs = $homeVideo.find('img.video_thumb')
-    thumbs.hide()
-
-    # Lightbox thumb
-    $(thumbs[imgIndex]).show()
-    $homeVideo.show()
-
-    # Lightbox poster
-    unless SublimeVideo.isMobile()
-      posterImage = new Image()
-      posterImage.src = SublimeVideo.postersPaths[imgIndex]
-    $video = $("#video_framework")
-    $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
-
-SublimeVideo.fadeInHackForChrome = ($div) ->
-  if /Chrome/i.test(navigator.userAgent)
-    $div.css('left', '49px')
-    setTimeout((-> $div.css('left', '50px')), 10)
-
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->
     @pauseDuration = pause * 1000

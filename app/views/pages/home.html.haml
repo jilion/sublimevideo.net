@@ -27,15 +27,15 @@
             = link_to page_path('tailor-made-players') do
               = "Learn more"
               %span.icon-arrow
-  #home_video{ style: "display:none" }
+  #home_video
     .v_shadow
     = link_to "#video_framework", class: "sublime", id: "lightbox_framework" do
       -# - (1..6).each do |n|
       -#   = image_tag "home/video/thumbs/thumb_#{n}.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
-      = image_tag "home/video/thumbs/thumb_6.jpg", size: "270x152", class: "video_thumb", style: 'display:none', alt: ''
+      = image_tag "home/video/thumbs/thumb_6.jpg", size: "270x152", class: "video_thumb", alt: ''
       %span.overlay
       %span.play
-    %video#video_framework{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_1.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+    %video#video_framework{ width: 800, height: 450, style: 'display:none', poster: image_path('home/video/posters/poster_6.jpg'),  data: { uid: 'home', name: 'Home', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
       <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
       <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
       <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />

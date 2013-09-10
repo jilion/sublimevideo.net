@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-feature 'Header navigation links' do
+feature 'Header navigation links', :vcr do
   scenario 'links are clickable and routable' do
     visit '/'
     current_url.should eq "http://sublimevideo.dev/"

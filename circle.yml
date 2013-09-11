@@ -3,7 +3,7 @@ dependencies:
     - "bundle"
 deployment:
   staging:
-    branch: remove_horizon
+    branch: kill_horizon
     heroku:
       appname: sv-www-staging
   production:

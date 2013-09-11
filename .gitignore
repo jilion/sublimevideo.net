@@ -13,6 +13,7 @@ db/backups/*
 vendor/ruby
 vendor/bundler
 !.bundle
-.env
+!.env
+.env.*
 *.sublime-project
 !.sublime-project

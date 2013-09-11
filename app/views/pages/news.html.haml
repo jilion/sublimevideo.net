@@ -79,12 +79,12 @@
       %li.vivendi
         = image_tag "news/awards/vivendi.png", alt: "Vivendi"
         %strong= 'Vivendi "Coup de Coeur" Prize MIPCube Lab 2012'
+        = link_to "Read more", "http://blog.jilion.com/2012/04/03/vivendi-awards-sublimevideo-its-coup-de-coeur-prize-at-mipcube-lab-2012", class: "read_more"
         = link_to "#mipcube-video", class: "sublime", id: "lightbox_mipcube" do
-          = image_tag "news/awards/mipcube-lightbox.jpg", alt: "SublimeVideo MIPCube", style: "box-shadow:rgba(4,22,54,0.5) 0 1px 4px;margin:5px 0 15px"
+          = image_tag "news/awards/mipcube-lightbox.jpg", alt: "SublimeVideo MIPCube", style: "box-shadow:rgba(4,22,54,0.5) 0 1px 4px;margin:18px 0 10px"
         %video#mipcube-video{ width: 800, height: 450, style: 'display:none', poster: 'http://media.jilion.com/videos/presentations/sublimevideo-mipcube-the-innovation-show-miptv-2012.jpg',  data: { uid: 'MIPCube', name: 'MIPCube' } }
           <source src="http://media.jilion.com/videos/presentations/sublimevideo-mipcube-the-innovation-show-miptv-2012-720p.mp4" />
           <source src="http://media.jilion.com/videos/presentations/sublimevideo-mipcube-the-innovation-show-miptv-2012-360p.mp4" />
-        = link_to "Read more", "http://blog.jilion.com/2012/04/03/vivendi-awards-sublimevideo-its-coup-de-coeur-prize-at-mipcube-lab-2012", class: "read_more"
       %li.mipcube
         = image_tag "news/awards/mipcube.png", alt: "MIPCube"
         %strong= 'Most Promising Disruptive TV Start-up MIPCube Lab 2012'

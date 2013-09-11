@@ -79,8 +79,6 @@ group :development, :test do
   gem 'ruby_gntp', require: false
 
   gem 'coderay', '~> 1.0' # until this is released: https://github.com/pry/pry/commit/ddfa9042a3cac
-  gem 'guard', github: 'guard', branch: 'v2.0'
-  # gem 'guard', path: '~/Code/github/guard'
   gem 'guard-pow', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false

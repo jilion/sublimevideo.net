@@ -153,7 +153,7 @@ body {
 /* Slide 3 */
 
 #slides .slide.s_3 .s_wrap {
-  width:303px;
+  width:308px;
   left:100px;
   text-align:left;
 }
@@ -341,7 +341,7 @@ body {
   line-height:24px;
   position:relative;
   z-index:2;
-  padding:24px 60px;
+  padding:24px 50px;
   display:block;
   text-shadow:rgba(0,0,0,0.8) 0 -1px 0;
   -webkit-font-smoothing:antialiased;
@@ -993,7 +993,7 @@ body {
 .features header h2,
 .about header h2,
 .contact header h2,
-.horizon header h2,
+.framework header h2,
 .pricing header h2,
 .youtube header h2,
 .tailor_made header h2,
@@ -1549,28 +1549,28 @@ section.upcoming a.tell_us span.icon-mail {
   margin-right:3px;
 }
 
-/* ===================== */
-/* = Horizon Framework = */
-/* ===================== */
+/* ============= */
+/* = Framework = */
+/* ============= */
 
-.horizon header, .horizon header .shadow, .horizon header .lights {
+.framework header, .framework header .shadow, .framework header .lights {
   height:290px;
 }
 
-.horizon header h2 {
+.framework header h2 {
   padding-top:25px;
 }
 
-.horizon header p.sub {
+.framework header p.sub {
   padding-right:340px;
 }
 
-.horizon #content {
+.framework #content {
   width:960px;
   margin:0 auto;
 }
 
-.horizon #content .big_video {
+.framework #content .big_video {
   width:960px;
   height:540px;
   margin:30px 0 40px;
@@ -1579,7 +1579,7 @@ section.upcoming a.tell_us span.icon-mail {
   @include box-shadow(rgba(0,13,40,0.5) 0 3px 10px);
 }
 
-.horizon #content .big_video a.overlay {
+.framework #content .big_video a.overlay {
   display:block;
   width:960px;
   height:540px;
@@ -1588,69 +1588,69 @@ section.upcoming a.tell_us span.icon-mail {
   left:0;
 }
 
-.horizon #content .big_video a.overlay span.overlay {
+.framework #content .big_video a.overlay span.overlay {
   display:block;
   width:960px;
   height:540px;
   position:absolute;
   top:0;
   left:0;
-  background:url(<%= asset_path "horizon/video_overlay.png" %>) no-repeat 0 0;
+  background:url(<%= asset_path "framework/video_overlay.png" %>) no-repeat 0 0;
   opacity:0.85;
   filter:alpha(opacity=40);
   @include transition(opacity, 0.5s, linear);
 }
 
-.horizon #content .big_video a.overlay:hover span.overlay {
+.framework #content .big_video a.overlay:hover span.overlay {
   opacity:1;
   filter:alpha(opacity=60);
 }
 
-.horizon .main_copy {
+.framework .main_copy {
   padding-bottom:60px;
 }
 
-.horizon .main_copy h3 {
+.framework .main_copy h3 {
   font-size:38px;
   font-weight:600;
   color:#003165;
   padding:20px 0;
 }
 
-.horizon .main_copy h4 {
+.framework .main_copy h4 {
   font-size:25px;
   font-weight:600;
   color:#003165;
   padding:20px 0;
 }
 
-.horizon .main_copy p, .horizon .main_copy li {
+.framework .main_copy p, .framework .main_copy li {
   font-size:21px;
   line-height:32px;
   padding:8px 0;
 }
 
-.horizon .main_copy ul {
+.framework .main_copy ul {
   list-style-type:none;
 }
 
-.horizon .main_copy li:before {
+.framework .main_copy li:before {
   content: "• ";
   color:#003165;
   font-size:26px;
 }
 
-.horizon .main_copy strong {
+.framework .main_copy strong {
   color:#003165;
   font-weight:600;
 }
 
-.horizon .main_copy p a, .horizon .main_copy li a  {
+.framework .main_copy p a, .framework .main_copy li a  {
   color:#1185ff;
   border-bottom:1px solid #81bbfc;
 }
 
-.horizon .main_copy h4.headline {
+.framework .main_copy h4.headline {
   font-size:25px;
   font-weight:600;
   line-height:34px;
@@ -1665,34 +1665,34 @@ section.upcoming a.tell_us span.icon-mail {
   @include box-shadow((inset rgba(0,0,0,.75) 0 2px 6px, #fff 0 1px 0));
 }
 
-.horizon .main_copy em.caption {
+.framework .main_copy em.caption {
   color:#003165;
   display:block;
   text-align:center;
 }
 
-.horizon img.mountain_team {
+.framework img.mountain_team {
   margin:10px 0 20px -2px;
 }
 
-.horizon img.architecture_scheme {
+.framework img.architecture_scheme {
   margin:20px 0 0 -66px;
 }
 
-.horizon img.twitter_shapes {
+.framework img.twitter_shapes {
   margin:20px 0;
 }
 
-.horizon img.retina {
+.framework img.retina {
   float:right;
   margin:10px -20px 0 40px;
 }
 
-.horizon img.sketch {
+.framework img.sketch {
   margin:5px 0 20px -2px;
 }
 
-.horizon .main_copy .big_break {
+.framework .main_copy .big_break {
   margin:30px 0;
 }
 
@@ -1791,11 +1791,6 @@ section.upcoming a.tell_us span.icon-mail {
 
 .tailor_made .main_copy .big_break {
   margin:40px 0 30px;
-}
-
-.tailor_made img.partnership {
-  float:right;
-  margin:0 20px 0 30px;
 }
 
 .tailor_made section.modules {

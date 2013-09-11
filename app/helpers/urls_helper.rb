@@ -12,7 +12,7 @@ module UrlsHelper
     'https://getsatisfaction.com/sublimevideo/topics/next_features_suggestions'
   end
 
-  def get_satisfaction_opening_horizon_to_developers_url
+  def get_satisfaction_opening_framework_to_developers_url
     'https://getsatisfaction.com/sublimevideo/topics/opening_horizon_to_developers'
   end
 

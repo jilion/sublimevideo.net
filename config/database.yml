@@ -11,16 +11,20 @@
   end
 %>
 
-development:
+defaults: &defaults
   adapter: postgresql
   encoding: utf8
-  database: wwsv_development_<%= suffix %>
   pool: 25
   host: localhost
 
+development:
+  <<: *defaults
+  database: wwsv_development_<%= suffix %>
+
+production:
+  <<: *defaults
+  database: wwsv_development_<%= suffix %>
+
 test:
-  adapter: postgresql
-  encoding: utf8
+  <<: *defaults
   database: wwsv_test_<%= suffix %>
-  pool: 25
-  host: localhost

@@ -2,7 +2,6 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   TOPICS = %w[agency standalone platform other]
 
   attr_accessor :honeypot
-  attr_accessible :name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document, :honeypot
 
   mount_uploader :document, TailorMadePlayerRequestDocumentUploader
 
@@ -12,10 +11,10 @@ class TailorMadePlayerRequest < ActiveRecord::Base
   validates :document, file_size: { maximum: 10.megabytes.to_i }
   validate :honeypot_validation
 
-  scope :by_topic, lambda { |way = 'desc'| order{ topic.send(way) } }
-  scope :by_date,  lambda { |way = 'desc'| order{ created_at.send(way) } }
-  scope :with_topic, lambda { |topic| where(topic: topic) }
-  scope :created_before, lambda { |date| where('created_at <= ?', date) }
+  scope :by_topic, ->(way = 'desc') { order(topic: way.to_sym) }
+  scope :by_date,  ->(way = 'desc') { order(created_at: way.to_sym) }
+  scope :with_topic, ->(topic) { where(topic: topic) }
+  scope :created_before, ->(date) { where('created_at <= ?', date) }
 
   def self.topics
     TOPICS

@@ -1,4 +1,11 @@
+dependencies:
+  cache_directories:
+    - "bundle"
 deployment:
+  staging:
+    branch: remove_horizon
+    heroku:
+      appname: sv-www-staging
   production:
     branch: master
     heroku:

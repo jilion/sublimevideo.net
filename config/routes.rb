@@ -2,7 +2,7 @@ class PagesConstraint < PageConstraint; end
 class PressReleasesConstraint < PageConstraint; end
 
 SublimeVideo::Application.routes.draw do
-  namespace :private_api do
+  namespace :private_api, constraints: { format: 'json' } do
     resources :tailor_made_player_requests, only: [:index, :show, :destroy] do
       get :topics, on: :collection
     end

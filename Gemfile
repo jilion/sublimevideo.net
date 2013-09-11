@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-source 'https://8dezqz7z7HWea9vtaFwg@gem.fury.io/me/' # thibaud@jilion.com account
+source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com account
 
 ruby '2.0.0'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.5' # hosted on gemfury
 
@@ -24,6 +24,7 @@ gem 'responders'
 gem 'kaminari'
 
 # Internals
+gem 'fog'
 gem 'sidekiq'
 gem 'autoscaler'
 gem 'honeybadger'
@@ -36,10 +37,9 @@ gem 'librato-rails', github: 'librato/librato-rails', branch: 'feature/rack_firs
 gem 'configurator', github: 'jilion/configurator'
 gem 'uniquify'
 gem 'oj'
-gem 'net-scp', '1.0.4'
 
 gem 'lograge'
-gem 'countries', github: 'hexorx/countries' # until 0.9.2 is out!
+gem 'countries'
 gem 'rack-status'
 
 # Gems used only for assets and not required
@@ -52,11 +52,12 @@ group :assets do
 end
 
 group :production do
-  gem 'rack-google-analytics'
+  gem 'rack-google-analytics', '0.11.0'
 end
 
 group :staging, :production do
   gem 'unicorn'
+  gem 'memcachier'
   gem 'dalli'
   gem 'rack-cache'
   gem 'rack-no-www'

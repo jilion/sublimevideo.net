@@ -17,6 +17,7 @@ guard :pow do
   watch('config/environment.rb')
   watch(%r{^config/environments/.*\.rb$})
   watch(%r{^config/initializers/.*\.rb$})
+  watch('config/routes.rb')
 end
 
 guard :rspec, bundler: false, all_after_pass: false, keep_failed: false do

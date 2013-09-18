@@ -1,83 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://zendesk%40sublimevideo.net%2Ftoken:oxVzosGyu7DaZrQ0fhmKngHATvd78UhEqTzMszZy@sublimevideo.zendesk.com/api/v2/tickets
-    body:
-      encoding: UTF-8
-      string: '{"ticket":{"subject":"Tailor-made player request for John Doe SA","comment":{"value":"Contact:
-        John Doe (remy@jilion.com)\n\nJob & company: Mr. Dev at John Doe SA\n\nWebsite:
-        rymai.me\n\nCountry: Switzerland\n\nTopic: I am an agency and I would like
-        to join the partner program to design and sell tailor-made players to my customers.\n\nDescription:
-        I want a gorgeous tailor-made player!"},"tags":["sales","tailor-made"],"requester":{"name":"John
-        Doe","email":"remy@jilion.com"}}}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - ZendeskAPI API 0.2.2
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 201
-      message: Created
-    headers:
-      Server:
-      - nginx/1.0.15
-      Date:
-      - Thu, 17 Jan 2013 11:33:10 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Connection:
-      - keep-alive
-      Status:
-      - 201 Created
-      Cache-Control:
-      - no-cache
-      X-Zendesk-Api-Version:
-      - v2
-      Location:
-      - https://sublimevideo.zendesk.com/api/v2/tickets/3373.json
-      X-Runtime:
-      - '852'
-      Content-Length:
-      - '3654'
-      X-Zendesk-Origin-Server:
-      - app13.sys.zendesk.com
-      X-Zendesk-User-Id:
-      - '15308267'
-    body:
-      encoding: US-ASCII
-      string: '{"ticket":{"url":"https://sublimevideo.zendesk.com/api/v2/tickets/3373.json","id":3373,"external_id":null,"via":{"channel":"api","source":{"from":{},"to":{},"rel":null}},"created_at":"2013-01-17T11:33:09Z","updated_at":"2013-01-17T11:33:09Z","type":null,"subject":"Tailor-made
-        player request for John Doe SA","description":"Contact: John Doe (remy@jilion.com)\n\nJob
-        & company: Mr. Dev at John Doe SA\n\nWebsite: rymai.me\n\nCountry: Switzerland\n\nTopic:
-        I am an agency and I would like to join the partner program to design and
-        sell tailor-made players to my customers.\n\nDescription: I want a gorgeous
-        tailor-made player!","priority":null,"status":"new","recipient":null,"requester_id":17650353,"submitter_id":17650353,"assignee_id":null,"organization_id":null,"group_id":88332,"collaborator_ids":[],"forum_topic_id":null,"problem_id":null,"has_incidents":false,"due_at":null,"tags":["sales","tailor-made"],"custom_fields":[],"satisfaction_rating":null,"sharing_agreement_ids":[],"fields":[]},"audit":{"id":10411422211,"ticket_id":3373,"created_at":"2013-01-17T11:33:10Z","author_id":15308267,"via":{"channel":"api","source":{"from":{},"to":{},"rel":null}},"metadata":{"system":{"client":"ZendeskAPI
-        API 0.2.2","ip_address":"128.179.67.94","location":"Lausanne, 23, Switzerland","latitude":46.5333,"longitude":6.666699999999992},"custom":{}},"events":[{"id":10411422221,"type":"Comment","author_id":17650353,"body":"Contact:
-        John Doe (remy@jilion.com)\n\nJob & company: Mr. Dev at John Doe SA\n\nWebsite:
-        rymai.me\n\nCountry: Switzerland\n\nTopic: I am an agency and I would like
-        to join the partner program to design and sell tailor-made players to my customers.\n\nDescription:
-        I want a gorgeous tailor-made player!","html_body":"<p>Contact: John Doe (<a
-        href=\"mailto:remy@jilion.com\">remy@jilion.com</a>)</p>\n\n<p>Job &amp; company:
-        Mr. Dev at John Doe SA</p>\n\n<p>Website: rymai.me</p>\n\n<p>Country: Switzerland</p>\n\n<p>Topic:
-        I am an agency and I would like to join the partner program to design and
-        sell tailor-made players to my customers.</p>\n\n<p>Description: I want a
-        gorgeous tailor-made player!</p>","public":true,"trusted":true,"attachments":[]},{"id":10411422241,"type":"Create","value":"Tailor-made
-        player request for John Doe SA","field_name":"subject"},{"id":10411422261,"type":"Create","value":["sales","tailor-made"],"field_name":"tags"},{"id":10411422281,"type":"Create","value":17650353,"field_name":"requester_id"},{"id":10411422291,"type":"Create","value":null,"field_name":"status"},{"id":10411422301,"type":"Create","value":null,"field_name":"priority"},{"id":10411422311,"type":"Create","value":null,"field_name":"type"},{"id":10411422321,"type":"Create","value":88332,"field_name":"group_id"},{"id":10411422331,"type":"Notification","via":{"channel":"rule","source":{"to":{},"from":{"id":24675318,"title":"Notify
-        requester of received request (sent through support form)"},"rel":"trigger"}},"subject":"[SublimeVideo]
-        Request received: {{ticket.title}} (#{{ticket.id}})","body":"Your request
-        has been received.\n\nPlease note our support team is available during central
-        Europe business hours: 9am - 6pm CET.\n\n{{ticket.comments_formatted}}","recipients":[17650353]},{"id":10411422341,"type":"External","via":{"channel":"rule","source":{"to":{},"from":{"id":24569717,"title":"Notify
-        Campfire of new ticket"},"rel":"trigger"}},"resource":"20007171","body":"New
-        Ticket #{{ticket.id}} \"{{ticket.title}}\" by {{ticket.requester.name}} <{{ticket.requester.email}}>
-        (via {{ticket.via}})\nStatus: {{ticket.status}}\nTags: {{ticket.tags}}\nhttps://sublimevideo.zendesk.com/agent/#/tickets/{{ticket.id}}","success":null}]}}'
-    http_version: 
-  recorded_at: Thu, 17 Jan 2013 11:33:10 GMT
-- request:
     method: get
     uri: http://blog.jilion.com/atom.xml
     body:
@@ -98,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 09 Sep 2013 15:54:21 GMT
+      - Tue, 10 Sep 2013 10:13:06 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -5634,5 +5557,5 @@ http_interactions:
         OyM4MjEyOyBNZWhkaSwgWmVubywgVGhpYmF1ZCwgT2N0YXZlJmx0Oy9wJmd0
         OzwvY29udGVudD4KICAgIDwvZW50cnk+CiAgCgo8L2ZlZWQ+Cg==
     http_version: 
-  recorded_at: Mon, 09 Sep 2013 15:54:22 GMT
+  recorded_at: Tue, 10 Sep 2013 10:13:06 GMT
 recorded_with: VCR 2.5.0

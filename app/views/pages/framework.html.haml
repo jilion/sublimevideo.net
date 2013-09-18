@@ -1,9 +1,8 @@
-- @page_title = "Horizon Framework"
-- @body_class = "horizon"
+- @page_title = "SublimeVideo Framework"
 
 = content_for :header do
-  %h2= "SublimeVideo Horizon HTML5 Video Framework"
-  %p.sub= "Here is an overview of SublimeVideo Horizon's technology, why we built it and what we plan to do with it."
+  %h2= "SublimeVideo HTML5 Video Framework"
+  %p.sub= "Here is an overview of SublimeVideo Framework's technology, why we built it and what we plan to do with it."
 
 %ul.section_anchors
   %li= link_to "Origin", "#origin"
@@ -13,26 +12,26 @@
 .big_break
 
 .big_video
-  = link_to '', class: 'overlay', id: 'video_horizon_trigger' do
-    = image_tag "horizon/horizon_poster.jpg", alt: "Discover SublimeVideo Horizon", class: "video_poster"
+  = link_to '', class: 'overlay', id: 'video_framework_trigger' do
+    = image_tag "framework/framework_poster.jpg", alt: "Discover SublimeVideo Framework", class: "video_poster"
     %span.overlay
-  %video#video_horizon{ width: 960, height: 540, poster: image_path('horizon/horizon_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'Horizon Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/horizon.html", 'sharing-text' => 'Check out SublimeVideo Horizon, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
-    <source src="http://media.sublimevideo.net/v/horizon_360p.mp4" data-quality='base' />
-    <source src="http://media.sublimevideo.net/v/horizon_720p.mp4" data-quality='hd' />
-    <source src="http://media.sublimevideo.net/v/horizon_360p.webm" data-quality='base' />
-    <source src="http://media.sublimevideo.net/v/horizon_720p.webm" data-quality='hd' />
-    <track src="/subtitles/horizon_en.vtt" srclang='en' />
-    <track src="/subtitles/horizon_fr.vtt" srclang='fr' />
-    <track src="/subtitles/horizon_it.vtt" srclang='it' />
+  %video#video_framework{ width: 960, height: 540, poster: image_path('framework/framework_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'SublimeVideo Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+    <source src="http://media.sublimevideo.net/v/sublimevideo_framework_360p.mp4" data-quality='base' />
+    <source src="http://media.sublimevideo.net/v/sublimevideo_framework_720p.mp4" data-quality='hd' />
+    <source src="http://media.sublimevideo.net/v/sublimevideo_framework_360p.webm" data-quality='base' />
+    <source src="http://media.sublimevideo.net/v/sublimevideo_framework_720p.webm" data-quality='hd' />
+    <track src="/subtitles/framework_en.vtt" srclang='en' />
+    <track src="/subtitles/framework_fr.vtt" srclang='fr' />
+    <track src="/subtitles/framework_it.vtt" srclang='it' />
 
 .main_copy
   %a#origin
   :textile
-    h3. Origin and motivations for building the SublimeVideo Horizon Framework
+    h3. Origin and motivations for building the SublimeVideo Framework
 
     h4. First goal already achieved: Reliable video play in any browser and device
 
-    Before Horizon, we offered only one player; The SublimeVideo HTML5 Video Player.
+    Before SublimeVideo Framework, we offered only one player; The SublimeVideo HTML5 Video Player.
     It was great because it was truly reliable. It is safe to say it was the most web-page friendly HTML5 video player out there, thanks to the countless hours we spent ensuring nothing would break when you used it on any of your pages. Not an easy task for an HTML5 Video player without iFrame.
 
     It was the only HTML5 Video player on the market to hold true to our philosophy of providing any website with a simple Plug-and-Play solution so you can play your videos anywhere without having to care about the big on-going transition from Flash to HTML5.
@@ -49,7 +48,7 @@
 
     We had to find a way to break those barriers. it's worth noting that no-one else had gone beyond those limitations while keeping broad browser compatibility. In our opinion, this was a completely new frontier to surpass.
 
-    Something had to be done! That's why we created Horizon. We wanted...
+    Something had to be done! That's why we created SublimeVideo Framework. We wanted...
 
     h4(headline). The Technology to create any number of unique players with no limitations and no compromises in quality
 
@@ -83,18 +82,18 @@
 
     h4. A truly difficult journey
 
-  = image_tag "horizon/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing Horizon, facing the challenge of platforms fragmentation.", class: "mountain_team"
+  = image_tag "framework/jilion_alps_mountain_team.jpg", alt: "The Jilion team en route in developing SublimeVideo Framework, facing the challenge of platforms fragmentation.", class: "mountain_team"
 
   :textile
     It remained to be seen if such a framework could ever be built. Frankly, there were numerous times when we thought the technical challenges facing us were simply insurmountable. We really had the feeling we were embarking on a crazy journey, like a group of alpine mountain-climbing pioneers.
 
     h4. Just like in the movies, it turned out to be a happy outcome!
 
-    The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Horizon.
+    The good news is that, having survived more than a year of obsessive geek work later, we were finally able to produce the desired framework. To give a sense of the new and amazing freedom it provides, we called it SublimeVideo Framework.
 
-  = image_tag "horizon/horizon_framework_architecture_scheme.jpg", alt: "SublimeVideo Horizon Architecture", class: "architecture_scheme"
+  = image_tag "framework/sublimevideo_framework_architecture_scheme.jpg", alt: "SublimeVideo Framework Architecture", class: "architecture_scheme"
   %p
-    %em.caption= "SublimeVideo Horizon Architecture"
+    %em.caption= "SublimeVideo Framework Architecture"
 
   :textile
     Besides achieving the aforementioned goals of abstraction, having a single codebase, web technology harmonization and fully modular architecture, we would like to emphasize one of its most powerful aspects below, which is its capability to specifically unify graphics rendering and remove its complexity while not losing any creative freedom!
@@ -103,14 +102,14 @@
 
     With a hellish variety of mobile and tablet screen sizes and resolutions, we felt the need to push the envelope with a much more ambitious and elegant vector-based approach.
 
-  = image_tag "horizon/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
+  = image_tag "framework/twitter_shapes.png", alt: "Twitter shapes vector", class: "twitter_shapes"
 
   :textile
     Nevertheless, here again, there is no single technology today that allows the consistent drawing of a graphic element across all browsers (unless one uses Flash, which is no longer an option for mobiles).
 
     CSS3 or Canvas won't work on older browsers. VML only works on Internet Explorer. SVG works great on the iPad but it's not supported on early Android devices and the original Kindle Fire. Flash may be the only option on certain old browsers, etc. In addition to that, these drawing engines work differently and have different capabilities.
 
-    To overcome these numerous issues, we built a sophisticated Graphics Library as part of SublimeVideo Horizon Framework to unify the differences between those drawing engines, to add all the features required to draw complex UI elements, and to benefit from a unique and consistent drawing API.
+    To overcome these numerous issues, we built a sophisticated Graphics Library as part of SublimeVideo Framework to unify the differences between those drawing engines, to add all the features required to draw complex UI elements, and to benefit from a unique and consistent drawing API.
 
     It allows you to draw a graphics element once, and get it rendered exactly in the same way everywhere by automatically using the most appropriate drawing engine depending on the device or browser capabilities.
 
@@ -121,16 +120,16 @@
   :textile
     The whole rendering engine is also dynamic, which means you can control the UI elements in real time, and say, change their color or their appearance.
 
-    Also, with the advent of very high resolution displays, many designers realize their creations become pixelated when seen on those screens. Because Horizon draws user interfaces in using its vector-based graphics library, all its components are always rendered perfectly, independently of the device screen resolution.
+    Also, with the advent of very high resolution displays, many designers realize their creations become pixelated when seen on those screens. Because SublimeVideo Framework draws user interfaces in using its vector-based graphics library, all its components are always rendered perfectly, independently of the device screen resolution.
 
     h4. SublimeVideo player's designs goes deeper than the usual skins
 
-    In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Horizon, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
+    In many video players, the so-called "graphical skins" are very limited because the position, size and shape of controls is predefined, without mentioning they are often image-based. With SublimeVideo Framework, the player designer can create truly unique interfaces with no constraints. This opens the field for new forms of branding, enhanced user experiences, and increased viewer engagement. That's why we simply say: Just Draw It!
 
-  = image_tag "horizon/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
+  = image_tag "framework/custom_addons_sketch.jpg", alt: "360° Viewer Add-on Sketch", class: "sketch"
 
   :textile
-    h4. Benefits of SublimeVideo Horizon Graphic Engine Library:
+    h4. Benefits of SublimeVideo Framework Graphic Engine Library:
 
     * A unified drawing API, which is completely abstracted from any rendering engine.
     * A pixel perfect level of cross browser rendering.
@@ -143,7 +142,7 @@
 
     h3. Demos
 
-    Below you can test and play with various Horizon-based HTML5 Video players.
+    Below you can test and play with various SublimeVideo-based HTML5 Video players.
     We encourage you to test them on various desktop browsers including older versions of IE or newer tablets such as Apple iPads, Google Nexus 7 or Microsoft Surface.
 
   = render "showcases"
@@ -152,13 +151,13 @@
 
   %a#roadmap
   :textile
-    h3. Horizon's Next Steps
+    h3. SublimeVideo Framework's Next Steps
 
-    h4. 1st Phase: Horizon Introduction
+    h4. 1st Phase: SublimeVideo Framework Introduction
 
-    Today, as a first step, we are introducing the SublimeVideo Horizon HTML5 Video Framework, its powerful capabilities, and why we think it may be the best solution, if not the Holy Grail, to finally address the HTML5 Video fragmentation conundrum, elegantly and without compromise.
+    Today, as a first step, we are introducing the SublimeVideo HTML5 Video Framework, its powerful capabilities, and why we think it may be the best solution, if not the Holy Grail, to finally address the HTML5 Video fragmentation conundrum, elegantly and without compromise.
 
-    In this first phase we are releasing a brand new SublimeVideo Modular Player - redeveloped from the ground up based on SublimeVideo Horizon - for the users of our SublimeVideo.net cloud-based HTML5 Video Player service. This new, Horizon-based version of our player can be used right now by everyone. It is proposed as a freemium model which allows any site to start using SublimeVideo for free and indefinitely if they want.
+    In this first phase we are releasing a brand new SublimeVideo Modular Player - redeveloped from the ground up based on SublimeVideo Framework - for the users of our SublimeVideo.net cloud-based HTML5 Video Player service. This new, SublimeVideo-based version of our player can be used right now by everyone. It is proposed as a freemium model which allows any site to start using SublimeVideo for free and indefinitely if they want.
 
     Our new Modular Player service provides a number of important improvements over the previous generation, including:
 
@@ -167,16 +166,14 @@
     * A seamless integration with YouTube's new amazing player API, allowing you to get the best of both worlds! Indeed, you don't have to choose anymore between the two.
     * And much more, #{link_to "see our Modular Player product page", page_path('modular-player')}.
 
-    In this first phase, we are also starting a partnership program to allow Web agencies or IT companies to immediately design and provide their customers with never before seen, tailor-made HTML5 Video players! It's our goal for this program to develop an indirect commercial channel. We really want to have our partners working with their customers directly, managing the relationship, defining their needs, designing their tailor-made player, integrating it in their websites, and providing, along with us, the tailored-made player they want, according to their specifications. #{link_to "Learn more about our Partnership Program", page_path('tailor-made-players')}.
+    <a id='opening-framework-to-developers'></a>
 
-    <a id='opening-horizon-to-developers'></a>
+    h4. 2nd Phase: Opening SublimeVideo Framework to developers and designers
 
-    h4. 2nd Phase: Opening Horizon to developers and designers
+    So what's next, now that we have announced SublimeVideo Framework?
 
-    So what's next, now that we have announced SublimeVideo Horizon?
+    We don't want to stop there of course, and *it is our goal to provide developers and designers with ways to work with SublimeVideo Framework* as soon as possible!
 
-    We don't want to stop there of course, and *it is our goal to provide developers and designers with ways to work with SublimeVideo Horizon* as soon as possible!
+    After more than a year of hard work creating the framework itself, we now want to properly explore what could be the best ways to give developers and designers access to SublimeVideo Framework.
 
-    After more than a year of hard work creating the framework itself, we now want to properly explore what could be the best ways to give developers and designers access to SublimeVideo Horizon.
-
-    All the options are on the table now! Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_horizon_to_developers_url}.
+    All the options are on the table now! Frankly, we would love for you to let us know what you think we should do, and #{link_to "start a discussion about it", get_satisfaction_opening_framework_to_developers_url}.

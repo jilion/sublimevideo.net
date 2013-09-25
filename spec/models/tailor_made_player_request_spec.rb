@@ -15,10 +15,6 @@ describe TailorMadePlayerRequest do
   describe "Validations" do
     subject { build(:tailor_made_player_request) }
 
-    [:name, :email, :job_title, :company, :url, :country, :topic, :topic_standalone_detail, :topic_other_detail, :description, :document].each do |attribute|
-      it { should allow_mass_assignment_of(attribute) }
-    end
-
     it { should validate_presence_of(:name).with_message('Please fill in Your name') }
     it { should validate_presence_of(:email).with_message('Please fill in your Email address') }
     it { should validate_presence_of(:job_title).with_message('Please fill in your Job title') }

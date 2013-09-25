@@ -1,6 +1,5 @@
 SublimeVideo.homeReady = ->
   SublimeVideo.setupHomeSublime()
-  SublimeVideo.pickRandomVideoThumb()
   SublimeVideo.setupSolutionsSlideshow()
   SublimeVideo.setupShowcasesSlideshow()
   SublimeVideo.setupHighlightsSlideshow()
@@ -9,8 +8,8 @@ SublimeVideo.homeReady = ->
 
 SublimeVideo.setupHomeSublime = ->
   sublime.ready ->
-    if horizon_lightbox = sublime('lightbox_horizon')
-      horizon_lightbox.on
+    if framework_lightbox = sublime('lightbox_framework')
+      framework_lightbox.on
         didopen: ->
           SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
           SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
@@ -27,12 +26,12 @@ SublimeVideo.setupHomeSublime = ->
             if player.isFullscreen() then player.exitFullscreen(go) else go()
           player.on 'action:signup', ->
             go = ->
-              sublime('lightbox_horizon').close()
+              sublime('lightbox_framework').close()
               SublimeVideo.UI.Utils.openAccountPopup('signup')
             if player.isFullscreen() then player.exitFullscreen(go) else go()
 
-    if document.location.hash == '#horizon-video'
-      horizon_lightbox.open()
+    if (document.location.hash is '#horizon-video') or (document.location.hash is '#framework-video')
+      framework_lightbox.open()
 
 SublimeVideo.setupSolutionsSlideshow = ->
   if SublimeVideo.solutionSlideshow?
@@ -61,31 +60,6 @@ SublimeVideo.setupHighlightsSlideshow = ->
 SublimeVideo.setupNewsTicker = ->
   if ($newTicker = $('.news_ticker')).exists()
     new SublimeVideo.NewsTicker($newTicker, 6)
-
-SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
-
-SublimeVideo.pickRandomVideoThumb = ->
-  if ($homeVideo = $('#home_video')).exists()
-    imgIndex = Math.floor(Math.random()*6)
-
-    thumbs = $homeVideo.find('img.video_thumb')
-    thumbs.hide()
-
-    # Lightbox thumb
-    $(thumbs[imgIndex]).show()
-    $homeVideo.show()
-
-    # Lightbox poster
-    unless SublimeVideo.isMobile()
-      posterImage = new Image()
-      posterImage.src = SublimeVideo.postersPaths[imgIndex]
-    $video = $("#video_horizon")
-    $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
-
-SublimeVideo.fadeInHackForChrome = ($div) ->
-  if /Chrome/i.test(navigator.userAgent)
-    $div.css('left', '49px')
-    setTimeout((-> $div.css('left', '50px')), 10)
 
 class SublimeVideo.HomeSlideshow
   constructor: (@div, @selector, pause) ->

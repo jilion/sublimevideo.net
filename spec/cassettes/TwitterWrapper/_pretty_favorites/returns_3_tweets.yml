@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Twitter Ruby Gem 4.8.1
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '112'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 25 Sep 2013 10:42:10 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Wed, 25 Sep 2013 10:42:10 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - _twitter_sess=BAh7CToMY3NyZl9pZCIlMzJiYTIxNDczODkxNmFkMDYyMjQyZGFkMTQ5ZWVh%250ANDA6B2lkIiUzY2M5MTc2Y2RhZTRlZmJkNThiNWQzNjc0YzU0ODBiZCIKZmxh%250Ac2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoK%250AQHVzZWR7ADoPY3JlYXRlZF9hdGwrCMU4tlRBAQ%253D%253D--1755e2411aab7524694a240f60ec066a97347d6d;
+        domain=.twitter.com; path=/; secure; HttpOnly
+      - guest_id=v1%3A138010573003109231; Domain=.twitter.com; Path=/; Expires=Fri,
+        25-Sep-2015 10:42:10 UTC
+      Status:
+      - 403 Forbidden
+      Strict-Transport-Security:
+      - max-age=631138519
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - DENY
+      X-Mid:
+      - 626abed91f7f4375818a091dd28466e55c4ccf39
+      X-Runtime:
+      - '0.02012'
+      X-Transaction:
+      - 1aac69d2221577b5
+      X-Ua-Compatible:
+      - IE=10,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":99,"label":"authenticity_token_error","message":"Unable
+        to verify your credentials"}]}'
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 10:42:10 GMT
+recorded_with: VCR 2.5.0

@@ -62,7 +62,7 @@
     - random_favorite_tweets(5).each do |tweet|
       %li
         %blockquote
-          = clean_tweet_text(tweet, strip_cc: true, strip_urls: true)
+          = clean_tweet_text(tweet)
           %span.arrow
         .left
           = link_to "http://twitter.com/#{tweet.user.screen_name}" do

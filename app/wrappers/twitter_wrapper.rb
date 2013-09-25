@@ -6,75 +6,39 @@ module TwitterWrapper
   # Return a certain number of random favorites tweets of a user, ordered by date desc FROM Twitter.
   #
   # Options:
-  # - user: a Twitter username (default: 'sublimevideo')
-  # - user_doublon: if you allow more than 1 tweet by the same user (default: true)
-  # - count: number of favorites to return (default: 0)
-  # - random: if you want to return tweets randomly (default: false)
   # - since_date: return favorites only after since_date (default: nil)
-  # - include_entities: wether to include entities in results or not (default: false)
-  def self.pretty_favorites(*args)
-    options = {
-      user: 'sublimevideo',
-      user_doublon: true,
-      count: 0,
-      random: false,
-      since_date: nil,
-      include_entities: false
-    }.merge(args.extract_options!)
-    options.assert_valid_keys([:user, :user_doublon, :count, :random, :since_date, :include_entities])
+  def self.pretty_favorites(opts = {})
+    options = { since_date: nil, count: 10 }.merge(opts)
 
-    tweets = _all_favorites(options)
+    tweets = _random_tweets(_sublimevideo_favorites(options), options[:count])
 
-    count = if options[:count].zero?
-      tweets.size
-    else
-      [(options[:user_doublon] ? tweets.size : tweets.map { |tweet| tweet.user.id }.uniq.size), options[:count]].min
-    end
-
-    selected_tweets = options[:random] ? [] : tweets
-    if options[:random]
-      while selected_tweets.size < count
-        t = tweets.sample
-        selected_tweets << t if options[:user_doublon] || selected_tweets.map { |tweet| tweet.user.id }.exclude?(t.user.id)
-      end
-    end
-
-    selected_tweets.sort { |a, b| b.created_at <=> a.created_at }[0...count]
-  end
-
-  def self.method_missing(method_name, *args)
-    method_name = method_name.to_sym
-
-    if Twitter.respond_to?(method_name)
-      begin
-        _with_rescue_and_retry(3) do
-          Twitter.send(method_name, *args)
-        end
-      rescue => ex
-        raise ex if Rails.env.development?
-        nil
-      end
-    else
-      super
-    end
-  end
-
-  def self.respond_to?(method_name)
-    method_name = method_name.to_sym
-
-    Twitter.respond_to?(method_name) || super
+    tweets.sort { |a, b| b.created_at <=> a.created_at }[0...options[:count]]
   end
 
   private
 
-  def self._favorites(user, options)
-    favorites(user, page: options[:page], include_entities: options[:include_entities])
+  def self._random_tweets(tweets, count)
+    selected_tweets, i = [], 0
+    while i < tweets.size
+      tweet = tweets.sample
+      selected_tweets << tweet if selected_tweets.map { |tweet| tweet.user.id }.exclude?(tweet.user.id)
+      i += 1
+    end
+
+    selected_tweets
   end
 
-  def self._all_favorites(options)
-    page, user, tweets = 1, options.delete(:user), []
+  def self._favorites(user, page)
+    Twitter.favorites(user, count: 200, page: page, include_entities: true)
+  rescue Twitter::Error::TooManyRequests => ex
+    raise ex if Rails.env.development?
+    nil
+  end
 
-    while favorites = _favorites(user, options.merge(page: page))
+  def self._sublimevideo_favorites(options = {})
+    page, tweets = 1, []
+
+    while favorites = _favorites('sublimevideo', page)
       break if favorites.blank?
 
       favorites.each do |tweet|

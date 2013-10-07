@@ -4,7 +4,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 ruby '2.0.0'
 
 gem 'rails', '~> 4.0.0'
-gem 'sublime_video_layout',      '~> 2.0' # hosted on gemfury
+gem 'sublime_video_layout',      '~> 2.6' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.5' # hosted on gemfury
 
 # Databases
@@ -48,7 +48,7 @@ gem 'uglifier'
 gem 'asset_sync'
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.11.0'
+  gem 'rack-google-analytics', '~> 0.12'
 end
 
 group :staging, :production do
@@ -91,6 +91,6 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
 
   gem 'vcr'
-  gem 'webmock', '~> 1.11.0'
+  gem 'webmock', '~> 1.14'
   gem 'factory_girl_rails'
 end

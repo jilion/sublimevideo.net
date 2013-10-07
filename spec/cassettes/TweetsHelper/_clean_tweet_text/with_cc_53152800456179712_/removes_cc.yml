@@ -12,9 +12,9 @@ http_interactions:
       User-Agent:
       - Twitter Ruby Gem 4.8.1
       Authorization:
-      - OAuth oauth_consumer_key="6AFqM4wwzq5r1e1METCalQ", oauth_nonce="bfc499361f6fec8b84d5a87fbc5b3933",
-        oauth_signature="CfVrnzgpChR%2BejhOE%2FcWd3JfZJw%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1380105541", oauth_token="6797462-UyjlhitafFacKBoJ6mj5l16F32UCYkX7T2S5QUlpw",
+      - OAuth oauth_consumer_key="6AFqM4wwzq5r1e1METCalQ", oauth_nonce="ef1f188fdc2d63165a51ebddde606275",
+        oauth_signature="8wTvt0Iv8%2B4BA%2F6DadLuMfcdYeg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1381151654", oauth_token="6797462-UyjlhitafFacKBoJ6mj5l16F32UCYkX7T2S5QUlpw",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -26,22 +26,22 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Length:
-      - '982'
+      - '1015'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 25 Sep 2013 10:39:02 GMT
+      - Mon, 07 Oct 2013 13:14:14 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Wed, 25 Sep 2013 10:39:02 GMT
+      - Mon, 07 Oct 2013 13:14:14 GMT
       Pragma:
       - no-cache
       Server:
       - tfe
       Set-Cookie:
-      - guest_id=v1%3A138010554237139287; Domain=.twitter.com; Path=/; Expires=Fri,
-        25-Sep-2015 10:39:02 UTC
+      - guest_id=v1%3A138115165444258579; Domain=.twitter.com; Path=/; Expires=Wed,
+        07-Oct-2015 13:14:14 UTC
       - lang=en
       Status:
       - 200 OK
@@ -54,20 +54,20 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-      - '177'
+      - '178'
       X-Rate-Limit-Reset:
-      - '1380106318'
+      - '1381152553'
       X-Transaction:
-      - e0bc415a1d2b432f
+      - 96ac88965b45af17
     body:
       encoding: UTF-8
       string: '{"created_at":"Wed Mar 30 17:53:09 +0000 2011","id":53152800456179712,"id_str":"53152800456179712","text":"I
         want to be like @Jilion when I grow up. Their video player hosting service
         looks amazing. Kudos! \/ cc @zenoc","source":"\u003ca href=\"http:\/\/www.echofon.com\/\"
         rel=\"nofollow\"\u003eEchofon\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":7819352,"id_str":"7819352","name":"the
-        akosma.","screen_name":"akosma","location":"Schaffhausen, Switzerland","description":"","url":"http:\/\/t.co\/J6dz1IDyQc","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/J6dz1IDyQc","expanded_url":"http:\/\/about.me\/akosma","display_url":"about.me\/akosma","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1772,"friends_count":221,"listed_count":162,"created_at":"Mon
-        Jul 30 13:48:01 +0000 2007","favourites_count":826,"utc_offset":7200,"time_zone":"Bern","geo_enabled":true,"verified":false,"statuses_count":27718,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"FFFFFF","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_link_color":"000000","profile_sidebar_border_color":"181A1E","profile_sidebar_fill_color":"FFFFFF","profile_text_color":"000000","profile_use_background_image":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":3,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"Jilion","name":"Jilion","id":65370701,"id_str":"65370701","indices":[18,25]},{"screen_name":"zenoc","name":"Zeno
+        akosma.","screen_name":"akosma","location":"Schaffhausen, Switzerland","description":"","url":"http:\/\/t.co\/J6dz1IDyQc","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/J6dz1IDyQc","expanded_url":"http:\/\/about.me\/akosma","display_url":"about.me\/akosma","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":1769,"friends_count":223,"listed_count":161,"created_at":"Mon
+        Jul 30 13:48:01 +0000 2007","favourites_count":829,"utc_offset":7200,"time_zone":"Bern","geo_enabled":true,"verified":false,"statuses_count":27888,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"FFFFFF","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/2709565397\/525e902290a97b5569adc1bf958be992_normal.jpeg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/7819352\/1380783335","profile_link_color":"000000","profile_sidebar_border_color":"181A1E","profile_sidebar_fill_color":"FFFFFF","profile_text_color":"000000","profile_use_background_image":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":3,"entities":{"hashtags":[],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"Jilion","name":"Jilion","id":65370701,"id_str":"65370701","indices":[18,25]},{"screen_name":"zenoc","name":"Zeno
         Crivelli","id":7150612,"id_str":"7150612","indices":[104,110]}]},"favorited":false,"retweeted":false,"lang":"en"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 10:39:02 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Mon, 07 Oct 2013 13:14:14 GMT
+recorded_with: VCR 2.6.0

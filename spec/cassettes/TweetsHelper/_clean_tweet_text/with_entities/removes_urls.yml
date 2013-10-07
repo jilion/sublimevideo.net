@@ -12,9 +12,9 @@ http_interactions:
       User-Agent:
       - Twitter Ruby Gem 4.8.1
       Authorization:
-      - OAuth oauth_consumer_key="6AFqM4wwzq5r1e1METCalQ", oauth_nonce="d4b2c6c2728fdd6a7dcda17a449f1c6c",
-        oauth_signature="DLVPM52b6kke0rYO1VYdtPelYBs%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1380105541", oauth_token="6797462-UyjlhitafFacKBoJ6mj5l16F32UCYkX7T2S5QUlpw",
+      - OAuth oauth_consumer_key="6AFqM4wwzq5r1e1METCalQ", oauth_nonce="ad5cc59f2b7e91659f3ba579711d9065",
+        oauth_signature="HxydfDLj4cGHo4pGBR3FEUYSlvk%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1381151653", oauth_token="6797462-UyjlhitafFacKBoJ6mj5l16F32UCYkX7T2S5QUlpw",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -26,22 +26,22 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Length:
-      - '1287'
+      - '1288'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 25 Sep 2013 10:39:01 GMT
+      - Mon, 07 Oct 2013 13:14:13 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Wed, 25 Sep 2013 10:39:01 GMT
+      - Mon, 07 Oct 2013 13:14:13 GMT
       Pragma:
       - no-cache
       Server:
       - tfe
       Set-Cookie:
-      - guest_id=v1%3A138010554178799459; Domain=.twitter.com; Path=/; Expires=Fri,
-        25-Sep-2015 10:39:01 UTC
+      - guest_id=v1%3A138115165385472189; Domain=.twitter.com; Path=/; Expires=Wed,
+        07-Oct-2015 13:14:13 UTC
       - lang=en
       Status:
       - 200 OK
@@ -54,11 +54,11 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-      - '178'
+      - '179'
       X-Rate-Limit-Reset:
-      - '1380106318'
+      - '1381152553'
       X-Transaction:
-      - 27f7e530c4b0e7e5
+      - de097649c8f9a97e
     body:
       encoding: UTF-8
       string: '{"created_at":"Wed May 26 20:35:12 +0000 2010","id":14786759290,"id_str":"14786759290","text":"Help
@@ -66,11 +66,11 @@ http_interactions:
         Oil Reporter API . http:\/\/bit.ly\/dCueLT","source":"\u003ca href=\"http:\/\/www.tweetdeck.com\"
         rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":15893275,"id_str":"15893275","name":"squarefactor","screen_name":"squarefactor","location":"Orlando,
         FL","description":"We design and develop award winning interactive experiences
-        for web, mobile, social and more.","url":"http:\/\/t.co\/gxN2lwZJXw","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/gxN2lwZJXw","expanded_url":"http:\/\/squarefactor.com","display_url":"squarefactor.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":324,"friends_count":64,"listed_count":27,"created_at":"Mon
+        for web, mobile, social and more.","url":"http:\/\/t.co\/gxN2lwZJXw","entities":{"url":{"urls":[{"url":"http:\/\/t.co\/gxN2lwZJXw","expanded_url":"http:\/\/squarefactor.com","display_url":"squarefactor.com","indices":[0,22]}]},"description":{"urls":[]}},"protected":false,"followers_count":322,"friends_count":64,"listed_count":27,"created_at":"Mon
         Aug 18 16:20:58 +0000 2008","favourites_count":7,"utc_offset":-14400,"time_zone":"Eastern
         Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":706,"lang":"en","contributors_enabled":false,"is_translator":false,"profile_background_color":"0D0020","profile_background_image_url":"http:\/\/a0.twimg.com\/profile_background_images\/724705492\/64fb7a4dc4cb69055b333e53d39f6349.jpeg","profile_background_image_url_https":"https:\/\/si0.twimg.com\/profile_background_images\/724705492\/64fb7a4dc4cb69055b333e53d39f6349.jpeg","profile_background_tile":false,"profile_image_url":"http:\/\/a0.twimg.com\/profile_images\/1662499778\/sflogo2_normal.jpg","profile_image_url_https":"https:\/\/si0.twimg.com\/profile_images\/1662499778\/sflogo2_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/15893275\/1354217250","profile_link_color":"FAA419","profile_sidebar_border_color":"000000","profile_sidebar_fill_color":"FFFFFF","profile_text_color":"5F5F5F","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":{"id":"e40595796da14879","url":"https:\/\/api.twitter.com\/1.1\/geo\/id\/e40595796da14879.json","place_type":"city","name":"Altamonte
         Springs","full_name":"Altamonte Springs, FL","country_code":"US","country":"United
-        States","bounding_box":{"type":"Polygon","coordinates":[[[-81.443527,28.639849],[-81.343698,28.639849],[-81.343698,28.690035],[-81.443527,28.690035]]]},"attributes":{}},"contributors":null,"retweet_count":3,"favorite_count":0,"entities":{"hashtags":[{"text":"titanium","indices":[44,53]}],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"appcelerator","name":"Appcelerator","id":9662352,"id_str":"9662352","indices":[30,43]},{"screen_name":"intridea","name":"Intridea,  Inc.","id":14455548,"id_str":"14455548","indices":[70,79]}]},"favorited":false,"retweeted":false,"lang":"en"}'
+        States","bounding_box":{"type":"Polygon","coordinates":[[[-81.443527,28.639849],[-81.343698,28.639849],[-81.343698,28.690035],[-81.443527,28.690035]]]},"attributes":{}},"contributors":null,"retweet_count":3,"favorite_count":0,"entities":{"hashtags":[{"text":"titanium","indices":[44,53]}],"symbols":[],"urls":[],"user_mentions":[{"screen_name":"appcelerator","name":"Appcelerator","id":9662352,"id_str":"9662352","indices":[30,43]},{"screen_name":"intridea","name":"INTRIDEA","id":14455548,"id_str":"14455548","indices":[70,79]}]},"favorited":false,"retweeted":false,"lang":"en"}'
     http_version: 
-  recorded_at: Wed, 25 Sep 2013 10:39:01 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Mon, 07 Oct 2013 13:14:13 GMT
+recorded_with: VCR 2.6.0

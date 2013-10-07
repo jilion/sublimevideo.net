@@ -57,7 +57,7 @@ end
 #
 #  company                 :string(255)
 #  country                 :string(255)
-#  created_at              :datetime         not null
+#  created_at              :datetime
 #  description             :text             not null
 #  document                :string(255)
 #  email                   :string(255)      not null
@@ -69,7 +69,7 @@ end
 #  topic                   :string(255)      not null
 #  topic_other_detail      :string(255)
 #  topic_standalone_detail :string(255)
-#  updated_at              :datetime         not null
+#  updated_at              :datetime
 #  url                     :string(255)
 #  zendesk_ticket_id       :integer
 #

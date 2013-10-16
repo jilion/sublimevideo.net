@@ -288,8 +288,9 @@
       %button.next.arrow
         %span= "next"
       .news_ticker
-        %h4.custom_break.t2= "Latest News"
-        - cached_latest_sublimevideo_news(3).each_with_index do |news, i|
-          .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
-            = link_to news.title, news.url
-        .spacer
+        - if (latest_news = cached_latest_sublimevideo_news(3)).present?
+          %h4.custom_break.t2= "Latest News"
+          - latest_news.each_with_index do |news, i|
+            .news{ id: "news_#{i}", style: i > 0 ? "display:none" : "" }
+              = link_to news.title, news.url
+          .spacer

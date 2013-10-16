@@ -19,6 +19,9 @@ class News
       categories.include?('sublimevideo') && categories.exclude?('sublimevideo-showcase')
     }
     entries.first(count).map { |entry| News.new(entry) }
+  rescue => ex
+    Honeybadger.notify(ex)
+    []
   end
 
 end

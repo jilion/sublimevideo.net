@@ -53,6 +53,7 @@ end
 
 group :staging, :production do
   gem 'unicorn', require: false
+  gem 'memcachier'
   gem 'dalli'
   gem 'rack-cache'
   gem 'rack-no-www'
@@ -91,6 +92,6 @@ group :test do
   gem 'codeclimate-test-reporter', require: false
 
   gem 'vcr'
-  gem 'webmock', '~> 1.14'
+  gem 'webmock', '~> 1.13'
   gem 'factory_girl_rails'
 end

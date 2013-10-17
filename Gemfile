@@ -48,7 +48,8 @@ gem 'uglifier'
 gem 'asset_sync'
 
 group :production do
-  gem 'rack-google-analytics', '~> 0.12'
+  # Wait for https://github.com/leehambley/rack-google-analytics/pull/26 to be merged
+  gem 'rack-google-analytics', github: 'thibaudgg/rack-google-analytics', branch: 'without_rack_session'
 end
 
 group :staging, :production do

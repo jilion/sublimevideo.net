@@ -1,15 +1,14 @@
 #= require sublimevideo
-# TODO: Replace with minified http://ricostacruz.com/jquery.transit/ v0.1.4 when it's out
-#       It should contain a fix for jQuery 1.8
+#= require turbolinks
+#= require google-analytics-turbolinks
 #= require jquery.transit.min
 #= require jquery.slidify
 #= require home
 #= require sublimevideo_framework
 #= require modular_player
 #= require tailor_made_players
+#
 #= require_self
-#= require google-analytics-turbolinks
-#= require turbolinks
 
 # Ensure we don't have new relic errors
 window.NREUMQ = window.NREUMQ || []

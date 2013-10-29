@@ -1,8 +1,8 @@
 SublimeVideo::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   # config.middleware.insert_before Rack::Cache, Rack::Maintenance, domain: 'sublimevideo.net'
-  config.middleware.insert_before ActionDispatch::Static, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
-  config.middleware.insert_before ActionDispatch::Static, Rack::SslEnforcer, only: %r{^/private_api/}, strict: true
+  config.middleware.insert_before Rack::Cache, Rack::GoogleAnalytics, tracker: 'UA-10280941-8'
+  config.middleware.insert_before Rack::Cache, Rack::SslEnforcer, only: %r{^/private_api/}, strict: true
   config.middleware.insert_before Rack::SslEnforcer, Rack::NoWWW
 
   config.eager_load = true
@@ -54,6 +54,11 @@ SublimeVideo::Application.configure do
 
   # Use a different cache store in production
   config.cache_store = :dalli_store
+  client = Dalli::Client.new(ENV['MEMCACHIER_SERVERS'], value_max_bytes: 10485760)
+  config.action_dispatch.rack_cache = {
+    metastore: client,
+    entitystore: client
+  }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   config.action_controller.asset_host = 'd2z13vm5qgtpwn.cloudfront.net'

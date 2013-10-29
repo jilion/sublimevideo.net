@@ -5,7 +5,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0.0'
 gem 'sublime_video_layout',      '~> 2.6' # hosted on gemfury
-gem 'sublime_video_private_api', '~> 1.5' # hosted on gemfury
+gem 'sublime_video_private_api', '~> 1.6' # hosted on gemfury
 
 # Databases
 gem 'pg'
@@ -45,18 +45,18 @@ gem 'rack-status'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
-gem 'asset_sync'
 
 group :production do
-  # Wait for https://github.com/leehambley/rack-google-analytics/pull/26 to be merged
-  gem 'rack-google-analytics', github: 'thibaudgg/rack-google-analytics', branch: 'without_rack_session'
+  # Until > 0.12.0 is released
+  gem 'rack-google-analytics', github: 'leehambley/rack-google-analytics'
 end
 
 group :staging, :production do
   gem 'unicorn', require: false
   gem 'memcachier'
-  gem 'dalli'
   gem 'rack-cache'
+  gem 'dalli'
+  gem 'kgio'
   gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'

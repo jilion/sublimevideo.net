@@ -30,6 +30,7 @@ gem 'twitter'
 gem 'zendesk_api'
 gem 'ratom', require: 'atom'
 gem 'rescue_me'
+gem 'fog'
 gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails'
 gem 'uniquify'

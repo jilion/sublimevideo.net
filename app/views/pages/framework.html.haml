@@ -15,7 +15,7 @@
   = link_to '', class: 'overlay', id: 'video_framework_trigger' do
     = image_tag "framework/framework_poster.jpg", alt: "Discover SublimeVideo Framework", class: "video_poster"
     %span.overlay
-  %video#video_framework{ width: 960, height: 540, poster: image_path('framework/framework_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'SublimeVideo Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => page_url('') } }
+  %video#video_framework{ width: 960, height: 540, poster: image_path('framework/framework_poster.jpg'), preload: 'none', style: 'display:none', data: { uid: 'horizon-framework', name: 'SublimeVideo Framework', 'autoplay' => 'true', 'action-enable' => 'true', 'embed-size' => '640x360', 'embed-url' => "//#{cdn_host}/embeds/framework.html", 'sharing-text' => 'Check out SublimeVideo Framework, ground-breaking HTML5 Video framework', 'sharing-url' => root_url } }
     <source src="http://media.sublimevideo.net/v/sublimevideo_framework_360p.mp4" data-quality='base' />
     <source src="http://media.sublimevideo.net/v/sublimevideo_framework_720p.mp4" data-quality='hd' />
     <source src="http://media.sublimevideo.net/v/sublimevideo_framework_360p.webm" data-quality='base' />

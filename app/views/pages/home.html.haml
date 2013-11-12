@@ -209,13 +209,20 @@
       .wrap
         %ul
           %li.box.new
+            = link_to demo_site_stats_url do
+              = image_tag "home/highlights/rts.png", alt: "Universal Real-Time Stats", size: "100x87", style: "margin-top:30px"
+              %span.text
+                %strong= "Stats 2.0"
+                %span.desc= "Get the complete picture, in real-time."
+              %span.badge
+          %li.box
             = link_to page_path('modular-player', anchor: 'subtitles') do
               = image_tag "home/highlights/subtitles.png", alt: "Subtitles", size: "126x113", style: "margin-top:6px"
               %span.text
                 %strong= "Subtitles"
                 %span.desc= raw "Increase your videos' global reach<br> and site's accessibility."
               %span.badge
-          %li.box.new
+          %li.box
             = link_to page_path('modular-player', anchor: 'google_analytics') do
               = image_tag "home/highlights/google_analytics.png", alt: "Google Analytics", size: "136x110", style: "margin-top:17px"
               %span.text
@@ -263,13 +270,6 @@
               %span.text
                 %strong= "3 Sleek player designs"
                 %span.desc= raw "The new SublimeVideo Modular Player now lets choose your player design."
-              %span.badge
-          %li.box.demo
-            = link_to demo_site_stats_url do
-              = image_tag "home/highlights/rts.png", alt: "Universal Real-Time Stats", size: "100x87", style: "margin-top:30px"
-              %span.text
-                %strong= "Universal Real-Time Stats"
-                %span.desc= "Get the complete picture, in real-time."
               %span.badge
           %li.box
             = link_to "http://blog.jilion.com/2012/04/03/vivendi-awards-sublimevideo-its-coup-de-coeur-prize-at-mipcube-lab-2012" do

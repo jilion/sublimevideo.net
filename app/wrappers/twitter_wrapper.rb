@@ -15,6 +15,15 @@ module TwitterWrapper
     tweets.sort { |a, b| b.created_at <=> a.created_at }[0...options[:count]]
   end
 
+  def self.client
+    @client ||= Twitter::REST::Client.new do |config|
+      config.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
+      config.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
+      config.oauth_token        = ENV['TWITTER_OAUTH_TOKEN']
+      config.oauth_token_secret = ENV['TWITTER_OAUTH_TOKEN_SECRET']
+    end
+  end
+
   private
 
   def self._random_tweets(tweets, count)
@@ -55,15 +64,6 @@ module TwitterWrapper
   def self._with_rescue_and_retry(times)
     rescue_and_retry(times, Errno::ETIMEDOUT, Errno::ECONNRESET, Twitter::Error::BadGateway, Twitter::Error::ServiceUnavailable, Twitter::Error::InternalServerError) do
       yield
-    end
-  end
-
-  def self.client
-    @client ||= Twitter::REST::Client.new do |config|
-      config.consumer_key       = ENV['TWITTER_CONSUMER_KEY']
-      config.consumer_secret    = ENV['TWITTER_CONSUMER_SECRET']
-      config.oauth_token        = ENV['TWITTER_OAUTH_TOKEN']
-      config.oauth_token_secret = ENV['TWITTER_OAUTH_TOKEN_SECRET']
     end
   end
 

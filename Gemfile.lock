@@ -147,7 +147,7 @@ GEM
       multi_json (~> 1.8)
     guard-pow (2.0.0)
       guard (~> 2.0)
-    guard-rspec (4.1.0)
+    guard-rspec (4.1.1)
       guard (>= 2.1.1)
       rspec (~> 2.14)
     haml (4.1.0.alpha.2)
@@ -400,6 +400,7 @@ DEPENDENCIES
   haml-contrib
   has_scope
   honeybadger
+  i18n
   kaminari
   kgio
   launchy

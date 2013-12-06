@@ -69,10 +69,10 @@
           %span= "Starts Free"
         .button_wrap
           = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button"
-        = link_to page_path('youtube'), class: "youtube" do
-          = "Now with"
-          = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
-          = "integration!"
+        -# = link_to page_path('youtube'), class: "youtube" do
+        -#   = "Now with"
+        -#   = image_tag "home/get_it_now_youtube@2x.png", size: "68x30"
+        -#   = "integration!"
 %section.tailor_made
   %h4.custom_break= "Tailor-Made Players Showcases"
   .wrap

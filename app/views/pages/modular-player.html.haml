@@ -22,12 +22,11 @@
     %p= raw "Re-written from the ground-up using the #{link_to "SublimeVideo HTML5 Video Framework", page_path('framework')}, the SublimeVideo Player is now fully modular and allows you to choose and assemble exactly the player you need."
     .spacer
 
-  %section.youtube_integration.f.right
-    .i_wrap= image_tag "features/youtube_icon.jpg", alt: "YouTube Integration", size: "294x130"
-    %h3.title
-      = "Seamless YouTube integration"
-      %span.new= "New"
-    %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
+  %a#browsers_and_devices
+  %section.browsers_and_devices.f.right
+    .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device", size: "361x256"
+    %h3.title= "Play video on any browser or device"
+    %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
     .spacer
 
   %a#subtitles
@@ -146,11 +145,12 @@
     %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
     .spacer
 
-  %a#browsers_and_devices
-  %section.browsers_and_devices.f.right
-    .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device", size: "361x256"
-    %h3.title= "Play video on any browser or device"
-    %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+  %section.youtube_integration.f.right
+    .i_wrap= image_tag "features/youtube_icon.jpg", alt: "YouTube Integration", size: "294x130"
+    %h3.title
+      = "Seamless YouTube integration"
+      %span.new= "New"
+    %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
     .spacer
 
   %section.tablets.f.left

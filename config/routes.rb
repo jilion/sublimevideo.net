@@ -46,5 +46,5 @@ SublimeVideo::Application.routes.draw do
     get :thank_you, on: :collection, path: 'thank-you'
   end
 
-  root to: 'pages#show', page: 'home', format: :html
+  root to: 'pages#show', page: 'home', format: :html, via: [:get]
 end

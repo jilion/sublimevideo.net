@@ -18,7 +18,7 @@ feature "TailorMadePlayerRequest", :vcr do
       fill_in 'Company', with: 'John Doe SA'
       fill_in 'Website URL', with: 'rymai.me'
       select 'Switzerland', from: 'Country'
-      choose 'I am an agency and I would like to join the partner program to design and sell tailor-made players to my customers.'
+      choose 'I am an agency and I would like to design and sell tailor-made players to my customers.'
       fill_in 'How can we help you?', with: 'I want a gorgeous tailor-made player!'
 
       click_on 'Submit'

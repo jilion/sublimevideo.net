@@ -1,6 +1,7 @@
-require 'rubygems'
+ENV['RAILS_ENV'] ||= 'test'
 
-ENV["RAILS_ENV"] ||= 'test'
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require File.dirname(__FILE__) + "/../config/environment"
 require 'rspec/rails'

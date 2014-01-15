@@ -10,7 +10,7 @@ class PageConstraint
 
   private
 
-  def self.resources
+  def self._resources
     self.to_s.underscore.gsub(/_constraint$/, '')
   end
 end

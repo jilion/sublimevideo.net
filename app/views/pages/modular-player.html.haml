@@ -1,0 +1,348 @@
+- @page_title = "SublimeVideo Player"
+- @body_class = "features"
+
+= content_for :header do
+  %h2= "The Web's Most Universal, Reliable & Modular Video Player"
+  %p.sub= raw "The SublimeVideo Player, now fully modular, is the easiest way to enable real HTML5 Video on your site. Delivered as a Cloud Service, it requires no maintenance and is always up-to-date."
+
+%ul.section_anchors
+  %li= link_to "Player Features", "#player_features"
+  %li= link_to "Service Features", "#service_features"
+  %li= link_to "Upcoming Features", "#upcoming_features"
+.spacer
+.big_break
+
+%a#player_features
+%section.player
+  %section.modular_architecture.f.left
+    .i_wrap= image_tag "features/modular_icon.jpg", alt: "Modular Architecture", size: "312x184"
+    %h3.title
+      = "Modular architecture"
+      %span.new= "New"
+    %p= raw "Re-written from the ground-up using the #{link_to "SublimeVideo HTML5 Video Framework", page_path('framework')}, the SublimeVideo Player is now fully modular and allows you to choose and assemble exactly the player you need."
+    .spacer
+
+  %a#browsers_and_devices
+  %section.browsers_and_devices.f.right
+    .i_wrap= image_tag "features/browsers_and_devices_icon.jpg", alt: "Play video on any browser or device", size: "361x256"
+    %h3.title= "Play video on any browser or device"
+    %p= "Reaching your audience on any platform is paramount. SublimeVideo maximizes the use of HTML5 in the latest browsers, while providing full support for legacy browsers with automatic and imperceptible Flash fallback for video play. Wide mobile device support allows your videos to play seamlessly on iPhones, iPads, Android devices and almost any other mobile platforms."
+    .spacer
+
+  %a#subtitles
+  %section.subtitles.f.left
+    .i_wrap= image_tag "features/subtitles_icon.jpg", alt: "Subtitles", size: "253x226"
+    %h3.title
+      = "Subtitles"
+      %span.new= "New"
+    %p= raw "Increase your videos' global reach and provide a great experience to your hearing-impaired audience by adding subtitles to your videos. SublimeVideo supports multi-language subtitles on all desktop browsers and the latest mobile platforms. #{link_to "Learn more", docs_url('subtitles')}."
+    .spacer
+
+  %a#google_analytics
+  %section.google_analytics.f.left
+    .i_wrap= image_tag "features/google_analytics_icon.jpg", alt: "Google Analytics", size: "440x371"
+    %h3.title
+      = "Google Analytics integration"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Get advanced stats for all your videos like plays, completes or even sharing clicks and quality switches. All of this directly in your existing Google Analytics account without having to add a single line of code to your website. #{link_to "Learn more", docs_url('addons/google-analytics')}."
+    .spacer
+
+  %a#player_designs
+  %section.player_designs.f.right
+    .i_wrap= image_tag "features/3_players_icon.jpg", alt: "3 sleek player designs to choose from", size: "374x327"
+    %h3.title
+      = "3 sleek player designs to choose from"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Along with the #{link_to 'Classic', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '1' }} SublimeVideo player design, you can now select two additional player designs, #{link_to 'Light', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '3' }} and #{link_to 'Flat', '#design_demo', class: 'design_demo', data: { 'on-open' => 'nothing', 'kit-id' => '2' }}, which will work seamlessly on all browsers and platforms. More player designs will be available soon. If you need even more customization, #{link_to "check what we can do for you", page_path('tailor-made-players')}."
+    %video#design_demo{ width: 640, height: 360, poster: image_path('demo/midnight_sun2_800.jpg'), preload: 'none', style: 'display:none', data: { uid: 'designs-demo', name: 'Designs Demo' } }
+      <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_450p.mp4" />
+      <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
+      <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
+    .spacer
+
+  %a#social_sharing
+  %section.social_sharing.f.left
+    .i_wrap= image_tag "features/social_sharing_icon.jpg", alt: "Social sharing", size: "561x155"
+    %h3.title
+      = "Social sharing"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Make your videos spread around popular social networks such as Twitter, Facebook, Google+, Pinterest and more to come. Your audience can now share the video directly from the player, which is particularly important when your video is embedded in an external site. #{link_to 'Let us know', 'https://getsatisfaction.com/sublimevideo/topics/comments_suggestions_for_the_social_sharing_add_on'} which other social networks you would like to have and #{link_to 'learn more', docs_url('addons/sharing')} on how to integrate it on your site."
+
+  %a#embed
+  %section.embed.f.right
+    .i_wrap= image_tag "features/auto_embed_icon.jpg", alt: "Spread your videos with auto embeds", size: "299x214"
+    %h3.title
+      = "Spread your videos with auto embeds"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. #{link_to 'Subscribe to this add-on', my_url('addons/embed?p=auto')} and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything! #{link_to 'Learn more', docs_url('addons/embed')}."
+    .spacer
+
+  %a#logo
+  %section.logo.f.left
+    .i_wrap= image_tag "features/your_logo_icon.jpg", alt: "On video logo", size: "322x244"
+    %h3.title
+      = "On-video logo"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "With this new add-on, you can display your logo on video and define its placement and link. #{link_to "Learn more", docs_url('addons/on-video-logo')}."
+    .spacer
+
+  %section.retina.f.right
+    .i_wrap= image_tag "features/retina_icon.jpg", alt: "Beautiful Retina® and pixel-perfect rendering", size: "367x321"
+    %h3.title
+      = "Beautiful Retina® and pixel-perfect rendering"
+      %span.new= "New"
+    %p= "Because SublimeVideo Players are drawn with our vector-based graphics library, part of the SublimeVideo Framework, the rendering of every control and UI element is resolution independent and delivers a pixel-perfect rendering which is incredibly crisp on Retina® displays."
+    .spacer
+
+  %a#responsive
+  %section.responsive.f.left
+    .i_wrap= image_tag "features/responsive_icon.jpg", alt: "Responsive design support", size: "393x316"
+    %h3.title
+      = "Responsive design support"
+      %span.new= "New"
+    %p= raw "SublimeVideo always had great support for dynamic resizing, but in the past, one had to program this behavior with a few lines of JavaScript. Our new player has further been improved so it can automatically adapt to responsive layouts by simply setting #{link_to "one single autoresize", docs_url('responsive-layout')} parameter."
+    .spacer
+
+  %a#cuezones
+  %section.cuezones.f.right
+    .i_wrap= image_tag "features/cuezones_icon.jpg", alt: "Cue zones", size: "364x287"
+    %h3.title
+      = "Cue zones: more powerful cue points"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "This add-on allows you to perform a JavaScript action when the viewer enters or exits a certain zone in the video timeline. You could use it to synchronize slides alongside a video presentation, display side-advertising or create chapters in your video. #{link_to "Learn more", docs_url('addons/cue-zones')}."
+    .spacer
+
+  %a#lightbox
+  %section.lightbox.f.left
+    .i_wrap= image_tag "features/lightbox_icon.jpg", alt: "Integrated lightbox", size: "396x265"
+    %h3.title
+      = "Integrated lightbox"
+      %span.new= "New"
+    %p= "Quickly and easily give your audience another great way to view your videos with SublimeVideo's integrated lightbox. The new lightbox works great over a liquid layout and a responsive design. You can also use it to display images to offer a more consistent UI."
+    .spacer
+
+  %a#keyboard
+  %section.keyboard.f.right
+    .i_wrap= image_tag "features/keyboard_icon.jpg", alt: "Keyboard control", size: "295x214"
+    %h3.title
+      = "Keyboard control"
+      %span.new= "New"
+    %p= raw "It's often more convenient to control viewing with your keyboard. This built-in feature lets you control your video with simple keys like the space bar and arrows keys. It will also improve your site's accessibility. #{link_to "Learn more", docs_url('keyboard')}."
+    .spacer
+
+  %a#api
+  %section.api.f.left
+    .i_wrap= image_tag "features/api_icon.jpg", alt: "Advanced Player API", size: "403x361"
+    %h3.title
+      = "Advanced Player API"
+      %span.new= "New"
+    %p= raw "Our player API gives you the ability to control the player via JavaScript and easily implement custom and advanced functionality that work cross browser and cross device. The API is extensively documented and our online Help provides code samples to facilitate your integration project. #{link_to "Learn more", docs_url('javascript-api')}."
+    .spacer
+
+  %section.youtube_integration.f.right
+    .i_wrap= image_tag "features/youtube_icon.jpg", alt: "YouTube Integration", size: "294x130"
+    %h3.title
+      = "Seamless YouTube integration"
+      %span.new= "New"
+    %p= raw "That's right, SublimeVideo now fully integrates with YouTube, bringing together the world's most sophisticated HTML5 Video Player and the biggest video platform. #{link_to "Learn more", page_path('youtube')}."
+    .spacer
+
+  %section.tablets.f.left
+    .i_wrap= image_tag "features/tablets_icon.jpg", alt: "Design and features working even on tablets", size: "311x252"
+    %h3.title
+      = "Design and features working even on tablets"
+      %span.new= "New"
+    %p= raw "Thanks to SublimeVideo Framework, the new SublimeVideo Player runs perfectly with no features or design degradation even on tablets and some of the new smartphones."
+    .spacer
+
+  %section#playlist.playlist.f
+    .box
+      .video_wrap.active
+        %video#video2.sublime{ width: 432, height: 243, poster: image_path("demo/midnight_sun2_800.jpg"), preload: "none", data: { uid: 'features-playlist-2', name: 'Features Playlist #2' } }
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.mp4" />
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_2_360p.webm" />
+      .video_wrap
+        %video#video3{ width: 432, height: 243, poster: image_path("demo/midnight_sun3_800.jpg"), preload: "none", data: { uid: 'features-playlist-3', name: 'Features Playlist #3' } }
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_3_360p.mp4" />
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_3_360p.webm" />
+      .video_wrap
+        %video#video4{ width: 432, height: 243, poster: image_path("demo/midnight_sun4_800.jpg"), preload: "none", data: { uid: 'features-playlist-4', name: 'Features Playlist #4' } }
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_4_360p.mp4" />
+          <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_4_360p.webm" />
+      %ul.thumbs
+        %li#thumbnail_video2
+          %a{ href: "" }
+            = image_tag("demo/midnight_sun2_144.jpg", alt: "", size: "127x71")
+            %span.play
+        %li#thumbnail_video3
+          %a{ href: "" }
+            = image_tag("demo/midnight_sun3_144.jpg", alt: "", size: "127x71")
+            %span.play
+        %li#thumbnail_video4
+          %a{ href: "" }
+            = image_tag("demo/midnight_sun4_144.jpg", alt: "", size: "127x71")
+            %span.play
+      .spacer
+    %h3.title= "Playlist support"
+    %p= raw "Playlist support using our powerful API makes it possible for you to link multiple videos or chapters to the same player. Integrated playlists that are even easier to use will be available soon. #{link_to "Learn more", docs_url('playlists')}."
+    .spacer
+
+  %a#hd
+  %section.hd.f.left
+    .i_wrap= image_tag "features/hd_icon.jpg", alt: "A simple way to deliver HD to your audience", size: "243x137"
+    %h3.title= "A simple way to deliver HD to your audience"
+    %p= raw "While HTML5 Video does not provide resolution switching natively, SublimeVideo allows switching from SD to HD video sources with a single click using SublimeVideo's HD button which is built straight into the player's UI. #{link_to "Learn more", docs_url('hd-switching')}."
+    .spacer
+
+  %section.seamless_integration.f.right
+    .i_wrap= image_tag "features/seamless_integration_icon.jpg", alt: "Highly compatible with any web page", size: "349x280"
+    %h3.title= "Highly compatible with any web page"
+    %p= "We've designed SublimeVideo to be highly compatible with your site's existing code, CSS in particular, which means that you don't need to recode a thing to insert our Player in any of your pages."
+    .spacer
+
+  %section.library_independent.f.left
+    .i_wrap= image_tag "features/library_independent_icon.jpg", alt: "JS library independent", size: "364x288"
+    %h3.title= "JS library independent"
+    %p= "SublimeVideo is not using any third-party JavaScript library and is designed to run safely alongside other JavaScript libraries present on your page and never creates conflicts."
+    .spacer
+
+= render "layouts/sign_up_box"
+
+%a#service_features
+%section.service
+  .tagline
+    %h2.title= "Your Player in The Cloud"
+    %p.sub= raw "Because your SublimeVideo player is in the cloud you’ll always be running the latest version — without having to lift a finger."
+
+  %a#instant_setup
+  %section.instant_setup.f.left
+    .i_wrap= image_tag "features/timer_icon.jpg", alt: "Instant setup & easy integration", size: "199x220"
+    %h3.title= "Instant setup & easy integration"
+    %p= raw "No download, no installation; #{link_to "Sign up", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')"} for free today and be up and running in seconds. It couldn’t be simpler to integrate SublimeVideo into your site: Just add a single line of code to enable it on your page."
+    .spacer
+
+  %a#always_up_to_date
+  %section.always_up_to_date.f.right
+    .i_wrap= image_tag "features/up_to_date_icon.jpg", alt: "Always up-to-date", size: "299x214"
+    %h3.title= "Always up-to-date"
+    %p= raw "SublimeVideo is the world's first zero maintenance HTML5 video player offered as a service solution. You'll always have the latest version of the player; we provide automatic browser support #{link_to "updates", docs_url('releases')}, bug fixes and new features so you never have to lift a finger."
+    .spacer
+
+  %a#stats
+  %section.stats.f
+    .left
+      %a.sublime.watch{ href: '#video_stats' }
+        = image_tag "demo/stats_video_thumb.png", alt: "Universal Real-Time Statistics Demo Video", size: "196x111"
+        %span.play
+      %video#video_stats{ width: "640", height: "360", poster: "http://media.sublimevideo.net/v/sublimevideo-real-time-statistics.jpg", preload: "none", style: "display:none", data: { uid: "real-time-stats", name: "Real-Time Statistics" } }
+        <source src="http://media.sublimevideo.net/v/sublimevideo-real-time-statistics_720p.mp4" data-quality="hd" />
+        <source src="http://media.sublimevideo.net/v/sublimevideo-real-time-statistics_360p.mp4" />
+        <source src="http://media.sublimevideo.net/v/sublimevideo-real-time-statistics_720p.webm" data-quality="hd" />
+        <source src="http://media.sublimevideo.net/v/sublimevideo-real-time-statistics_360p.webm" />
+      %h5= "Watch the video overview"
+    %h3.title
+      = "Stats 2.0"
+      %span.addon= "Add-on"
+      %span.new= "New"
+    %p= raw "Get a comprehensive, real-time overview of your site's video traffic with our Real-Time Statistics platform; monitor page and video views, browser and device statistics, visitors' countries, mobiles / desktop devices usage and more. Check out #{link_to "our live demo", demo_site_stats_url}."
+    = link_to demo_site_stats_url, class: "button" do
+      %span= "Live demo"
+    .spacer
+
+  %a#fast_and_reliable
+  %section.fast_and_reliable.f.right
+    .i_wrap= image_tag "features/cdn_icon.jpg", alt: "Fast & reliable", size: "212x222"
+    %h3.title= "Fast & reliable"
+    %p= raw "Thanks to our integration with #{link_to "EdgeCast", 'http://www.edgecast.com'}, a state of the art Content Delivery Network (CDN), SublimeVideo Player is delivered to your global audience both quickly and reliably."
+    .spacer
+
+  %a#support
+  %section.support.f.left
+    .i_wrap= image_tag "features/support_icon.jpg", alt: "Technical support", size: "208x208"
+    %h3.title
+      = "Technical support"
+      %span.addon= "Add-on"
+    %p= raw "Our video player comes with a comprehensive documentation and a community forum. Dedicated email support is offered to all customers with at least a paid add-on. We also offer a VIP support add-on with a guaranteed response within the next business day."
+    .spacer
+
+.big_break
+
+%section.integration
+  .tagline
+    %h2.title= "Integration"
+    %p.sub= "SublimeVideo is designed to integrate easily with your site and your video hosting solution."
+
+  %section.hosting.f.left
+    .i_wrap= image_tag "features/video_sources_icon.jpg", alt: "Choose your preferred hosting platform freely", size: "456x291"
+    %h3.title
+      = "Choose your preferred hosting platform freely"
+      %span.new= "New"
+    %p= "We provide the video player, while you keep full control of your videos by freely using your preferred hosting and encoding service(s). Your videos can be hosted anywhere, including Vimeo Pro, Amazon S3/CloudFront. In addition, we now also seamlessly integrate with YouTube."
+    .spacer
+
+  %a#wordpress
+  %section.wordpress.f.right
+    .i_wrap= image_tag "features/wordpress_icon.jpg", alt: "WordPress plugin", size: "374x335"
+    %h3.title= "WordPress plugin"
+    %p= raw "Our plugin makes it easier than ever for you to use SublimeVideo in your WordPress blog. Once installed, just click on the SV button in the toolbar to start embedding your videos. #{link_to "Learn more", docs_url('wordpress')}."
+    .spacer
+
+  %a#video_publishing_assistant
+  %section.video_publishing_assistant.f.left
+    .i_wrap= image_tag "features/video_publishing_assistant_icon.jpg", alt: "Video Publishing Assistant", size: "277x224"
+    %h3.title
+      = "Video Publishing Assistant"
+      %span.new= "New"
+    %p= "Our Video Publishing Assistant lets you easily generate properly configured <video> tags, optimized for SublimeVideo. It is also the easiest way to quickly test the SublimeVideo Player with your own video sources."
+    .spacer
+
+  = render "layouts/sign_up_box"
+
+.upcoming_banner
+
+%a#upcoming_features
+%section.upcoming
+  .tagline
+    %h2.title= "Upcoming Features and Add-ons"
+    %p.sub= raw "Thanks to SublimeVideo Framework, the SublimeVideo Modular Player can now easily be enriched with future features and add-ons. Below, we would like to share with you some possible upcoming features and add-ons. We would be delighted if you #{link_to "let us know about any other add-on you may need", get_satisfaction_next_features_discussion_url}."
+
+  %ul.upcoming_list
+    %li
+      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_integrated_playlists_comments_suggestions', class: "tell_us" do
+        %span.icon-mail
+        = "Tell us what you think"
+      %h4= "Integrated playlists"
+      %p= "We plan to go beyond the current playlist support that requires some programming by using our JavaScript API. We are strongly considering an integrated playlist system which could do the same without the need to code anything."
+    %li
+      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_advertising_comments_suggestions', class: "tell_us" do
+        %span.icon-mail
+        = "Tell us what you think"
+      %h4= "Advertising"
+      %p= "Video advertising is a vital need for lots of publishers when it comes to monetizing their video contents. We are considering a number of video advertising options including support for the IAB VAST standard and pre/post-roll ads."
+    %li
+      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_colors_customization_comments_suggestions', class: "tell_us" do
+        %span.icon-mail
+        = "Tell us what you think"
+      %h4= "Color customization"
+      %p= "This add-on will allow you to personalize the colors of your player."
+    %li
+      = link_to 'https://getsatisfaction.com/sublimevideo/topics/_upcoming_feature_custom_action_buttons_comments_suggestions', class: "tell_us" do
+        %span.icon-mail
+        = "Tell us what you think"
+      %h4= "Custom action buttons"
+      %p= "We plan to release a library of custom action buttons, including buy buttons, to enrich the interaction between the viewer and your video content, your brand or your products."
+
+  .upcoming_row
+    = link_to get_satisfaction_next_features_discussion_url, class: "tell_us" do
+      %span.icon-mail
+      = "Tell us what you think"
+    %h4= "Are we forgetting anything?"
+    %p= "Do you feel we are missing the add-on you desperately need? Just let us know what you would like SublimeVideo Player to provide. We may well add it to our add-ons development calendar or propose a custom solution for it."
+
+= render "layouts/sign_up_box"

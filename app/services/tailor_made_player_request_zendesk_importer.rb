@@ -6,15 +6,15 @@ class TailorMadePlayerRequestZendeskImporter
   end
 
   def import
-    create_ticket_in_zendesk
+    _create_ticket_in_zendesk
   end
 
   private
 
-  def create_ticket_in_zendesk
+  def _create_ticket_in_zendesk
     return true if tailor_made_player_request.zendesk_ticket_id?
 
-    zendesk_ticket = ZendeskWrapper.create_ticket(tailor_made_player_request_to_params)
+    zendesk_ticket = ZendeskWrapper.create_ticket(_tailor_made_player_request_to_params)
 
     if zendesk_ticket
       tailor_made_player_request.update_column(:zendesk_ticket_id, zendesk_ticket.id)
@@ -25,37 +25,38 @@ class TailorMadePlayerRequestZendeskImporter
     end
   end
 
-  def tailor_made_player_request_to_params
+  def _tailor_made_player_request_to_params
     {
-      subject: ticket_subject,
-      comment: { value: ticket_comment },
+      subject: _ticket_subject,
+      comment: { value: _ticket_comment },
       uploads: ticket_uploaded_files,
       tags: %w[sales tailor-made],
       requester: { name: tailor_made_player_request.name, email: tailor_made_player_request.email }
     }
   end
 
-  def ticket_subject
+  def _ticket_subject
     "Tailor-made player request for #{tailor_made_player_request.company}"
   end
 
-  def ticket_comment
+  def _ticket_comment
     body = ["Contact: #{tailor_made_player_request.name} (#{tailor_made_player_request.email})"]
     body << "Job & company: #{tailor_made_player_request.job_title} at #{tailor_made_player_request.company}"
     body << "Website: #{tailor_made_player_request.url}"
     body << "Country: #{Country[tailor_made_player_request.country].name}"
-    topic = if tailor_made_player_request.topic == 'other'
+    body << "Topic: #{_ticket_comment_topic}"
+    body << "Main agency: #{tailor_made_player_request.topic_standalone_detail}" if tailor_made_player_request.topic_standalone_detail?
+    body << "Description: #{tailor_made_player_request.description}"
+
+    body.join("\n\n")
+  end
+
+  def _ticket_comment_topic
+    if tailor_made_player_request.topic == 'other'
       tailor_made_player_request.topic_other_detail
     else
       I18n.t("activerecord.attributes.tailor_made_player_request.topic_#{tailor_made_player_request.topic}")
     end
-    body << "Topic: #{topic}"
-    if tailor_made_player_request.topic_standalone_detail?
-      body << "Main agency: #{tailor_made_player_request.topic_standalone_detail}"
-    end
-    body << "Description: #{tailor_made_player_request.description}"
-
-    body.join("\n\n")
   end
 
   def ticket_uploaded_files

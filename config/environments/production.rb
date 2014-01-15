@@ -21,7 +21,8 @@ SublimeVideo::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = :sass
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
@@ -53,15 +54,14 @@ SublimeVideo::Application.configure do
 
   # Use a different cache store in production
   config.cache_store = :dalli_store
-  # https://devcenter.heroku.com/articles/rack-cache-memcached-static-assets-rails31
+  client = Dalli::Client.new(ENV['MEMCACHIER_SERVERS'], value_max_bytes: 10485760)
   config.action_dispatch.rack_cache = {
-    metastore:    Dalli::Client.new,
-    entitystore:  'file:tmp/cache/rack/body',
-    allow_reload: false
+    metastore: client,
+    entitystore: client
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  config.action_controller.asset_host = "http://cdn.sublimevideo.net"
+  config.action_controller.asset_host = 'd2z13vm5qgtpwn.cloudfront.net'
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )

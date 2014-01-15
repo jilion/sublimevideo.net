@@ -1,6 +1,6 @@
 #= require sublimevideo
-# TODO: Replace with minified http://ricostacruz.com/jquery.transit/ v0.1.4 when it's out
-#       It should contain a fix for jQuery 1.8
+#= require turbolinks
+#= require google-analytics-turbolinks
 #= require jquery.transit.min
 #= require jquery.slidify
 #= require prism-line-highlight

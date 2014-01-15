@@ -7,6 +7,4 @@ section.l-full-width-wrap
 
   p= raw "For media inquiries please refer to our #{link_to 'News page', page_path('news')} or if you prefer simply email us at #{mail_to(t("mailer.press.email").html_safe, t("mailer.press.email"), encode: "hex", class: "hl")}."
 
-  p= raw "For inquiries about custom and enterprise solutions please use our dedicated #{link_to 'contact form', new_tailor_made_player_request_path} or if your prefer email us at #{mail_to(t("mailer.sales.email").html_safe, t("mailer.sales.email"), encode: "hex", class: "hl")}."
-
   p= raw "For all other inquiries please email us at #{mail_to(t("mailer.info.email").html_safe, t("mailer.info.email"), encode: "hex", class: "hl")}."

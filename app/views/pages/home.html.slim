@@ -1,9 +1,5 @@
 h2.headline
   | The HTML5 Video Player people trust.
-  / br
-  / em
-  /   small
-  /     | The HTML5 Video Player people trust.
 section.demo-player.l-full-width-wrap
   section.demo-video-player
     video.sublime#home_demo_player data-player-kit="10" title='Home' data-uid='home-v2' data-settings='autoresize:fit;' data-embed-type="auto" data-embed-enable="false" data-sharing-enable="false" data-logo-enable="false" data-subtitles-enable="false" height='360' poster='http://cdn.sublimevideo.net/assets/demo/midnight_sun2_800-c6d73d0c7bcde93ad1f405b66f003ecc.jpg' preload='none' width='640' style="visibility:hidden"
@@ -33,8 +29,8 @@ section.demo-player.l-full-width-wrap
         a href="" data-feature="logo" Logo
       li
         a href="" data-feature="embed" Embed
-      li
-        a href="" data-feature="youtube" YouTube
+      /li
+      /  a href="" data-feature="youtube" YouTube
       li
         a href="" data-feature="lightbox" Lightbox
     .spacer
@@ -53,11 +49,6 @@ section.demo-player.l-full-width-wrap
       '  It's
       strong Free
       |  with unlimited plays!
-    h2
-      ' You just pay for the extra add-ons you need!
-      = link_to page_path('features', anchor: 'add-ons'), style: 'white-space:nowrap' do
-        ' View Pricing
-        small.icon-uniF473
   .l-separator
   .customers-quotes-box
     h5.l-center What our customers say

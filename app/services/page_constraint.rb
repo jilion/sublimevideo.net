@@ -2,7 +2,7 @@ require 'active_support/core_ext'
 
 class PageConstraint
   def self.matches?(request)
-    pattern = [Rails.root, 'app', 'views', resources, "#{request.path.sub(resources, '')}.html.{haml,slim}"]
+    pattern = [Rails.root, 'app', 'views', _resources, "#{request.path.sub(_resources, '')}.html.{haml,slim}"]
               .join('/').squeeze('/')
 
     Dir[pattern].any?

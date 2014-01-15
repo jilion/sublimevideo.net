@@ -7,19 +7,14 @@ section.features.l-full-width-wrap
       a.light-blue href="#core-features" Core Features
     li
       a.light-violet href="#add-ons" Add-ons
-    / li
-    /   a href="" Upcoming Features
 
   p.l-center
     'Start using the SublimeVideo Player for free with all the
     a href="#core-features" Core Features
-    '  included. Then just pay for the
+    '  included. Then just choose the
     a href="#add-ons" Add-ons
-    '  you need. And don't forget to check out and give us your feedback on our
-    a href="https://getsatisfaction.com/sublimevideo/ideas/planned" Upcoming features
-    '.
+    '  you need.
   ul.l-grid.features-thumbs
-    = feature_thumb('youtube')
     = feature_thumb('player-designs')
     = feature_thumb('responsive-layout')
     = feature_thumb('lightbox')
@@ -36,20 +31,18 @@ section.features.l-full-width-wrap
     = feature_thumb('choose-your-hosting')
     = feature_thumb('wordpress-plugin')
     = feature_thumb('video-publishing-assistant')
+    = feature_thumb('youtube')
     = feature_thumb('google-analytics', addon: true)
     = feature_thumb('social-sharing', addon: true)
     = feature_thumb('on-video-logo', addon: true)
     = feature_thumb('cue-zones', addon: true)
     = feature_thumb('embed', addon: true)
-    = feature_thumb('stats', addon: true)
-    = feature_thumb('support', addon: true)
   .spacer
 
   a#core-features
   h3.l-center.section-title Core Features
 
   ul.l-stacked.features-list
-    = feature('youtube', learn_more_url: docs_url('youtube'))
     = feature('player-designs')
     = feature('responsive-layout', learn_more_url: docs_url('responsive-layout'))
     = feature('lightbox', learn_more_url: docs_url('lightbox'))
@@ -66,18 +59,17 @@ section.features.l-full-width-wrap
     = feature('choose-your-hosting')
     = feature('wordpress-plugin', demo: false, learn_more_url: docs_url('wordpress'))
     = feature('video-publishing-assistant', demo: false, learn_more_url: docs_url('video-publishing-assistant'))
+    = feature('youtube', learn_more_url: docs_url('youtube'))
 
   a#add-ons
   h3.l-center.section-title Add-ons
 
   ul.l-stacked.features-list
-    = add_on('google-analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'), plans: %w[standard])
+    = add_on('google-analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'), plans: [])
     = add_on('social-sharing', learn_more_url: docs_url('addons/sharing'), plans: %w[standard])
     = add_on('on-video-logo', learn_more_url: docs_url('addons/on-video-logo'), plans: %w[disabled custom])
     = add_on('cue-zones', learn_more_url: docs_url('addons/cue-zones'), plans: %w[standard])
     = add_on('embed', learn_more_url: docs_url('addons/embed'), plans: %w[auto])
-    = add_on('stats', learn_more_url: docs_url('addons/stats'), plans: %w[realtime])
-    = add_on('support', learn_more_url: docs_url('addons/support'), demo: false, plans: %w[vip])
 
   = render "layouts/signup_banner"
 .l-height-margin

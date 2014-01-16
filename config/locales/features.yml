@@ -167,7 +167,7 @@ en:
       title: Spread your videos with auto embeds
       short_title: Embed
       subtitle: Get your audience to embed your videos without having to code anything.
-      description: "Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web. Subscribe to this add-on and we'll take care of the rest: displaying the embed button as well as managing your embed files so you don't have to code anything!"
+      description: Your audience can easily share your videos by embedding them into their own sites or elsewhere on the web.
       docs_path: addons/embed
       my_name: embed
       plans:

@@ -13,9 +13,9 @@ feature 'Demos redirects' do
 
   context 'feature has only one demo' do
     scenario '/demos/:feature redirects to this feature first demo' do
-      visit '/demos/youtube'
+      visit '/demos/player-designs'
 
-      current_url.should eq 'http://sublimevideo.dev/demos/youtube/classic-design'
+      current_url.should eq 'http://sublimevideo.dev/demos/player-designs/classic'
     end
   end
 

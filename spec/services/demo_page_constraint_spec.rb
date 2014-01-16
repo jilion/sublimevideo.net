@@ -8,7 +8,7 @@ describe DemoPageConstraint do
   end
 
   describe '.matches?' do
-    let(:request_simple_path) { double(path: '/demos/youtube/classic-design')}
+    let(:request_simple_path) { double(path: '/demos/embed/auto-embed')}
     let(:request_numbered_path) { double(path: '/demos/lightbox/custom-overlay-opacity')}
     let(:request_path_without_demo_page) { double(path: '/demos/lightbox')}
 

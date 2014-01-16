@@ -72,7 +72,7 @@ section.l-full-width-wrap
       - random_favorite_tweets(18).each do |tweet|
         li
           blockquote
-            = clean_tweet_text(tweet, strip_cc: true, strip_urls: true)
+            = clean_tweet_text(tweet)
           = link_to "http://twitter.com/#{tweet.user.screen_name}" do
             = image_tag tweet.user.profile_image_url, alt: clean_tweet_from_user(tweet), size: '48x48'
           h4= link_to clean_tweet_from_user(tweet), "http://twitter.com/#{tweet.user.screen_name}"

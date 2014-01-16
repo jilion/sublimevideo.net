@@ -27,9 +27,9 @@ feature 'Legacy redirects' do
   end
 
   %w[demo youtube].each do |page|
-    scenario "/#{page} redirects to youtube demo" do
+    scenario "/#{page} redirects to classic demo" do
       visit "/#{page}"
-      current_url.should eq "http://sublimevideo.dev/demos/youtube/classic-design"
+      current_url.should eq "http://sublimevideo.dev/demos/player-designs/classic"
     end
   end
 

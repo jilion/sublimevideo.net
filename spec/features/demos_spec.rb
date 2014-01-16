@@ -7,7 +7,7 @@ feature 'Demos redirects' do
     scenario "/#{demo_path} redirects to first available demo" do
       visit "/#{demo_path}"
 
-      current_url.should eq 'http://sublimevideo.dev/demos/youtube/classic-design'
+      current_url.should eq 'http://sublimevideo.dev/demos/player-designs/classic'
     end
   end
 

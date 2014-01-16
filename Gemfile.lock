@@ -31,7 +31,7 @@ GIT
       thor
 
 PATH
-  remote: ~/Code/Jilion/Products/SublimeVideo/sublime_video_layout
+  remote: /Users/Thibaud/Codes/Jilion/sublime_video_layout
   specs:
     sublime_video_layout (3.0.0)
       bourbon

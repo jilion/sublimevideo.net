@@ -16,7 +16,7 @@ SublimeVideo::Application.routes.draw do
     get "/tailor-made-players/#{showcase}" => redirect('/')
   end
   get 'customer-showcase' => redirect('/testimonials')
-  get 'youtube' => redirect('/demos/youtube')
+  get 'youtube' => redirect('/demos/player-designs/classic')
 
   # Shortcut redirects
   %w[demo demos].each { |action| get action => redirect('/demos/player-designs/classic'), as: :"redirect_#{action}" }
@@ -49,9 +49,10 @@ SublimeVideo::Application.routes.draw do
 
   get '/:page' => 'pages#show', as: :page, constraints: PagesConstraint, format: false
 
-  resources :tailor_made_player_requests, only: [:new, :create], path: 'tailor-made-players-requests' do
-    get :thank_you, on: :collection, path: 'thank-you'
-  end
+  get '/tailor-made-players-requests/new' => redirect('/')
+  # resources :tailor_made_player_requests, only: [:new, :create], path: 'tailor-made-players-requests' do
+  #   get :thank_you, on: :collection, path: 'thank-you'
+  # end
 
   root to: 'pages#show', page: 'home', format: :html, via: [:get]
 end

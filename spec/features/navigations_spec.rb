@@ -8,11 +8,11 @@ feature 'Header navigation links' do
     within 'header' do
       current_url.should eq "http://sublimevideo.dev/"
 
-      click_link 'Features & Pricing'
+      click_link 'Features'
       current_url.should eq "http://sublimevideo.dev/features"
 
       click_link 'Demos'
-      current_url.should eq "http://sublimevideo.dev/demos/youtube/classic-design"
+      current_url.should eq "http://sublimevideo.dev/demos/player-designs/classic"
 
       click_link 'Documentation'
       current_url.should eq "http://docs.sublimevideo.dev/"
@@ -37,9 +37,6 @@ feature 'Footer navigation links' do
       click_link 'Features'
       current_url.should eq "http://sublimevideo.dev/features"
 
-      click_link 'Pricing'
-      current_url.should eq "http://sublimevideo.dev/features" # should link with anchor... #add-ons
-
       click_link 'Testimonials'
       current_url.should eq "http://sublimevideo.dev/testimonials"
 
@@ -50,11 +47,6 @@ feature 'Footer navigation links' do
       click_link 'Documentation'
       current_url.should eq "http://docs.sublimevideo.dev/"
       visit 'http://sublimevideo.dev/' # go back to root
-
-      # forum...
-
-      click_link 'Support'
-      current_url.should eq "http://sublimevideo.dev/help"
 
       # player releases...
 

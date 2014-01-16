@@ -94,8 +94,8 @@ en:
       title: Choose your preferred hosting platform freely
       short_title: Hosting platform
       subtitle: Your videos can be hosted anywhere.
-      description: 'We provide the video player, while you keep full control of your videos by freely using your preferred hosting and encoding service(s). Your videos can be hosted anywhere, including Vimeo Pro, Amazon S3/CloudFront. In addition, we now also seamlessly integrate with YouTube.'
-      docs_path: vimeo-pro
+      description: 'We provide the video player, while you keep full control of your videos by freely using your preferred hosting and encoding service(s). Your videos can be hosted anywhere, including Dailymotion Cloud, Vimeo Pro, Amazon S3/CloudFront.'
+      docs_path: dailymotion-cloud
 
     wordpress-plugin:
       title: WordPress plugin

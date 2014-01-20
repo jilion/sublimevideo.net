@@ -98,11 +98,23 @@ class SublimeVideo.HomeDemo
     switch value
       when 9, 10, 11
         player.attr('data-player-kit', value)
-      when "youtube"
-        if player.attr('data-youtube-id')?
-          player.removeAttr('data-youtube-id')
+      when 'dm-cloud'
+        sources = player.find('source')
+        newSources = []
+
+        if /sublimevideo/.test(sources[0].src)
+          player.attr('poster', '<%= asset_url("dmcloud.jpg") %>')
+          newSources.push $("<source src='https://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s02.mp4' />")
+          newSources.push $("<source src='http://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s04.mp4' data-quality='hd' />")
         else
-          player.attr('data-youtube-id', 'rAq2rNEru8A')
+          player.attr('poster', '<%= asset_url("demo/midnight_sun2_800.jpg") %>')
+          newSources.push $("<source src='http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.mp4' />")
+          newSources.push $("<source src='http://media.sublimevideo.net/v/midnight-sun-short-edit-720p.mp4' data-quality='hd' />")
+          newSources.push $("<source src='http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.webm' />")
+          newSources.push $("<source src='http://media.sublimevideo.net/v/midnight-sun-short-edit-720p.webm' data-quality='hd' />")
+
+        sources.remove()
+        newSources.forEach (element) -> element.appendTo(player)
       else
         attribute_data = "data-#{value}-enable"
         if player.attr(attribute_data) is 'true'

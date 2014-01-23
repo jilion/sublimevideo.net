@@ -327,7 +327,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (3.0.0)
+    sublime_video_layout (3.0.1)
       bourbon
       coffee-rails
       jquery-rails
@@ -449,7 +449,7 @@ DEPENDENCIES
   shoulda-matchers
   sidekiq
   slim
-  sublime_video_layout (~> 3.0.0)
+  sublime_video_layout (~> 3.0.1)
   sublime_video_private_api (~> 1.6)
   turbolinks!
   twitter

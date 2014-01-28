@@ -15,7 +15,7 @@ gem 'pg'
 gem 'haml'
 gem 'haml-contrib'
 gem 'slim'
-gem 'bourbon', github: 'thoughtbot/bourbon'
+gem 'bourbon', github: 'octave/bourbon', branch: 'ie10-flexbox-2009'
 gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
@@ -86,9 +86,9 @@ group :development, :test do
   gem 'ruby_gntp', require: false
 
   gem 'coderay', '~> 1.0' # until this is released: https://github.com/pry/pry/commit/ddfa9042a3cac
-  # gem 'guard-pow', require: false
-  # gem 'guard-livereload', require: false
-  # gem 'guard-rspec', require: false
+  gem 'guard-pow', require: false
+  gem 'guard-livereload', require: false
+  gem 'guard-rspec', require: false
 end
 
 group :test do

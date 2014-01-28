@@ -4,7 +4,6 @@
 #= require jquery.transit.min
 #= require jquery.slidify
 #= require prism-line-highlight
-#= require snap.min
 #= require google-analytics-turbolinks
 #= require turbolinks
 #= require home

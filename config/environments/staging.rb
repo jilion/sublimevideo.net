@@ -22,7 +22,8 @@ SublimeVideo::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = false
+  config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = false
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false

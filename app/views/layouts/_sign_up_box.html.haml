@@ -1,4 +1,4 @@
 .sign_up_box
   %h4= "Use SublimeVideo in your site for free today."
   .button_wrap
-    = link_to "Get It Now", root_url(host: request.domain, p: 'signup'), onclick: "return SublimeVideo.UI.Utils.openAccountPopup('signup')", class: "big_button sign_up_btn"
+    = link_to "Get It Now", my_url('signup'), class: "big_button sign_up_btn"

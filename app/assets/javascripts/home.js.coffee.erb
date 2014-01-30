@@ -1,143 +1,146 @@
 SublimeVideo.homeReady = ->
-  SublimeVideo.setupHomeSublime()
-  SublimeVideo.setupSolutionsSlideshow()
-  SublimeVideo.setupShowcasesSlideshow()
-  SublimeVideo.setupHighlightsSlideshow()
-  SublimeVideo.setupNewsTicker()
+  SublimeVideo.setupDemo()
+  SublimeVideo.setupQuotesSlideshow()
+  # SublimeVideo.pickRandomVideoThumb()
   # (new SublimeVideo.Quotes).randomShow() if $('section.showcase').exists()
 
-SublimeVideo.setupHomeSublime = ->
+SublimeVideo.setupDemo = ->
+  unless SublimeVideo.homeDemo?
+    SublimeVideo.homeDemo = new SublimeVideo.HomeDemo('#home_demo_player')
+
   sublime.ready ->
-    if framework_lightbox = sublime('lightbox_framework')
-      framework_lightbox.on
-        didopen: ->
-          SublimeVideo.solutionSlideshow.stopTimer() if SublimeVideo.solutionSlideshow?
-          SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
-        didclose: ->
-          SublimeVideo.solutionSlideshow.startTimer() if SublimeVideo.solutionSlideshow?
-          SublimeVideo.showcasesSlideshow.startTimer() if SublimeVideo.showcasesSlideshow?
-        contentready: (lightbox, player) ->
-          player = lightbox unless player
-          player.on 'action:showcases', ->
-            go = -> document.location.href = '/tailor-made-players'
-            if player.isFullscreen() then player.exitFullscreen(go) else go()
-          player.on 'action:teamup', ->
-            go = -> document.location.href = '/tailor-made-players-requests/new'
-            if player.isFullscreen() then player.exitFullscreen(go) else go()
-          player.on 'action:signup', ->
-            go = ->
-              sublime('lightbox_framework').close()
-              SublimeVideo.UI.Utils.openAccountPopup('signup')
-            if player.isFullscreen() then player.exitFullscreen(go) else go()
+    SublimeVideo.homeDemo.setupObservers()
 
-    if (document.location.hash is '#horizon-video') or (document.location.hash is '#framework-video')
-      framework_lightbox.open()
+SublimeVideo.setupQuotesSlideshow = ->
+  if $('#customers-quotes-slideshow').exists()
+    unless SublimeVideo.quotesSlideshow?
+      SublimeVideo.quotesSlideshow = new SublimeVideo.QuotesSlideshow('#customers-quotes-slideshow')
+    SublimeVideo.quotesSlideshow.start()
 
-SublimeVideo.setupSolutionsSlideshow = ->
-  if SublimeVideo.solutionSlideshow?
-    SublimeVideo.solutionSlideshow.kill()
-    SublimeVideo.solutionSlideshow = null
+class SublimeVideo.QuotesSlideshow
+  constructor: (@slideshowDivSelector, @delay = 11) ->
 
-  if ($slides = $('#slides')).exists()
-    SublimeVideo.solutionSlideshow = new SublimeVideo.HomeSlideshow($slides, $('#home_slide_selector'), 10)
+  start: ->
+    @stop()
+    $("#{@slideshowDivSelector} > li:gt(0)").hide().addClass('blur')
+    @interval = setInterval =>
+      @nextQuote()
+    , @delay*1000
 
-SublimeVideo.setupShowcasesSlideshow = ->
-  if ($showcases = $('section.tailor_made')).exists()
-    SublimeVideo.showcasesSlideshow = new SublimeVideo.HomeSlideshow($showcases, $('#showcases_selector'), 6)
+  stop: ->
+    clearInterval @interval
 
-    $showcases.find('a').each (index, el) ->
-      $(el).on 'click', (event) ->
-        SublimeVideo.showcasesSlideshow.stopTimer() if SublimeVideo.showcasesSlideshow?
+  nextQuote: ->
+    $el = $("#{@slideshowDivSelector} > li:first")
+    $el.addClass('blur').fadeOut 800, =>
+      $el.next().fadeIn(800).removeClass('blur')
+      $el.appendTo(@slideshowDivSelector)
 
-SublimeVideo.setupHighlightsSlideshow = ->
-  if ($highlights = $('section.highlights')).exists()
-    $highlights.find('ul').slidify
-      visibleSlides: 3
-      speed: 5
-      previousButtons: $highlights.find('button.arrow.previous')
-      nextButtons: $highlights.find('button.arrow.next')
+# SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
 
-SublimeVideo.setupNewsTicker = ->
-  if ($newTicker = $('.news_ticker')).exists()
-    new SublimeVideo.NewsTicker($newTicker, 6)
+# SublimeVideo.pickRandomVideoThumb = ->
+#   if ($homeVideo = $('#home_video')).exists()
+#     imgIndex = Math.floor(Math.random()*6)
+#
+#     thumbs = $homeVideo.find('img.video_thumb')
+#     thumbs.hide()
+#
+#     # Lightbox thumb
+#     $(thumbs[imgIndex]).show()
+#     $homeVideo.show()
+#
+#     # Lightbox poster
+#     unless SublimeVideo.isMobile()
+#       posterImage = new Image()
+#       posterImage.src = SublimeVideo.postersPaths[imgIndex]
+#     $video = $("#video_framework")
+#     $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
 
-class SublimeVideo.HomeSlideshow
-  constructor: (@div, @selector, pause) ->
-    @pauseDuration = pause * 1000
+class SublimeVideo.HomeDemo
+  constructor: (playerId) ->
+    @playerId = playerId
 
-    this.startTimer()
-    this.setupObservers()
-
-  kill: ->
-    this.stopTimer()
-    this.clearObservers()
-
-  startTimer: ->
-    @timer = setInterval((=> this.showNext()), @pauseDuration)
-
-  stopTimer: ->
-    if @timer
-      clearInterval(@timer)
-      @timer = null
-
-  showNext: (index) ->
-    currentSlide = @div.find('.slide.active').first()
-    currentSelector = @selector.find('li.active').first()
-    currentSlide.removeClass('active')
-    currentSelector.removeClass('active')
-    if index?
-      $(@div.find('.slide')[index]).addClass('active')
-      $(@selector.find('li')[index]).addClass('active')
-    else
-      if currentSlide.next().length == 1
-        currentSlide.next().addClass('active')
-        currentSelector.next().addClass('active')
-      else
-        @div.find('.slide').first().addClass('active')
-        @selector.find('li').first().addClass('active')
+  reload: ->
+    @$player = $(@playerId)
+    @featuresButtons = $('ul.demo-video-actions')
+    @kitsButtons = $('ul.demo-choose-design')
 
   setupObservers: ->
-    @selector.find('li a').each (index, element) =>
-      $(element).on 'click', (event) =>
-        event.preventDefault()
-        this.stopTimer()
-        this.showNext(index)
+    @reload()
 
-  clearObservers: ->
-    @selector.find('li a').each (index, element) =>
-      $(element).off 'click'
+    @kitsButtons.find('li a').each (index, element) =>
+      @manageTogglerBtn($(element), 'kit')
 
+    @featuresButtons.find('li a').each (index, element) =>
+      $element = $(element)
+      if $element.data('feature') is 'lightbox'
+        @setupLightbox($element)
+      else
+        @manageTogglerBtn($element, 'feature')
 
-# class SublimeVideo.Quotes
-#   constructor: ->
-#     @quotes = $("section.showcase .quote")
-#
-#   randomShow: ->
-#     randomQuoteIndex = Math.ceil(Math.random() * @quotes.length) - 1
-#     $(@quotes[randomQuoteIndex]).show()
+  manageTogglerBtn: ($element, attribute) ->
+    autoplay = true
+    $element.on 'click', (event) =>
+      event.preventDefault()
+      if attribute is "kit"
+        @kitsButtons.find('li').removeClass('active')
+        autoplay = false
+      @setupAttribute($element.data(attribute), autoplay)
+      $element.parent().toggleClass('active')
 
+  setupAttribute: (value, autoplay) ->
+    @unprepareVideo()
+    @updatePlayersValues(@$player, value)
+    @updatePlayersValues(@lightboxPlayer, value)
+    @prepareAndPlayVideo(autoplay)
 
-class SublimeVideo.NewsTicker
-  constructor: (@div, pause) ->
-    @pauseDuration = pause * 1000
-    @news = @div.find('.news')
-    @activeBoxIndex = 0
-    this.startTimer()
+  updatePlayersValues: (player, value) ->
+    switch value
+      when 9, 10, 11
+        player.attr('data-player-kit', value)
+      when 'dm-cloud'
+        sources = player.find('source')
+        newSources = []
 
-  startTimer: ->
-    @timer = setInterval((=> this.nextNews(@activeBoxIndex + 1)), @pauseDuration)
+        if /sublimevideo/.test(sources[0].src)
+          player.attr('poster', '<%= asset_url("dmcloud.jpg") %>')
+          $(player.find('source')[0]).attr 'src', 'https://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s02.mp4'
+          $(player.find('source')[1]).attr 'src', 'http://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s04.mp4'
+        else
+          player.attr('poster', '<%= asset_url("demo/midnight_sun2_800.jpg") %>')
+          $(player.find('source')[0]).attr 'src', 'http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.mp4'
+          $(player.find('source')[1]).attr 'src', 'http://media.sublimevideo.net/v/midnight-sun-short-edit-720p.mp4'
 
-  nextNews: (index) ->
-    currentEl = $(@news[@activeBoxIndex])
+      else
+        attribute_data = "data-#{value}-enable"
+        if player.attr(attribute_data) is 'true'
+          player.attr(attribute_data, 'false')
+        else
+          player.attr(attribute_data, 'true')
 
-    @activeBoxIndex = index % @news.length
-    nextEl = $(@news[@activeBoxIndex])
+  unprepareVideo: ->
+    sublime.unprepare @$player[0]
 
-    currentEl.transition({
-      opacity: 0
-    }, =>
-      currentEl.hide()
-      nextEl.css({ opacity : 0 }).show().transition({
-        opacity: 1
-      })
-    )
+  prepareAndPlayVideo: (autoplay) ->
+    # Don't autoplay if it change the design
+    if autoplay
+      @$player.attr('data-autoplay', 'true')
+    else
+      @$player.removeAttr('data-autoplay')
+    sublime.prepare @$player[0]
+
+  setupLightbox: ($element) ->
+    $element.attr('href', '#lightbox_home_demo')
+
+    @lightboxPlayer = @$player.clone().removeAttr('style class src')
+      .attr(id: 'lightbox_home_demo', width: 800, height: 450)
+      .hide()
+      .appendTo('section.demo-video-player')
+
+    sublime.prepare $element[0], (lightbox) ->
+      lightbox.on 'didClose', ->
+        $element.parent().removeClass('active')
+
+    $element.on 'click', (event) ->
+      $element.parent().addClass('active')
+

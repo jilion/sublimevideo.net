@@ -1,0 +1,25 @@
+sublime.ready(function() {
+  sublime.prepare("video1", function(player) {
+    var duration = null, currentSeekPercentage = null;
+
+    player.on("metadata", function(p) {
+      duration = p.duration();
+
+      // User wants to seek, let's seek!
+      if (currentSeekPercentage != null) {
+        player.seekTo((duration / 100) * currentSeekPercentage);
+      }
+    });
+
+    $(".seek_to").on("click", function(event) {
+      event.preventDefault();
+      currentSeekPercentage = parseInt($(event.target).data("seek-to"));
+      player.play();
+
+      // We need the video duration in order to seek!
+      if (duration != null) {
+        player.seekTo((duration / 100) * currentSeekPercentage);
+      }
+    });
+  });
+});

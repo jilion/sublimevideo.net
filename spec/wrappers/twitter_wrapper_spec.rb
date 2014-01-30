@@ -1,5 +1,9 @@
 require 'fast_spec_helper'
 require 'config/vcr'
+require 'active_support/core_ext'
+
+require 'dotenv'
+Dotenv.load
 
 require 'wrappers/twitter_wrapper'
 

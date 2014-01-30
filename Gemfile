@@ -5,7 +5,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0.2'
 gem 'i18n'
-gem 'sublime_video_layout',      '~> 2.7' # hosted on gemfury
+gem 'sublime_video_layout', '~> 3.1.0' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.6' # hosted on gemfury
 
 # Databases
@@ -14,9 +14,13 @@ gem 'pg'
 # Views
 gem 'haml'
 gem 'haml-contrib'
+gem 'slim'
+gem 'bourbon', github: 'octave/bourbon', branch: 'ie10-flexbox-2009'
+gem 'sass', '~> 3.2.14'
 gem 'RedCloth'
 gem 'turbolinks', github: 'jilion/turbolinks', branch: 'ios_video_issue'
 gem 'google-analytics-turbolinks'
+gem 'htmlentities'
 
 # Controllers
 gem 'has_scope'

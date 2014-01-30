@@ -11,3 +11,4 @@ RSpec.configure do |config|
     Capybara.app_host = 'http://sublimevideo.dev'
   end
 end
+

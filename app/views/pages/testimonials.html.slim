@@ -1,0 +1,83 @@
+- @page_title = "Testimonials"
+
+section.l-full-width-wrap
+  h3.section-title.l-center= "We're proud to have great customers."
+  ul.customers-quotes.list
+    li
+      h5.l-center Bredbandsbolaget
+      = image_tag "showcase/avatars/david_thunman_telenor_sweden.jpg", alt: "David Thunman - Telenor Sweden", class: "avatar"
+      blockquote.l-center
+        ' “Since the launch of our updated TV service back in 2010 we have strived to offer our customers new channels, with a high quality of service. The SublimeVideo Player has helped us to showcase the latest and upcoming TV-shows. Thanks to the support offered by SublimeVideo, the implementation into our CMS was made simple.
+        ' Our editors can quickly add a video player as part of the website or as a lightbox. We love the fact that the player automatically chose the best format for each visitor and that it works in all browsers.”
+        em —David Thunman, Online Business Developer at Telenor Sweden.
+      p.l-center
+        strong
+          = link_to "http://blog.jilion.com/2011/09/27/customer-showcase-bredbandsbolaget", style: 'white-space:nowrap' do
+            ' Read testimonial
+            small.icon-uniF473
+    li
+      h5.l-center Rock am Ring
+      = image_tag "showcase/avatars/matt_henderson_makalu_media.jpg", alt: "Matt Henderson - Makalu Media", class: "avatar"
+      blockquote.l-center
+        ' “We chose SublimeVideo having become frustrated with other Players. We liked that it looks the same with Flash or HTML5 video (that was important to our customer; they didn’t want to know about different video types, etc; they just didn’t want the look to change at any time), and (most importantly) that it was super-easy to implement. The ease-of-implementation saved us a lot of time.”
+        em —Matt Henderson, Director of Makalu Media Inc.
+      p.l-center
+        strong
+          = link_to "http://blog.jilion.com/2011/07/22/customer-showcase-rock-am-ring", style: 'white-space:nowrap' do
+            ' Read testimonial
+            small.icon-uniF473
+    li
+      h5.l-center Camera +
+      = image_tag "showcase/avatars/scott_meinzer_tap_tap_tap.jpg", alt: "Scott Meinzer - Camera +", class: "avatar"
+      blockquote.l-center
+        ' “HTML5 video can be a bag of hurt if you implement it on your own. The fact that SublimeVideo makes it so we can just drop in a line of JavaScript and it works consistently across all the browsers is amazing. The great design and thoughtful user experience just make it even better.”
+        em —Scott Meinzer, Co-founder of tap tap tap, developer of Camera+.
+      p.l-center
+        strong
+          = link_to "http://blog.jilion.com/2011/06/01/customer-showcase-camera-plus", style: 'white-space:nowrap' do
+            ' Read testimonial
+            small.icon-uniF473
+
+    li
+      h5.l-center Wollzelle
+      = image_tag "showcase/avatars/thomas_pamminger_wollzelle.jpg", alt: "Thomas Pamminger - Wollzelle", class: "avatar"
+      blockquote.l-center
+        / ' “We love pushing web technologies beyond their limits, by turning sites into immersive, highly interactive experiences. To help with development, we’ve coded and released open-source tools that enable web developers everywhere to work faster and more efficiently.
+        / ' This means we have high standards, but not that we want to reinvent the wheel: there is such a thing as building on the shoulders of giants. To us, SublimeVideo is one such giant: it puts great engineering at the service of original design. Practically speaking, it enables us to integrate rock-solid video capabilities into our sites and applications, safe in the knowledge they will work everywhere, so we can focus on what the video is about and what happens around it.
+        ' Because Jilion keeps an eye on the rapidly changing browser and plug-in landscape, we know our videos will keep playing, no matter what. That kind of surveillance is best centralised and entrusted to a specialist. The application’s low-latency, high-availability platform is second to none and we know integrating SublimeVideo in our sites will not penalise end users by slowing down pages. SublimeVideo shares our commitments and blends into our code: what more could we ask for?”
+        em —Thomas Pamminger, CEO/Chief Creative Officer, Wollzelle.
+      p.l-center
+        strong
+          = link_to "http://blog.jilion.com/2012/05/02/sublimevideo-showcase-wollzelle", style: 'white-space:nowrap' do
+            ' Read testimonial
+            small.icon-uniF473
+
+    li
+      h5.l-center Katabatic Digital
+      = image_tag "showcase/avatars/emery_wells_katabatic.jpg", alt: "Emery Wells - Katabatic Digital", class: "avatar"
+      blockquote.l-center
+        ' “Katabatic Digital is a creative services media company and video content is our product.  We’ve spent a great deal of R&D on developing proprietary encoding technology to display our work on the web and our digital artists spend countless hours perfecting every pixel on screen. We needed a first class vehicle for showcasing our work to our clients and SublimeVideo delivered on tech and style.”
+        em —Emery Wells, Founder/CTO of Katabatic Digital.
+      p.l-center
+        strong
+          = link_to "http://blog.jilion.com/2011/10/14/customer-showcase-katabatic-digital", style: 'white-space:nowrap' do
+            ' Read testimonial
+            small.icon-uniF473
+
+  / p.view_all= link_to "View all testimonials", "http://blog.jilion.com/tags/sublimevideo-showcase", class: "showcase"
+
+  section.twitter_love
+    h3.section-title.l-center= "Twitter Love"
+    ul.twitter-quotes
+      - random_favorite_tweets(18).each do |tweet|
+        li
+          blockquote
+            = clean_tweet_text(tweet)
+          = link_to "http://twitter.com/#{tweet.user.screen_name}" do
+            = image_tag tweet.user.profile_image_url, alt: clean_tweet_from_user(tweet), size: '48x48'
+          h4= link_to clean_tweet_from_user(tweet), "http://twitter.com/#{tweet.user.screen_name}"
+          em.date= link_to l(tweet.created_at, format: :tweet, ordinal_day: tweet.created_at.day.ordinalize), "http://twitter.com/#{tweet.user.screen_name}/status/#{tweet.id}"
+          .spacer
+  .spacer
+  = render "layouts/signup_banner"
+.l-height-margin

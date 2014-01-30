@@ -1,10 +1,11 @@
+require 'active_support/core_ext'
+
 class PageConstraint
   def self.matches?(request)
-    param = request.params["page"]
-    return unless param =~ /^[a-z-]+$/
-    Dir.glob("app/views/#{_resources}/#{param}.html.haml").any?
-  rescue
-    false
+    pattern = [Rails.root, 'app', 'views', _resources, "#{request.path.sub(_resources, '')}.html.{haml,slim}"]
+              .join('/').squeeze('/')
+
+    Dir[pattern].any?
   end
 
   private
@@ -13,3 +14,6 @@ class PageConstraint
     self.to_s.underscore.gsub(/_constraint$/, '')
   end
 end
+
+class PagesConstraint < PageConstraint; end
+class PressReleasesConstraint < PageConstraint; end

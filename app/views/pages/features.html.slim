@@ -1,0 +1,73 @@
+- @page_title = "SublimeVideo Player"
+
+section.features.l-full-width-wrap
+  h2.l-center Everything you need... and even more!
+  ul.l-grid.go-to-anchor
+    li
+      a.light-blue href="#core-features" Core Features
+    li
+      a.light-violet href="#add-ons" Add-ons
+
+  p.l-center
+    'Start using the SublimeVideo Player for free with all the
+    a href="#core-features" Core Features
+    '  included. Then just choose the
+    a href="#add-ons" Add-ons
+    '  you need.
+  ul.l-grid.features-thumbs
+    = feature_thumb('player-designs')
+    = feature_thumb('responsive-layout')
+    = feature_thumb('lightbox')
+    = feature_thumb('subtitles')
+    = feature_thumb('keyboard')
+    = feature_thumb('player-api')
+    = feature_thumb('browsers-and-devices')
+    = feature_thumb('hd-switching')
+    = feature_thumb('retina')
+    = feature_thumb('seamless-integration')
+    = feature_thumb('instant-setup')
+    = feature_thumb('up-to-date')
+    = feature_thumb('fast-and-reliable')
+    = feature_thumb('choose-your-hosting')
+    = feature_thumb('wordpress-plugin')
+    = feature_thumb('video-publishing-assistant')
+    = feature_thumb('google-analytics', addon: true)
+    = feature_thumb('social-sharing', addon: true)
+    = feature_thumb('on-video-logo', addon: true)
+    = feature_thumb('cue-zones', addon: true)
+    = feature_thumb('embed', addon: true)
+  .spacer
+
+  a#core-features
+  h3.l-center.section-title Core Features
+
+  ul.l-stacked.features-list
+    = feature('player-designs')
+    = feature('responsive-layout', learn_more_url: docs_url('responsive-layout'))
+    = feature('lightbox', learn_more_url: docs_url('lightbox'))
+    = feature('subtitles', learn_more_url: docs_url('subtitles'))
+    = feature('keyboard', demo: false, learn_more_url: docs_url('keyboard'))
+    = feature('player-api', learn_more_url: docs_url('javascript-api'))
+    = feature('browsers-and-devices', demo: false, learn_more_url: docs_url('supported-platforms'))
+    = feature('hd-switching', learn_more_url: docs_url('hd-switching'))
+    = feature('retina', demo: false)
+    = feature('seamless-integration', demo: false)
+    = feature('instant-setup', demo: false, learn_more_url: docs_url('quickstart-guide'))
+    = feature('up-to-date', demo: false, learn_more_url: docs_url('releases'))
+    = feature('fast-and-reliable', demo: false)
+    = feature('choose-your-hosting')
+    = feature('wordpress-plugin', demo: false, learn_more_url: docs_url('wordpress'))
+    = feature('video-publishing-assistant', demo: false, learn_more_url: docs_url('video-publishing-assistant'))
+
+  a#add-ons
+  h3.l-center.section-title Add-ons
+
+  ul.l-stacked.features-list
+    = add_on('google-analytics', demo: false, learn_more_url: docs_url('addons/google-analytics'), plans: [])
+    = add_on('social-sharing', learn_more_url: docs_url('addons/sharing'), plans: %w[standard])
+    = add_on('on-video-logo', learn_more_url: docs_url('addons/on-video-logo'), plans: %w[disabled custom])
+    = add_on('cue-zones', learn_more_url: docs_url('addons/cue-zones'), plans: %w[standard])
+    = add_on('embed', learn_more_url: docs_url('addons/embed'), plans: %w[auto])
+
+  = render "layouts/signup_banner"
+.l-height-margin

@@ -1,0 +1,94 @@
+/* Thumbnails below the video */
+
+img {border:none;}
+
+.spacer {clear:both}
+
+.sv_playlist .video_wrap {
+  width:100%;
+  display:none;
+  float:left;
+  background:#fff;
+  padding:1px;
+  -moz-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+  -webkit-box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+  box-shadow:rgba(0,23,60,0.5) 0 4px 17px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sv_playlist .video_wrap.active {
+  display:block;
+}
+
+.sv_playlist ul.thumbs {
+  list-style-type:none;
+  width:100%;
+  float:left;
+}
+
+.sv_playlist li {
+  line-height:0;
+  display:block;
+  width:23%;
+  margin:2.4% 2.6668% 10px 0;
+  background:#000;
+  float:left;
+  border:1px solid #000;
+  -moz-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+  -webkit-box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+  box-shadow:rgba(0,23,60,0.5) 0 2px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sv_playlist li:nth-child(4) {
+  margin-right:0;
+}
+
+.sv_playlist li.active {
+  border-color:#fff;
+}
+
+.sv_playlist li a {
+  display:block;
+  position:relative;
+}
+
+.sv_playlist li a img {
+  width:100%;
+}
+
+.sv_playlist li a span.play {
+  display:block;
+  width:100%;
+  height:100%;;
+  /*
+  Important:
+  You can find the play icon here: http://f.cl.ly/items/3M0u0p0i0k1l3S0v2b1G/playlist_play_icon.png
+  Please do not hotlink it!
+  */
+  background:url("http://media.jilion.com/images/playlist_play_icon.png") no-repeat center;
+  background-color:rgba(0,0,0,0.6);
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  -moz-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+  -webkit-box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+  box-shadow:inset rgba(255,255,255,0.3) 0 1px 0;
+  -o-transition:background-color,0.25s,linear;
+  -moz-transition:background-color,0.25s,linear;
+  -webkit-transition:background-color,0.25s,linear;
+  transition:background-color,0.25s,linear;
+}
+
+.sv_playlist li a:hover span.play {
+  background-color:rgba(0,0,0,0);
+}
+
+.sv_playlist li.active a span.play {
+  background:none;
+}

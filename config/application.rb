@@ -38,7 +38,7 @@ module SublimeVideo
 
     # Required from sublime_video_layout, needed for rake assets:precompile when
     # initialize_on_precompile is false
-    config.assets.precompile += %w[errors.css ie.css]
+    # config.assets.precompile += %w[errors.css]
 
     # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer

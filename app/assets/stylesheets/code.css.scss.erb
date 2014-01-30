@@ -1,0 +1,36 @@
+@import "bourbon";
+
+$darkblue:#003165;
+
+.code-label {
+  background:transparentize($darkblue,0.4);
+  color:#fff;
+  font-size:0.85em;
+  padding:0.2em 0.5em;
+  @include border-top-radius(4px);
+}
+
+.two-col-content-source pre {
+  background:#fff;
+  padding:0;
+  margin-top:0;
+  margin-bottom:1em;
+  @include border-bottom-radius(4px);
+  -webkit-overflow-scrolling: touch;
+//  @include border-right-radius(4px);
+}
+
+.two-col-content-source code {
+  color: #224579;
+  font-size:0.85em;
+  line-height:1.6em;
+  direction:ltr;
+  text-align:left;
+  white-space:pre;
+  display:block;
+  padding:1.2em 1.5em;
+  background:none;
+  @media screen and (max-width:568px) {
+    font-size:0.7em;
+  }
+}

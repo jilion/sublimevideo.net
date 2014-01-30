@@ -3,29 +3,39 @@
 #= require google-analytics-turbolinks
 #= require jquery.transit.min
 #= require jquery.slidify
+#= require prism-line-highlight
+#= require google-analytics-turbolinks
+#= require turbolinks
 #= require home
-#= require sublimevideo_framework
-#= require modular_player
-#= require tailor_made_players
-#
+#= require framework
+#= require features
+#= require demos
 #= require_self
 
 # Ensure we don't have new relic errors
 window.NREUMQ = window.NREUMQ || []
 
+# iPhone/iPad viewport fix
+if navigator.userAgent.match(/iPhone/i) or navigator.userAgent.match(/iPad/i)
+  viewportmeta = document.querySelector("meta[name=\"viewport\"]")
+  if viewportmeta
+    viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0"
+    document.addEventListener("gesturestart", (()->
+      viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6"
+    ), false)
+
 SublimeVideo.wwwDocumentReady = ->
   SublimeVideo.prepareVideoPlayers()
-  SublimeVideo.homeReady() if $('body.home').exists()
-  SublimeVideo.modularPlayerReady() if $('body.features').exists()
-  SublimeVideo.sublimeVideoFrameworkReady() if $('body.framework').exists()
-  SublimeVideo.tailorMadePlayersReady() if $('body.tailor_made').exists()
-  SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
+  SublimeVideo.homeReady()
+  SublimeVideo.featuresReady() if $('section.features').exists()
+  SublimeVideo.frameworkReady() if $('section.framework').exists()
+  SublimeVideo.demosReady() if $('.two-col-wrapper').exists()
+  # SublimeVideo.playlistDemo = new SublimeVideo.Playlist('playlist')
 
 $(document).ready ->
   SublimeVideo.wwwDocumentReady()
 
-$(window).bind 'page:change', ->
-  SublimeVideo.documentReady()
+$(document).bind 'page:change', ->
   SublimeVideo.wwwDocumentReady()
   SublimeVideo.UI.updateActiveItemMenus()
 

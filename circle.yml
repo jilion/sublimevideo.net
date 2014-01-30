@@ -2,6 +2,10 @@ dependencies:
   cache_directories:
     - ".bundle"
 deployment:
+  staging:
+    branch: new
+    heroku:
+      appname: sv-www-staging
   production:
     branch: master
     heroku:

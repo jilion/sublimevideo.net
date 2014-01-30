@@ -1,62 +1,57 @@
 #player_showcases
-  %a#sony
-  .showcase.left
-    .video_wrap
-      %video#showcase_sony.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/sony-nex-fs700e.jpg", preload: 'none', data: { uid: 'showcase-sony', name: 'NEX-FS700EK', settings: "player-kit:6; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/sony.html; sharing-twitter-url:#{page_url('tailor-made-players/sony')}; sharing-facebook-url:#{page_url('tailor-made-players/sony')};", 'info-enable' => 'true', 'product-url' => 'http://www.sony.co.uk/pro/product/35mmdigitalmotionpicturecamerascamcorders/nex-fs700ek/overview',  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!' } }
+  .player-showcase
+    %a#sony
+    .player-showcase-video
+      %video#showcase_sony.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/sony-nex-fs700e.jpg", preload: 'none', data: { uid: 'showcase-sony', name: 'NEX-FS700EK', settings: "player-kit:6; autoresize:fit; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/sony.html; sharing-twitter-url:#{page_url('tailor-made-players/sony')}; sharing-facebook-url:#{page_url('tailor-made-players/sony')};", 'info-enable' => 'true', 'product-url' => 'http://www.sony.co.uk/pro/product/35mmdigitalmotionpicturecamerascamcorders/nex-fs700ek/overview',  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!' } }
         <source src="http://player.vimeo.com/external/39839187.sd.mp4?s=14767e79da41842ad8997cecc6c975ad" />
         <source src="http://player.vimeo.com/external/39839187.hd.mp4?s=c4ad4400a2ae812768ba9c752b308d51" data-quality="hd" />
         <source src="http://player.vimeo.com/external/39839187.mobile.mp4?s=fcb84ad0cb9f7bf52818a5884025acbf" />
         <source src="http://media.sublimevideo.net/v/sony-nex-fs700e_360p.webm" />
         <source src="http://media.sublimevideo.net/v/sony-nex-fs700e_720p.webm" data-quality="hd" />
-    .desc
-      %h4= "Sony"
+    .player-showcase-description
+      %h3.title= "Sony"
       %p= raw "This tailor-made player designed for #{link_to "Sony Europe","http://www.sony-europe.com"} has been developed in collaboration with their agency #{link_to "Bite Global", "http://www.biteglobal.com"} following Sony's branding guidelines."
-    .spacer
-  %a#twit
-  .showcase.right
-    .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt.jpg", preload: 'none', data: { uid: 'showcase-twittv', name: 'TWiT.TV Showcase', settings: "player-kit:5; initial-overlay-enable:false; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/twit.html; sharing-twitter-url:#{page_url('tailor-made-players/twit')}; sharing-facebook-url:#{page_url('tailor-made-players/twit')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!', 'controls-logo-url' => 'http://twit.tv', 'controls-logo-visibility' => 'visible' } }
+  .player-showcase
+    %a#twit
+    .player-showcase-video
+      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt.jpg", preload: 'none', data: { uid: 'showcase-twittv', name: 'TWiT.TV Showcase', settings: "player-kit:5; autoresize:fit; initial-overlay-enable:false; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/twit.html; sharing-twitter-url:#{page_url('tailor-made-players/twit')}; sharing-facebook-url:#{page_url('tailor-made-players/twit')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!', 'controls-logo-url' => 'http://twit.tv', 'controls-logo-visibility' => 'visible' } }
         <source src="http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt_360p.mp4" />
         <source src="http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt_720p.mp4" data-quality="hd" />
         <source src="http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt_360p.webm" />
         <source src="http://media.sublimevideo.net/v/twit-ipad-today-125-excerpt_720p.webm" data-quality="hd" />
-    .desc
-      %h4{ style: "padding-top:70px" }= "TWiT.TV"
+    .player-showcase-description
+      %h3.title= "TWiT.TV"
       %p= raw "This tailor-made #{link_to "TWiT.TV", "http://twit.tv"} player integrates their brand and elements of their identity, and carry them wherever the player is embedded."
-    .spacer
-  %a#blackhandcinema
-  .showcase.left
-    .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial.jpg", preload: 'none', data: { uid: 'showcase-bhc', name: 'Rocawear, Marcy to Barclays', settings: 'player-kit:7' } }
+  .player-showcase
+    %a#blackhandcinema
+    .player-showcase-video
+      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial.jpg", preload: 'none', data: { uid: 'showcase-bhc', name: 'Rocawear, Marcy to Barclays', settings: 'player-kit:7; autoresize:fit;' } }
         <source src="http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial_360p.mp4" />
         <source src="http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial_720p.mp4" data-quality="hd" />
         <source src="http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial_360p.webm" />
         <source src="http://media.sublimevideo.net/v/anthony-rocawear-presents-jay-z-from-marcy-to-barclays-commercial_720p.webm" data-quality="hd" />
-    .desc
-      %h4{ style: "padding-top:0" }= "Black Hand Cinema"
-      %p{ style: "font-size:18px; line-height:27px"}= raw "This tailored-made player has been developed in collaboration with LA-based award-winning director and photographer Anthony Mandler of #{link_to "Black Hand Cinema", "http://blackhandcinema.com"}. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
-    .spacer
-  %a#next15
-  .showcase.right
-    .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/next15-sublime.jpg", preload: 'none', data: {uid: 'showcase-next15', name: 'Next15 Showcase', settings: "player-kit:8; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/next15.html; sharing-twitter-url:#{page_url('tailor-made-players/next15')}; sharing-facebook-url:#{page_url('tailor-made-players/next15')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!', 'sharing-logo-url' => 'http://next15.com' } }
+    .player-showcase-description
+      %h3.title= "Black Hand Cinema"
+      %p= raw "This tailored-made player has been developed in collaboration with LA-based award-winning director and photographer Anthony Mandler of #{link_to "Black Hand Cinema", "http://blackhandcinema.com"}. The goal has been to keep the inline player light and stylish while expanding the set of features once in full screen (on browsers with full screen HTML5 support)."
+  .player-showcase
+    %a#next15
+    .player-showcase-video
+      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/next15-sublime.jpg", preload: 'none', data: {uid: 'showcase-next15', name: 'Next15 Showcase', settings: "player-kit:8; autoresize:fit; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/next15.html; sharing-twitter-url:#{page_url('tailor-made-players/next15')}; sharing-facebook-url:#{page_url('tailor-made-players/next15')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!', 'sharing-logo-url' => 'http://next15.com' } }
         <source src="http://media.sublimevideo.net/v/next15-sublime_360p.mp4" />
         <source src="http://media.sublimevideo.net/v/next15-sublime_720p.mp4" data-quality="hd" />
         <source src="http://media.sublimevideo.net/v/next15-sublime_360p.webm" />
         <source src="http://media.sublimevideo.net/v/next15-sublime_720p.webm" data-quality="hd" />
-    .desc
-      %h4{ style: "padding-top:45px" }= "Next 15"
+    .player-showcase-description
+      %h3.title= "Next 15"
       %p= raw "Watch #{link_to "Next15", "http://www.next15.com"}'s CEO Tim Dyson comment on the importance of SublimeVideo's cross-platform player branding and customisation technology."
-    .spacer
-  %a#html5
-  .showcase.left
-    .video_wrap
-      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/midnight_sun_sv1.jpg", preload: 'none', data: { uid: 'showcase-html5', name: 'HTML5 Showcase', settings: "player-kit:4; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/html5.html; sharing-twitter-url:#{page_url('tailor-made-players/html5')}; sharing-facebook-url:#{page_url('tailor-made-players/html5')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!' } }
+  .player-showcase
+    %a#html5
+    .player-showcase-video
+      %video.sublime{ width: 640, height: 360, poster: "http://media.sublimevideo.net/v/midnight_sun_sv1.jpg", preload: 'none', data: { uid: 'showcase-html5', name: 'HTML5 Showcase', settings: "player-kit:4; autoresize:fit; sharing-enable:true; sharing-embed-width:640px; sharing-embed-height:360px; sharing-embed-url://#{cdn_host}/embeds/showcases/html5.html; sharing-twitter-url:#{page_url('tailor-made-players/html5')}; sharing-facebook-url:#{page_url('tailor-made-players/html5')};",  'sharing-default-text' => 'Check out this tailor-made HTML5 Video player created with SublimeVideo Framework!' } }
         <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_360p.mp4" />
         <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_720p.mp4" data-quality="hd" />
         <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_360p.webm" />
         <source src="http://media.sublimevideo.net/v/midnight_sun_sv1_720p.webm" data-quality="hd" />
-    .desc
-      %h4= "HTML5"
+    .player-showcase-description
+      %h3.title= "HTML5"
       %p= "Here's a showcase paying homage to HTML5 itself! Like all other SublimeVideo players, it is rendered purely using vector graphics. Enjoy it on Retina displays!"
-    .spacer

@@ -97,7 +97,6 @@ class SublimeVideo.HomeDemo
     @prepareAndPlayVideo(autoplay)
 
   getDmCloudUrl: (quality, callback) ->
-    console.log("ajax for quality #{quality}")
     $.ajax
       url: "http://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s0#{quality}.mp4?redirect=0"
       dataType: 'text'

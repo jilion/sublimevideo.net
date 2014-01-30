@@ -103,11 +103,11 @@ class SublimeVideo.HomeDemo
         newSources = []
 
         if /sublimevideo/.test(sources[0].src)
-          player.attr('poster', '<%= asset_url("dmcloud.jpg") %>')
+          player.attr('poster', '<%= asset_path("dmcloud.jpg") %>')
           $(player.find('source')[0]).attr 'src', 'https://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s02.mp4'
           $(player.find('source')[1]).attr 'src', 'http://cdn.dmcloud.net/route/http/4bab4364f325e14f14000000/4cbdac0e94a6f61144000186/abs_s04.mp4'
         else
-          player.attr('poster', '<%= asset_url("demo/midnight_sun2_800.jpg") %>')
+          player.attr('poster', '<%= asset_path("demo/midnight_sun2_800.jpg") %>')
           $(player.find('source')[0]).attr 'src', 'http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.mp4'
           $(player.find('source')[1]).attr 'src', 'http://media.sublimevideo.net/v/midnight-sun-short-edit-720p.mp4'
 

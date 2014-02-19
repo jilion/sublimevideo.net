@@ -7,18 +7,10 @@ GIT
       coffee-rails
 
 GIT
-  remote: git://github.com/leehambley/rack-google-analytics.git
-  revision: 9a1c336fc21ee488f9a04b1c7d30cf03102ff169
-  specs:
-    rack-google-analytics (1.0.0)
-      actionpack
-      activesupport
-
-GIT
   remote: git://github.com/librato/librato-rails.git
-  revision: 0024c74353511cdf64618eee126d06e1027c54d2
+  revision: 20028b630cd3280073ee837172b665880ace3c9a
   specs:
-    librato-rails (0.10.1)
+    librato-rails (0.10.2)
       librato-rack (~> 0.4.2)
       rails (>= 3.0)
 
@@ -36,25 +28,25 @@ GEM
   remote: https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/
   specs:
     RedCloth (4.2.9)
-    actionmailer (4.0.2)
-      actionpack (= 4.0.2)
+    actionmailer (4.0.3)
+      actionpack (= 4.0.3)
       mail (~> 2.5.4)
-    actionpack (4.0.2)
-      activesupport (= 4.0.2)
+    actionpack (4.0.3)
+      activesupport (= 4.0.3)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    activemodel (4.0.2)
-      activesupport (= 4.0.2)
+    activemodel (4.0.3)
+      activesupport (= 4.0.3)
       builder (~> 3.1.0)
-    activerecord (4.0.2)
-      activemodel (= 4.0.2)
+    activerecord (4.0.3)
+      activemodel (= 4.0.3)
       activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.2)
+      activesupport (= 4.0.3)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activesupport (4.0.2)
+    activesupport (4.0.3)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
@@ -65,7 +57,7 @@ GEM
     annotate (2.6.1)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
-    arel (4.0.1)
+    arel (4.0.2)
     atomic (1.1.14)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -86,6 +78,9 @@ GEM
       json (>= 1.7)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
+      nio4r (>= 0.5.0)
     codeclimate-test-reporter (0.3.0)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
@@ -95,19 +90,20 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.3)
+    coffee-script-source (1.7.0)
     connection_pool (1.2.0)
     countries (0.9.3)
       currencies (~> 0.4.2)
-    country_select (1.2.0)
-    crack (0.4.1)
-      safe_yaml (~> 0.9.0)
+    country_select (1.3.1)
+      countries (= 0.9.3)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     currencies (0.4.2)
     dalli (2.7.0)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.3)
     diff-lcs (1.2.5)
-    docile (1.1.2)
+    docile (1.1.3)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
@@ -119,22 +115,20 @@ GEM
     eventmachine (1.0.3)
     excon (0.31.0)
     execjs (2.0.2)
-    factory_girl (4.3.0)
+    factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.3.0)
-      factory_girl (~> 4.3.0)
+    factory_girl_rails (4.4.0)
+      factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
-    faraday-http-cache (0.3.0)
-      activesupport (>= 3.0)
+    faraday-http-cache (0.4.0)
       faraday (~> 0.8)
-      multi_json (~> 1.3)
     faraday_middleware (0.8.8)
       faraday (>= 0.7.4, < 0.9)
     ffaker (1.23.0)
     ffi (1.9.3)
-    fog (1.19.0)
+    fog (1.20.0)
       builder
       excon (~> 0.31.0)
       formatador (~> 0.2.0)
@@ -142,11 +136,10 @@ GEM
       multi_json (~> 1.0)
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-      nokogiri (~> 1.5)
-      ruby-hmac
+      nokogiri (>= 1.5.11)
     formatador (0.2.4)
     google-analytics-turbolinks (0.0.3)
-    guard (2.3.0)
+    guard (2.4.0)
       formatador (>= 0.2.4)
       listen (~> 2.1)
       lumberjack (~> 1.0)
@@ -158,7 +151,7 @@ GEM
       multi_json (~> 1.0)
     guard-pow (2.0.0)
       guard (~> 2.0)
-    guard-rspec (4.2.5)
+    guard-rspec (4.2.6)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
     haml (4.1.0.beta.1)
@@ -173,7 +166,7 @@ GEM
       faraday (~> 0.8)
       multi_json (~> 1.7)
     hike (1.2.3)
-    honeybadger (1.10.2)
+    honeybadger (1.11.0)
       json
     htmlentities (4.3.1)
     http (0.5.0)
@@ -181,16 +174,16 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.6.9)
     inflection (1.0.0)
-    jquery-rails (3.0.4)
+    jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.1.1)
-      railties (>= 3.1.0)
+    jquery-ui-rails (4.2.0)
+      railties (>= 3.2.16)
     json (1.8.1)
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.8.1)
+    kgio (2.9.2)
     launchy (2.4.2)
       addressable (~> 2.3)
     librato-metrics (1.3.0)
@@ -200,8 +193,9 @@ GEM
     librato-rack (0.4.4)
       librato-metrics (~> 1.1)
     libxml-ruby (2.6.0)
-    listen (2.4.0)
+    listen (2.5.0)
       celluloid (>= 0.15.2)
+      celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lograge (0.2.2)
@@ -223,22 +217,26 @@ GEM
     multipart-post (1.2.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.7.0)
-    newrelic_rpm (3.7.1.188)
+    net-ssh (2.8.0)
+    newrelic_rpm (3.7.2.195)
+    nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
-    oj (2.5.4)
+    oj (2.5.5)
     pg (0.17.1)
-    polyglot (0.3.3)
-    powder (0.2.0)
+    polyglot (0.3.4)
+    powder (0.2.1)
       thor (>= 0.11.5)
-    pry (0.9.12.5)
+    pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-google-analytics (1.0.0)
+      actionpack
+      activesupport
     rack-livereload (0.3.15)
       rack
     rack-no-www (0.0.2)
@@ -247,25 +245,25 @@ GEM
     rack-status (1.0.0)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.0.2)
-      actionmailer (= 4.0.2)
-      actionpack (= 4.0.2)
-      activerecord (= 4.0.2)
-      activesupport (= 4.0.2)
+    rails (4.0.3)
+      actionmailer (= 4.0.3)
+      actionpack (= 4.0.3)
+      activerecord (= 4.0.3)
+      activesupport (= 4.0.3)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.2)
+      railties (= 4.0.3)
       sprockets-rails (~> 2.0.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
-    railties (4.0.2)
-      actionpack (= 4.0.2)
-      activesupport (= 4.0.2)
+    railties (4.0.3)
+      actionpack (= 4.0.3)
+      activesupport (= 4.0.3)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.12.0)
+    raindrops (0.13.0)
     rake (10.1.1)
     ratom (0.8.2)
       libxml-ruby (~> 2.6.0)
@@ -283,9 +281,9 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rspec-core (2.14.7)
-    rspec-expectations (2.14.4)
+    rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.4)
+    rspec-mocks (2.14.5)
     rspec-rails (2.14.1)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
@@ -294,9 +292,8 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    ruby-hmac (0.4.0)
     ruby_gntp (0.3.4)
-    safe_yaml (0.9.7)
+    safe_yaml (1.0.1)
     sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -304,7 +301,7 @@ GEM
       sprockets-rails (~> 2.0.0)
     shoulda-matchers (2.5.0)
       activesupport (>= 3.0.0)
-    sidekiq (2.17.3)
+    sidekiq (2.17.6)
       celluloid (>= 0.15.2)
       connection_pool (>= 1.0.0)
       json
@@ -374,18 +371,18 @@ GEM
     unf (0.1.3)
       unf_ext
     unf_ext (0.0.6)
-    unicorn (4.8.0)
+    unicorn (4.8.2)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
     uniquify (0.1.0)
     vcr (2.8.0)
-    webmock (1.17.1)
+    webmock (1.17.3)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
-    zendesk_api (1.2.5)
+    zendesk_api (1.2.6)
       faraday (~> 0.8.0)
       faraday_middleware (~> 0.8.7)
       hashie (>= 1.2)
@@ -406,13 +403,13 @@ DEPENDENCIES
   capybara
   carrierwave
   codeclimate-test-reporter
-  coderay (~> 1.0)
   coffee-rails
   countries
   country_select
   dalli
   dotenv-rails
   factory_girl_rails
+  faraday (~> 0.8.9)
   ffaker
   fog
   google-analytics-turbolinks
@@ -436,12 +433,12 @@ DEPENDENCIES
   pg
   powder
   rack-cache
-  rack-google-analytics!
+  rack-google-analytics
   rack-livereload
   rack-no-www
   rack-ssl-enforcer
   rack-status
-  rails (~> 4.0.2)
+  rails (~> 4.0.3)
   rails_12factor
   ratom
   rescue_me

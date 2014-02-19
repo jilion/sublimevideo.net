@@ -3,7 +3,7 @@ source 'https://8dezqz7z7HWea9vtaFwg:@gem.fury.io/me/' # thibaud@jilion.com acco
 
 ruby '2.0.0'
 
-gem 'rails', '~> 4.0.2'
+gem 'rails', '~> 4.0.3'
 gem 'i18n'
 gem 'sublime_video_layout', '~> 3.1.0' # hosted on gemfury
 gem 'sublime_video_private_api', '~> 1.6' # hosted on gemfury
@@ -40,6 +40,7 @@ gem 'carrierwave', require: ['carrierwave', 'carrierwave/processing/mime_types']
 gem 'librato-rails', github: 'librato/librato-rails'
 gem 'uniquify'
 gem 'oj'
+gem 'faraday', '~> 0.8.9'
 
 gem 'lograge'
 gem 'countries'
@@ -53,8 +54,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 
 group :production do
-  # Until > 0.12.0 is released
-  gem 'rack-google-analytics', github: 'leehambley/rack-google-analytics'
+  gem 'rack-google-analytics'
 end
 
 group :staging, :production do
@@ -86,7 +86,6 @@ group :development, :test do
   # Guard
   gem 'ruby_gntp', require: false
 
-  gem 'coderay', '~> 1.0' # until this is released: https://github.com/pry/pry/commit/ddfa9042a3cac
   gem 'guard-pow', require: false
   gem 'guard-livereload', require: false
   gem 'guard-rspec', require: false

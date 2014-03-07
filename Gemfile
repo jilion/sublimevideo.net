@@ -5,8 +5,8 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0.3'
 gem 'i18n'
-gem 'sublime_video_layout', '~> 3.1.0' # hosted on gemfury
-gem 'sublime_video_private_api', '~> 1.6' # hosted on gemfury
+gem 'sublime_video_layout' # hosted on gemfury
+gem 'sublime_video_private_api' # hosted on gemfury
 
 # Databases
 gem 'pg'

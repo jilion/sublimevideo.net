@@ -63,7 +63,6 @@ group :staging, :production do
   gem 'rack-cache'
   gem 'dalli'
   gem 'kgio'
-  gem 'rack-no-www'
   gem 'rack-ssl-enforcer'
   gem 'newrelic_rpm'
   gem 'rails_12factor'

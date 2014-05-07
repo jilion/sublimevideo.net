@@ -5,7 +5,7 @@ FactoryGirl.define do
     email       'john@doe.com'
     job_title   'Developer'
     company     'Foo & Co.'
-    url         'http://jilion.com'
+    url         'http://www.jilion.com'
     country     'FR'
     topic       'agency'
     description 'Want a player.'

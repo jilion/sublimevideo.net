@@ -55,6 +55,7 @@ gem 'uglifier'
 
 group :production do
   gem 'rack-google-analytics'
+  gem 'font_assets'
 end
 
 group :staging, :production do

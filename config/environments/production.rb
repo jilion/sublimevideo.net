@@ -35,7 +35,7 @@ SublimeVideo::Application.configure do
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
-  config.action_dispatch.default_headers = {
+  config.action_dispatch.x_sendfile_header = {
     'Access-Control-Allow-Origin' => '*',
     'Access-Control-Request-Method' => 'GET'
   }

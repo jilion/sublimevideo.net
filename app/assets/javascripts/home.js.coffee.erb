@@ -36,26 +36,6 @@ class SublimeVideo.QuotesSlideshow
       $el.next().fadeIn(800).removeClass('blur')
       $el.appendTo(@slideshowDivSelector)
 
-# SublimeVideo.postersPaths = <%= (1..6).inject([]) { |memo, n| memo << image_path("home/video/posters/poster_#{n}.jpg") } %>
-
-# SublimeVideo.pickRandomVideoThumb = ->
-#   if ($homeVideo = $('#home_video')).exists()
-#     imgIndex = Math.floor(Math.random()*6)
-#
-#     thumbs = $homeVideo.find('img.video_thumb')
-#     thumbs.hide()
-#
-#     # Lightbox thumb
-#     $(thumbs[imgIndex]).show()
-#     $homeVideo.show()
-#
-#     # Lightbox poster
-#     unless SublimeVideo.isMobile()
-#       posterImage = new Image()
-#       posterImage.src = SublimeVideo.postersPaths[imgIndex]
-#     $video = $("#video_framework")
-#     $video.attr("poster", SublimeVideo.postersPaths[imgIndex])
-
 class SublimeVideo.HomeDemo
   constructor: (playerId) ->
     @playerId = playerId
@@ -158,4 +138,3 @@ class SublimeVideo.HomeDemo
 
     $element.on 'click', (event) ->
       $element.parent().addClass('active')
-

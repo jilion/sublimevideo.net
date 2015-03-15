@@ -187,7 +187,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.6.9)
     inflection (1.0.0)
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.2.1)
@@ -339,7 +339,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sublime_video_layout (3.2.0)
+    sublime_video_layout (3.2.1)
       bourbon
       coffee-rails
       jquery-rails
@@ -435,6 +435,8 @@ DEPENDENCIES
   honeybadger
   htmlentities
   i18n
+  jquery-rails (= 3.1.2)
+  jquery-ui-rails (= 4.2.1)
   kaminari
   kgio
   launchy
@@ -462,7 +464,7 @@ DEPENDENCIES
   shoulda-matchers
   sidekiq
   slim
-  sublime_video_layout
+  sublime_video_layout (= 3.2.1)
   sublime_video_private_api
   turbolinks!
   twitter
